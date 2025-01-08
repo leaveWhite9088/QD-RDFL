@@ -2,6 +2,7 @@ import struct
 import numpy as np
 import torch
 from torch.utils.data import TensorDataset, DataLoader
+import os
 
 
 class UtilsMNIST:
@@ -212,7 +213,11 @@ class UtilsMNIST:
         if len(arr1) != len(arr2):
             raise ValueError("两个数组的长度必须相同")
         if not (0 <= proportion <= 1):
-            raise ValueError("比例必须在0到1之间")
+            print("比例必须在0到1之间，已自动调整")
+            if proportion < 0:
+                proportion = 0
+            if proportion > 1:
+                proportion = 1
 
         # 计算需要选取的元素数量
         num_samples = int(len(arr1) * proportion)
@@ -338,12 +343,39 @@ class UtilsMNIST:
 
     # dataowner把数据传给cpc
     @staticmethod
-    def dataowner_pass_data_to_cpc(dataowner, cpc):
+    def dataowner_pass_data_to_cpc(dataowner, cpc, proportion):
         """
         dataowner把数据传给cpc
         :param dataowner:
         :param cpc:
+        :param proportion:比例
         :return:
         """
-        cpc.imgData = dataowner.imgData
-        cpc.labelData = dataowner.labelData
+        cpc.imgData, cpc.labelData = UtilsMNIST.sample_arrays(np.array(dataowner.imgData),
+                                                              np.array(dataowner.labelData), proportion)
+
+    # 定义一个函数，用于同时打印到控制台和文件
+    @staticmethod
+    def print_and_log(message):
+        # 获取当前文件的绝对路径
+        current_file_path = os.path.abspath(__file__)
+
+        # 获取当前文件所在的目录
+        current_dir = os.path.dirname(current_file_path)
+
+        # 获取项目根目录（假设项目根目录是当前文件所在目录的父目录）
+        project_root = os.path.dirname(current_dir)
+
+        # 构建日志文件的完整路径
+        log_file_path = os.path.join(project_root, 'data', 'log', 'log-MNIST.txt')
+
+        # 打开一个文件用于追加写入
+        with open(log_file_path, 'a') as f:
+            # 将message转换为字符串
+            message_str = str(message)
+
+            # 打印到控制台
+            print(message_str)
+
+            # 写入到文件
+            f.write(message_str + '\n')
