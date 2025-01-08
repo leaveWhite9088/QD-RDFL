@@ -379,3 +379,30 @@ class UtilsMNIST:
 
             # 写入到文件
             f.write(message_str + '\n')
+
+    # 归一化列表
+    @staticmethod
+    def normalize_list(lst):
+        """
+        因为等于0会出问题，这里将原始的归一化结果乘以0.5，然后加上0.5，从而将结果从0到1映射到0.5到1。
+        :param lst:
+        :return:
+        """
+        if not lst:  # 如果列表为空，返回空列表
+            return []
+
+        min_val = min(lst)
+        max_val = max(lst)
+
+        if max_val == min_val:  # 如果所有元素都相同，直接返回全1列表
+            return [1] * len(lst)
+
+        normalized_lst = [0.5 + 0.5 * ((x - min_val) / (max_val - min_val)) for x in lst]
+        return normalized_lst
+
+    # 取两个list中较大的元素
+    @staticmethod
+    def compare_elements(list1, list2):
+        # 使用列表推导式和zip函数逐个比较元素
+        comparison_results = [x if x > y else y for x, y in zip(list1, list2)]
+        return comparison_results
