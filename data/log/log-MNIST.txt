@@ -1,0 +1,115 @@
+D:\03_sfwAndEnv\03_sfwCode\03_anaconda\envs\torch_py308\python.exe D:\07_program\05_PythonProgram\06_联邦学习\Data_Assetization\main.py 
+---------------------------------- step1 ----------------------------------
+Weights: [0.05263158 0.10526316 0.05263158 0.31578947 0.47368421]
+Split sizes: [ 3160  6315  3157 18947 28421]
+DataOwner1: noise random: 0.031860836142186134
+DataOwner2: noise random: 0.0997371879157021
+DataOwner3: noise random: 0.0835825690048482
+DataOwner4: noise random: 0.04292571110278006
+DataOwner5: noise random: 0.07315302239497237
+DataOwner1: Image 1: MSE = 0.0004, SNR = 28.36 dB
+DataOwner2: Image 1: MSE = 0.0037, SNR = 18.77 dB
+DataOwner3: Image 1: MSE = 0.0028, SNR = 17.14 dB
+DataOwner4: Image 1: MSE = 0.0007, SNR = 26.32 dB
+DataOwner5: Image 1: MSE = 0.0018, SNR = 20.73 dB
+---------------------------------- step2 ----------------------------------
+model initing...
+Epoch 1/5 started...
+Epoch [1/5], Batch [1/1], Loss: 5.2474
+Epoch 1 completed. Average Loss: 5.2474
+Epoch 2/5 started...
+Epoch [2/5], Batch [1/1], Loss: 111.0760
+Epoch 2 completed. Average Loss: 111.0760
+Epoch 3/5 started...
+Epoch [3/5], Batch [1/1], Loss: 61.3187
+Epoch 3 completed. Average Loss: 61.3187
+Epoch 4/5 started...
+Epoch [4/5], Batch [1/1], Loss: 30.5809
+Epoch 4 completed. Average Loss: 30.5809
+Epoch 5/5 started...
+Epoch [5/5], Batch [1/1], Loss: 12.1532
+Epoch 5 completed. Average Loss: 12.1532
+Model saved to ./data/model/mnist_cnn_test
+Accuracy: 36.16%
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.0956
+DataOwner1的最优x_1 = 0.0154
+DataOwner2的最优x_2 = 0.0152
+DataOwner3的最优x_3 = 0.0152
+DataOwner4的最优x_4 = 0.0153
+DataOwner5的最优x_5 = 0.0153
+ModelOwner的最大效用 U(Eta) = -0.0588
+---------------------------------- step3 ----------------------------------
+ModelOwner的最优总支付：0.09556339512568311
+DataOwner1的分配到的支付 ： 0.0192
+DataOwner2的分配到的支付 ： 0.0190
+DataOwner3的分配到的支付 ： 0.0190
+DataOwner4的分配到的支付 ： 0.0192
+DataOwner5的分配到的支付 ： 0.0191
+---------------------------------- step4 ----------------------------------
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5'}
+---------------------------------- step5 ----------------------------------
+DataOwner1把数据交给CPC1，本轮训练的数据量为：48.54，CPC1调整模型中:
+Model loaded from ./data/model/mnist_cnn_test
+原模型评估：
+Accuracy: 36.16%
+Epoch 1/5, Loss: 2.2999
+Epoch 2/5, Loss: 2.2972
+Epoch 3/5, Loss: 2.2939
+Epoch 4/5, Loss: 2.2893
+Epoch 5/5, Loss: 2.2824
+新模型评估：
+Accuracy: 44.11%
+Model saved to ./data/model/mnist_cnn_test
+DataOwner2把数据交给CPC2，本轮训练的数据量为：96.02，CPC2调整模型中:
+Model loaded from ./data/model/mnist_cnn_test
+原模型评估：
+Accuracy: 44.11%
+Epoch 1/5, Loss: 2.2707
+Epoch 2/5, Loss: 2.2496
+Epoch 3/5, Loss: 2.2187
+Epoch 4/5, Loss: 2.1727
+Epoch 5/5, Loss: 2.1116
+新模型评估：
+Accuracy: 52.34%
+Model saved to ./data/model/mnist_cnn_test
+DataOwner3把数据交给CPC3，本轮训练的数据量为：48.14，CPC3调整模型中:
+Model loaded from ./data/model/mnist_cnn_test
+原模型评估：
+Accuracy: 52.34%
+Epoch 1/5, Loss: 2.0539
+Epoch 2/5, Loss: 2.0241
+Epoch 3/5, Loss: 1.9938
+Epoch 4/5, Loss: 1.9612
+Epoch 5/5, Loss: 1.9261
+新模型评估：
+Accuracy: 54.61%
+Model saved to ./data/model/mnist_cnn_test
+DataOwner4把数据交给CPC4，本轮训练的数据量为：290.74，CPC4调整模型中:
+Model loaded from ./data/model/mnist_cnn_test
+原模型评估：
+Accuracy: 54.61%
+Epoch 1/5, Loss: 1.8197
+Epoch 2/5, Loss: 1.5878
+Epoch 3/5, Loss: 1.3382
+Epoch 4/5, Loss: 1.1161
+Epoch 5/5, Loss: 0.9377
+新模型评估：
+Accuracy: 74.60%
+Model saved to ./data/model/mnist_cnn_test
+DataOwner5把数据交给CPC5，本轮训练的数据量为：434.66，CPC5调整模型中:
+Model loaded from ./data/model/mnist_cnn_test
+原模型评估：
+Accuracy: 74.60%
+Epoch 1/5, Loss: 0.8172
+Epoch 2/5, Loss: 0.6871
+Epoch 3/5, Loss: 0.6006
+Epoch 4/5, Loss: 0.5399
+Epoch 5/5, Loss: 0.4958
+新模型评估：
+Accuracy: 75.50%
+Model saved to ./data/model/mnist_cnn_test
+---------------------------------- step6 ----------------------------------
+---------------------------------- step7 ----------------------------------
+
+Process finished with exit code 0
