@@ -1,115 +1,380 @@
-D:\03_sfwAndEnv\03_sfwCode\03_anaconda\envs\torch_py308\python.exe D:\07_program\05_PythonProgram\06_è”é‚¦å­¦ä¹ \Data_Assetization\main.py 
----------------------------------- step1 ----------------------------------
-Weights: [0.05263158 0.10526316 0.05263158 0.31578947 0.47368421]
-Split sizes: [ 3160  6315  3157 18947 28421]
-DataOwner1: noise random: 0.031860836142186134
-DataOwner2: noise random: 0.0997371879157021
-DataOwner3: noise random: 0.0835825690048482
-DataOwner4: noise random: 0.04292571110278006
-DataOwner5: noise random: 0.07315302239497237
-DataOwner1: Image 1: MSE = 0.0004, SNR = 28.36 dB
-DataOwner2: Image 1: MSE = 0.0037, SNR = 18.77 dB
-DataOwner3: Image 1: MSE = 0.0028, SNR = 17.14 dB
-DataOwner4: Image 1: MSE = 0.0007, SNR = 26.32 dB
-DataOwner5: Image 1: MSE = 0.0018, SNR = 20.73 dB
----------------------------------- step2 ----------------------------------
+*************************** ÔËĞĞÊ±¼ä£º 2025-01-08 17:53:52 ***************************
+---------------------------------- ¶¨Òå²ÎÊıÖµ ----------------------------------
+DONE
+---------------------------------- ×¼±¸¹¤×÷ ----------------------------------
+³õÊ¼Êı¾İÕ¼MNISTµÄ±ÈÀı£º0.1%
 model initing...
 Epoch 1/5 started...
-Epoch [1/5], Batch [1/1], Loss: 5.2474
-Epoch 1 completed. Average Loss: 5.2474
+Epoch [1/5], Batch [1/1], Loss: 4.7275
+Epoch 1 completed. Average Loss: 4.7275
 Epoch 2/5 started...
-Epoch [2/5], Batch [1/1], Loss: 111.0760
-Epoch 2 completed. Average Loss: 111.0760
+Epoch [2/5], Batch [1/1], Loss: 44.3072
+Epoch 2 completed. Average Loss: 44.3072
 Epoch 3/5 started...
-Epoch [3/5], Batch [1/1], Loss: 61.3187
-Epoch 3 completed. Average Loss: 61.3187
+Epoch [3/5], Batch [1/1], Loss: 48.0244
+Epoch 3 completed. Average Loss: 48.0244
 Epoch 4/5 started...
-Epoch [4/5], Batch [1/1], Loss: 30.5809
-Epoch 4 completed. Average Loss: 30.5809
+Epoch [4/5], Batch [1/1], Loss: 24.7557
+Epoch 4 completed. Average Loss: 24.7557
 Epoch 5/5 started...
-Epoch [5/5], Batch [1/1], Loss: 12.1532
-Epoch 5 completed. Average Loss: 12.1532
+Epoch [5/5], Batch [1/1], Loss: 10.7945
+Epoch 5 completed. Average Loss: 10.7945
 Model saved to ./data/model/mnist_cnn_test
-Accuracy: 36.16%
-Stackelbergå‡è¡¡ç»“æœï¼š
-ModelOwnerçš„æœ€ä¼˜Eta = 0.0956
-DataOwner1çš„æœ€ä¼˜x_1 = 0.0154
-DataOwner2çš„æœ€ä¼˜x_2 = 0.0152
-DataOwner3çš„æœ€ä¼˜x_3 = 0.0152
-DataOwner4çš„æœ€ä¼˜x_4 = 0.0153
-DataOwner5çš„æœ€ä¼˜x_5 = 0.0153
-ModelOwnerçš„æœ€å¤§æ•ˆç”¨ U(Eta) = -0.0588
----------------------------------- step3 ----------------------------------
-ModelOwnerçš„æœ€ä¼˜æ€»æ”¯ä»˜ï¼š0.09556339512568311
-DataOwner1çš„åˆ†é…åˆ°çš„æ”¯ä»˜ ï¼š 0.0192
-DataOwner2çš„åˆ†é…åˆ°çš„æ”¯ä»˜ ï¼š 0.0190
-DataOwner3çš„åˆ†é…åˆ°çš„æ”¯ä»˜ ï¼š 0.0190
-DataOwner4çš„åˆ†é…åˆ°çš„æ”¯ä»˜ ï¼š 0.0192
-DataOwner5çš„åˆ†é…åˆ°çš„æ”¯ä»˜ ï¼š 0.0191
----------------------------------- step4 ----------------------------------
+³õÊ¼»¯Ä£ĞÍµÄ×¼È·ÂÊ£º
+Accuracy: 51.75%
+DONE
+==================================== literation: 1 ====================================
+---------------------------------- ¼ÆËã DataOwner µÄÊı¾İÖÊÁ¿ ----------------------------------
+DataOwner1: noise random: 0.08506047077688621
+DataOwner2: noise random: 0.0977049460744033
+DataOwner3: noise random: 0.03990932974555154
+DataOwner4: noise random: 0.05202519482581053
+DataOwner5: noise random: 0.026633102073680838
+DataOwner1: Image 1: MSE = 0.0029, SNR = 18.12 dB
+DataOwner2: Image 1: MSE = 0.0041, SNR = 15.68 dB
+DataOwner3: Image 1: MSE = 0.0007, SNR = 25.13 dB
+DataOwner4: Image 1: MSE = 0.0009, SNR = 24.05 dB
+DataOwner5: Image 1: MSE = 0.0003, SNR = 30.51 dB
+DONE
+---------------------------------- ¼ÆËã ModelOwner ×ÜÌåÖ§¸¶ºÍ DataOwners ×îÓÅÊı¾İÁ¿ ----------------------------------
+Stackelberg¾ùºâ½á¹û£º
+ModelOwnerµÄ×îÓÅEta = 0.0956
+DataOwner1µÄ×îÓÅx_1 = 0.0152
+DataOwner2µÄ×îÓÅx_2 = 0.0152
+DataOwner3µÄ×îÓÅx_3 = 0.0153
+DataOwner4µÄ×îÓÅx_4 = 0.0153
+DataOwner5µÄ×îÓÅx_5 = 0.0154
+Ã¿¸öDataOwnerÓ¦¸Ã¹±Ï×Êı¾İ±ÈÀı xn_list = [0.015234647496694727, 0.015182070567814572, 0.015337357142383469, 0.015328613278063617, 0.015357211260620323]
+ModelOwnerµÄ×î´óĞ§ÓÃ U(Eta) = -0.0588
+DONE
+---------------------------------- DataOwner ·ÖÅä ModelOwner µÄÖ§¸¶ ----------------------------------
+ModelOwnerµÄ×îÓÅ×ÜÖ§¸¶£º0.09555070669616049
+DataOwner1µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0190
+DataOwner2µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0189
+DataOwner3µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0192
+DataOwner4µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0192
+DataOwner5µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0192
+DONE
+---------------------------------- Æ¥Åä DataOwner ºÍ CPC ----------------------------------
+{'DataOwner1': 'CPC2', 'DataOwner5': 'CPC1', 'DataOwner2': 'CPC3', 'DataOwner3': 'CPC4', 'DataOwner4': 'CPC5'}
+DONE
+---------------------------------- DataOwner Ïò CPC Ìá½»Êı¾İ ----------------------------------
+DataOwner1 °ÑÊı¾İ½»¸ø CPC2
+DataOwner5 °ÑÊı¾İ½»¸ø CPC1
+DataOwner2 °ÑÊı¾İ½»¸ø CPC3
+DataOwner3 °ÑÊı¾İ½»¸ø CPC4
+DataOwner4 °ÑÊı¾İ½»¸ø CPC5
+DONE
+---------------------------------- Ä£ĞÍÑµÁ· ----------------------------------
+ÕıÔÚÆÀ¹ÀDataOwner1µÄÊı¾İÖÊÁ¿, ±¾ÂÖÆÀ¹ÀµÄÑù±¾Êı¾İÁ¿Îª£º166.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 51.75%
+Epoch 1/5, Loss: 2.2971
+Epoch 2/5, Loss: 2.2957
+Epoch 3/5, Loss: 2.2945
+Epoch 4/5, Loss: 2.2894
+Epoch 5/5, Loss: 2.2919
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 54.68%
+loss²îÎª£º
+0.005205074946085464
+µ¥Î»Êı¾İloss²îÎª£º
+3.135587316918954e-05
+ÕıÔÚÆÀ¹ÀDataOwner5µÄÊı¾İÖÊÁ¿, ±¾ÂÖÆÀ¹ÀµÄÑù±¾Êı¾İÁ¿Îª£º335.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 51.75%
+Epoch 1/5, Loss: 2.2875
+Epoch 2/5, Loss: 2.2877
+Epoch 3/5, Loss: 2.2858
+Epoch 4/5, Loss: 2.2812
+Epoch 5/5, Loss: 2.2769
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 56.59%
+loss²îÎª£º
+0.010656118392944336
+µ¥Î»Êı¾İloss²îÎª£º
+3.180930863565473e-05
+ÕıÔÚÆÀ¹ÀDataOwner2µÄÊı¾İÖÊÁ¿, ±¾ÂÖÆÀ¹ÀµÄÑù±¾Êı¾İÁ¿Îª£º248.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 51.75%
+Epoch 1/5, Loss: 2.2984
+Epoch 2/5, Loss: 2.2961
+Epoch 3/5, Loss: 2.2956
+Epoch 4/5, Loss: 2.2943
+Epoch 5/5, Loss: 2.2928
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 56.27%
+loss²îÎª£º
+0.005581855773925781
+µ¥Î»Êı¾İloss²îÎª£º
+2.250748295937815e-05
+ÕıÔÚÆÀ¹ÀDataOwner3µÄÊı¾İÖÊÁ¿, ±¾ÂÖÆÀ¹ÀµÄÑù±¾Êı¾İÁ¿Îª£º83.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 51.75%
+Epoch 1/5, Loss: 2.3092
+Epoch 2/5, Loss: 2.3266
+Epoch 3/5, Loss: 2.3124
+Epoch 4/5, Loss: 2.3279
+Epoch 5/5, Loss: 2.3030
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 53.49%
+loss²îÎª£º
+0.0061386823654174805
+µ¥Î»Êı¾İloss²îÎª£º
+7.396002849900578e-05
+ÕıÔÚÆÀ¹ÀDataOwner4µÄÊı¾İÖÊÁ¿, ±¾ÂÖÆÀ¹ÀµÄÑù±¾Êı¾İÁ¿Îª£º83.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 51.75%
+Epoch 1/5, Loss: 2.2957
+Epoch 2/5, Loss: 2.2850
+Epoch 3/5, Loss: 2.3079
+Epoch 4/5, Loss: 2.2938
+Epoch 5/5, Loss: 2.2856
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 53.98%
+loss²îÎª£º
+0.01016998291015625
+µ¥Î»Êı¾İloss²îÎª£º
+0.00012252991458019578
+CPC2µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º166.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 51.75%
+Epoch 1/5, Loss: 2.2995
+Epoch 2/5, Loss: 2.2938
+Epoch 3/5, Loss: 2.2942
+Epoch 4/5, Loss: 2.2952
+Epoch 5/5, Loss: 2.2942
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 54.62%
+Model saved to ./data/model/mnist_cnn_test
+CPC1µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º335.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 54.62%
+Epoch 1/5, Loss: 2.2806
+Epoch 2/5, Loss: 2.2767
+Epoch 3/5, Loss: 2.2826
+Epoch 4/5, Loss: 2.2806
+Epoch 5/5, Loss: 2.2671
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 57.43%
+Model saved to ./data/model/mnist_cnn_test
+CPC3µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º248.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 57.43%
+Epoch 1/5, Loss: 2.2854
+Epoch 2/5, Loss: 2.2825
+Epoch 3/5, Loss: 2.2803
+Epoch 4/5, Loss: 2.2779
+Epoch 5/5, Loss: 2.2754
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 58.93%
+Model saved to ./data/model/mnist_cnn_test
+CPC4µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º83.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 58.93%
+Epoch 1/5, Loss: 2.2925
+Epoch 2/5, Loss: 2.2852
+Epoch 3/5, Loss: 2.2841
+Epoch 4/5, Loss: 2.3114
+Epoch 5/5, Loss: 2.2877
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 59.71%
+Model saved to ./data/model/mnist_cnn_test
+CPC5µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º83.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 59.71%
+Epoch 1/5, Loss: 2.2655
+Epoch 2/5, Loss: 2.2643
+Epoch 3/5, Loss: 2.2618
+Epoch 4/5, Loss: 2.2570
+Epoch 5/5, Loss: 2.2515
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 60.09%
+Model saved to ./data/model/mnist_cnn_test
+DONE
+==================================== literation: 2 ====================================
+---------------------------------- ¼ÆËã DataOwner µÄÊı¾İÖÊÁ¿ ----------------------------------
+DONE
+---------------------------------- ¼ÆËã ModelOwner ×ÜÌåÖ§¸¶ºÍ DataOwners ×îÓÅÊı¾İÁ¿ ----------------------------------
+Stackelberg¾ùºâ½á¹û£º
+ModelOwnerµÄ×îÓÅEta = 0.2151
+DataOwner1µÄ×îÓÅx_1 = 0.0031
+DataOwner2µÄ×îÓÅx_2 = -0.1101
+DataOwner3µÄ×îÓÅx_3 = 0.0523
+DataOwner4µÄ×îÓÅx_4 = 0.0406
+DataOwner5µÄ×îÓÅx_5 = 0.0060
+Ã¿¸öDataOwnerÓ¦¸Ã¹±Ï×Êı¾İ±ÈÀı xn_list = [0.0030673928096139496, -0.11013208086488843, 0.05231496087855985, 0.04056112301430683, 0.005958903526665193]
+ModelOwnerµÄ×î´óĞ§ÓÃ U(Eta) = -0.2151
+DONE
+---------------------------------- DataOwner ·ÖÅä ModelOwner µÄÖ§¸¶ ----------------------------------
+ModelOwnerµÄ×îÓÅ×ÜÖ§¸¶£º0.21506954922534027
+DataOwner1µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0031
+DataOwner2µÄ·ÖÅäµ½µÄÖ§¸¶ £º -0.0802
+DataOwner3µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.1252
+DataOwner4µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.1608
+DataOwner5µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0061
+DONE
+---------------------------------- Æ¥Åä DataOwner ºÍ CPC ----------------------------------
 {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5'}
----------------------------------- step5 ----------------------------------
-DataOwner1æŠŠæ•°æ®äº¤ç»™CPC1ï¼Œæœ¬è½®è®­ç»ƒçš„æ•°æ®é‡ä¸ºï¼š48.54ï¼ŒCPC1è°ƒæ•´æ¨¡å‹ä¸­:
+DONE
+---------------------------------- DataOwner Ïò CPC Ìá½»Êı¾İ ----------------------------------
+DataOwner1 °ÑÊı¾İ½»¸ø CPC1
+DataOwner2 °ÑÊı¾İ½»¸ø CPC2
+DataOwner3 °ÑÊı¾İ½»¸ø CPC3
+DataOwner4 °ÑÊı¾İ½»¸ø CPC4
+DataOwner5 °ÑÊı¾İ½»¸ø CPC5
+DONE
+---------------------------------- Ä£ĞÍÑµÁ· ----------------------------------
+CPC1µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º33.00 :
 Model loaded from ./data/model/mnist_cnn_test
-åŸæ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 36.16%
-Epoch 1/5, Loss: 2.2999
-Epoch 2/5, Loss: 2.2972
-Epoch 3/5, Loss: 2.2939
-Epoch 4/5, Loss: 2.2893
-Epoch 5/5, Loss: 2.2824
-æ–°æ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 44.11%
-Model saved to ./data/model/mnist_cnn_test
-DataOwner2æŠŠæ•°æ®äº¤ç»™CPC2ï¼Œæœ¬è½®è®­ç»ƒçš„æ•°æ®é‡ä¸ºï¼š96.02ï¼ŒCPC2è°ƒæ•´æ¨¡å‹ä¸­:
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 60.09%
+Epoch 1/5, Loss: 2.2606
+Epoch 2/5, Loss: 2.2595
+Epoch 3/5, Loss: 2.2584
+Epoch 4/5, Loss: 2.2573
+Epoch 5/5, Loss: 2.2561
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 59.95%
+CPC2µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º0.00 :
+Êı¾İÁ¿Îª0£¬Ìø¹ı´ËÂÖµ÷Õû
+CPC3µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º285.00 :
 Model loaded from ./data/model/mnist_cnn_test
-åŸæ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 44.11%
-Epoch 1/5, Loss: 2.2707
-Epoch 2/5, Loss: 2.2496
-Epoch 3/5, Loss: 2.2187
-Epoch 4/5, Loss: 2.1727
-Epoch 5/5, Loss: 2.1116
-æ–°æ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 52.34%
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 60.09%
+Epoch 1/5, Loss: 2.2513
+Epoch 2/5, Loss: 2.2440
+Epoch 3/5, Loss: 2.2407
+Epoch 4/5, Loss: 2.2339
+Epoch 5/5, Loss: 2.2307
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 61.23%
 Model saved to ./data/model/mnist_cnn_test
-DataOwner3æŠŠæ•°æ®äº¤ç»™CPC3ï¼Œæœ¬è½®è®­ç»ƒçš„æ•°æ®é‡ä¸ºï¼š48.14ï¼ŒCPC3è°ƒæ•´æ¨¡å‹ä¸­:
+CPC4µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º221.00 :
 Model loaded from ./data/model/mnist_cnn_test
-åŸæ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 52.34%
-Epoch 1/5, Loss: 2.0539
-Epoch 2/5, Loss: 2.0241
-Epoch 3/5, Loss: 1.9938
-Epoch 4/5, Loss: 1.9612
-Epoch 5/5, Loss: 1.9261
-æ–°æ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 54.61%
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 61.23%
+Epoch 1/5, Loss: 2.2301
+Epoch 2/5, Loss: 2.2163
+Epoch 3/5, Loss: 2.2198
+Epoch 4/5, Loss: 2.2201
+Epoch 5/5, Loss: 2.2055
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 61.76%
 Model saved to ./data/model/mnist_cnn_test
-DataOwner4æŠŠæ•°æ®äº¤ç»™CPC4ï¼Œæœ¬è½®è®­ç»ƒçš„æ•°æ®é‡ä¸ºï¼š290.74ï¼ŒCPC4è°ƒæ•´æ¨¡å‹ä¸­:
+CPC5µ÷ÕûÄ£ĞÍÖĞ, ±¾ÂÖÑµÁ·µÄÊı¾İÁ¿Îª£º130.00 :
 Model loaded from ./data/model/mnist_cnn_test
-åŸæ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 54.61%
-Epoch 1/5, Loss: 1.8197
-Epoch 2/5, Loss: 1.5878
-Epoch 3/5, Loss: 1.3382
-Epoch 4/5, Loss: 1.1161
-Epoch 5/5, Loss: 0.9377
-æ–°æ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 74.60%
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 61.76%
+Epoch 1/5, Loss: 2.2307
+Epoch 2/5, Loss: 2.1981
+Epoch 3/5, Loss: 2.1925
+Epoch 4/5, Loss: 2.2104
+Epoch 5/5, Loss: 2.2387
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 62.15%
 Model saved to ./data/model/mnist_cnn_test
-DataOwner5æŠŠæ•°æ®äº¤ç»™CPC5ï¼Œæœ¬è½®è®­ç»ƒçš„æ•°æ®é‡ä¸ºï¼š434.66ï¼ŒCPC5è°ƒæ•´æ¨¡å‹ä¸­:
+DONE
+*************************** ÔËĞĞÊ±¼ä£º 2025-01-08 17:56:21 ***************************
+---------------------------------- ¶¨Òå²ÎÊıÖµ ----------------------------------
+DONE
+---------------------------------- ×¼±¸¹¤×÷ ----------------------------------
+³õÊ¼Êı¾İÕ¼MNISTµÄ±ÈÀı£º0.1%
+model initing...
+Epoch 1/5 started...
+Epoch [1/5], Batch [1/1], Loss: 5.5520
+Epoch 1 completed. Average Loss: 5.5520
+Epoch 2/5 started...
+Epoch [2/5], Batch [1/1], Loss: 136.0855
+Epoch 2 completed. Average Loss: 136.0855
+Epoch 3/5 started...
+Epoch [3/5], Batch [1/1], Loss: 103.1615
+Epoch 3 completed. Average Loss: 103.1615
+Epoch 4/5 started...
+Epoch [4/5], Batch [1/1], Loss: 40.0451
+Epoch 4 completed. Average Loss: 40.0451
+Epoch 5/5 started...
+Epoch [5/5], Batch [1/1], Loss: 16.9913
+Epoch 5 completed. Average Loss: 16.9913
+Model saved to ./data/model/mnist_cnn_test
+³õÊ¼»¯Ä£ĞÍµÄ×¼È·ÂÊ£º
+Accuracy: 23.40%
+DONE
+==================================== literation: 1 ====================================
+---------------------------------- ¼ÆËã DataOwner µÄÊı¾İÖÊÁ¿ ----------------------------------
+DataOwner1: noise random: 0.09628292081820797
+DataOwner2: noise random: 0.005729557444264677
+DataOwner3: noise random: 0.07836725650100165
+DataOwner4: noise random: 0.00036977016367335526
+DataOwner5: noise random: 0.05842988436646211
+DataOwner1: Image 1: MSE = 0.0039, SNR = 16.11 dB
+DataOwner2: Image 1: MSE = 0.0000, SNR = 43.75 dB
+DataOwner3: Image 1: MSE = 0.0020, SNR = 20.40 dB
+DataOwner4: Image 1: MSE = 0.0000, SNR = 62.86 dB
+DataOwner5: Image 1: MSE = 0.0014, SNR = 21.80 dB
+DONE
+---------------------------------- ¼ÆËã ModelOwner ×ÜÌåÖ§¸¶ºÍ DataOwners ×îÓÅÊı¾İÁ¿ ----------------------------------
+Stackelberg¾ùºâ½á¹û£º
+ModelOwnerµÄ×îÓÅEta = 0.0961
+DataOwner1µÄ×îÓÅx_1 = 0.0153
+DataOwner2µÄ×îÓÅx_2 = 0.0154
+DataOwner3µÄ×îÓÅx_3 = 0.0153
+DataOwner4µÄ×îÓÅx_4 = 0.0154
+DataOwner5µÄ×îÓÅx_5 = 0.0154
+Ã¿¸öDataOwnerÓ¦¸Ã¹±Ï×Êı¾İ±ÈÀı xn_list = [0.015254284943297376, 0.015435910163984976, 0.015342167489021074, 0.0154364250398169, 0.015372137780047397]
+ModelOwnerµÄ×î´óĞ§ÓÃ U(Eta) = -0.0591
+DONE
+---------------------------------- DataOwner ·ÖÅä ModelOwner µÄÖ§¸¶ ----------------------------------
+ModelOwnerµÄ×îÓÅ×ÜÖ§¸¶£º0.09605198312436691
+DataOwner1µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0190
+DataOwner2µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0193
+DataOwner3µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0192
+DataOwner4µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0193
+DataOwner5µÄ·ÖÅäµ½µÄÖ§¸¶ £º 0.0192
+DONE
+---------------------------------- Æ¥Åä DataOwner ºÍ CPC ----------------------------------
+{'DataOwner1': 'CPC2', 'DataOwner2': 'CPC1', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5'}
+DONE
+---------------------------------- DataOwner Ïò CPC Ìá½»Êı¾İ ----------------------------------
+DataOwner1 °ÑÊı¾İ½»¸ø CPC2
+DataOwner2 °ÑÊı¾İ½»¸ø CPC1
+DataOwner3 °ÑÊı¾İ½»¸ø CPC3
+DataOwner4 °ÑÊı¾İ½»¸ø CPC4
+DataOwner5 °ÑÊı¾İ½»¸ø CPC5
+DONE
+---------------------------------- Ä£ĞÍÑµÁ· ----------------------------------
+ÕıÔÚÆÀ¹ÀDataOwner1µÄÊı¾İÖÊÁ¿, ±¾ÂÖÆÀ¹ÀµÄÑù±¾Êı¾İÁ¿Îª£º281.00 :
 Model loaded from ./data/model/mnist_cnn_test
-åŸæ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 74.60%
-Epoch 1/5, Loss: 0.8172
-Epoch 2/5, Loss: 0.6871
-Epoch 3/5, Loss: 0.6006
-Epoch 4/5, Loss: 0.5399
-Epoch 5/5, Loss: 0.4958
-æ–°æ¨¡å‹è¯„ä¼°ï¼š
-Accuracy: 75.50%
-Model saved to ./data/model/mnist_cnn_test
----------------------------------- step6 ----------------------------------
----------------------------------- step7 ----------------------------------
-
-Process finished with exit code 0
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 23.40%
+Epoch 1/5, Loss: 2.2966
+Epoch 2/5, Loss: 2.2964
+Epoch 3/5, Loss: 2.2978
+Epoch 4/5, Loss: 2.2905
+Epoch 5/5, Loss: 2.2937
+ĞÂÄ£ĞÍÆÀ¹À£º
+Accuracy: 24.39%
+loss²îÎª£º
+0.0029191493988038886
+µ¥Î»Êı¾İloss²îÎª£º
+1.0388432024213126e-05
+ÕıÔÚÆÀ¹ÀDataOwner2µÄÊı¾İÖÊÁ¿, ±¾ÂÖÆÀ¹ÀµÄÑù±¾Êı¾İÁ¿Îª£º71.00 :
+Model loaded from ./data/model/mnist_cnn_test
+Ô­Ä£ĞÍÆÀ¹À£º
+Accuracy: 23.40%
+Epoch 1/5, Loss: 2.3019
+Epoch 2/5, Loss: 2.3164
+Epoch 3/5, Loss: 2.3105
+Epoch 4/5, Loss: 2.3095
+Epoch 5/5, Loss: 2.2975
+ĞÂÄ£ĞÍÆÀ¹À£º

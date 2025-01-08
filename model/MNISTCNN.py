@@ -7,6 +7,7 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 
 from dataset.MNISTDataset import MNISTDataset
+from utils.UtilsMNIST import UtilsMNIST
 
 
 class MNISTCNN(nn.Module):
@@ -56,7 +57,7 @@ class MNISTCNN(nn.Module):
 
         for epoch in range(num_epochs):
             running_loss = 0.0
-            print(f"Epoch {epoch + 1}/{num_epochs} started...")  # 打印每个epoch的开始
+            UtilsMNIST.print_and_log(f"Epoch {epoch + 1}/{num_epochs} started...")  # 打印每个epoch的开始
 
             for batch_idx, (inputs, labels) in enumerate(train_loader):
                 inputs, labels = inputs.to(device), labels.to(device)
@@ -75,11 +76,11 @@ class MNISTCNN(nn.Module):
 
                 # 每 100 个 batch 输出一次损失
                 if batch_idx % 100 == 0:
-                    print(
+                    UtilsMNIST.print_and_log(
                         f"Epoch [{epoch + 1}/{num_epochs}], Batch [{batch_idx + 1}/{len(train_loader)}], Loss: {loss.item():.4f}")
 
             # 每个 epoch 结束时输出平均损失
-            print(f"Epoch {epoch + 1} completed. Average Loss: {running_loss / len(train_loader):.4f}")
+            UtilsMNIST.print_and_log(f"Epoch {epoch + 1} completed. Average Loss: {running_loss / len(train_loader):.4f}")
 
         # 保存最终模型
         self.save_model(model_save_path)
@@ -106,7 +107,7 @@ class MNISTCNN(nn.Module):
                 correct += (predicted == labels).sum().item()
 
         accuracy = correct / total
-        print(f"Accuracy: {accuracy * 100:.2f}%")
+        UtilsMNIST.print_and_log(f"Accuracy: {accuracy * 100:.2f}%")
         return accuracy
 
     def save_model(self, file_path):
@@ -115,7 +116,7 @@ class MNISTCNN(nn.Module):
         :param file_path: 保存模型的文件路径
         """
         torch.save(self.state_dict(), file_path)
-        print(f"Model saved to {file_path}")
+        UtilsMNIST.print_and_log(f"Model saved to {file_path}")
 
     def load_model(self, file_path):
         """
@@ -124,7 +125,7 @@ class MNISTCNN(nn.Module):
         """
         self.load_state_dict(torch.load(file_path))
         self.eval()
-        print(f"Model loaded from {file_path}")
+        UtilsMNIST.print_and_log(f"Model loaded from {file_path}")
 
 
 # 使用minist数据集，训练cnn
@@ -188,7 +189,7 @@ def fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu'
     model.load_model(model_path)  # 加载先前保存的模型
 
     # 评估模型
-    print("原模型评估：")
+    UtilsMNIST.print_and_log("原模型评估：")
     ori_accuracy = model.evaluate(test_loader, device=str(device))
 
     # 定义损失函数和优化器
@@ -219,16 +220,90 @@ def fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu'
             # 累加损失
             running_loss += loss.item()
 
-        print(f"Epoch {epoch + 1}/{num_epochs}, Loss: {running_loss / len(train_loader):.4f}")
+        UtilsMNIST.print_and_log(f"Epoch {epoch + 1}/{num_epochs}, Loss: {running_loss / len(train_loader):.4f}")
+
+    # 如果效果比原模型好，就更新原模型
+    UtilsMNIST.print_and_log("新模型评估：")
+    new_accuracy = model.evaluate(test_loader, device=str(device))
+    if new_accuracy > ori_accuracy:
+        model.save_model(model_path)
+
+    return model
+
+
+# 微调整个网络
+def fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5, device='cpu', lr=1e-5, model_path=None):
+    """
+    微调整个网络，但是不更新模型，用于计算数据质量
+    :param model: 已训练的CNN模型
+    :param train_loader: 训练数据加载器，其中包含数据
+    :param criterion: 损失函数
+    :param optimizer: 优化器
+    :param num_epochs: 训练的轮数
+    :param device: 计算设备 ('cpu' 或 'cuda')
+    :param lr: 微调时的学习率
+    :param model_save_path: 保存模型的路径，默认不保存
+    :return: 微调后的模型
+    """
+
+    # 将模型移动到指定设备
+    model.to(device)
+
+    # 加载预训练模型权重（如果有保存的模型）
+    model.load_model(model_path)  # 加载先前保存的模型
+
+    # 评估模型
+    UtilsMNIST.print_and_log("原模型评估：")
+    model.evaluate(test_loader, device=str(device))
+
+    # 定义损失函数和优化器
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+    # 设置新的学习率（如果需要微调时设置更小的学习率）
+    for param_group in optimizer.param_groups:
+        param_group['lr'] = lr
+
+    # 开始训练
+    model.train()  # 设置模型为训练模式
+
+    for epoch in range(num_epochs):
+        running_loss = 0.0
+        for inputs, labels in train_loader:
+            inputs, labels = inputs.to(device), labels.to(device)
+
+            # 前向传播
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
+
+            # 反向传播
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
+            # 累加损失
+            running_loss += loss.item()
+
+        UtilsMNIST.print_and_log(f"Epoch {epoch + 1}/{num_epochs}, Loss: {running_loss / len(train_loader):.4f}")
+
+        # 记录loss，用于计算loss差
+        if epoch == 0:
+            first_epoch_loss = running_loss / len(train_loader)
+
+        if epoch == num_epochs - 1:
+            last_epoch_loss = running_loss / len(train_loader)
 
     # # 如果指定了模型保存路径，保存微调后的模型
     # if model_save_path:
     #     model.save_model(model_save_path)
 
     # 如果效果比原模型好，就更新原模型
-    print("新模型评估：")
-    new_accuracy = model.evaluate(test_loader, device=str(device))
-    if new_accuracy > ori_accuracy:
-        model.save_model(model_path)
+    UtilsMNIST.print_and_log("新模型评估：")
+    model.evaluate(test_loader, device=str(device))
+    UtilsMNIST.print_and_log("loss差为：")
+    UtilsMNIST.print_and_log(first_epoch_loss - last_epoch_loss)
+    UtilsMNIST.print_and_log("单位数据loss差为：")
+    diffloss = (first_epoch_loss - last_epoch_loss) / len(train_loader.dataset)
+    UtilsMNIST.print_and_log(diffloss)
 
-    return model
+    return diffloss
