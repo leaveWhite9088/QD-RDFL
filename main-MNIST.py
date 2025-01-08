@@ -108,8 +108,8 @@ def init_model(rate):
     return model
 
 
-# ModelOwner发布任务， DataOwner计算数据质量
-def evaluate_data_quality(dataowners, literation, rate, avg_f_list, printTimes):
+# ModelOwner发布任务， DataOwner计算数据质量（Dataowner自己计算）
+def evaluate_data_quality(dataowners, rate, printTimes):
     """
     加噪声，模拟DataOwner的数据不好的情况
     :param dataowners:
@@ -119,40 +119,39 @@ def evaluate_data_quality(dataowners, literation, rate, avg_f_list, printTimes):
     :return:
     """
 
-    if literation == 0:
-        # 第一次训练时：添加噪声，以1-MSE为fn
-        for i, do in enumerate(dataowners):
-            random_num = random.random() / int(1.0 / rate)
-            UtilsMNIST.add_noise(do, severity=random_num)
-            UtilsMNIST.print_and_log(f"DataOwner{i + 1}: noise random: {random_num}")
+    # 第一次训练时：添加噪声，以1-MSE为fn
+    for i, do in enumerate(dataowners):
+        random_num = random.random() / int(1.0 / rate)
+        UtilsMNIST.add_noise(do, severity=random_num)
+        UtilsMNIST.print_and_log(f"DataOwner{i + 1}: noise random: {random_num}")
 
-        # 评价数据质量
-        for i, do in enumerate(dataowners):
+    # 评价数据质量
+    for i, do in enumerate(dataowners):
 
-            mse_scores = UtilsMNIST.evaluate_quality(do, metric="mse")
-            snr_scores = UtilsMNIST.evaluate_quality(do, metric="snr")
+        mse_scores = UtilsMNIST.evaluate_quality(do, metric="mse")
+        snr_scores = UtilsMNIST.evaluate_quality(do, metric="snr")
 
-            # 输出每张图像的质量得分
-            cnt = 0
-            avg_f = 0
-            for j, (mse, snr) in enumerate(zip(mse_scores, snr_scores)):
-                UtilsMNIST.print_and_log(f"DataOwner{i + 1}: Image {j + 1}: MSE = {mse:.4f}, SNR = {snr:.2f} dB")
-                cnt += 1
-                avg_f += mse
-                if cnt >= printTimes:
-                    break
-            avg_f /= printTimes
-            avg_f_list.append(1 - avg_f)
+        # 输出每张图像的质量得分
+        cnt = 0
+        avg_f = 0
+        for j, (mse, snr) in enumerate(zip(mse_scores, snr_scores)):
+            UtilsMNIST.print_and_log(f"DataOwner{i + 1}: Image {j + 1}: MSE = {mse:.4f}, SNR = {snr:.2f} dB")
+            cnt += 1
+            avg_f += mse
+            if cnt >= printTimes:
+                break
+        avg_f /= printTimes
+        avg_f_list.append(1 - avg_f)
 
-        return avg_f_list
+    UtilsMNIST.print_and_log("DataOwners自行评估数据质量：")
+    UtilsMNIST.print_and_log(f"数据质量列表avg_f_list: {avg_f_list}")
+    UtilsMNIST.print_and_log(f"归一化后的数据质量列表avg_f_list: {UtilsMNIST.normalize_list(avg_f_list)}")
 
-    if literation >= 1:
-        # 第二次的avg_f_list应该就是上一轮的loss差，所以这里直接返回
-        return avg_f_list
+    return UtilsMNIST.normalize_list(avg_f_list)
 
 
 # ModelOwner计算模型总体支付，DataOwner确定提供的最优数据量
-def calculate_optimal_payment_and_data(avg_f_list):
+def calculate_optimal_payment_and_data(avg_f_list, last_xn_list):
     """
     ModelOwner计算模型总体支付，DataOwner确定提供的最优数据量
     :param avg_f_list:
@@ -170,7 +169,7 @@ def calculate_optimal_payment_and_data(avg_f_list):
     UtilsMNIST.print_and_log(f"每个DataOwner应该贡献数据比例 xn_list = {xn_list}")
     UtilsMNIST.print_and_log(f"ModelOwner的最大效用 U(Eta) = {U_opt:.4f}")
 
-    return xn_list, eta_opt
+    return UtilsMNIST.compare_elements(xn_list, last_xn_list), eta_opt
 
 
 # DataOwner结合自身数据质量来算模型贡献，分配ModelOwner的支付
@@ -233,7 +232,7 @@ def submit_data_to_cpc(matching, dataowners, cpcs, xn_list):
 
 
 # 使用CPC进行模型训练和全局模型的更新
-def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list):
+def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list, adjustment_literation):
     """
     使用CPC进行模型训练和全局模型的更新
     :param matching:
@@ -245,8 +244,9 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
     :return: 第二轮要使用的fn的列表
     """
 
-    # 第一次训练的时候要评估数据质量
-    if literation == 0:
+    # 指定轮次的时候要评估数据质量, 其余轮次直接训练即可
+    if literation == adjustment_literation:
+        UtilsMNIST.print_and_log("重新调整fn，进而调整xn、Eta")
         avg_f_list = [0] * N
         for item in matching.items():
             dataowner_match = re.search(r'\d+$', item[0])
@@ -272,58 +272,30 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
                                                        lr=1e-5, model_path="./data/model/mnist_cnn_test")
             avg_f_list[dataowner_index] = diffloss
 
-        for item in matching.items():
-            dataowner_match = re.search(r'\d+$', item[0])
-            dataowner_index = int(dataowner_match.group()) - 1
-            cpc_match = re.search(r'\d+$', item[1])
-            cpc_index = int(cpc_match.group()) - 1
+    for item in matching.items():
+        dataowner_match = re.search(r'\d+$', item[0])
+        dataowner_index = int(dataowner_match.group()) - 1
+        cpc_match = re.search(r'\d+$', item[1])
+        cpc_index = int(cpc_match.group()) - 1
 
-            UtilsMNIST.print_and_log(
-                f"{item[1]}调整模型中, 本轮训练的数据量为：{len(cpcs[cpc_index].imgData) :.2f} :")
-            if len(cpcs[cpc_index].imgData) == 0:
-                UtilsMNIST.print_and_log("数据量为0，跳过此轮调整")
-                continue
+        UtilsMNIST.print_and_log(
+            f"{item[1]}调整模型中, 本轮训练的数据量为：{len(cpcs[cpc_index].imgData) :.2f} :")
+        if len(cpcs[cpc_index].imgData) == 0:
+            UtilsMNIST.print_and_log("数据量为0，跳过此轮调整")
+            continue
 
-            train_loader = UtilsMNIST.create_data_loader(cpcs[cpc_index].imgData, cpcs[cpc_index].labelData,
-                                                         batch_size=64, shuffle=True)
-            test_loader = UtilsMNIST.create_data_loader(test_images, test_labels, batch_size=64, shuffle=False)
+        train_loader = UtilsMNIST.create_data_loader(cpcs[cpc_index].imgData, cpcs[cpc_index].labelData,
+                                                     batch_size=64, shuffle=True)
+        test_loader = UtilsMNIST.create_data_loader(test_images, test_labels, batch_size=64, shuffle=False)
 
-            # 创建CNN模型
-            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            model = MNISTCNN(num_classes=10).to(device)
+        # 创建CNN模型
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        model = MNISTCNN(num_classes=10).to(device)
 
-            fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu',
-                            lr=1e-5, model_path="./data/model/mnist_cnn_test")
+        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu',
+                        lr=1e-5, model_path="./data/model/mnist_cnn_test")
 
-        return avg_f_list
-
-    # 第二次直接训练即可
-    if literation >= 1:
-        for item in matching.items():
-            dataowner_match = re.search(r'\d+$', item[0])
-            dataowner_index = int(dataowner_match.group()) - 1
-            cpc_match = re.search(r'\d+$', item[1])
-            cpc_index = int(cpc_match.group()) - 1
-
-            UtilsMNIST.print_and_log(
-                f"{item[1]}调整模型中, 本轮训练的数据量为：{len(cpcs[cpc_index].imgData) :.2f} :")
-            if len(cpcs[cpc_index].imgData) == 0:
-                UtilsMNIST.print_and_log("数据量为0，跳过此轮调整")
-                continue
-
-            train_loader = UtilsMNIST.create_data_loader(cpcs[cpc_index].imgData, cpcs[cpc_index].labelData,
-                                                         batch_size=64, shuffle=True)
-            test_loader = UtilsMNIST.create_data_loader(test_images, test_labels, batch_size=64, shuffle=False)
-
-            # 创建CNN模型
-            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            model = MNISTCNN(num_classes=10).to(device)
-
-            fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu',
-                            lr=1e-5, model_path="./data/model/mnist_cnn_test")
-
-        # 不需要调整，直接返回即可
-        return avg_f_list
+    return UtilsMNIST.normalize_list(avg_f_list)
 
 
 if __name__ == "__main__":
@@ -339,40 +311,43 @@ if __name__ == "__main__":
     UtilsMNIST.print_and_log("DONE")
 
     literation = 0  # 迭代次数
+    adjustment_literation = 5  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
     avg_f_list = []
+    last_xn_list = [0] * N
     while True:
-        UtilsMNIST.print_and_log(
-            f"==================================== literation: {literation + 1} ====================================")
+        UtilsMNIST.print_and_log(f"========================= literation: {literation + 1} =========================")
+
+        # DataOwner自己报数据质量的机会只有一次
+        if literation == 0:
+            UtilsMNIST.print_and_log(f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
+            avg_f_list = evaluate_data_quality(dataowners, 0.1, 1)
+            UtilsMNIST.print_and_log("DONE")
 
         UtilsMNIST.print_and_log(
-            "---------------------------------- 计算 DataOwner 的数据质量 ----------------------------------")
-        avg_f_list = evaluate_data_quality(dataowners, literation, 0.1, avg_f_list, 1)
+            f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
+        xn_list, best_Eta = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
+        last_xn_list = xn_list
         UtilsMNIST.print_and_log("DONE")
 
-        UtilsMNIST.print_and_log(
-            "---------------------------------- 计算 ModelOwner 总体支付和 DataOwners 最优数据量 ----------------------------------")
-        xn_list, best_Eta = calculate_optimal_payment_and_data(avg_f_list)
-        UtilsMNIST.print_and_log("DONE")
-
-        UtilsMNIST.print_and_log(
-            "---------------------------------- DataOwner 分配 ModelOwner 的支付 ----------------------------------")
+        UtilsMNIST.print_and_log(f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
         compute_contribution_rates(xn_list, avg_f_list, best_Eta)
         UtilsMNIST.print_and_log("DONE")
 
-        UtilsMNIST.print_and_log(
-            "---------------------------------- 匹配 DataOwner 和 CPC ----------------------------------")
-        matching = match_data_owners_to_cpc(xn_list, cpcs)
-        UtilsMNIST.print_and_log("DONE")
+        # 一旦匹配成功，就无法改变
+        if literation == 0:
+            UtilsMNIST.print_and_log(f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
+            matching = match_data_owners_to_cpc(xn_list, cpcs)
+            UtilsMNIST.print_and_log("DONE")
 
-        UtilsMNIST.print_and_log(
-            "---------------------------------- DataOwner 向 CPC 提交数据 ----------------------------------")
+        UtilsMNIST.print_and_log(f"----- literation {literation + 1}: DataOwner 向 CPC 提交数据 -----")
         submit_data_to_cpc(matching, dataowners, cpcs, xn_list)
         UtilsMNIST.print_and_log("DONE")
 
-        UtilsMNIST.print_and_log("---------------------------------- 模型训练 ----------------------------------")
-        avg_f_list = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list)
+        UtilsMNIST.print_and_log(f"----- literation {literation + 1}: 模型训练 -----")
+        avg_f_list = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list,
+                                          adjustment_literation)
         UtilsMNIST.print_and_log("DONE")
 
         literation += 1
-        if literation >= 2:
+        if literation >= 10:
             break
