@@ -339,7 +339,7 @@ if __name__ == "__main__":
 
         UtilsMNIST.print_and_log(global_min_parent_path,
                                  "---------------------------------- 定义参数值 ----------------------------------")
-        Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Alpha=5, N=n + 1)
+        Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Alpha=5, M=n + 1, N=n + 1, SigmaM=[1] * (n + 1))
         UtilsMNIST.print_and_log(global_min_parent_path, "DONE")
 
         UtilsMNIST.print_and_log(global_min_parent_path,
@@ -402,10 +402,10 @@ if __name__ == "__main__":
 
             literation += 1
             if literation > adjustment_literation + 1:
-                UtilsMNIST.print_and_log(global_min_parent_path,f"U_Eta_list: {U_Eta_list}")
-                UtilsMNIST.print_and_log(global_min_parent_path,f"U_qn_list: {U_qn_list}")
+                UtilsMNIST.print_and_log(global_min_parent_path, f"U_Eta_list: {U_Eta_list}")
+                UtilsMNIST.print_and_log(global_min_parent_path, f"U_qn_list: {U_qn_list}")
                 break
 
-    UtilsMNIST.print_and_log(global_min_parent_path,"最终的列表：")
-    UtilsMNIST.print_and_log(global_min_parent_path,f"U_Eta_list: {U_Eta_list}")
-    UtilsMNIST.print_and_log(global_min_parent_path,f"U_qn_list: {U_qn_list}")
+    UtilsMNIST.print_and_log(global_min_parent_path, "最终的列表：")
+    UtilsMNIST.print_and_log(global_min_parent_path, f"U_Eta_list: {U_Eta_list}")
+    UtilsMNIST.print_and_log(global_min_parent_path, f"U_qn_list: {U_qn_list}")
