@@ -43,7 +43,7 @@ class MNISTCNN(nn.Module):
         return x
 
     def train_model(self, train_loader, criterion, optimizer, num_epochs=5, device='cpu',
-                    model_save_path="../data/model/mnist_cnn"):
+                    model_save_path=None):
         """
         训练模型并保存最终模型
         :param train_loader: 训练数据加载器
@@ -83,8 +83,9 @@ class MNISTCNN(nn.Module):
             # 每个 epoch 结束时输出平均损失
             UtilsMNIST.print_and_log(global_min_parent_path,f"Epoch {epoch + 1} completed. Average Loss: {running_loss / len(train_loader):.4f}")
 
-        # 保存最终模型
-        self.save_model(model_save_path)
+        if model_save_path is not None:
+            # 保存最终模型
+            self.save_model(model_save_path)
 
     def evaluate(self, test_loader, device='cpu'):
         """
