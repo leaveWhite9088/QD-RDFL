@@ -356,7 +356,7 @@ class UtilsMNIST:
 
     # 定义一个函数，用于同时打印到控制台和文件
     @staticmethod
-    def print_and_log(message):
+    def print_and_log(min_parent_path, message):
         # 获取当前文件的绝对路径
         current_file_path = os.path.abspath(__file__)
 
@@ -367,7 +367,7 @@ class UtilsMNIST:
         project_root = os.path.dirname(current_dir)
 
         # 构建日志文件的完整路径
-        log_file_path = os.path.join(project_root, 'data', 'log', 'log-MNIST.txt')
+        log_file_path = os.path.join(project_root, 'data', 'log', min_parent_path,'log-MNIST.txt')
 
         # 打开一个文件用于追加写入
         with open(log_file_path, 'a') as f:
@@ -397,7 +397,7 @@ class UtilsMNIST:
         if max_val == min_val:  # 如果所有元素都相同，直接返回全1列表
             return [1] * len(lst)
 
-        normalized_lst = [0.5 + 0.5 * ((x - min_val) / (max_val - min_val)) for x in lst]
+        normalized_lst = [0.9 + 0.1 * ((x - min_val) / (max_val - min_val)) for x in lst]
         return normalized_lst
 
     # 取两个list中较大的元素
