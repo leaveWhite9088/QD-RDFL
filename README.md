@@ -1,3 +1,3 @@
 # QD-RDFL
 
-Quality-aware Dynamic Resources-decoupled FL
+Quality-aware Dynamic Resources-decoupled FL 
