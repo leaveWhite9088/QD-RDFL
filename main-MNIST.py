@@ -13,6 +13,7 @@ import torch.nn as nn
 import torch.optim as optim
 import re
 from datetime import datetime
+import os
 
 # 在MNISTCNN里也要修改
 global_min_parent_path = "log-main"
@@ -100,10 +101,16 @@ def init_model(rate):
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-    # 训练模型
-    model_save_path = "./data/model/mnist_cnn_test"
-    model.train_model(train_loader, criterion, optimizer, num_epochs=5, device=str(device),
-                      model_save_path=model_save_path)
+    # 如果不存在初始化模型，就训练模型，如果存在，就加载到model中
+    model_save_path = "./data/model/initial/mnist_cnn_initial_model"
+    if os.path.exists(model_save_path):
+        print(f"{model_save_path} 存在，加载初始化模型")
+        model.load_model(model_save_path)
+        model.save_model("./data/model/mnist_cnn_model")
+    else:
+        print(f"{model_save_path} 不存在，初始化模型")
+        model.train_model(train_loader, criterion, optimizer, num_epochs=5, device=str(device),
+                          model_save_path=model_save_path)
 
     UtilsMNIST.print_and_log(global_min_parent_path, "初始化模型的准确率：")
     model.evaluate(test_loader, device=str(device))
@@ -279,7 +286,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
 
             unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
                                                                device='cpu',
-                                                               lr=1e-5, model_path="./data/model/mnist_cnn_test")
+                                                               lr=1e-5, model_path="./data/model/mnist_cnn_model")
             avg_f_list[dataowner_index] = unitDataLossDiff
 
         UtilsMNIST.print_and_log(global_min_parent_path, "经过服务器调节后的真实数据质量：")
@@ -308,7 +315,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         model = MNISTCNN(num_classes=10).to(device)
 
         fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu',
-                        lr=1e-5, model_path="./data/model/mnist_cnn_test")
+                        lr=1e-5, model_path="./data/model/mnist_cnn_model")
 
     return UtilsMNIST.normalize_list(avg_f_list)
 

@@ -50,7 +50,7 @@ class Stackelberg:
     @staticmethod
     def find_stackelberg_equilibrium(alpha, fn, lambda_, rho):
         # 定义优化范围，根据领导者效用函数，eta >=0
-        bounds = (0, 100)  # 根据具体情况调整上界
+        bounds = (0, 1000)  # 根据具体情况调整上界
 
         # 使用 minimize_scalar 进行一维优化
         res = minimize_scalar(

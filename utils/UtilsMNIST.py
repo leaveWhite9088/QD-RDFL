@@ -367,7 +367,7 @@ class UtilsMNIST:
         project_root = os.path.dirname(current_dir)
 
         # 构建日志文件的完整路径
-        log_file_path = os.path.join(project_root, 'data', 'log', min_parent_path,'log-MNIST.txt')
+        log_file_path = os.path.join(project_root, 'data', 'log', min_parent_path,f'{min_parent_path}-MNIST.txt')
 
         # 打开一个文件用于追加写入
         with open(log_file_path, 'a') as f:
