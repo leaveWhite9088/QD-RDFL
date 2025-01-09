@@ -1,1 +1,3 @@
-# Data_Assetization
+# QD-RDFL
+
+Quality-aware Dynamic Resources-decoupled FL
