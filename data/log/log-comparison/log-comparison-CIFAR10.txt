@@ -1,0 +1,968 @@
+**** log-comparison 运行时间： 2025-01-15 20:27:59 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+**** log-comparison 运行时间： 2025-01-15 20:30:35 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../data/model/initial/cifar10_cnn_initial_model 不存在，初始化模型
+Epoch 1/20 started...
+Epoch [1/20], Batch [1/4], Loss: 2.3029
+Epoch 1 completed. Average Loss: 2.3579
+Epoch 2/20 started...
+Epoch [2/20], Batch [1/4], Loss: 2.2798
+Epoch 2 completed. Average Loss: 2.2797
+Epoch 3/20 started...
+Epoch [3/20], Batch [1/4], Loss: 2.1922
+Epoch 3 completed. Average Loss: 2.1893
+Epoch 4/20 started...
+Epoch [4/20], Batch [1/4], Loss: 2.1023
+Epoch 4 completed. Average Loss: 2.0586
+Epoch 5/20 started...
+Epoch [5/20], Batch [1/4], Loss: 1.8833
+Epoch 5 completed. Average Loss: 1.9619
+Epoch 6/20 started...
+Epoch [6/20], Batch [1/4], Loss: 1.9471
+Epoch 6 completed. Average Loss: 1.9446
+Epoch 7/20 started...
+Epoch [7/20], Batch [1/4], Loss: 1.8452
+Epoch 7 completed. Average Loss: 1.8711
+Epoch 8/20 started...
+Epoch [8/20], Batch [1/4], Loss: 1.7422
+Epoch 8 completed. Average Loss: 1.7770
+Epoch 9/20 started...
+Epoch [9/20], Batch [1/4], Loss: 1.6169
+Epoch 9 completed. Average Loss: 1.6739
+Epoch 10/20 started...
+Epoch [10/20], Batch [1/4], Loss: 1.6526
+Epoch 10 completed. Average Loss: 1.5881
+Epoch 11/20 started...
+Epoch [11/20], Batch [1/4], Loss: 1.4689
+Epoch 11 completed. Average Loss: 1.4753
+Epoch 12/20 started...
+Epoch [12/20], Batch [1/4], Loss: 1.3254
+Epoch 12 completed. Average Loss: 1.3300
+Epoch 13/20 started...
+Epoch [13/20], Batch [1/4], Loss: 1.1760
+Epoch 13 completed. Average Loss: 1.2002
+Epoch 14/20 started...
+Epoch [14/20], Batch [1/4], Loss: 1.0993
+Epoch 14 completed. Average Loss: 1.1500
+Epoch 15/20 started...
+Epoch [15/20], Batch [1/4], Loss: 1.0386
+Epoch 15 completed. Average Loss: 1.0070
+Epoch 16/20 started...
+Epoch [16/20], Batch [1/4], Loss: 0.8452
+Epoch 16 completed. Average Loss: 0.8724
+Epoch 17/20 started...
+Epoch [17/20], Batch [1/4], Loss: 0.7627
+Epoch 17 completed. Average Loss: 0.7687
+Epoch 18/20 started...
+Epoch [18/20], Batch [1/4], Loss: 0.6775
+Epoch 18 completed. Average Loss: 0.6050
+Epoch 19/20 started...
+Epoch [19/20], Batch [1/4], Loss: 0.5491
+Epoch 19 completed. Average Loss: 0.5001
+Epoch 20/20 started...
+Epoch [20/20], Batch [1/4], Loss: 0.3343
+Epoch 20 completed. Average Loss: 0.3926
+Model saved to ../../data/model/initial/cifar10_cnn_initial_model
+初始化模型的准确率：
+Accuracy: 31.79%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.09817187389968618
+DataOwner2: noise random: 0.05068492574862299
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9910268923288524, 0.9975199562806191]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+**** log-comparison 运行时间： 2025-01-15 20:33:06 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../data/model/initial/cifar10_cnn_initial_model 存在，加载初始化模型
+Model loaded from ../../data/model/initial/cifar10_cnn_initial_model
+Model saved to ../../data/model/cifar10_cnn_model
+初始化模型的准确率：
+Accuracy: 31.79%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.08212519043580307
+DataOwner2: noise random: 0.05999407057294566
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9936337839219355, 0.9965497590221106]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 1: 模型训练 -----
+**** log-comparison 运行时间： 2025-01-15 20:34:36 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../data/model/initial/cifar10_cnn_initial_model 存在，加载初始化模型
+Model loaded from ../../data/model/initial/cifar10_cnn_initial_model
+Model saved to ../../data/model/cifar10_cnn_model
+初始化模型的准确率：
+Accuracy: 31.79%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.01724653171259216
+DataOwner2: noise random: 0.07319277280855806
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9997074203338069, 0.9949073669237708]
+归一化后的数据质量列表avg_f_list: [1.0, 0.9]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.2047
+DataOwner2的分配到的支付 ： 0.1842
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 1: 模型训练 -----
+CPC1 调整模型中, 本轮训练的数据量为：4101 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Accuracy: 31.80%
+**** log-comparison 运行时间： 2025-01-15 20:45:54 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../data/model/initial/cifar10_cnn_initial_model 存在，加载初始化模型
+Model loaded from ../../data/model/initial/cifar10_cnn_initial_model
+Model saved to ../../data/model/cifar10_cnn_model
+初始化模型的准确率：
+Loss: 2.9232, Accuracy: 31.79%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.08185337210191786
+DataOwner2: noise random: 0.03543431202097848
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9936775842267558, 0.9987774299796021]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 1: 模型训练 -----
+CPC1 调整模型中, 本轮训练的数据量为：2423 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.6858
+Epoch 2/5, Loss: 2.3694
+Epoch 3/5, Loss: 2.2153
+Epoch 4/5, Loss: 2.0964
+Epoch 5/5, Loss: 2.0007
+新模型评估：
+Loss: 2.0144, Accuracy: 37.15%
+loss 差为：
+2.6858044862747192 - 2.00065489191758 = 0.6851
+单位数据 loss 差为：0.000283
+CPC2 调整模型中, 本轮训练的数据量为：2423 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.5964
+Epoch 2/5, Loss: 2.2996
+Epoch 3/5, Loss: 2.1491
+Epoch 4/5, Loss: 2.0330
+Epoch 5/5, Loss: 1.9416
+新模型评估：
+Loss: 1.9984, Accuracy: 37.98%
+loss 差为：
+2.596432946230236 - 1.9416457634223134 = 0.6548
+单位数据 loss 差为：0.000270
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：2423 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.6797
+Epoch 2/5, Loss: 2.3866
+Epoch 3/5, Loss: 2.2324
+Epoch 4/5, Loss: 2.1140
+Epoch 5/5, Loss: 2.0227
+新模型评估：
+Loss: 2.0025, Accuracy: 37.10%
+loss 差为：
+2.679737869061922 - 2.0227450853899906 = 0.6570
+单位数据 loss 差为：0.000271
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：2423 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.6197
+Epoch 2/5, Loss: 2.3293
+Epoch 3/5, Loss: 2.1859
+Epoch 4/5, Loss: 2.0785
+Epoch 5/5, Loss: 1.9901
+新模型评估：
+Loss: 2.0063, Accuracy: 37.13%
+loss 差为：
+2.6197061570067155 - 1.9901216437942104 = 0.6296
+单位数据 loss 差为：0.000260
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [0.0002711484868641895, 0.0002598367780489084]
+归一化后的数据质量列表avg_f_list:[1.0, 0.9]
+CPC1 调整模型中, 本轮训练的数据量为：2423 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.6758
+Epoch 2/5, Loss: 2.3918
+Epoch 3/5, Loss: 2.2390
+Epoch 4/5, Loss: 2.1193
+Epoch 5/5, Loss: 2.0279
+新模型评估：
+Loss: 2.0073, Accuracy: 37.08%
+loss 差为：
+2.675834972607462 - 2.0279463341361597 = 0.6479
+单位数据 loss 差为：0.000267
+CPC2 调整模型中, 本轮训练的数据量为：2423 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.6275
+**** log-comparison 运行时间： 2025-01-15 20:53:25 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../data/model/initial/cifar10_cnn_initial_model 存在，加载初始化模型
+Model loaded from ../../data/model/initial/cifar10_cnn_initial_model
+Model saved to ../../data/model/cifar10_cnn_model
+初始化模型的准确率：
+Loss: 2.9232, Accuracy: 31.79%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.011053683790610381
+DataOwner2: noise random: 0.0702590643702527
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9998793859554508, 0.9953020962815348]
+归一化后的数据质量列表avg_f_list: [1.0, 0.9]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.2047
+DataOwner2的分配到的支付 ： 0.1842
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 1: 模型训练 -----
+CPC1 调整模型中, 本轮训练的数据量为：3808 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.5427
+Epoch 2/5, Loss: 2.2331
+Epoch 3/5, Loss: 2.0691
+Epoch 4/5, Loss: 1.9508
+Epoch 5/5, Loss: 1.8622
+新模型评估：
+Loss: 1.8464, Accuracy: 38.11%
+CPC2 调整模型中, 本轮训练的数据量为：1038 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.9426
+Epoch 2/5, Loss: 2.6773
+Epoch 3/5, Loss: 2.4767
+Epoch 4/5, Loss: 2.4058
+Epoch 5/5, Loss: 2.3305
+新模型评估：
+Loss: 2.2750, Accuracy: 35.79%
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.2047
+DataOwner2的分配到的支付 ： 0.1842
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：3808 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+**** log-comparison 运行时间： 2025-01-15 20:57:45 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../data/model/initial/cifar10_cnn_initial_model 存在，加载初始化模型
+Model loaded from ../../data/model/initial/cifar10_cnn_initial_model
+Model saved to ../../data/model/cifar10_cnn_model
+初始化模型的准确率：
+Loss: 2.9232, Accuracy: 31.79%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.015119225198343189
+DataOwner2: noise random: 0.00516261653221738
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9997749254632631, 0.9999735917477703]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 1: 模型训练 -----
+CPC1 调整模型中, 本轮训练的数据量为：2908 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.5788
+Epoch 2/5, Loss: 2.2944
+Epoch 3/5, Loss: 2.1347
+Epoch 4/5, Loss: 2.0187
+Epoch 5/5, Loss: 1.9286
+新模型评估：
+Loss: 1.9229, Accuracy: 37.93%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC2 调整模型中, 本轮训练的数据量为：1939 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.9229, Accuracy: 37.93%
+Epoch 1/5, Loss: 1.9037
+Epoch 2/5, Loss: 1.8366
+Epoch 3/5, Loss: 1.7842
+Epoch 4/5, Loss: 1.7462
+Epoch 5/5, Loss: 1.7349
+新模型评估：
+Loss: 1.7468, Accuracy: 39.38%
+Model saved to ../../data/model/cifar10_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：2908 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.7468, Accuracy: 39.38%
+Epoch 1/5, Loss: 1.7232
+Epoch 2/5, Loss: 1.6896
+Epoch 3/5, Loss: 1.6609
+Epoch 4/5, Loss: 1.6380
+Epoch 5/5, Loss: 1.6250
+新模型评估：
+Loss: 1.6494, Accuracy: 41.53%
+loss 差为：
+1.7232063179430754 - 1.625000282474186 = 0.0982
+单位数据 loss 差为：0.000034
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：1939 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.7468, Accuracy: 39.38%
+Epoch 1/5, Loss: 1.6922
+Epoch 2/5, Loss: 1.6779
+Epoch 3/5, Loss: 1.6543
+Epoch 4/5, Loss: 1.6378
+Epoch 5/5, Loss: 1.6172
+新模型评估：
+Loss: 1.6694, Accuracy: 41.11%
+loss 差为：
+1.692177991713247 - 1.617243432229565 = 0.0749
+单位数据 loss 差为：0.000039
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [3.3770988813235695e-05, 3.864598219890762e-05]
+归一化后的数据质量列表avg_f_list:[0.9, 1.0]
+CPC1 调整模型中, 本轮训练的数据量为：2908 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.7468, Accuracy: 39.38%
+Epoch 1/5, Loss: 1.7201
+Epoch 2/5, Loss: 1.6810
+Epoch 3/5, Loss: 1.6603
+Epoch 4/5, Loss: 1.6367
+Epoch 5/5, Loss: 1.6239
+新模型评估：
+Loss: 1.6488, Accuracy: 41.54%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC2 调整模型中, 本轮训练的数据量为：1939 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.6488, Accuracy: 41.54%
+Epoch 1/5, Loss: 1.6034
+Epoch 2/5, Loss: 1.5865
+Epoch 3/5, Loss: 1.5711
+Epoch 4/5, Loss: 1.5667
+Epoch 5/5, Loss: 1.5508
+新模型评估：
+Loss: 1.6097, Accuracy: 42.44%
+Model saved to ../../data/model/cifar10_cnn_model
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 3: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 3: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 3: 模型训练 -----
+CPC1 调整模型中, 本轮训练的数据量为：2908 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.6097, Accuracy: 42.44%
+Epoch 1/5, Loss: 1.6128
+Epoch 2/5, Loss: 1.5915
+Epoch 3/5, Loss: 1.5792
+Epoch 4/5, Loss: 1.5654
+Epoch 5/5, Loss: 1.5529
+新模型评估：
+Loss: 1.5699, Accuracy: 43.66%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC2 调整模型中, 本轮训练的数据量为：1939 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.5699, Accuracy: 43.66%
+Epoch 1/5, Loss: 1.5513
+Epoch 2/5, Loss: 1.5369
+Epoch 3/5, Loss: 1.5343
+Epoch 4/5, Loss: 1.5208
+Epoch 5/5, Loss: 1.5032
+新模型评估：
+Loss: 1.5525, Accuracy: 44.02%
+Model saved to ../../data/model/cifar10_cnn_model
+DONE
+U_Eta_list: [0.03380193622101457]
+U_qn_list: [0.09749147610231525]
+========================= 客户端数量: 3 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../data/model/initial/cifar10_cnn_initial_model 存在，加载初始化模型
+Model loaded from ../../data/model/initial/cifar10_cnn_initial_model
+Model saved to ../../data/model/cifar10_cnn_model
+初始化模型的准确率：
+Loss: 2.9232, Accuracy: 31.79%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.09346724070165863
+DataOwner2: noise random: 0.07663353675766583
+DataOwner3: noise random: 0.08590952150221746
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9918339610328284, 0.9944328806548178, 0.9930644619162553]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0, 0.9473466310006533]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.9167
+DataOwner1的最优x_1 = 0.1919
+DataOwner2的最优x_2 = 0.2133
+DataOwner3的最优x_3 = 0.2037
+每个DataOwner应该贡献数据比例 xn_list = [0.1918533496046056, 0.2132947383987225, 0.2036978787143139]
+ModelOwner的最大效用 U(Eta) = 0.2252
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.9167
+DataOwner1的分配到的支付 ： 0.2734
+DataOwner2的分配到的支付 ： 0.3377
+DataOwner3的分配到的支付 ： 0.3055
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DONE
+----- literation 1: 模型训练 -----
+CPC1 调整模型中, 本轮训练的数据量为：4196 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.5978
+Epoch 2/5, Loss: 2.2405
+Epoch 3/5, Loss: 2.0528
+Epoch 4/5, Loss: 1.9288
+Epoch 5/5, Loss: 1.8447
+新模型评估：
+Loss: 1.8241, Accuracy: 38.13%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC2 调整模型中, 本轮训练的数据量为：3999 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.8241, Accuracy: 38.13%
+Epoch 1/5, Loss: 1.7744
+Epoch 2/5, Loss: 1.7181
+Epoch 3/5, Loss: 1.6842
+Epoch 4/5, Loss: 1.6610
+Epoch 5/5, Loss: 1.6351
+新模型评估：
+Loss: 1.6503, Accuracy: 41.39%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC3 调整模型中, 本轮训练的数据量为：1909 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.6503, Accuracy: 41.39%
+Epoch 1/5, Loss: 1.6465
+Epoch 2/5, Loss: 1.6270
+Epoch 3/5, Loss: 1.6130
+Epoch 4/5, Loss: 1.5989
+Epoch 5/5, Loss: 1.5894
+新模型评估：
+Loss: 1.6188, Accuracy: 42.23%
+Model saved to ../../data/model/cifar10_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.9167
+DataOwner1的最优x_1 = 0.1919
+DataOwner2的最优x_2 = 0.2133
+DataOwner3的最优x_3 = 0.2037
+每个DataOwner应该贡献数据比例 xn_list = [0.1918533496046056, 0.2132947383987225, 0.2036978787143139]
+ModelOwner的最大效用 U(Eta) = 0.2252
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.9167
+DataOwner1的分配到的支付 ： 0.2734
+DataOwner2的分配到的支付 ： 0.3377
+DataOwner3的分配到的支付 ： 0.3055
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：4196 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.6188, Accuracy: 42.23%
+Epoch 1/5, Loss: 1.6220
+Epoch 2/5, Loss: 1.6014
+Epoch 3/5, Loss: 1.5854
+Epoch 4/5, Loss: 1.5694
+Epoch 5/5, Loss: 1.5587
+新模型评估：
+Loss: 1.5714, Accuracy: 43.49%
+loss 差为：
+1.6220195817224907 - 1.5587090163519888 = 0.0633
+单位数据 loss 差为：0.000015
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：3999 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.6188, Accuracy: 42.23%
+Epoch 1/5, Loss: 1.6146
+Epoch 2/5, Loss: 1.5961
+Epoch 3/5, Loss: 1.5788
+Epoch 4/5, Loss: 1.5609
+Epoch 5/5, Loss: 1.5456
+新模型评估：
+Loss: 1.5640, Accuracy: 43.64%
+loss 差为：
+1.614615862331693 - 1.5455823001407443 = 0.0690
+单位数据 loss 差为：0.000017
+正在评估DataOwner3的数据质量, 本轮评估的样本数据量为：1909 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.6188, Accuracy: 42.23%
+Epoch 1/5, Loss: 1.5700
+Epoch 2/5, Loss: 1.5549
+Epoch 3/5, Loss: 1.5448
+Epoch 4/5, Loss: 1.5370
+Epoch 5/5, Loss: 1.5271
+新模型评估：
+Loss: 1.6030, Accuracy: 42.75%
+loss 差为：
+1.5699581742286681 - 1.5270836671193442 = 0.0429
+单位数据 loss 差为：0.000022
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [1.508831395865156e-05, 1.7262706224293274e-05, 2.2459144635580903e-05]
+归一化后的数据质量列表avg_f_list:[0.9, 0.9294999622287832, 1.0]
+CPC1 调整模型中, 本轮训练的数据量为：4196 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.6188, Accuracy: 42.23%
+Epoch 1/5, Loss: 1.6249
+Epoch 2/5, Loss: 1.6012
+Epoch 3/5, Loss: 1.5874
+Epoch 4/5, Loss: 1.5712
+Epoch 5/5, Loss: 1.5597
+新模型评估：
+Loss: 1.5664, Accuracy: 43.78%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC2 调整模型中, 本轮训练的数据量为：3999 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.5664, Accuracy: 43.78%
+Epoch 1/5, Loss: 1.5646
+Epoch 2/5, Loss: 1.5468
+Epoch 3/5, Loss: 1.5353
+Epoch 4/5, Loss: 1.5195
+Epoch 5/5, Loss: 1.5138
+新模型评估：
+Loss: 1.5318, Accuracy: 44.37%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC3 调整模型中, 本轮训练的数据量为：1909 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.5318, Accuracy: 44.37%
+Epoch 1/5, Loss: 1.5035
+Epoch 2/5, Loss: 1.4908
+Epoch 3/5, Loss: 1.4808
+Epoch 4/5, Loss: 1.4748
+Epoch 5/5, Loss: 1.4683
+新模型评估：
+Loss: 1.5269, Accuracy: 44.99%
+Model saved to ../../data/model/cifar10_cnn_model
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.9065
+DataOwner1的最优x_1 = 0.1913
+DataOwner2的最优x_2 = 0.1988
+DataOwner3的最优x_3 = 0.2119
+每个DataOwner应该贡献数据比例 xn_list = [0.19134672423960772, 0.19881843497151344, 0.2118802495503109]
+ModelOwner的最大效用 U(Eta) = 0.2194
+DONE
+----- literation 3: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.9065
+DataOwner1的分配到的支付 ： 0.2686
+DataOwner2的分配到的支付 ： 0.3084
+DataOwner3的分配到的支付 ： 0.3296
+DONE
+----- literation 3: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DONE
+----- literation 3: 模型训练 -----
+CPC1 调整模型中, 本轮训练的数据量为：4196 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.5269, Accuracy: 44.99%
+Epoch 1/5, Loss: 1.5359
+Epoch 2/5, Loss: 1.5201
+Epoch 3/5, Loss: 1.5092
+Epoch 4/5, Loss: 1.4993
+Epoch 5/5, Loss: 1.4885
+新模型评估：
+Loss: 1.5008, Accuracy: 45.61%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC2 调整模型中, 本轮训练的数据量为：3999 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.5008, Accuracy: 45.61%
+Epoch 1/5, Loss: 1.5073
+Epoch 2/5, Loss: 1.4965
+Epoch 3/5, Loss: 1.4868
+Epoch 4/5, Loss: 1.4770
+Epoch 5/5, Loss: 1.4718
+新模型评估：
+Loss: 1.4746, Accuracy: 46.58%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC3 调整模型中, 本轮训练的数据量为：1986 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 1.4746, Accuracy: 46.58%
+Epoch 1/5, Loss: 1.4814
+Epoch 2/5, Loss: 1.4563
+Epoch 3/5, Loss: 1.4579
+Epoch 4/5, Loss: 1.4370
+Epoch 5/5, Loss: 1.4243
+新模型评估：
+Loss: 1.4691, Accuracy: 46.57%
+DONE
+U_Eta_list: [0.03380193622101457, 0.21940652968252994]
+U_qn_list: [0.09749147610231525, 0.10149179643683559]
+========================= 客户端数量: 4 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../data/model/initial/cifar10_cnn_initial_model 存在，加载初始化模型
+Model loaded from ../../data/model/initial/cifar10_cnn_initial_model
+Model saved to ../../data/model/cifar10_cnn_model
+初始化模型的准确率：
+Loss: 2.9232, Accuracy: 31.79%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.05245520433120981
+DataOwner2: noise random: 0.06665136078053407
+DataOwner3: noise random: 0.07948627575094727
+DataOwner4: noise random: 0.04718390608203271
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9973464937047277, 0.9957610519402144, 0.9940278399509062, 0.9978465376374565]
+归一化后的数据质量列表avg_f_list: [0.9869053804785354, 0.9453875151052855, 0.9, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.1060
+DataOwner1的最优x_1 = 0.2196
+DataOwner2的最优x_2 = 0.2024
+DataOwner3的最优x_3 = 0.1789
+DataOwner4的最优x_4 = 0.2242
+每个DataOwner应该贡献数据比例 xn_list = [0.21957308450795146, 0.20242918357819858, 0.17890741224636506, 0.22424873239700924]
+ModelOwner的最大效用 U(Eta) = 0.3542
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.1060
+DataOwner1的分配到的支付 ： 0.3021
+DataOwner2的分配到的支付 ： 0.2668
+DataOwner3的分配到的支付 ： 0.2245
+DataOwner4的分配到的支付 ： 0.3126
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DONE
+----- literation 1: 模型训练 -----
+CPC1 调整模型中, 本轮训练的数据量为：1568 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.8935, Accuracy: 31.80%
+Epoch 1/5, Loss: 2.6796
+Epoch 2/5, Loss: 2.4433
+Epoch 3/5, Loss: 2.3285
+Epoch 4/5, Loss: 2.2292
+Epoch 5/5, Loss: 2.1313
+新模型评估：
+Loss: 2.1480, Accuracy: 36.82%
+Model saved to ../../data/model/cifar10_cnn_model
+CPC2 调整模型中, 本轮训练的数据量为：5783 :
+Model loaded from ../../data/model/cifar10_cnn_model
+加载预训练模型来自 ../../data/model/cifar10_cnn_model
+原模型评估：
+Loss: 2.1480, Accuracy: 36.82%
+Epoch 1/5, Loss: 2.0384
+Epoch 2/5, Loss: 1.8554
