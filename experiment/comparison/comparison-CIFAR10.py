@@ -117,6 +117,7 @@ def init_model():
         UtilsCIFAR10.print_and_log(global_cifar_parent_path, f"{model_save_path} 不存在，初始化模型")
         model.train_model(train_loader, criterion, optimizer, num_epochs=20, device=str(device),
                           model_save_path=model_save_path)
+        model.save_model("../../data/model/cifar10_cnn_model")
 
     # 加载完整的训练数据进行评估
     test_loader = UtilsCIFAR10.create_data_loader(train_data, train_labels, batch_size=128, shuffle=False)  # 使用全部数据进行测试
@@ -374,7 +375,7 @@ if __name__ == "__main__":
     U_qn_list = []
 
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 101):
+    for n in [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]:
         UtilsCIFAR10.print_and_log(global_cifar_parent_path,
                                    f"========================= 客户端数量: {n + 1} =========================")
 

@@ -111,6 +111,7 @@ def init_model(rate):
         print(f"{model_save_path} 不存在，初始化模型")
         model.train_model(train_loader, criterion, optimizer, num_epochs=5, device=str(device),
                           model_save_path=model_save_path)
+        model.save_model("../../data/model/mnist_cnn_model")
 
     UtilsMNIST.print_and_log(global_min_parent_path, "初始化模型的准确率：")
     model.evaluate(test_loader, device=str(device))
@@ -333,7 +334,7 @@ if __name__ == "__main__":
     U_qn_list = []
 
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 101):
+    for n in [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]:
         UtilsMNIST.print_and_log(global_min_parent_path,
                                  f"========================= 客户端数量: {n + 1} =========================")
 
