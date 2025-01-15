@@ -15,7 +15,7 @@ from datetime import datetime
 import os
 
 # 全局日志路径调整为CIFAR100
-global_cifar_parent_path = "log-comparison-cifar100"
+global_cifar_parent_path = "log-comparison"
 
 
 # 定义参数值
@@ -77,7 +77,7 @@ def init_model():
     UtilsCIFAR100.print_and_log(global_cifar_parent_path, "初始化模型中...")
 
     # 假设初始比例为1% (rate=0.01)
-    rate = 0.01
+    rate = 0.1
     UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"初始数据占CIFAR100的比例：{rate * 100}%")
 
     # 加载CIFAR100数据集
@@ -116,6 +116,7 @@ def init_model():
         UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"{model_save_path} 不存在，初始化模型")
         model.train_model(train_loader, criterion, optimizer, num_epochs=20, device=str(device),
                           model_save_path=model_save_path)
+        model.save_model("../../data/model/cifar100_cnn_model")
 
     # 加载完整的训练数据进行评估
     test_loader = UtilsCIFAR100.create_data_loader(train_data, train_labels, batch_size=128,
@@ -175,15 +176,11 @@ def evaluate_data_quality(dataowners):
 
 
 # ModelOwner计算模型总体支付，DataOwner确定提供的最优数据量
-def calculate_optimal_payment_and_data(avg_f_list, last_xn_list, Alpha, Lambda, Rho, N):
+def calculate_optimal_payment_and_data(avg_f_list, last_xn_list):
     """
     ModelOwner计算模型总体支付，DataOwner确定提供的最优数据量
     :param avg_f_list: 数据质量列表
     :param last_xn_list: 上一次的x_n列表
-    :param Alpha: 模型质量调整参数
-    :param Lambda: 市场调整因子
-    :param Rho: 单位数据训练费用
-    :param N: DataOwner的数量
     :return: xn_list, eta_opt, U_Eta, U_qn
     """
     # 利用Stackelberg算法，求ModelOwner的支付，DataOwner提供的最优数据量
@@ -232,7 +229,7 @@ def compute_contribution_rates(xn_list, avg_f_list, best_Eta):
 
 
 # 匹配DataOwner和CPC
-def match_data_owners_to_cpc(xn_list, cpcs, Rho, SigmaM):
+def match_data_owners_to_cpc(xn_list, cpcs):
     """
     匹配DataOwner和CPC
     :param xn_list: DataOwner的贡献比例列表
@@ -242,7 +239,7 @@ def match_data_owners_to_cpc(xn_list, cpcs, Rho, SigmaM):
     :return: matching
     """
     preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho)
-    proposals = GaleShapley.make_proposals(SigmaM, len(xn_list))
+    proposals = GaleShapley.make_proposals(SigmaM, N)
 
     # 调用Gale-Shapley算法
     matching = GaleShapley.gale_shapley(proposals, preferences)
@@ -377,7 +374,7 @@ if __name__ == "__main__":
     U_qn_list = []
 
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 101):
+    for n in [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]:
         UtilsCIFAR100.print_and_log(global_cifar_parent_path,
                                     f"========================= 客户端数量: {n + 1} =========================")
 
@@ -415,8 +412,7 @@ if __name__ == "__main__":
 
             UtilsCIFAR100.print_and_log(global_cifar_parent_path,
                                         f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
-            xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list, Alpha, Lambda,
-                                                                                Rho, N)
+            xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
             last_xn_list = xn_list
 
             # 只有在调整轮次之后的轮次才记录
@@ -434,7 +430,7 @@ if __name__ == "__main__":
             if literation == 0:
                 UtilsCIFAR100.print_and_log(global_cifar_parent_path,
                                             f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                matching = match_data_owners_to_cpc(xn_list, cpcs, Rho, cpcs[0].SigmaM)  # 确保传递正确的参数
+                matching = match_data_owners_to_cpc(xn_list, cpcs)  # 确保传递正确的参数
                 UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
 
             UtilsCIFAR100.print_and_log(global_cifar_parent_path,
