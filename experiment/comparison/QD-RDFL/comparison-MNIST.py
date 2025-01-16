@@ -37,10 +37,10 @@ def define_parameters(Lambda=1, Rho=1, Alpha=1, Epsilon=1, N=5, M=5, SigmaM=[1, 
 
 # 为联邦学习任务做准备工作
 def ready_for_task():
-    train_images_path = "../../data/dataset/MNIST/train-images.idx3-ubyte"
-    train_labels_path = "../../data/dataset/MNIST/train-labels.idx1-ubyte"
-    test_images_path = "../../data/dataset/MNIST/t10k-images.idx3-ubyte"
-    test_labels_path = "../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
+    train_images_path = "../../../data/dataset/MNIST/train-images.idx3-ubyte"
+    train_labels_path = "../../../data/dataset/MNIST/train-labels.idx1-ubyte"
+    test_images_path = "../../../data/dataset/MNIST/t10k-images.idx3-ubyte"
+    test_labels_path = "../../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
 
     # 加载训练数据和测试数据
     train_images, train_labels = UtilsMNIST.load_mnist_dataset(train_images_path, train_labels_path)
@@ -71,10 +71,10 @@ def init_model(rate):
     UtilsMNIST.print_and_log(global_min_parent_path, f"初始数据占MNIST的比例：{rate * 100}%")
     UtilsMNIST.print_and_log(global_min_parent_path, "model initing...")
 
-    train_images_path = "../../data/dataset/MNIST/train-images.idx3-ubyte"
-    train_labels_path = "../../data/dataset/MNIST/train-labels.idx1-ubyte"
-    test_images_path = "../../data/dataset/MNIST/t10k-images.idx3-ubyte"
-    test_labels_path = "../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
+    train_images_path = "../../../data/dataset/MNIST/train-images.idx3-ubyte"
+    train_labels_path = "../../../data/dataset/MNIST/train-labels.idx1-ubyte"
+    test_images_path = "../../../data/dataset/MNIST/t10k-images.idx3-ubyte"
+    test_labels_path = "../../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
 
     # 加载训练数据和测试数据
     train_images, train_labels = UtilsMNIST.load_mnist_dataset(train_images_path, train_labels_path)
@@ -102,16 +102,16 @@ def init_model(rate):
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # 如果不存在初始化模型，就训练模型，如果存在，就加载到model中
-    model_save_path = "../../data/model/initial/mnist_cnn_initial_model"
+    model_save_path = "../../../data/model/initial/mnist_cnn_initial_model"
     if os.path.exists(model_save_path):
         print(f"{model_save_path} 存在，加载初始化模型")
         model.load_model(model_save_path)
-        model.save_model("../../data/model/mnist_cnn_model")
+        model.save_model("../../../data/model/mnist_cnn_model")
     else:
         print(f"{model_save_path} 不存在，初始化模型")
         model.train_model(train_loader, criterion, optimizer, num_epochs=5, device=str(device),
                           model_save_path=model_save_path)
-        model.save_model("../../data/model/mnist_cnn_model")
+        model.save_model("../../../data/model/mnist_cnn_model")
 
     UtilsMNIST.print_and_log(global_min_parent_path, "初始化模型的准确率：")
     model.evaluate(test_loader, device=str(device))
@@ -291,7 +291,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
 
             unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
                                                                device='cpu',
-                                                               lr=1e-5, model_path="../../data/model/mnist_cnn_model")
+                                                               lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
             avg_f_list[dataowner_index] = unitDataLossDiff
 
         UtilsMNIST.print_and_log(global_min_parent_path, "经过服务器调节后的真实数据质量：")
@@ -320,7 +320,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         model = MNISTCNN(num_classes=10).to(device)
 
         fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu',
-                        lr=1e-5, model_path="../../data/model/mnist_cnn_model")
+                        lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
 
     return UtilsMNIST.normalize_list(avg_f_list)
 

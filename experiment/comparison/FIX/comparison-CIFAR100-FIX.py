@@ -81,7 +81,7 @@ def init_model():
     UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"初始数据占CIFAR100的比例：{rate * 100}%")
 
     # 加载CIFAR100数据集
-    data_dir = "../../data/dataset/CIFAR100"  # CIFAR100批处理文件所在目录
+    data_dir = "../../../data/dataset/CIFAR100"  # CIFAR100批处理文件所在目录
     train_data, train_labels, _, _ = UtilsCIFAR100.load_cifar100_dataset(data_dir)
 
     # 获取图像数量
@@ -107,16 +107,16 @@ def init_model():
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # 如果不存在初始化模型，就训练模型，如果存在，就加载到model中
-    model_save_path = "../../data/model/initial/cifar100_cnn_initial_model"
+    model_save_path = "../../../data/model/initial/cifar100_cnn_initial_model"
     if os.path.exists(model_save_path):
         UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"{model_save_path} 存在，加载初始化模型")
         model.load_model(model_save_path)
-        model.save_model("../../data/model/cifar100_cnn_model")
+        model.save_model("../../../data/model/cifar100_cnn_model")
     else:
         UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"{model_save_path} 不存在，初始化模型")
         model.train_model(train_loader, criterion, optimizer, num_epochs=20, device=str(device),
                           model_save_path=model_save_path)
-        model.save_model("../../data/model/cifar100_cnn_model")
+        model.save_model("../../../data/model/cifar100_cnn_model")
 
     # 加载完整的训练数据进行评估
     test_loader = UtilsCIFAR100.create_data_loader(train_data, train_labels, batch_size=128,
@@ -322,7 +322,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
 
             unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
                                                                device=device, lr=1e-5,
-                                                               model_path="../../data/model/cifar100_cnn_model")
+                                                               model_path="../../../data/model/cifar100_cnn_model")
             avg_f_list[dataowner_index] = unitDataLossDiff
 
         UtilsCIFAR100.print_and_log(global_cifar_parent_path, "经过服务器调节后的真实数据质量：")
@@ -357,14 +357,14 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         model = CIFAR100CNN(num_classes=100).to(device)
 
         fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=device, lr=1e-5,
-                        model_path="../../data/model/cifar100_cnn_model")
+                        model_path="../../../data/model/cifar100_cnn_model")
 
     return UtilsCIFAR100.normalize_list(avg_f_list)
 
 
 if __name__ == "__main__":
     UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                f"**** {global_cifar_parent_path}-RANDOM 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
+                                f"**** {global_cifar_parent_path}-FIX 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
 
     # 记录第 adjustment_literation+1 轮的 U(Eta) 和 U(qn)/N
     U_Eta_list = []
@@ -382,7 +382,7 @@ if __name__ == "__main__":
 
         UtilsCIFAR100.print_and_log(global_cifar_parent_path,
                                     "---------------------------------- 准备工作 ----------------------------------")
-        data_dir = "../../data/dataset/CIFAR100"  # CIFAR100批处理文件所在目录
+        data_dir = "../../../data/dataset/CIFAR100"  # CIFAR100批处理文件所在目录
         dataowners, modelowner, cpcs, test_data, test_labels = ready_for_task(Lambda, Rho, Alpha, Epsilon, N, M, SigmaM,
                                                                               data_dir)
         UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
@@ -414,19 +414,19 @@ if __name__ == "__main__":
         last_xn_list = xn_list
 
         UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                 f"----- literation {literation + 1}: 随机Eta -----")
-        random_Eta = random.uniform(0.5, 1) * best_Eta
-        random_x_opt = Stackelberg._solve_followers(random_Eta, np.array(avg_f_list), Lambda, Rho)
-        random_xn_list = []
-        for i, xi in enumerate(random_x_opt):
-            UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"RANDOM: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
-            random_xn_list.append(xi)
-        random_U_Eta = Stackelberg._leader_utility(random_Eta, Alpha, avg_f_list, random_xn_list)
-        random_U_qn = (random_Eta - Lambda * Rho * (sum(xn_list))) / N
+                                 f"----- literation {literation + 1}: 固定Eta -----")
+        fix_Eta = 1
+        fix_x_opt = Stackelberg._solve_followers(fix_Eta, np.array(avg_f_list), Lambda, Rho)
+        fix_xn_list = []
+        for i, xi in enumerate(fix_x_opt):
+            UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"FIX: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
+            fix_xn_list.append(xi)
+        fix_U_Eta = Stackelberg._leader_utility(fix_Eta, Alpha, avg_f_list, fix_xn_list)
+        fix_U_qn = (fix_Eta - Lambda * Rho * (sum(xn_list))) / N
 
         # 记录
-        U_Eta_list.append(random_U_Eta)
-        U_qn_list.append(random_U_qn)
+        U_Eta_list.append(fix_U_Eta)
+        U_qn_list.append(fix_U_qn)
         UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
 
         UtilsCIFAR100.print_and_log(global_cifar_parent_path,

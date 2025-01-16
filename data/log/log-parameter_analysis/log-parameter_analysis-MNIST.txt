@@ -591,3 +591,17 @@ Model loaded from ../../data/model/initial/mnist_cnn_initial_model
 Model saved to ../../data/model/mnist_cnn_model
 Model loaded from ../../data/model/initial/mnist_cnn_initial_model
 Model saved to ../../data/model/mnist_cnn_model
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
