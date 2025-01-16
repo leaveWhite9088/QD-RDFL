@@ -9,8 +9,7 @@ import os
 
 from dataset.CIFAR10Dataset import CIFAR10Dataset
 from utils.UtilsCIFAR10 import UtilsCIFAR10
-
-global_cifar10_parent_path = "log-comparison"
+from global_varible import global_cifar10_parent_path
 
 class CIFAR10CNN(nn.Module):
     def __init__(self, num_classes=10):

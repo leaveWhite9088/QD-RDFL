@@ -8,8 +8,7 @@ from torchvision import transforms
 
 from dataset.MNISTDataset import MNISTDataset
 from utils.UtilsMNIST import UtilsMNIST
-
-global_min_parent_path = "log-parameter_analysis"
+from global_varible import global_minst_parent_path
 
 class MNISTCNN(nn.Module):
     def __init__(self, num_classes=10):
@@ -58,7 +57,7 @@ class MNISTCNN(nn.Module):
 
         for epoch in range(num_epochs):
             running_loss = 0.0
-            UtilsMNIST.print_and_log(global_min_parent_path,f"Epoch {epoch + 1}/{num_epochs} started...")  # 打印每个epoch的开始
+            UtilsMNIST.print_and_log(global_minst_parent_path,f"Epoch {epoch + 1}/{num_epochs} started...")  # 打印每个epoch的开始
 
             for batch_idx, (inputs, labels) in enumerate(train_loader):
                 inputs, labels = inputs.to(device), labels.to(device)
@@ -77,11 +76,11 @@ class MNISTCNN(nn.Module):
 
                 # 每 100 个 batch 输出一次损失
                 if batch_idx % 100 == 0:
-                    UtilsMNIST.print_and_log(global_min_parent_path,
+                    UtilsMNIST.print_and_log(global_minst_parent_path,
                         f"Epoch [{epoch + 1}/{num_epochs}], Batch [{batch_idx + 1}/{len(train_loader)}], Loss: {loss.item():.4f}")
 
             # 每个 epoch 结束时输出平均损失
-            UtilsMNIST.print_and_log(global_min_parent_path,f"Epoch {epoch + 1} completed. Average Loss: {running_loss / len(train_loader):.4f}")
+            UtilsMNIST.print_and_log(global_minst_parent_path,f"Epoch {epoch + 1} completed. Average Loss: {running_loss / len(train_loader):.4f}")
 
         if model_save_path is not None:
             # 保存最终模型
@@ -109,7 +108,7 @@ class MNISTCNN(nn.Module):
                 correct += (predicted == labels).sum().item()
 
         accuracy = correct / total
-        UtilsMNIST.print_and_log(global_min_parent_path,f"Accuracy: {accuracy * 100:.2f}%")
+        UtilsMNIST.print_and_log(global_minst_parent_path,f"Accuracy: {accuracy * 100:.2f}%")
         return accuracy
 
     def save_model(self, file_path):
@@ -118,7 +117,7 @@ class MNISTCNN(nn.Module):
         :param file_path: 保存模型的文件路径
         """
         torch.save(self.state_dict(), file_path)
-        UtilsMNIST.print_and_log(global_min_parent_path,f"Model saved to {file_path}")
+        UtilsMNIST.print_and_log(global_minst_parent_path,f"Model saved to {file_path}")
 
     def load_model(self, file_path):
         """
@@ -127,7 +126,7 @@ class MNISTCNN(nn.Module):
         """
         self.load_state_dict(torch.load(file_path))
         self.eval()
-        UtilsMNIST.print_and_log(global_min_parent_path,f"Model loaded from {file_path}")
+        UtilsMNIST.print_and_log(global_minst_parent_path,f"Model loaded from {file_path}")
 
 
 # 使用minist数据集，训练cnn
@@ -191,7 +190,7 @@ def fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu'
     model.load_model(model_path)  # 加载先前保存的模型
 
     # 评估模型
-    UtilsMNIST.print_and_log(global_min_parent_path,"原模型评估：")
+    UtilsMNIST.print_and_log(global_minst_parent_path,"原模型评估：")
     ori_accuracy = model.evaluate(test_loader, device=str(device))
 
     # 定义损失函数和优化器
@@ -222,10 +221,10 @@ def fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu'
             # 累加损失
             running_loss += loss.item()
 
-        UtilsMNIST.print_and_log(global_min_parent_path,f"Epoch {epoch + 1}/{num_epochs}, Loss: {running_loss / len(train_loader):.4f}")
+        UtilsMNIST.print_and_log(global_minst_parent_path,f"Epoch {epoch + 1}/{num_epochs}, Loss: {running_loss / len(train_loader):.4f}")
 
     # 如果效果比原模型好，就更新原模型
-    UtilsMNIST.print_and_log(global_min_parent_path,"新模型评估：")
+    UtilsMNIST.print_and_log(global_minst_parent_path,"新模型评估：")
     new_accuracy = model.evaluate(test_loader, device=str(device))
     if new_accuracy > ori_accuracy:
         model.save_model(model_path)
@@ -255,7 +254,7 @@ def fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs
     model.load_model(model_path)  # 加载先前保存的模型
 
     # 评估模型
-    UtilsMNIST.print_and_log(global_min_parent_path,"原模型评估：")
+    UtilsMNIST.print_and_log(global_minst_parent_path,"原模型评估：")
     model.evaluate(test_loader, device=str(device))
 
     # 定义损失函数和优化器
@@ -286,7 +285,7 @@ def fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs
             # 累加损失
             running_loss += loss.item()
 
-        UtilsMNIST.print_and_log(global_min_parent_path,f"Epoch {epoch + 1}/{num_epochs}, Loss: {running_loss / len(train_loader):.4f}")
+        UtilsMNIST.print_and_log(global_minst_parent_path,f"Epoch {epoch + 1}/{num_epochs}, Loss: {running_loss / len(train_loader):.4f}")
 
         # 记录loss，用于计算loss差
         if epoch == 0:
@@ -300,12 +299,12 @@ def fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs
     #     model.save_model(model_save_path)
 
     # 如果效果比原模型好，就更新原模型
-    UtilsMNIST.print_and_log(global_min_parent_path,"新模型评估：")
+    UtilsMNIST.print_and_log(global_minst_parent_path,"新模型评估：")
     model.evaluate(test_loader, device=str(device))
-    UtilsMNIST.print_and_log(global_min_parent_path,"loss差为：")
-    UtilsMNIST.print_and_log(global_min_parent_path,first_epoch_loss - last_epoch_loss)
-    UtilsMNIST.print_and_log(global_min_parent_path,"单位数据loss差为：")
+    UtilsMNIST.print_and_log(global_minst_parent_path,"loss差为：")
+    UtilsMNIST.print_and_log(global_minst_parent_path,first_epoch_loss - last_epoch_loss)
+    UtilsMNIST.print_and_log(global_minst_parent_path,"单位数据loss差为：")
     unitDataLossDiff = (first_epoch_loss - last_epoch_loss) / len(train_loader.dataset)
-    UtilsMNIST.print_and_log(global_min_parent_path,unitDataLossDiff)
+    UtilsMNIST.print_and_log(global_minst_parent_path,unitDataLossDiff)
 
     return unitDataLossDiff

@@ -34,7 +34,7 @@ class Stackelberg:
         if sol.success:
             return sol.x
         else:
-            return Stackelberg._solve_followers(eta * 1.1, fn, lambda_, rho)
+            return None
 
     # 领导者的优化目标函数（负效用，因为我们使用的是最小化函数）
     @staticmethod
