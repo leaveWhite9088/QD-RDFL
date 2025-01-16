@@ -50,8 +50,8 @@ class UtilsMNIST:
         :return: None (每个DataOwner对象将保存其对应的数据)
 
         示例：
-        X_train = np.random.rand(60000, 784)  # 假设是MNIST的样本数据，每个图像是28x28=784维向量
-        y_train = np.random.randint(0, 10, 60000)  # 假设是MNIST的标签，0到9的数字
+        X_train = np.RANDOM.rand(60000, 784)  # 假设是MNIST的样本数据，每个图像是28x28=784维向量
+        y_train = np.RANDOM.randint(0, 10, 60000)  # 假设是MNIST的标签，0到9的数字
 
         # 创建DataOwner对象数组
         dataowners = [DataOwner(Lambda=0.5, Rho=0.1) for _ in range(5)]  # 假设有5个DataOwner
