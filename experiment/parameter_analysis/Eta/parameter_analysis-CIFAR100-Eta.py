@@ -115,13 +115,6 @@ def init_model():
                           model_save_path=model_save_path)
         model.save_model("../../../data/model/cifar100_cnn_model")
 
-    # 加载完整的训练数据进行评估
-    test_loader = UtilsCIFAR100.create_data_loader(train_data, train_labels, batch_size=128,
-                                                   shuffle=False)  # 使用全部数据进行测试
-
-    UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "初始化模型的准确率：")
-    model.evaluate(test_loader, device=str(device))
-
     return model
 
 

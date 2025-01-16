@@ -57003,3 +57003,269 @@ DONE
 ----- literation 1: 为 DataOwner 的数据添加噪声 -----
 DataOwner1: noise random: 0.020467163365008548
 DataOwner2: noise random: 0.05016908224486068
+**** log-comparison 运行时间： 2025-01-17 00:00:16 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+初始化模型的准确率：
+Accuracy: 26.82%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.08412934164661758
+DataOwner2: noise random: 0.08604340471285399
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9971304534452352, 0.9970058851889951]
+归一化后的数据质量列表avg_f_list: [1.0, 0.9]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3888886505297596
+DataOwner1的分配到的支付 ： 0.2047
+DataOwner2的分配到的支付 ： 0.1842
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 1: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：1454.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2948
+Epoch 2/5, Loss: 2.2887
+Epoch 3/5, Loss: 2.2801
+Epoch 4/5, Loss: 2.2673
+Epoch 5/5, Loss: 2.2490
+新模型评估：
+Accuracy: 42.78%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：4362.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 42.78%
+Epoch 1/5, Loss: 2.2076
+Epoch 2/5, Loss: 2.1193
+Epoch 3/5, Loss: 1.9756
+Epoch 4/5, Loss: 1.7737
+Epoch 5/5, Loss: 1.5497
+新模型评估：
+Accuracy: 66.48%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3888886505297596
+DataOwner1的分配到的支付 ： 0.2047
+DataOwner2的分配到的支付 ： 0.1842
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 2: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：1454.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 66.48%
+Epoch 1/5, Loss: 1.3894
+Epoch 2/5, Loss: 1.3364
+Epoch 3/5, Loss: 1.2835
+Epoch 4/5, Loss: 1.2304
+Epoch 5/5, Loss: 1.1787
+新模型评估：
+Accuracy: 69.94%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：4362.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.94%
+Epoch 1/5, Loss: 1.1008
+Epoch 2/5, Loss: 0.9662
+Epoch 3/5, Loss: 0.8569
+Epoch 4/5, Loss: 0.7630
+Epoch 5/5, Loss: 0.6905
+新模型评估：
+Accuracy: 74.84%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+random: DataOwner1的最优x_1 = 0.0856
+random: DataOwner2的最优x_2 = 0.0856
+DONE
+----- literation 3: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3888886505297596
+DataOwner1的分配到的支付 ： 0.2047
+DataOwner2的分配到的支付 ： 0.1842
+DONE
+----- literation 3: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 3: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：1454.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 74.84%
+Epoch 1/5, Loss: 0.6589
+Epoch 2/5, Loss: 0.6371
+Epoch 3/5, Loss: 0.6133
+Epoch 4/5, Loss: 0.5957
+Epoch 5/5, Loss: 0.5775
+新模型评估：
+Accuracy: 76.16%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：4362.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.16%
+Epoch 1/5, Loss: 0.5536
+Epoch 2/5, Loss: 0.5089
+Epoch 3/5, Loss: 0.4797
+Epoch 4/5, Loss: 0.4573
+Epoch 5/5, Loss: 0.4405
+新模型评估：
+Accuracy: 74.78%
+DONE
+U_Eta_list: [0.03338296094606924]
+U_qn_list: [0.07474613037673519]
+========================= 客户端数量: 3 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+初始化模型的准确率：
+Accuracy: 26.82%
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.0551868115890563
+DataOwner2: noise random: 0.09502111449518519
+DataOwner3: noise random: 0.05487584815965885
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9987669400069873, 0.9963409658366706, 0.9987777476631288]
+归一化后的数据质量列表avg_f_list: [0.9995564783016629, 0.9, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.9442
+DataOwner1的最优x_1 = 0.2167
+DataOwner2的最优x_2 = 0.1927
+DataOwner3的最优x_3 = 0.2168
+每个DataOwner应该贡献数据比例 xn_list = [0.21673334652519155, 0.19273951410838186, 0.21681031637972253]
+ModelOwner的最大效用 U(Eta) = 0.2416
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.9442216931983908
+DataOwner1的分配到的支付 ： 0.3370
+DataOwner2的分配到的支付 ： 0.2699
+DataOwner3的分配到的支付 ： 0.3373
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC2', 'DataOwner3': 'CPC1', 'DataOwner2': 'CPC3'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner3 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DONE
+----- literation 1: 模型训练 -----
+CPC2调整模型中, 本轮训练的数据量为：9362.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2608
+Epoch 2/5, Loss: 1.9986
+Epoch 3/5, Loss: 1.4688
+Epoch 4/5, Loss: 0.9969
+Epoch 5/5, Loss: 0.7205
+新模型评估：
+Accuracy: 77.65%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC1调整模型中, 本轮训练的数据量为：1040.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6260
+Epoch 2/5, Loss: 0.6025
+Epoch 3/5, Loss: 0.6082
+Epoch 4/5, Loss: 0.5648
+Epoch 5/5, Loss: 0.5576
+新模型评估：
+Accuracy: 77.42%
+CPC3调整模型中, 本轮训练的数据量为：2312.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6223
+Epoch 2/5, Loss: 0.5969
+Epoch 3/5, Loss: 0.5600
+Epoch 4/5, Loss: 0.5465
+Epoch 5/5, Loss: 0.5134
+新模型评估：
+Accuracy: 76.18%
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.9442
+DataOwner1的最优x_1 = 0.2167
+DataOwner2的最优x_2 = 0.1927
+DataOwner3的最优x_3 = 0.2168
+每个DataOwner应该贡献数据比例 xn_list = [0.21673334652519155, 0.19273951410838186, 0.21681031637972253]
+ModelOwner的最大效用 U(Eta) = 0.2416
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.9442216931983908
+DataOwner1的分配到的支付 ： 0.3370
+DataOwner2的分配到的支付 ： 0.2699
+DataOwner3的分配到的支付 ： 0.3373
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner3 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DONE
+----- literation 2: 模型训练 -----
+CPC2调整模型中, 本轮训练的数据量为：9362.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
