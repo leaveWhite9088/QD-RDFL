@@ -122,9 +122,6 @@ def init_model():
     test_loader = UtilsCIFAR100.create_data_loader(train_data, train_labels, batch_size=128,
                                                    shuffle=False)  # 使用全部数据进行测试
 
-    UtilsCIFAR100.print_and_log(global_cifar_parent_path, "初始化模型的准确率：")
-    model.evaluate(test_loader, device=str(device))
-
     return model
 
 
@@ -367,7 +364,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
 
 if __name__ == "__main__":
     UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                f"**** {global_cifar_parent_path} 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
+                                f"**** {global_cifar_parent_path}-FIX 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
 
     # 记录第 adjustment_literation+1 轮的 U(Eta) 和 U(qn)/N
     U_Eta_list = []
@@ -394,60 +391,52 @@ if __name__ == "__main__":
         adjustment_literation = 1  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
         avg_f_list = []
         last_xn_list = [0] * N
-        while True:
+
+        UtilsCIFAR100.print_and_log(global_cifar_parent_path,
+                                    f"========================= literation: {literation + 1} =========================")
+
+        # DataOwner自己报数据质量的机会只有一次
+        if literation == 0:
             UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                        f"========================= literation: {literation + 1} =========================")
-
-            # DataOwner自己报数据质量的机会只有一次
-            if literation == 0:
-                UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                            f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
-                dataowner_add_noise(dataowners, 0.1)
-                UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
-
-                UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                            f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
-                avg_f_list = evaluate_data_quality(dataowners)
-                UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
-
-            UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                        f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
-            xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
-            last_xn_list = xn_list
-
-            # 只有在调整轮次之后的轮次才记录
-            if literation == adjustment_literation + 1:
-                U_Eta_list.append(U_Eta)
-                U_qn_list.append(U_qn)
+                                        f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
+            dataowner_add_noise(dataowners, 0.1)
             UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
 
             UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                        f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
-            compute_contribution_rates(xn_list, avg_f_list, best_Eta)
+                                        f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
+            avg_f_list = evaluate_data_quality(dataowners)
             UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
 
-            # 一旦匹配成功，就无法改变
-            if literation == 0:
-                UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                            f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                matching = match_data_owners_to_cpc(xn_list, cpcs)  # 确保传递正确的参数
-                UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
+        UtilsCIFAR100.print_and_log(global_cifar_parent_path,
+                                    f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
+        # 这里获取到QD-RDFL方法的UEta，Uqn，接下来要随机一个Eta，然后根据公式求x_opt（一个集合），然后求Uqn
+        xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
+        last_xn_list = xn_list
 
-            UtilsCIFAR100.print_and_log(global_cifar_parent_path,
-                                        f"----- literation {literation + 1}: DataOwner 向 CPC 提交数据 -----")
-            submit_data_to_cpc(matching, dataowners, cpcs, xn_list)
-            UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
+        UtilsCIFAR100.print_and_log(global_cifar_parent_path,
+                                 f"----- literation {literation + 1}: 固定Eta -----")
+        fix_Eta = 1
+        fix_x_opt = Stackelberg._solve_followers(fix_Eta, np.array(avg_f_list), Lambda, Rho)
+        fix_xn_list = []
+        for i, xi in enumerate(fix_x_opt):
+            UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"FIX: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
+            fix_xn_list.append(xi)
+        fix_U_Eta = Stackelberg._leader_utility(fix_Eta, Alpha, avg_f_list, fix_xn_list)
+        fix_U_qn = (fix_Eta - Lambda * Rho * (sum(xn_list))) / N
 
-            UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
-            avg_f_list = train_model_with_cpc(matching, cpcs, test_data, test_labels, literation, avg_f_list,
-                                              adjustment_literation, N)
-            UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
+        # 记录
+        U_Eta_list.append(fix_U_Eta)
+        U_qn_list.append(fix_U_qn)
+        UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
 
-            literation += 1
-            if literation > adjustment_literation + 1:
-                UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"U_Eta_list: {U_Eta_list}")
-                UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"U_qn_list: {U_qn_list}")
-                break
+        UtilsCIFAR100.print_and_log(global_cifar_parent_path,
+                                    f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
+        compute_contribution_rates(xn_list, avg_f_list, best_Eta)
+        UtilsCIFAR100.print_and_log(global_cifar_parent_path, "DONE")
+
+        literation += 1
+        UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"U_Eta_list: {U_Eta_list}")
+        UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"U_qn_list: {U_qn_list}")
 
     UtilsCIFAR100.print_and_log(global_cifar_parent_path, "最终的列表：")
     UtilsCIFAR100.print_and_log(global_cifar_parent_path, f"U_Eta_list: {U_Eta_list}")

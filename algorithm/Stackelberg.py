@@ -34,7 +34,7 @@ class Stackelberg:
         if sol.success:
             return sol.x
         else:
-            raise ValueError(f"无法为 eta={eta} 求解追随者的最佳反应。")
+            return Stackelberg._solve_followers(eta * 1.1, fn, lambda_, rho)
 
     # 领导者的优化目标函数（负效用，因为我们使用的是最小化函数）
     @staticmethod
