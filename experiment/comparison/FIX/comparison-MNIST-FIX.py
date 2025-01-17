@@ -283,7 +283,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = MNISTCNN(num_classes=10).to(device)
 
-        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu',
+        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
                         lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
 
     return UtilsMNIST.normalize_list(avg_f_list)
@@ -358,7 +358,7 @@ if __name__ == "__main__":
                     fix_xn_list.append(xi)
                 fix_xn_list = UtilsMNIST.compare_elements(fix_xn_list, [0] * N)
                 fix_U_Eta = Stackelberg._leader_utility(fix_Eta, Alpha, avg_f_list, fix_xn_list)
-                fix_U_qn = (fix_Eta - Lambda * Rho * (sum(xn_list))) / N
+                fix_U_qn = (fix_Eta - Lambda * Rho * (sum(fix_xn_list))) / N
 
                 # 添加进列表
                 U_Eta_list.append(fix_U_Eta)
