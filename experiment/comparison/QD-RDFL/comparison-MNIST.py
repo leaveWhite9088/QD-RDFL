@@ -14,7 +14,7 @@ import torch.optim as optim
 import re
 from datetime import datetime
 import os
-from global_varible import global_minst_parent_path,Lambda,Rho,Alpha,Epsilon
+from global_variable import global_minst_parent_path,Lambda,Rho,Alpha,Epsilon
 
 
 # 定义参数值

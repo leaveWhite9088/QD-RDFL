@@ -8,7 +8,7 @@ from torchvision import transforms
 
 from dataset.MNISTDataset import MNISTDataset
 from utils.UtilsMNIST import UtilsMNIST
-from global_varible import global_minst_parent_path
+from global_variable import global_minst_parent_path
 
 class MNISTCNN(nn.Module):
     def __init__(self, num_classes=10):

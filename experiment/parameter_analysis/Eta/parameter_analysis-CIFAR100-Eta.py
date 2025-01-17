@@ -13,7 +13,7 @@ import torch.optim as optim
 import re
 from datetime import datetime
 import os
-from global_varible import global_cifar100_parent_path,Lambda,Rho,Alpha,Epsilon
+from global_variable import global_cifar100_parent_path,Lambda,Rho,Alpha,Epsilon
 
 # 定义参数值
 def define_parameters(Lambda=1, Rho=1, Alpha=1, Epsilon=1, N=5, M=5, SigmaM=None):
