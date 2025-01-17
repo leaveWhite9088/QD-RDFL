@@ -4,7 +4,7 @@
 
 # 可选：log-parameter_analysis，log-comparison
 
-global_minst_parent_path = "log-comparison"
+global_minst_parent_path = "log-parameter_analysis"
 global_cifar10_parent_path = "log-comparison"
 global_cifar100_parent_path = "log-comparison"
 

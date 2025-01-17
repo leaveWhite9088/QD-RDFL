@@ -385,7 +385,7 @@ if __name__ == "__main__":
                 if fix_x_opt is None:
                     U_Eta_list.append(last_fix_U_Eta)
                     U_qn_list.append(last_fix_U_qn)
-                    continue
+                    break
                 fix_xn_list = []
                 for i, xi in enumerate(fix_x_opt):
                     UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
