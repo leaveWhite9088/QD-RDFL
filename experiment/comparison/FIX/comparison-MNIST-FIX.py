@@ -356,7 +356,7 @@ if __name__ == "__main__":
                     UtilsMNIST.print_and_log(global_minst_parent_path,
                                              f"fix: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
                     fix_xn_list.append(xi)
-                UtilsMNIST.compare_elements(fix_xn_list, [0] * N)
+                fix_xn_list = UtilsMNIST.compare_elements(fix_xn_list, [0] * N)
                 fix_U_Eta = Stackelberg._leader_utility(fix_Eta, Alpha, avg_f_list, fix_xn_list)
                 fix_U_qn = (fix_Eta - Lambda * Rho * (sum(xn_list))) / N
 
