@@ -390,7 +390,7 @@ if __name__ == "__main__":
                     fix_xn_list.append(xi)
                 fix_xn_list = UtilsCIFAR100.compare_elements(fix_xn_list, [0] * N)
                 fix_U_Eta = Stackelberg._leader_utility(fix_Eta, Alpha, avg_f_list, fix_xn_list)
-                fix_U_qn = (fix_Eta - Lambda * Rho * (sum(xn_list))) / N
+                fix_U_qn = (fix_Eta - Lambda * Rho * (sum(fix_xn_list))) / N
 
                 # 添加进列表
                 U_Eta_list.append(fix_U_Eta)

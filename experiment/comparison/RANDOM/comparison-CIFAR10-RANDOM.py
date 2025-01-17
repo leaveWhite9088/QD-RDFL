@@ -316,7 +316,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = CIFAR10CNN(num_classes=10).to(device)
 
-        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=device,
+        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
                         lr=1e-5, model_path="../../../data/model/cifar10_cnn_model")
 
     return UtilsCIFAR10.normalize_list(avg_f_list)
@@ -392,7 +392,7 @@ if __name__ == "__main__":
                     random_xn_list.append(xi)
                 random_xn_list = UtilsCIFAR10.compare_elements(random_xn_list, [0] * N)
                 random_U_Eta = Stackelberg._leader_utility(random_Eta, Alpha, avg_f_list, random_xn_list)
-                random_U_qn = (random_Eta - Lambda * Rho * (sum(xn_list))) / N
+                random_U_qn = (random_Eta - Lambda * Rho * (sum(random_xn_list))) / N
 
                 # 添加进列表
                 U_Eta_list.append(random_U_Eta)

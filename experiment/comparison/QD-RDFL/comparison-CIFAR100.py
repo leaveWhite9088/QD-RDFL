@@ -321,7 +321,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
             model = CIFAR100CNN(num_classes=100).to(device)
 
             unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
-                                                               device=device, lr=1e-5,
+                                                               device=str(device), lr=1e-5,
                                                                model_path="../../../data/model/cifar100_cnn_model")
             avg_f_list[dataowner_index] = unitDataLossDiff
 

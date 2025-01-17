@@ -13,7 +13,7 @@ import torch.optim as optim
 import re
 from datetime import datetime
 import os
-from global_variable import global_cifar10_parent_path,Lambda,Rho,Alpha,Epsilon
+from global_variable import global_cifar10_parent_path, Lambda, Rho, Alpha, Epsilon
 
 
 # 定义参数值
@@ -316,7 +316,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = CIFAR10CNN(num_classes=10).to(device)
 
-        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=device,
+        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
                         lr=1e-5, model_path="../../../data/model/cifar10_cnn_model")
 
     return UtilsCIFAR10.normalize_list(avg_f_list)
@@ -340,7 +340,8 @@ if __name__ == "__main__":
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
                                    "---------------------------------- 定义参数值 ----------------------------------")
         Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Lambda=Lambda, Rho=Rho, Alpha=Alpha,
-                                                                      Epsilon=Epsilon,  M=n + 1, N=n + 1, SigmaM=[1] * (n + 1))
+                                                                      Epsilon=Epsilon, M=n + 1, N=n + 1,
+                                                                      SigmaM=[1] * (n + 1))
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
@@ -388,11 +389,11 @@ if __name__ == "__main__":
                 fix_xn_list = []
                 for i, xi in enumerate(fix_x_opt):
                     UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                             f"fix: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
+                                               f"fix: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
                     fix_xn_list.append(xi)
                 fix_xn_list = UtilsCIFAR10.compare_elements(fix_xn_list, [0] * N)
                 fix_U_Eta = Stackelberg._leader_utility(fix_Eta, Alpha, avg_f_list, fix_xn_list)
-                fix_U_qn = (fix_Eta - Lambda * Rho * (sum(xn_list))) / N
+                fix_U_qn = (fix_Eta - Lambda * Rho * (sum(fix_xn_list))) / N
 
                 # 添加进列表
                 U_Eta_list.append(fix_U_Eta)
