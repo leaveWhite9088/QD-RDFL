@@ -388,7 +388,7 @@ if __name__ == "__main__":
                     UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                              f"fix: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
                     fix_xn_list.append(xi)
-                UtilsCIFAR100.compare_elements(fix_xn_list, [0] * N)
+                fix_xn_list = UtilsCIFAR100.compare_elements(fix_xn_list, [0] * N)
                 fix_U_Eta = Stackelberg._leader_utility(fix_Eta, Alpha, avg_f_list, fix_xn_list)
                 fix_U_qn = (fix_Eta - Lambda * Rho * (sum(xn_list))) / N
 

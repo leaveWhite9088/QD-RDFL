@@ -7,6 +7,11 @@ class Stackelberg:
     # 领导者的效用函数
     @staticmethod
     def _leader_utility(eta, alpha, fn, x):
+        print(f"eta: {eta}, alpha: {alpha}, fn: {fn}, x: {x}")
+        print(f"fn type: {type(fn)}, x type: {type(x)}")
+        if fn is None or x is None:
+            raise ValueError("fn or x is None")
+
         S = np.dot(x, fn)
         return 0.5 * alpha * np.log(S + 1) - eta
 

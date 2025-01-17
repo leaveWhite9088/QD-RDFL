@@ -356,7 +356,7 @@ if __name__ == "__main__":
                     UtilsMNIST.print_and_log(global_minst_parent_path,
                                              f"random: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
                     random_xn_list.append(xi)
-                UtilsMNIST.compare_elements(random_xn_list, [0] * N)
+                random_xn_list = UtilsMNIST.compare_elements(random_xn_list, [0] * N)
                 random_U_Eta = Stackelberg._leader_utility(random_Eta, Alpha, avg_f_list, random_xn_list)
                 random_U_qn = (random_Eta - Lambda * Rho * (sum(xn_list))) / N
 
