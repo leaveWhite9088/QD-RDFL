@@ -13,7 +13,7 @@ import torch.optim as optim
 import re
 from datetime import datetime
 import os
-from global_varible import global_cifar10_parent_path,Lambda,Rho,Alpha,Epsilon
+from global_variable import global_cifar10_parent_path,Lambda,Rho,Alpha,Epsilon
 
 
 # 定义参数值
@@ -390,6 +390,7 @@ if __name__ == "__main__":
                     UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
                                              f"random: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
                     random_xn_list.append(xi)
+                UtilsCIFAR10.compare_elements(random_xn_list, [0] * N)
                 random_U_Eta = Stackelberg._leader_utility(random_Eta, Alpha, avg_f_list, random_xn_list)
                 random_U_qn = (random_Eta - Lambda * Rho * (sum(xn_list))) / N
 

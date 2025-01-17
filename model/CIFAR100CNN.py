@@ -9,7 +9,7 @@ import os
 
 from dataset.CIFAR100Dataset import CIFAR100Dataset
 from utils.UtilsCIFAR100 import UtilsCIFAR100
-from global_varible import global_cifar100_parent_path
+from global_variable import global_cifar100_parent_path
 
 class CIFAR100CNN(nn.Module):
     def __init__(self, num_classes=100):
