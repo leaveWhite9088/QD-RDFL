@@ -1,6 +1,3 @@
-from role.CPC import CPC
-
-
 class GaleShapley:
 
     # Gale - Shapley 婚姻匹配算法。

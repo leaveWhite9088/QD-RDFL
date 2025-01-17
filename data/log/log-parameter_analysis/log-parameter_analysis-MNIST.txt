@@ -11469,3 +11469,2790 @@ Accuracy: 77.22%
 DONE
 最终的列表：
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.15285673453012114, 0.1611690360336873, 0.1611690360336873, 0.1611690360336873, 0.1611690360336873, 0.1611690360336873, 0.1611690360336873, 0.1611690360336873, 0.21573146763191528, 0.21573146763191528, 0.2302098123104489, 0.2372722952806745, 0.24421911586688416, 0.2510518316129473, 0.25777196880940006, 0.26438102330883356, 0.27088046141856353, 0.27727172049219656, 0.28355620987446256, 0.2897353115269479, 0.295810380736725, 0.295810380736725, 0.3076537138499581, 0.3134245610842403, 0.3134245610842403, 0.3134245610842403, 0.3301488201150091, 0.3301488201150091, 0.3408201260223009, 0.3460158141262499, 0.3511196963862255, 0.35613287545654276, 0.3610564342345392, 0.3610564342345392, 0.3610564342345392, 0.3610564342345392, 0.3610564342345392, 0.3843665008270294, 0.38877403025715107, 0.3930990044634607, 0.3973423641456786, 0.3973423641456786, 0.4055879231287358, 0.40959192533381683, 0.41351791946630423, 0.4173667698614162, 0.4211393263042197, 0.4248364249955151, 0.42845888820827593, 0.43200752492426864, 0.4354831310221291, 0.4354831310221291, 0.442218371200111, 0.44547953413748587, 0.44867072469973246, 0.45179267743247176, 0.4548461153665311, 0.4578317502816396, 0.46075028290452824, 0.4636024031654795, 0.46638879040945125, 0.4691101136050986, 0.4717670315655649, 0.4743601931450787, 0.47689023744286785, 0.4793577940068625, 0.48176348297026816, 0.4841079153438992, 0.486391693091085, 0.48861540934906167, 0.49077964860734535, 0.4928849868574189, 0.49493199176667, 0.4969212228341201, 0.49885323155173233, 0.5007285615399467, 0.502547748726821, 0.5043113214633171, 0.506019800681, 0.5076737000408355, 0.5092735259846805, 0.5108197780460677, 0.5123129487952933, 0.5137535240576601, 0.5151419830226942, 0.516478798351405, 0.5177644363214511, 0.5189993569034468, 0.520184013908995, 0.5213188550800976, 0.5224043222036907, 0.5234408512155813, 0.5244288723046828, 0.5253688100081948, 0.5262610833205366, 0.5271061057787574, 0.5279042855633724, 0.528656025586596, 0.5293617235869295, 0.5300217722131502, 0.5306365591135662, 0.5312064670186711, 0.5317318738255825, 0.5322131526780516, 0.5326506720463844, 0.5330447958045457, 0.533395883307209, 0.5337042894635102, 0.533970364810362, 0.5341944555839624, 0.5343769037898578, 0.5345180472726745, 0.5346182197779281, 0.53467775103165, 0.5346969667802199, 0.5346761888860612, 0.5346157353629202, 0.5345159204482197, 0.5343770546614148, 0.5341994448608098, 0.5339833943035714, 0.5337292026991927, 0.5334371662659396, 0.5331075777836256, 0.5327407268661579, 0.5323368989300961, 0.5318963774019971, 0.5314194416211506, 0.5309063680157937, 0.5303574296303541, 0.5297728968008206, 0.5291530365343804, 0.5284981130507957, 0.5278083873998571, 0.527084117871282, 0.5263255598396348, 0.5255329659130079, 0.5247065858371143, 0.5238466666694293, 0.5229534527671136, 0.5220271858058365, 0.521068104856343, 0.520076446395755, 0.5190524443575446, 0.5179963301651496, 0.5169083327654505, 0.5157886786659502, 0.5146375919576969, 0.5134552944063095, 0.5122420053702561, 0.5109979419490549, 0.5097233189576322, 0.5084183489697016, 0.5070832423479312, 0.5057182072769069, 0.5043234497909963, 0.5028991737981212, 0.5014455811331806, 0.4999628715315112, 0.4984512427421799, 0.4969108904723216, 0.49534200846010545, 0.49374478847522085, 0.49211942041665147, 0.49046609217560655, 0.48878498990506136, 0.48707629777236616, 0.48534019819790863, 0.48357687177885667, 0.48178649733261647, 0.4799692519220462, 0.47812531087241084, 0.4762548478135902, 0.4743580346657099, 0.4724350416959784, 0.4704860375248412, 0.46851118914356094, 0.4665106619504231, 0.4644846197498307, 0.46243322479245097, 0.4603566377816817, 0.45825501789899525, 0.4561285228214409, 0.4539773087428378, 0.45180153038825344, 0.4496013410361739, 0.4473768925260746, 0.4451283353050499, 0.44285581840510524, 0.44055948948042456, 0.4382394948538595, 0.43589597948335745, 0.4335290869771318, 0.4311389596614008, 0.42872573855919915, 0.4262895634127264, 0.42383057270369706, 0.4213489036473015, 0.41884469225091436, 0.4163180732837799, 0.4137691803350023, 0.41119814572431324, 0.4086051007119136, 0.40599017531683623, 0.4033534984310134, 0.4006951978068227, 0.3980154000775822, 0.3953142307663784, 0.39259181430013346, 0.389848274022337, 0.387083732205487, 0.3842983100635493, 0.38149212776394803, 0.3786653044434227, 0.37581795820223407, 0.3729502061513217, 0.37006216438637063, 0.36715394802023305, 0.3642256711884224, 0.36127744706062925, 0.358309387852104, 0.35532160483199116, 0.35231420834151006, 0.34928730778438677, 0.34624101166913634, 0.34317542759218655, 0.34009066225748086, 0.3369868214871272, 0.3338640102293384, 0.3307223325688087, 0.3275618917359724, 0.32438279011757976, 0.3211851292654191, 0.31796900988694476, 0.31473453190909817, 0.3114817944174706, 0.3082108957133416, 0.304921933289525, 0.30161500387293927, 0.29829020342519863, 0.29494762711205924, 0.2915873693077713, 0.28820952381896525, 0.28481418345795717, 0.2814014404437062, 0.27797138625089746, 0.27452411162793355, 0.27105970661141265, 0.2675782605342074, 0.2640798620312692, 0.2605645990483567, 0.2570325588486164, 0.2534838280193332, 0.24991849248126385, 0.2463366374898177, 0.242738347647395, 0.23912370690841156, 0.23549279858516714, 0.2318457053548899, 0.22818250926629124, 0.2245032917454628, 0.2208081336025609, 0.21709711503791507, 0.2133703156480964, 0.2096278144328938, 0.20586968979819797, 0.2020960195642294, 0.19830688097471194, 0.194502350695394, 0.19068250482551807, 0.18684741890015788, 0.18299716789729636, 0.1791318262434567, 0.17525146781607326, 0.17135616595929548, 0.16744599346972633, 0.16352102262107948, 0.15958132515952705, 0.155626972309999, 0.15165803478318374, 0.1476745827789938, 0.14367668599085004, 0.13966441361215365, 0.13563783434013432, 0.13159701638070453]
+**** log-parameter_analysis 运行时间： 2025-01-17 22:34:51 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.09393294726302918
+DataOwner2: noise random: 0.006922930992007293
+DataOwner3: noise random: 0.04180116398420369
+DataOwner4: noise random: 0.03709630802766041
+DataOwner5: noise random: 0.07037700683146399
+DataOwner6: noise random: 0.04740013205791659
+DataOwner7: noise random: 0.07178372572622836
+DataOwner8: noise random: 0.03690370479838099
+DataOwner9: noise random: 0.03455150614895173
+DataOwner10: noise random: 0.02731898898927353
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9964072362859457, 0.9999806907703578, 0.9992933878935594, 0.999442432771095, 0.9979974633721433, 0.9990899287030421, 0.9979185594159252, 0.9994492673544436, 0.9995160019213243, 0.9996970559903172]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0, 0.9807664298007284, 0.9849373204105234, 0.9445011149053226, 0.9750728022085833, 0.9422930566646953, 0.9851285802510619, 0.9869960887689897, 0.9920627286207835]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3525
+DataOwner1的最优x_1 = 0.0416
+DataOwner2的最优x_2 = 0.1515
+DataOwner3的最优x_3 = 0.1340
+DataOwner4的最优x_4 = 0.1379
+DataOwner5的最优x_5 = 0.0965
+DataOwner6的最优x_6 = 0.1285
+DataOwner7的最优x_7 = 0.0941
+DataOwner8的最优x_8 = 0.1381
+DataOwner9的最优x_9 = 0.1398
+DataOwner10的最优x_10 = 0.1445
+每个DataOwner应该贡献数据比例 xn_list = [0.04157022869840666, 0.15152926076661963, 0.13396476348371167, 0.13789977485519053, 0.09653787092599003, 0.12847598157743456, 0.09405997030914102, 0.1380785052493272, 0.13981585512874026, 0.14445871613330444]
+ModelOwner的最大效用 U(Eta) = 0.5942
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3524595127368417
+DataOwner1的分配到的支付 ： 0.0429
+DataOwner2的分配到的支付 ： 0.1739
+DataOwner3的分配到的支付 ： 0.1508
+DataOwner4的分配到的支付 ： 0.1559
+DataOwner5的分配到的支付 ： 0.1046
+DataOwner6的分配到的支付 ： 0.1438
+DataOwner7的分配到的支付 ： 0.1017
+DataOwner8的分配到的支付 ： 0.1561
+DataOwner9的分配到的支付 ： 0.1584
+DataOwner10的分配到的支付 ： 0.1645
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC2', 'DataOwner5': 'CPC1', 'DataOwner2': 'CPC3', 'DataOwner3': 'CPC4', 'DataOwner4': 'CPC5', 'DataOwner6': 'CPC6', 'DataOwner7': 'CPC7', 'DataOwner8': 'CPC8', 'DataOwner9': 'CPC9', 'DataOwner10': 'CPC10'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner5 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DataOwner3 把数据交给 CPC4
+DataOwner4 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 1: 模型训练 -----
+CPC2调整模型中, 本轮训练的数据量为：67.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2614
+Epoch 2/5, Loss: 2.2852
+Epoch 3/5, Loss: 2.2642
+Epoch 4/5, Loss: 2.2725
+Epoch 5/5, Loss: 2.2734
+新模型评估：
+Accuracy: 27.53%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC1调整模型中, 本轮训练的数据量为：782.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 27.53%
+Epoch 1/5, Loss: 2.2932
+Epoch 2/5, Loss: 2.2963
+Epoch 3/5, Loss: 2.2892
+Epoch 4/5, Loss: 2.2860
+Epoch 5/5, Loss: 2.2785
+新模型评估：
+Accuracy: 40.84%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：245.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 40.84%
+Epoch 1/5, Loss: 2.2811
+Epoch 2/5, Loss: 2.2789
+Epoch 3/5, Loss: 2.2762
+Epoch 4/5, Loss: 2.2750
+Epoch 5/5, Loss: 2.2729
+新模型评估：
+Accuracy: 44.09%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：1086.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 44.09%
+Epoch 1/5, Loss: 2.2630
+Epoch 2/5, Loss: 2.2522
+Epoch 3/5, Loss: 2.2396
+Epoch 4/5, Loss: 2.2241
+Epoch 5/5, Loss: 2.2053
+新模型评估：
+Accuracy: 47.09%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：894.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 47.09%
+Epoch 1/5, Loss: 2.1888
+Epoch 2/5, Loss: 2.1725
+Epoch 3/5, Loss: 2.1548
+Epoch 4/5, Loss: 2.1361
+Epoch 5/5, Loss: 2.1150
+新模型评估：
+Accuracy: 48.67%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：2291.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 48.67%
+Epoch 1/5, Loss: 2.0806
+Epoch 2/5, Loss: 2.0212
+Epoch 3/5, Loss: 1.9485
+Epoch 4/5, Loss: 1.8650
+Epoch 5/5, Loss: 1.7702
+新模型评估：
+Accuracy: 56.54%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：152.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 56.54%
+Epoch 1/5, Loss: 1.7158
+Epoch 2/5, Loss: 1.6818
+Epoch 3/5, Loss: 1.6921
+Epoch 4/5, Loss: 1.6965
+Epoch 5/5, Loss: 1.7030
+新模型评估：
+Accuracy: 57.26%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：1343.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 57.26%
+Epoch 1/5, Loss: 1.6713
+Epoch 2/5, Loss: 1.6190
+Epoch 3/5, Loss: 1.5673
+Epoch 4/5, Loss: 1.5149
+Epoch 5/5, Loss: 1.4621
+新模型评估：
+Accuracy: 65.45%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：226.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.45%
+Epoch 1/5, Loss: 1.5026
+Epoch 2/5, Loss: 1.4877
+Epoch 3/5, Loss: 1.4771
+Epoch 4/5, Loss: 1.4633
+Epoch 5/5, Loss: 1.4474
+新模型评估：
+Accuracy: 65.53%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：468.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.53%
+Epoch 1/5, Loss: 1.3545
+Epoch 2/5, Loss: 1.3446
+Epoch 3/5, Loss: 1.3109
+Epoch 4/5, Loss: 1.3016
+Epoch 5/5, Loss: 1.2647
+新模型评估：
+Accuracy: 70.02%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3525
+DataOwner1的最优x_1 = 0.0416
+DataOwner2的最优x_2 = 0.1515
+DataOwner3的最优x_3 = 0.1340
+DataOwner4的最优x_4 = 0.1379
+DataOwner5的最优x_5 = 0.0965
+DataOwner6的最优x_6 = 0.1285
+DataOwner7的最优x_7 = 0.0941
+DataOwner8的最优x_8 = 0.1381
+DataOwner9的最优x_9 = 0.1398
+DataOwner10的最优x_10 = 0.1445
+每个DataOwner应该贡献数据比例 xn_list = [0.04157022869840666, 0.15152926076661963, 0.13396476348371167, 0.13789977485519053, 0.09653787092599003, 0.12847598157743456, 0.09405997030914102, 0.1380785052493272, 0.13981585512874026, 0.14445871613330444]
+ModelOwner的最大效用 U(Eta) = 0.5942
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3524595127368417
+DataOwner1的分配到的支付 ： 0.0429
+DataOwner2的分配到的支付 ： 0.1739
+DataOwner3的分配到的支付 ： 0.1508
+DataOwner4的分配到的支付 ： 0.1559
+DataOwner5的分配到的支付 ： 0.1046
+DataOwner6的分配到的支付 ： 0.1438
+DataOwner7的分配到的支付 ： 0.1017
+DataOwner8的分配到的支付 ： 0.1561
+DataOwner9的分配到的支付 ： 0.1584
+DataOwner10的分配到的支付 ： 0.1645
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner5 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DataOwner3 把数据交给 CPC4
+DataOwner4 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：67.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 70.02%
+Epoch 1/5, Loss: 1.2291
+Epoch 2/5, Loss: 1.3420
+Epoch 3/5, Loss: 1.2084
+Epoch 4/5, Loss: 1.2915
+Epoch 5/5, Loss: 1.0498
+新模型评估：
+Accuracy: 70.22%
+loss差为：
+0.17935866117477417
+单位数据loss差为：
+0.0026769949429070773
+正在评估DataOwner5的数据质量, 本轮评估的样本数据量为：782.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 70.02%
+Epoch 1/5, Loss: 1.3440
+Epoch 2/5, Loss: 1.2938
+Epoch 3/5, Loss: 1.2627
+Epoch 4/5, Loss: 1.2380
+Epoch 5/5, Loss: 1.2130
+新模型评估：
+Accuracy: 69.72%
+loss差为：
+0.13103307210482096
+单位数据loss差为：
+0.0001675614732798222
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：245.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.01%
+Epoch 1/5, Loss: 0.9629
+Epoch 2/5, Loss: 0.9524
+Epoch 3/5, Loss: 0.9439
+Epoch 4/5, Loss: 0.9286
+Epoch 5/5, Loss: 0.9230
+新模型评估：
+Accuracy: 75.05%
+loss差为：
+0.0398348867893219
+单位数据loss差为：
+0.00016259137465029347
+正在评估DataOwner3的数据质量, 本轮评估的样本数据量为：1086.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.01%
+Epoch 1/5, Loss: 0.9453
+Epoch 2/5, Loss: 0.9103
+Epoch 3/5, Loss: 0.8807
+Epoch 4/5, Loss: 0.8536
+Epoch 5/5, Loss: 0.8259
+新模型评估：
+Accuracy: 75.34%
+loss差为：
+0.11943992797066183
+单位数据loss差为：
+0.00010998151746838105
+正在评估DataOwner4的数据质量, 本轮评估的样本数据量为：894.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.01%
+Epoch 1/5, Loss: 0.9093
+Epoch 2/5, Loss: 0.8799
+Epoch 3/5, Loss: 0.8547
+Epoch 4/5, Loss: 0.8310
+Epoch 5/5, Loss: 0.8073
+新模型评估：
+Accuracy: 73.53%
+loss差为：
+0.10206811342920574
+单位数据loss差为：
+0.00011417014924967085
+正在评估DataOwner6的数据质量, 本轮评估的样本数据量为：2291.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2916
+Epoch 2/5, Loss: 2.2799
+Epoch 3/5, Loss: 2.2585
+Epoch 4/5, Loss: 2.2217
+Epoch 5/5, Loss: 2.1622
+新模型评估：
+Accuracy: 53.52%
+loss差为：
+0.12938055064943077
+单位数据loss差为：
+5.647339618045865e-05
+正在评估DataOwner7的数据质量, 本轮评估的样本数据量为：152.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+**** log-parameter_analysis 运行时间： 2025-01-17 22:42:03 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.03909528644185309
+DataOwner2: noise random: 0.059804858563670384
+DataOwner3: noise random: 0.08621001502060306
+DataOwner4: noise random: 0.019022035563856024
+DataOwner5: noise random: 0.08014997925842934
+DataOwner6: noise random: 0.06159052367419313
+DataOwner7: noise random: 0.004156411603494492
+DataOwner8: noise random: 0.0777477156427723
+DataOwner9: noise random: 0.04785129147860178
+DataOwner10: noise random: 0.007695907074791209
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9993813432112229, 0.9985554273657783, 0.9969846961074036, 0.9998535226000185, 0.9974016162118857, 0.9984672014688297, 0.9999930167392177, 0.9975493377086392, 0.9990723208339377, 0.9999759790462467]
+归一化后的数据质量列表avg_f_list: [0.9796672761032792, 0.952212893857245, 0.9, 0.9953630561275941, 0.9138588985520043, 0.9492801646788607, 1.0, 0.9187693291487715, 0.9693950207453526, 0.9994336477039438]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3383
+DataOwner1的最优x_1 = 0.1426
+DataOwner2的最优x_2 = 0.1161
+DataOwner3的最优x_3 = 0.0557
+DataOwner4的最优x_4 = 0.1564
+DataOwner5的最优x_5 = 0.0731
+DataOwner6的最优x_6 = 0.1131
+DataOwner7的最优x_7 = 0.1603
+DataOwner8的最优x_8 = 0.0791
+DataOwner9的最优x_9 = 0.1331
+DataOwner10的最优x_10 = 0.1599
+每个DataOwner应该贡献数据比例 xn_list = [0.14264580520771064, 0.11610569012407498, 0.055703950198206856, 0.15643435480398474, 0.07314585511653897, 0.11307473263459368, 0.16032913747310895, 0.079067897825616, 0.13309131806658234, 0.15985766924909664]
+ModelOwner的最大效用 U(Eta) = 0.5778
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3383375142427196
+DataOwner1的分配到的支付 ： 0.1623
+DataOwner2的分配到的支付 ： 0.1284
+DataOwner3的分配到的支付 ： 0.0582
+DataOwner4的分配到的支付 ： 0.1809
+DataOwner5的分配到的支付 ： 0.0777
+DataOwner6的分配到的支付 ： 0.1247
+DataOwner7的分配到的支付 ： 0.1862
+DataOwner8的分配到的支付 ： 0.0844
+DataOwner9的分配到的支付 ： 0.1499
+DataOwner10的分配到的支付 ： 0.1856
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5', 'DataOwner6': 'CPC9', 'DataOwner8': 'CPC6', 'DataOwner7': 'CPC10', 'DataOwner9': 'CPC7', 'DataOwner10': 'CPC8'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC9
+DataOwner8 把数据交给 CPC6
+DataOwner7 把数据交给 CPC10
+DataOwner9 把数据交给 CPC7
+DataOwner10 把数据交给 CPC8
+DONE
+----- literation 1: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：1352.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2906
+Epoch 2/5, Loss: 2.2877
+Epoch 3/5, Loss: 2.2785
+Epoch 4/5, Loss: 2.2643
+Epoch 5/5, Loss: 2.2528
+新模型评估：
+Accuracy: 39.15%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：366.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 39.15%
+Epoch 1/5, Loss: 2.2325
+Epoch 2/5, Loss: 2.2268
+Epoch 3/5, Loss: 2.2209
+Epoch 4/5, Loss: 2.2144
+Epoch 5/5, Loss: 2.2071
+新模型评估：
+Accuracy: 43.75%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：263.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+**** log-parameter_analysis 运行时间： 2025-01-17 22:43:05 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.01141658216311292
+DataOwner2: noise random: 0.05565190315100332
+DataOwner3: noise random: 0.010916139971950733
+DataOwner4: noise random: 0.0769201904117881
+DataOwner5: noise random: 0.08815028355753296
+DataOwner6: noise random: 0.0624994012975338
+DataOwner7: noise random: 0.05529858492801413
+DataOwner8: noise random: 0.005483372368984474
+DataOwner9: noise random: 0.03809842906985659
+DataOwner10: noise random: 0.06667113618827175
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9999471873173084, 0.9987432504538906, 0.9999517448753736, 0.9976119634542615, 0.9968531824745663, 0.9984188375826696, 0.9987643065341315, 0.9999878154433819, 0.9994128779125186, 0.9982000609764101]
+归一化后的数据质量列表avg_f_list: [0.9987038952732996, 0.9602963089499568, 0.9988492889481131, 0.92420637399159, 0.9, 0.9499469993354547, 0.9609680328950061, 1.0, 0.9816585374880273, 0.9429676620913202]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3434
+DataOwner1的最优x_1 = 0.1562
+DataOwner2的最优x_2 = 0.1205
+DataOwner3的最优x_3 = 0.1563
+DataOwner4的最优x_4 = 0.0810
+DataOwner5的最优x_5 = 0.0508
+DataOwner6的最优x_6 = 0.1098
+DataOwner7的最优x_7 = 0.1212
+DataOwner8的最优x_8 = 0.1573
+DataOwner9的最优x_9 = 0.1411
+DataOwner10的最优x_10 = 0.1024
+每个DataOwner应该贡献数据比例 xn_list = [0.1561627231351038, 0.12052825671408214, 0.15628652932141768, 0.08104903908944151, 0.05075644114984305, 0.10984783103649408, 0.12120469649055904, 0.15726361617988255, 0.1410878961132977, 0.10236310190127434]
+ModelOwner的最大效用 U(Eta) = 0.5836
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3433998984317428
+DataOwner1的分配到的支付 ： 0.1804
+DataOwner2的分配到的支付 ： 0.1339
+DataOwner3的分配到的支付 ： 0.1806
+DataOwner4的分配到的支付 ： 0.0866
+DataOwner5的分配到的支付 ： 0.0528
+DataOwner6的分配到的支付 ： 0.1207
+DataOwner7的分配到的支付 ： 0.1347
+DataOwner8的分配到的支付 ： 0.1819
+DataOwner9的分配到的支付 ： 0.1602
+DataOwner10的分配到的支付 ： 0.1116
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC2', 'DataOwner3': 'CPC1', 'DataOwner2': 'CPC8', 'DataOwner5': 'CPC3', 'DataOwner4': 'CPC9', 'DataOwner6': 'CPC4', 'DataOwner7': 'CPC5', 'DataOwner9': 'CPC6', 'DataOwner10': 'CPC7', 'DataOwner8': 'CPC10'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner3 把数据交给 CPC1
+DataOwner2 把数据交给 CPC8
+DataOwner5 把数据交给 CPC3
+DataOwner4 把数据交给 CPC9
+DataOwner6 把数据交给 CPC4
+DataOwner7 把数据交给 CPC5
+DataOwner9 把数据交给 CPC6
+DataOwner10 把数据交给 CPC7
+DataOwner8 把数据交给 CPC10
+DONE
+----- literation 1: 模型训练 -----
+CPC2调整模型中, 本轮训练的数据量为：670.00 :
+**** log-parameter_analysis 运行时间： 2025-01-17 22:43:19 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.08065760343487995
+DataOwner2: noise random: 0.09687856469168825
+DataOwner3: noise random: 0.061060884961292465
+DataOwner4: noise random: 0.08522541577276416
+DataOwner5: noise random: 0.05161926395959814
+DataOwner6: noise random: 0.041944524868440115
+DataOwner7: noise random: 0.024401955417553214
+DataOwner8: noise random: 0.0266746620789178
+DataOwner9: noise random: 0.0235813870487416
+DataOwner10: noise random: 0.0428312153758623
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9973624715747037, 0.996209191841275, 0.9984899384588928, 0.9970648000066891, 0.9989237292684428, 0.999289443626023, 0.9997593075702995, 0.9997119774705103, 0.9997754948607911, 0.9992575432502593]
+归一化后的数据质量列表avg_f_list: [0.932338242911989, 0.9, 0.9639526872825085, 0.9239914600843473, 0.9761162865946283, 0.9863710057135293, 0.9995461044559872, 0.9982189570001996, 1.0, 0.9854765114546524]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3490
+DataOwner1的最优x_1 = 0.0856
+DataOwner2的最优x_2 = 0.0451
+DataOwner3的最优x_3 = 0.1200
+DataOwner4的最优x_4 = 0.0757
+DataOwner5的最优x_5 = 0.1320
+DataOwner6的最优x_6 = 0.1416
+DataOwner7的最优x_7 = 0.1533
+DataOwner8的最优x_8 = 0.1522
+DataOwner9的最优x_9 = 0.1537
+DataOwner10的最优x_10 = 0.1408
+每个DataOwner应该贡献数据比例 xn_list = [0.08561678691061485, 0.04508518847886938, 0.1199716184755712, 0.07571152539799639, 0.13196348483884654, 0.14158790352619505, 0.15333655356129425, 0.15218344053767285, 0.15372940034487728, 0.14076548149004456]
+ModelOwner的最大效用 U(Eta) = 0.5902
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3490396993980278
+DataOwner1的分配到的支付 ： 0.0919
+DataOwner2的分配到的支付 ： 0.0467
+DataOwner3的分配到的支付 ： 0.1331
+DataOwner4的分配到的支付 ： 0.0805
+DataOwner5的分配到的支付 ： 0.1483
+DataOwner6的分配到的支付 ： 0.1607
+DataOwner7的分配到的支付 ： 0.1764
+DataOwner8的分配到的支付 ： 0.1748
+DataOwner9的分配到的支付 ： 0.1769
+DataOwner10的分配到的支付 ： 0.1597
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5', 'DataOwner6': 'CPC6', 'DataOwner7': 'CPC7', 'DataOwner8': 'CPC8', 'DataOwner9': 'CPC9', 'DataOwner10': 'CPC10'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 1: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：571.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2988
+Epoch 2/5, Loss: 2.2967
+Epoch 3/5, Loss: 2.2945
+Epoch 4/5, Loss: 2.2921
+Epoch 5/5, Loss: 2.2893
+新模型评估：
+Accuracy: 35.42%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：100.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 35.42%
+Epoch 1/5, Loss: 2.2936
+Epoch 2/5, Loss: 2.2983
+Epoch 3/5, Loss: 2.2968
+Epoch 4/5, Loss: 2.2921
+Epoch 5/5, Loss: 2.2938
+新模型评估：
+Accuracy: 36.47%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：533.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 36.47%
+Epoch 1/5, Loss: 2.2868
+Epoch 2/5, Loss: 2.2824
+Epoch 3/5, Loss: 2.2788
+Epoch 4/5, Loss: 2.2720
+Epoch 5/5, Loss: 2.2677
+新模型评估：
+Accuracy: 43.41%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：504.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 43.41%
+Epoch 1/5, Loss: 2.2720
+Epoch 2/5, Loss: 2.2672
+Epoch 3/5, Loss: 2.2624
+Epoch 4/5, Loss: 2.2569
+Epoch 5/5, Loss: 2.2512
+新模型评估：
+Accuracy: 40.88%
+CPC5调整模型中, 本轮训练的数据量为：293.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.31%
+Epoch 1/5, Loss: 1.1043
+Epoch 2/5, Loss: 1.0923
+Epoch 3/5, Loss: 1.0586
+Epoch 4/5, Loss: 1.0741
+Epoch 5/5, Loss: 1.0501
+新模型评估：
+Accuracy: 73.88%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：943.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 73.88%
+Epoch 1/5, Loss: 1.0132
+Epoch 2/5, Loss: 0.9765
+Epoch 3/5, Loss: 0.9464
+Epoch 4/5, Loss: 0.9219
+Epoch 5/5, Loss: 0.8979
+新模型评估：
+Accuracy: 75.44%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：3066.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.44%
+Epoch 1/5, Loss: 0.8453
+Epoch 2/5, Loss: 0.7749
+Epoch 3/5, Loss: 0.7161
+Epoch 4/5, Loss: 0.6662
+Epoch 5/5, Loss: 0.6223
+新模型评估：
+Accuracy: 77.65%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：1014.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.5992
+Epoch 2/5, Loss: 0.5852
+Epoch 3/5, Loss: 0.5708
+Epoch 4/5, Loss: 0.5583
+Epoch 5/5, Loss: 0.5451
+新模型评估：
+Accuracy: 75.79%
+CPC9调整模型中, 本轮训练的数据量为：341.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6515
+Epoch 2/5, Loss: 0.6490
+Epoch 3/5, Loss: 0.6213
+Epoch 4/5, Loss: 0.6672
+Epoch 5/5, Loss: 0.6370
+新模型评估：
+Accuracy: 75.86%
+CPC10调整模型中, 本轮训练的数据量为：312.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6340
+Epoch 2/5, Loss: 0.6217
+Epoch 3/5, Loss: 0.6196
+Epoch 4/5, Loss: 0.6092
+Epoch 5/5, Loss: 0.6048
+新模型评估：
+Accuracy: 77.10%
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3490
+DataOwner1的最优x_1 = 0.0856
+DataOwner2的最优x_2 = 0.0451
+DataOwner3的最优x_3 = 0.1200
+DataOwner4的最优x_4 = 0.0757
+DataOwner5的最优x_5 = 0.1320
+DataOwner6的最优x_6 = 0.1416
+DataOwner7的最优x_7 = 0.1533
+DataOwner8的最优x_8 = 0.1522
+DataOwner9的最优x_9 = 0.1537
+DataOwner10的最优x_10 = 0.1408
+每个DataOwner应该贡献数据比例 xn_list = [0.08561678691061485, 0.04508518847886938, 0.1199716184755712, 0.07571152539799639, 0.13196348483884654, 0.14158790352619505, 0.15333655356129425, 0.15218344053767285, 0.15372940034487728, 0.14076548149004456]
+ModelOwner的最大效用 U(Eta) = 0.5902
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3490396993980278
+DataOwner1的分配到的支付 ： 0.0919
+DataOwner2的分配到的支付 ： 0.0467
+DataOwner3的分配到的支付 ： 0.1331
+DataOwner4的分配到的支付 ： 0.0805
+DataOwner5的分配到的支付 ： 0.1483
+DataOwner6的分配到的支付 ： 0.1607
+DataOwner7的分配到的支付 ： 0.1764
+DataOwner8的分配到的支付 ： 0.1748
+DataOwner9的分配到的支付 ： 0.1769
+DataOwner10的分配到的支付 ： 0.1597
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：571.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6091
+Epoch 2/5, Loss: 0.5949
+Epoch 3/5, Loss: 0.5861
+Epoch 4/5, Loss: 0.5762
+Epoch 5/5, Loss: 0.5664
+新模型评估：
+Accuracy: 77.04%
+loss差为：
+0.042641447650061726
+单位数据loss差为：
+7.467854229432877e-05
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：100.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6414
+Epoch 2/5, Loss: 0.5945
+Epoch 3/5, Loss: 0.6208
+Epoch 4/5, Loss: 0.6126
+Epoch 5/5, Loss: 0.5808
+新模型评估：
+Accuracy: 76.48%
+loss差为：
+0.06051735579967499
+单位数据loss差为：
+0.0006051735579967499
+正在评估DataOwner3的数据质量, 本轮评估的样本数据量为：533.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6102
+Epoch 2/5, Loss: 0.5829
+Epoch 3/5, Loss: 0.5893
+Epoch 4/5, Loss: 0.5679
+Epoch 5/5, Loss: 0.5571
+新模型评估：
+Accuracy: 75.96%
+loss差为：
+0.05316678351826143
+单位数据loss差为：
+9.975006288604396e-05
+正在评估DataOwner4的数据质量, 本轮评估的样本数据量为：504.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6516
+Epoch 2/5, Loss: 0.6384
+Epoch 3/5, Loss: 0.6307
+Epoch 4/5, Loss: 0.6231
+Epoch 5/5, Loss: 0.6141
+新模型评估：
+Accuracy: 75.68%
+loss差为：
+0.037495166063308716
+单位数据loss差为：
+7.439517076053316e-05
+正在评估DataOwner5的数据质量, 本轮评估的样本数据量为：293.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6927
+Epoch 2/5, Loss: 0.6792
+Epoch 3/5, Loss: 0.6532
+Epoch 4/5, Loss: 0.6647
+Epoch 5/5, Loss: 0.6449
+新模型评估：
+Accuracy: 77.98%
+loss差为：
+0.04776606559753416
+单位数据loss差为：
+0.00016302411466735206
+正在评估DataOwner6的数据质量, 本轮评估的样本数据量为：943.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6389
+Epoch 2/5, Loss: 0.6189
+Epoch 3/5, Loss: 0.6026
+Epoch 4/5, Loss: 0.5897
+Epoch 5/5, Loss: 0.5782
+新模型评估：
+Accuracy: 75.94%
+loss差为：
+0.06075703303019209
+单位数据loss差为：
+6.442951540847517e-05
+正在评估DataOwner7的数据质量, 本轮评估的样本数据量为：3066.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6144
+Epoch 2/5, Loss: 0.5796
+Epoch 3/5, Loss: 0.5508
+Epoch 4/5, Loss: 0.5267
+Epoch 5/5, Loss: 0.5048
+新模型评估：
+Accuracy: 76.49%
+loss差为：
+0.10962621929744887
+单位数据loss差为：
+3.575545313028339e-05
+正在评估DataOwner8的数据质量, 本轮评估的样本数据量为：1014.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.5918
+Epoch 2/5, Loss: 0.5750
+Epoch 3/5, Loss: 0.5607
+Epoch 4/5, Loss: 0.5464
+Epoch 5/5, Loss: 0.5359
+新模型评估：
+Accuracy: 76.26%
+loss差为：
+0.0559641532599926
+单位数据loss差为：
+5.519147264299073e-05
+正在评估DataOwner9的数据质量, 本轮评估的样本数据量为：341.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.7079
+Epoch 2/5, Loss: 0.6735
+Epoch 3/5, Loss: 0.6808
+Epoch 4/5, Loss: 0.6865
+Epoch 5/5, Loss: 0.7045
+新模型评估：
+Accuracy: 77.41%
+loss差为：
+0.003337611754735348
+单位数据loss差为：
+9.787717755822135e-06
+正在评估DataOwner10的数据质量, 本轮评估的样本数据量为：312.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.65%
+Epoch 1/5, Loss: 0.6767
+Epoch 2/5, Loss: 0.6686
+Epoch 3/5, Loss: 0.6573
+Epoch 4/5, Loss: 0.6494
+Epoch 5/5, Loss: 0.6459
+新模型评估：
+Accuracy: 76.90%
+loss差为：
+0.03088845014572139
+单位数据loss差为：
+9.900144277474804e-05
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [7.467854229432877e-05, 0.0006051735579967499, 9.975006288604396e-05, 7.439517076053316e-05, 0.00016302411466735206, 6.442951540847517e-05, 3.575545313028339e-05, 5.519147264299073e-05, 9.787717755822135e-06, 9.900144277474804e-05]
+归一化后的数据质量列表avg_f_list:[0.9108989532757864, 1.0, 0.9151099235235117, 0.9108513586716418, 0.9257373263780546, 0.9091775440327137, 0.9043614969687478, 0.9076259379747419, 0.9, 0.914984186554189]
+CPC1调整模型中, 本轮训练的数据量为：571.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.72%
+Epoch 1/5, Loss: 0.4205
+Epoch 2/5, Loss: 0.4088
+Epoch 3/5, Loss: 0.4020
+Epoch 4/5, Loss: 0.3969
+Epoch 5/5, Loss: 0.3929
+新模型评估：
+Accuracy: 77.34%
+CPC2调整模型中, 本轮训练的数据量为：100.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.72%
+Epoch 1/5, Loss: 0.4171
+Epoch 2/5, Loss: 0.3845
+Epoch 3/5, Loss: 0.3751
+Epoch 4/5, Loss: 0.3817
+Epoch 5/5, Loss: 0.3778
+新模型评估：
+Accuracy: 77.24%
+CPC3调整模型中, 本轮训练的数据量为：533.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.72%
+Epoch 1/5, Loss: 0.3992
+Epoch 2/5, Loss: 0.4002
+Epoch 3/5, Loss: 0.3981
+Epoch 4/5, Loss: 0.4235
+Epoch 5/5, Loss: 0.3808
+新模型评估：
+Accuracy: 76.96%
+CPC4调整模型中, 本轮训练的数据量为：504.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.72%
+Epoch 1/5, Loss: 0.4824
+Epoch 2/5, Loss: 0.4699
+Epoch 3/5, Loss: 0.4676
+Epoch 4/5, Loss: 0.4617
+Epoch 5/5, Loss: 0.4572
+新模型评估：
+Accuracy: 76.19%
+CPC5调整模型中, 本轮训练的数据量为：293.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.72%
+Epoch 1/5, Loss: 0.5114
+Epoch 2/5, Loss: 0.4997
+Epoch 3/5, Loss: 0.4743
+Epoch 4/5, Loss: 0.4824
+Epoch 5/5, Loss: 0.4710
+新模型评估：
+Accuracy: 78.36%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：943.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.36%
+Epoch 1/5, Loss: 0.4444
+Epoch 2/5, Loss: 0.4287
+Epoch 3/5, Loss: 0.4219
+Epoch 4/5, Loss: 0.4196
+Epoch 5/5, Loss: 0.4108
+新模型评估：
+Accuracy: 76.60%
+CPC7调整模型中, 本轮训练的数据量为：3066.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.36%
+Epoch 1/5, Loss: 0.4449
+Epoch 2/5, Loss: 0.4320
+Epoch 3/5, Loss: 0.4215
+Epoch 4/5, Loss: 0.4115
+Epoch 5/5, Loss: 0.4035
+新模型评估：
+Accuracy: 76.53%
+CPC8调整模型中, 本轮训练的数据量为：1014.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.77%
+Epoch 1/5, Loss: 0.4106
+Epoch 2/5, Loss: 0.3992
+Epoch 3/5, Loss: 0.3939
+Epoch 4/5, Loss: 0.3869
+Epoch 5/5, Loss: 0.3829
+新模型评估：
+Accuracy: 76.83%
+CPC9调整模型中, 本轮训练的数据量为：341.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.77%
+Epoch 1/5, Loss: 0.5724
+Epoch 2/5, Loss: 0.4827
+Epoch 3/5, Loss: 0.5135
+Epoch 4/5, Loss: 0.4921
+Epoch 5/5, Loss: 0.4852
+新模型评估：
+Accuracy: 78.08%
+CPC10调整模型中, 本轮训练的数据量为：312.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.77%
+Epoch 1/5, Loss: 0.4977
+Epoch 2/5, Loss: 0.4865
+Epoch 3/5, Loss: 0.4768
+Epoch 4/5, Loss: 0.4702
+Epoch 5/5, Loss: 0.4682
+新模型评估：
+Accuracy: 78.32%
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.2911
+DataOwner1的最优x_1 = 0.1077
+DataOwner2的最优x_2 = 0.1846
+DataOwner3的最优x_3 = 0.1121
+DataOwner4的最优x_4 = 0.1077
+DataOwner5的最优x_5 = 0.1228
+DataOwner6的最优x_6 = 0.1059
+DataOwner7的最优x_7 = 0.1008
+DataOwner8的最优x_8 = 0.1043
+DataOwner9的最优x_9 = 0.0960
+DataOwner10的最优x_10 = 0.1120
+每个DataOwner应该贡献数据比例 xn_list = [0.10773713368985087, 0.1845524759813923, 0.1121182399576983, 0.10768712569034947, 0.12280278037600495, 0.10592139500671763, 0.10076365209395839, 0.10427228628819651, 0.09599198246262075, 0.11198865716275275]
+ModelOwner的最大效用 U(Eta) = 0.5253
+xn开始变化：
+DONE
+----- literation 3: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.2910956996974834
+DataOwner1的分配到的支付 ： 0.5634
+DataOwner2的分配到的支付 ： 0.1131
+DataOwner3的分配到的支付 ： 0.0673
+DataOwner4的分配到的支付 ： 0.0601
+DataOwner5的分配到的支付 ： 0.0749
+DataOwner6的分配到的支付 ： 0.0789
+DataOwner7的分配到的支付 ： 0.0850
+DataOwner8的分配到的支付 ： 0.0847
+DataOwner9的分配到的支付 ： 0.0848
+DataOwner10的分配到的支付 ： 0.0789
+DONE
+----- literation 3: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 3: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：6670.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.77%
+Epoch 1/5, Loss: 0.4326
+Epoch 2/5, Loss: 0.4098
+Epoch 3/5, Loss: 0.3925
+Epoch 4/5, Loss: 0.3814
+Epoch 5/5, Loss: 0.3664
+新模型评估：
+Accuracy: 78.96%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：410.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.96%
+Epoch 1/5, Loss: 0.3337
+Epoch 2/5, Loss: 0.3212
+Epoch 3/5, Loss: 0.3185
+Epoch 4/5, Loss: 0.3133
+Epoch 5/5, Loss: 0.3057
+新模型评估：
+Accuracy: 77.65%
+CPC3调整模型中, 本轮训练的数据量为：533.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.96%
+Epoch 1/5, Loss: 0.3079
+Epoch 2/5, Loss: 0.3039
+Epoch 3/5, Loss: 0.2903
+Epoch 4/5, Loss: 0.3159
+Epoch 5/5, Loss: 0.3199
+新模型评估：
+Accuracy: 78.05%
+CPC4调整模型中, 本轮训练的数据量为：717.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 45.28%
+Epoch 1/5, Loss: 2.2291
+Epoch 2/5, Loss: 2.2164
+Epoch 3/5, Loss: 2.2094
+Epoch 4/5, Loss: 2.1958
+Epoch 5/5, Loss: 2.1740
+新模型评估：
+Accuracy: 46.77%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：293.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 46.77%
+Epoch 1/5, Loss: 2.1364
+Epoch 2/5, Loss: 2.1362
+Epoch 3/5, Loss: 2.1250
+Epoch 4/5, Loss: 2.1201
+Epoch 5/5, Loss: 2.1048
+新模型评估：
+Accuracy: 47.94%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：943.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 47.94%
+Epoch 1/5, Loss: 2.1282
+Epoch 2/5, Loss: 2.1087
+Epoch 3/5, Loss: 2.0853
+Epoch 4/5, Loss: 2.0610
+Epoch 5/5, Loss: 2.0363
+新模型评估：
+Accuracy: 48.07%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：3066.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 48.07%
+Epoch 1/5, Loss: 1.9835
+Epoch 2/5, Loss: 1.8854
+Epoch 3/5, Loss: 1.7720
+Epoch 4/5, Loss: 1.6462
+Epoch 5/5, Loss: 1.5115
+新模型评估：
+Accuracy: 65.62%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：1014.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.62%
+Epoch 1/5, Loss: 1.4196
+Epoch 2/5, Loss: 1.3767
+Epoch 3/5, Loss: 1.3387
+Epoch 4/5, Loss: 1.2985
+Epoch 5/5, Loss: 1.2602
+新模型评估：
+Accuracy: 68.72%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：341.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 68.72%
+Epoch 1/5, Loss: 1.2938
+Epoch 2/5, Loss: 1.2676
+Epoch 3/5, Loss: 1.2744
+Epoch 4/5, Loss: 1.2395
+Epoch 5/5, Loss: 1.2568
+新模型评估：
+Accuracy: 70.24%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：312.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 70.24%
+Epoch 1/5, Loss: 1.1943
+Epoch 2/5, Loss: 1.1788
+Epoch 3/5, Loss: 1.1639
+Epoch 4/5, Loss: 1.1535
+Epoch 5/5, Loss: 1.1395
+新模型评估：
+Accuracy: 70.38%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+最终的列表：
+[-0.001045737676195901, -0.0011578050891925176, -0.0012712225537129217, -0.001385986993080025, -0.0015020953399583793, -0.0016195445363187226, -0.0017383315334027274, -0.001858453291687899, -0.0019799067808526083, -0.002102688979741321, -0.002226796876329956, -0.002352227467691436, -0.0024789777599613164, -0.0026070447683036874, -0.0027364255168771216, -0.0028671170388008364, -0.0029991163761209916, -0.0031324205797771364, -0.0032670267095688023, -0.0034029318341222796, -0.0035401330308574945, -0.0036786273859550737, -0.003818411994323541, -0.003959483959566641, -0.004101840393950871, -0.0042454784183730936, -0.004390395162328323, -0.004536587763877636, -0.0046840533696162895, -0.004832789134641885, -0.004982792222522736, -0.0051340598052663985, -0.005286589063288251, -0.005440377185380305, -0.005595421368680145, -0.005751718818639916, -0.005909266748995556, -0.0060680623817361695, -0.00622810294707337, -0.006389385683411027, -0.006551907837314873, -0.006715666663482445, -0.006880659424713088, -0.007046883391878048, -0.007214335843890758, -0.007383014067677281, -0.007552915358146742, -0.0077240370181621, -0.007896376358510843, -0.008069930697875968, -0.008244697362806946, -0.00842067368769104, -0.008597857014724437, -0.008776244693883765, -0.008955834082897657, -0.009136622547218358, -0.009318607459993598, -0.009501786202038454, -0.009686156161807416, -0.00987171473536659, -0.010058459326365933, -0.010246387346011708, -0.01043549621303895, -0.010625783353684193, -0.010817246201658248, -0.011009882198118964, -0.011203688791644378, -0.011398663438205767, -0.011594803601140916, -0.011792106751127393, -0.011990570366156209, -0.012190191931505168, -0.012390968939712754, -0.012592898890551832, -0.01279597929100365, -0.013000207655231827, -0.013205581504556599, -0.013412098367428862, -0.013619755779404885, -0.013828551283120452, -0.014038482428265706, -0.014249546771559735, -0.014461741876725442, -0.0146750653144644, -0.014889514662431935, -0.015105087505212236, -0.015321781434293663, -0.015539594048043975, -0.015758522951685935, -0.015978565757272717, -0.016199720083663688, -0.016421983556500097, -0.016645353808181024, -0.01686982847783927, -0.017095405211317555, -0.01732208166114453, -0.017549855486511196, -0.01777872435324722, -0.018008685933797453, -0.01823973790719849, -0.018471877959055333, -0.018705103781518226, -0.01893941307325947, -0.019174803539450433, -0.019411272891738676, -0.019648818848225003, -0.01988743913344082, -0.02012713147832547, -0.020367893620203706, -0.020609723302763228, -0.02085261827603234, -0.02109657629635768, -0.021341595126382104, -0.021587672535022542, -0.021834806297448092, -0.02208299419505806, -0.02233223401546025, -0.02258252355244922, -0.02283386060598462, -0.023086242982169797, -0.023339668493230215, -0.02359413495749231, -0.02384964019936199, -0.024106182049303662, -0.024363758343819097, -0.024622366925426464, -0.024882005642639343, -0.025142672349946077, -0.0254043649077889, -0.025667081182543364, -0.025930819046497716, -0.026195576377832597, -0.02646135106060045, -0.02672814098470537, -0.026995944045882833, -0.027264758145679566, -0.027534581191433496, -0.027805411096253813, -0.028077245779001114, -0.028350083164267473, -0.028623921182356876, -0.028898757769265496, -0.029174590866662173, -0.02945141842186895, -0.029729238387841556, -0.030008048723150355, -0.030287847391960804, -0.030568632364014497, -0.030850401614610085, -0.03113315312458409, -0.031416884880292234, -0.03170159487359048, -0.03198728110181606, -0.03227394156776933, -0.0325615742796945, -0.0328501772512616, -0.03313974850154769, -0.03343028605501877, -0.03372178794151112, -0.034014252196213374, -0.03430767685964822, -0.034602059977654365, -0.03489739960136834, -0.035193693787206826, -0.0354909405968486, -0.035789138097216844, -0.036088284360461326, -0.0363883774639408, -0.03668941549020541, -0.03699139652697919, -0.03729431866714275, -0.03759818000871551, -0.03790297865483891, -0.03820871271375886, -0.038515380298808605, -0.03882297952839181, -0.039131508525965336, -0.0394409654200224, -0.03975134834407565, -0.04006265543664034, -0.040374884841217734, -0.0406880347062781, -0.041002103185244415, -0.04131708843647569, -0.041632988623250405, -0.04194980191375028, -0.04226752648104373, -0.04258616050306971, -0.04290570216262146, -0.04322614964733035, -0.04354750114964975, -0.043869754866839084, -0.04419290900094783, -0.04451696175879952, -0.04484191135197613, -0.04516775599680209, -0.045494493914328665, -0.045822123330318376, -0.04615064247522918, -0.04648004958419927, -0.0468103428970314, -0.047141520658177505, -0.04747358111672337, -0.04780652252637346, -0.048140343145435555, -0.048475041236805655, -0.04881061506795284, -0.049147062910904316, -0.04948438304223038, -0.049822573743029536, -0.05016163329891343, -0.05050155999999248, -0.05084235214086069, -0.05118400802058115, -0.05152652594267146, -0.05186990421508908, -0.052214141150216775, -0.05255923506484836, -0.052905184280173906, -0.053251987121765904, -0.05359964191956451, -0.05394814700786363, -0.054297500725296544, -0.05464770141482195, -0.054998747423709776, -0.055350637103527195, -0.05570336881012464, -0.05605694090362204, -0.056411351748394734, -0.05676659971306, -0.0571226831704629, -0.057479600497663014, -0.057837350075920446, -0.05819593029068254, -0.05855533953157013, -0.058915576192364205, -0.05927663867099228, -0.05963852536951536, -0.060001234694114364, -0.06036476505507685, -0.06072911486678398, -0.06109428254769711, -0.06146026652034489, -0.06182706521131012, -0.062194677051216674, -0.06256310047471655, -0.06293233392047715, -0.06330237583116805, -0.06367322465344849, -0.06404487883795451, -0.06441733683928619, -0.06479059711599514, -0.06516465813057154, -0.06553951834943186, -0.06591517624290641, -0.06629163028522647, -0.06666887895451226, -0.06704692073276033, -0.0674257541058314, -0.06780537756343782, -0.06818578959913157, -0.06856698871029193, -0.0689489733981134, -0.06933174216759364, -0.06971529352752118, -0.07009962599046377, -0.07048473807275615, -0.0708706282944882, -0.07125729517949309, -0.07164473725533538, -0.0720329530532994, -0.07242194110837741, -0.07281169995925782, -0.07320222814831359, -0.07359352422159085, -0.07398558672879701, -0.07437841422328934, -0.07477200526206365, -0.07516635840574265, -0.07556147221856471, -0.07595734526837244, -0.0763539761266015, -0.07675136336826899, -0.07714950557196279, -0.07754840131982987, -0.07794804919756551, -0.07834844779440198, -0.07874959570309756, -0.07915149151992557, -0.07955413384466345, -0.0799575212805817, -0.08036165243443302, -0.08076652591644154, -0.08117214034029205, -0.08157849432311898, -0.08198558648549606, -0.08239341545142528, -0.08280197984832646, -0.08321127830702651, -0.08362130946174917, -0.08403207195010395, -0.0844435644130761, -0.08485578549501602, -0.08526873384362876, -0.08568240810996378, -0.08609680694840452, -0.08651192901665827, -0.08692777297574567, -0.0873443374899906, -0.08776162122701012, -0.08817962285770412, -0.08859834105624542, -0.08901777450006948, -0.0894379218698646, -0.08985878184956175, -0.09028035312632479, -0.09070263439054027, -0.09112562433580784, -0.09154932165893018, -0.0919737250599034, -0.09239883324190709, -0.09282464491129458, -0.09325115877758347, -0.09367837355344569, -0.09410628795469791, -0.09453490070029211, -0.0949642105123058, -0.09539421611593277, -0.09582491623947326, -0.09625630961432474, -0.09668839497497247, -0.09712117105898005, -0.09755463660697997, -0.0979887903626645, -0.09842363107277627, -0.09885915748709906, -0.09929536835844854, -0.09973226244266314, -0.10016983849859487, -0.10060809528810027, -0.10104703157603112, -0.10148664613022562, -0.10192693772149919, -0.10236790512363575, -0.10280954711337831, -0.10325186247042056, -0.1036948499773977, -0.10413850841987754, -0.10458283658635165, -0.10502783326822707, -0.1054734972598167, -0.10591982735833133, -0.1063668223638704, -0.10681448107941383, -0.10726280231081281, -0.10771178486678179, -0.10816142755888941, -0.10861172920155027, -0.10906268861201612, -0.10951430461036793, -0.10996657601950677, -0.11041950166514569, -0.11087308037580151, -0.1113273109827862, -0.11178219232019859, -0.11223772322491599, -0.11269390253658634, -0.11315072909761942, -0.11360820175317876, -0.114066319351174, -0.11452508074225187, -0.11498448477978873, -0.11544453031988217, -0.11590521622134303, -0.11636654134568736, -0.11682850455712823, -0.1172911047225682, -0.11775434071159085, -0.11821821139645317, -0.1186827156520775, -0.11914785235604386, -0.11961362038858181, -0.1200800186325629, -0.1205470459734928, -0.12101470129950359, -0.12148298350134568, -0.12195189147238078, -0.1224214241085736, -0.1228915803084844, -0.12336235897326153, -0.12383375900663374, -0.12430577931490228, -0.12477841880693408, -0.12525167639415352, -0.12572555099053528, -0.12620004151259673, -0.1266751468793909, -0.12715086601249842, -0.1276271978360205, -0.12810414127657177, -0.1285816952632725, -0.12905985872774162, -0.12953863060408916, -0.13001800982890938, -0.13049799534127315, -0.130978586082721, -0.13145978099725564, -0.1319415790313354, -0.13242397913386633, -0.13290698025619568, -0.13339058135210446, -0.13387478137780073, -0.13435957929191222, -0.13484497405547946, -0.13533096463194882, -0.13581754998716566, -0.13630472908936714, -0.1367925009091755, -0.13728086441959103, -0.13776981859598547, -0.13825936241609477, -0.1387494948600126, -0.13924021491018346, -0.13973152155139584, -0.14022341377077563, -0.14071589055777922, -0.14120895090418695, -0.14170259380409633, -0.14219681825391534, -0.14269162325235601, -0.1431870078004276, -0.14368297090143023, -0.14417951156094805, -0.14467662878684284, -0.1451743215892476, -0.14567258898055985, -0.1461714299754353, -0.1466708435907813, -0.1471708288457506, -0.14767138476173464, -0.14817251036235746, -0.14867420467346915, -0.1491764667231395, -0.149679295541652, -0.15018269016149705, -0.150686649617366, -0.15119117294614476, -0.15169625918690788, -0.15220190738091183, -0.15270811657158917, -0.15321488580454223, -0.15372221412753712, -0.1542301005904974, -0.15473854424549793, -0.1552475441467593, -0.15575709935064097, -0.15626720891563595, -0.15677787190236425, -0.15728908737356717, -0.15780085439410135, -0.15831317203093237, -0.15882603935312944, -0.15933945543185907, -0.15985341934037928, -0.16036793015403356, -0.16088298695024522, -0.1613985888085117, -0.1619147348103981, -0.16243142403953198, -0.16294865558159755, -0.16346642852432958, -0.16398474195750767, -0.16450359497295097, -0.16502298666451193, -0.16554291612807098, -0.16606338246153063, -0.16658438476481002, -0.1671059221398391, -0.1676279936905533, -0.16815059852288744, -0.16867373574477068, -0.16919740446612058, -0.16972160379883788, -0.17024633285680085, -0.1707715907558594, -0.17129737661383054, -0.17182368955049182, -0.17235052868757667, -0.1728778931487686, -0.17340578205969603, -0.17393419454792647, -0.1744631297429617, -0.17499258677623208, -0.1755225647810913, -0.17605306289281097, -0.17658408024857547, -0.17711561598747644, -0.17764766925050784, -0.17818023918056036, -0.17871332492241637, -0.1792469256227448, -0.17978104043009563, -0.1803156684948951, -0.1808508089694401, -0.18138646100789352, -0.1819226237662786, -0.18245929640247427, -0.18299647807620983, -0.18353416794905986, -0.18407236518443926, -0.18461106894759793, -0.18515027840561643, -0.18568999272739994, -0.1862302110836742, -0.18677093264697991, -0.18731215659166817, -0.1878538820938953, -0.18839610833161796, -0.1889388344845883, -0.18948205973434884, -0.1900257832642281, -0.1905700042593349, -0.19111472190655443, -0.19165993539454268, -0.19220564391372225, -0.19275184665627698, -0.19329854281614733, -0.19384573158902596, -0.19439341217235234, -0.19494158376530862, -0.1954902455688146, -0.19603939678552285, -0.1965890366198147, -0.19713916427779454, -0.19768977896728607, -0.19824087989782713, -0.19879246628066521, -0.1993445373287529, -0.19989709225674318, -0.20045013028098496, -0.20100365061951814, -0.20155765249206986, -0.20211213512004883, -0.2026670977265418, -0.20322253953630837, -0.2037784597757769, -0.20433485767303988, -0.20489173245784958, -0.20544908336161305, -0.20600690961738855, -0.2065652104598804, -0.2071239851254349, -0.20768323285203583, -0.20824295287930011, -0.20880314444847348, -0.2093638068024259, -0.20992493918564753, -0.21048654084424429, -0.2110486110259332, -0.2116111489800387, -0.21217415395748795, -0.2127376252108064, -0.21330156199411415, -0.213865963563121, -0.2144308291751228, -0.2149961580889967, -0.21556194956519736, -0.21612820286575263, -0.2166949172542592, -0.21726209199587876, -0.21782972635733344, -0.21839781960690213, -0.21896637101441596, -0.21953537985125426, -0.2201048453903407, -0.22067476690613902, -0.22124514367464881, -0.22181597497340189, -0.22238726008145754, -0.2229589982793994, -0.2235311888493306, -0.22410383107487025, -0.22467692424114927, -0.22525046763480633, -0.22582446054398403, -0.22639890225832487, -0.22697379206896734, -0.22754912926854193, -0.22812491315116717, -0.22870114301244593, -0.2292778181494612, -0.2298549378607725, -0.23043250144641164, -0.23101050820787944, -0.23158895744814134, -0.23216784847162386, -0.2327471805842104, -0.23332695309323798, -0.23390716530749317, -0.23448781653720813, -0.23506890609405706, -0.23565043329115226, -0.23623239744304075, -0.23681479786569987, -0.23739763387653434, -0.23798090479437167, -0.23856460993945944, -0.2391487486334608, -0.23973332019945087, -0.24031832396191383, -0.24090375924673813, -0.24148962538121366, -0.2420759216940278, -0.242662647515262, -0.2432498021763878, -0.24383738501026347, -0.24442539535113056, -0.2450138325346099, -0.2456026958976984, -0.24619198477876525, -0.24678169851754878, -0.24737183645515232, -0.247962397934041, -0.24855338229803836, -0.24914478889232256, -0.24973661706342315, -0.2503288661592172, -0.2509215355289265, -0.2515146245231132, -0.2521081324936772, -0.25270205879385227, -0.2532964027782024, -0.25389116380261934, -0.2544863412243176, -0.255081934401833, -0.2556779426950174, -0.25627436546503674, -0.2568712020743668, -0.2574684518867903, -0.25806611426739345, -0.25866418858256246, -0.25926267419998045, -0.25986157048862385, -0.26046087681875946, -0.2610605925619408, -0.2616607170910049, -0.2622612497800696, -0.2628621900045291, -0.26346353714105186, -0.2640652905675767, -0.2646674496633098, -0.2652700138087214, -0.2658729823855425, -0.2664763547767622, -0.2670801303666235, -0.26768430854062103, -0.2682888886854974, -0.2688938701892402, -0.2694992524410787, -0.27010503483148096, -0.2707112167521506, -0.27131779759602315, -0.271924776757264, -0.2725321536312642, -0.2731399276146381, -0.2737480981052198, -0.2743566645020604, -0.27496562620542475, -0.2755749826167884, -0.27618473313883474, -0.2767948771754514, -0.27740541413172815, -0.27801634341395276, -0.27862766442960907, -0.2792393765873729, -0.2798514792971102, -0.2804639719698731, -0.2810768540178974, -0.2816901248545996, -0.2823037838945735, -0.2829178305535881, -0.28353226424858374, -0.2841470843976697, -0.28476229042012124, -0.2853778817363763, -0.28599385776803316, -0.2866102179378469, -0.2872269616697275, -0.28784408838873554, -0.2884615975210806, -0.2890794884941177, -0.2896977607363446, -0.29031641367739924, -0.29093544674805627, -0.29155485938022496, -0.2921746510069456, -0.29279482106238763, -0.29341536898184567, -0.29403629420173777, -0.2946575961596022, -0.2952792742940943, -0.2959013280449846, -0.2965237568531551, -0.29714656016059704, -0.29776973741040813, -0.2983932880467897, -0.29901721151504396, -0.29964150726157135, -0.30026617473386785, -0.300891213380522, -0.3015166226512126, -0.30214240199670567, -0.3027685508688522, -0.3033950687205847, -0.3040219550059155, -0.3046492091799335, -0.3052768306988014, -0.30590481901975364, -0.30653317360109295, -0.3071618939021888, -0.3077909793834735, -0.3084204295064407, -0.3090502437336422, -0.30968042152868536, -0.31031096235623085, -0.3109418656819896, -0.31157313097272077, -0.3122047576962285, -0.3128367453213602, -0.31346909331800304, -0.31410180115708225, -0.3147348683105581, -0.3153682942514234, -0.3160020784537013, -0.3166362203924423, -0.3172707195437223, -0.31790557538463937, -0.31854078739331204, -0.3191763550488763, -0.31981227783148325, -0.3204485552222967, -0.3210851867034905, -0.3217221717582466, -0.3223595098707518, -0.32299720052619596, -0.3236352432107695, -0.3242736374116604, -0.3249123826170526, -0.32555147831612286, -0.326190923999039, -0.32683071915695694, -0.3274708632820186, -0.3281113558673493, -0.32875219640705594, -0.3293933843962239, -0.33003491933091494, -0.3306768007081651, -0.33131902802598195, -0.3319616007833427, -0.3326045184801912, -0.33324778061743643, -0.33389138669694945, -0.3345353362215615, -0.3351796286950616, -0.33582426362219414, -0.3364692405086567, -0.33711455886109754, -0.3377602181871139, -0.33840621799524884, -0.3390525577949898, -0.3396992370967657, -0.3403462554119452, -0.340993612252834, -0.3416413071326727, -0.3422893395656352, -0.34293770906682525, -0.3435864151522753, -0.3442354573389438, -0.34488483514471285, -0.34553454808838663, -0.34618459568968823, -0.34683497746925857, -0.34748569294865317, -0.3481367416503407, -0.34878812309770035, -0.34943983681502, -0.350091882327494, -0.3507442591612205, -0.35139696684320026, -0.3520500049013336, -0.35270337286441866, -0.3533570702621493, -0.3540110966251129, -0.35466545148478834, -0.3553201343735434, -0.35597514482463355, -0.35663048237219896, -0.35728614655126306, -0.3579421368977298, -0.35859845294838216, -0.3592550942408801, -0.35991206031375755, -0.36056935070642177, -0.3612269649591501, -0.36188490261308837, -0.3625431632102489, -0.3632017462935084, -0.3638606514066058, -0.3645198780941405, -0.36517942590157015, -0.3658392943752085, -0.36649948306222363, -0.36715999151063583, -0.36782081926931565, -0.36848196588798177, -0.3691434309171992, -0.3698052139083773, -0.3704673144137674, -0.3711297319864614, -0.3717924661803892, -0.37245551655031744, -0.3731188826518468, -0.3737825640414107, -0.37444656027627293, -0.37511087091452566, -0.375775495515088, -0.37644043363770335, -0.3771056848429383, -0.3777712486921798, -0.37843712474763425, -0.37910331257232455, -0.379769811730089, -0.38043662178557913, -0.3811037423042575, -0.3817711728523963, -0.38243891299707516, -0.38310696230617963, -0.3837753203483986, -0.3844439866932232, -0.3851129609109446, -0.3857822425726519, -0.3864518312502309, -0.3871217265163617, -0.38779192794451695, -0.3884624351089603, -0.3891332475847443, -0.3898043649477087, -0.39047578677447853, -0.3911475126424625, -0.3918195421298507, -0.3924918748156135, -0.393164510279499, -0.3938374481020319, -0.39451068786451116, -0.3951842291490088, -0.39585807153836744, -0.396532214616199, -0.39720665796688287, -0.39788140117556386, -0.3985564438281509, -0.3992317855113148, -0.39990742581248695, -0.400583364319857, -0.4012596006223719, -0.40193613430973335, -0.4026129649723967, -0.4032900922015688, -0.4039675155892065, -0.40464523472801495, -0.40532324921144547, -0.40600155863369475, -0.40668016258970213, -0.40735906067514843, -0.40803825248645426, -0.40871773762077807, -0.40939751567601484, -0.410077586250794, -0.41075794894447815, -0.411438603357161, -0.41211954908966586, -0.41280078574354423, -0.4134823129210735, -0.4141641302252563, -0.41484623725981756, -0.41552863362920417, -0.4162113189385824, -0.41689429279383666, -0.4175775548015678, -0.41826110456909144, -0.4189449417044365, -0.41962906581634346, -0.42031347651426276, -0.4209981734083529, -0.4216831561094796, -0.4223684242292134, -0.4230539773798285, -0.4237398151743011, -0.42442593722630767, -0.4251123431502234, -0.42579903256112095, -0.42648600507476825, -0.4271732603076276, -0.4278607978768536, -0.4285486174002921, -0.4292367184964777, -0.42992510078463353, -0.4306137638846684, -0.43130270741717625, -0.4319919310034338, -0.43268143426540007, -0.4333712168257135, -0.43406127830769153, -0.4347516183353284, -0.43544223653329406, -0.4361331325269326, -0.4368243059422602, -0.43751575640596435, -0.4382074835454023, -0.43889948698859854, -0.43959176636424485, -0.44028432130169737, -0.4409771514309764, -0.44167025638276364, -0.44236363578840193, -0.4430572892798926, -0.44375121648989513, -0.4444454170517247, -0.44513989059935166, -0.4458346367673991, -0.44652965519114185, -0.4472249455065057, -0.4479205073500646, -0.44861634035904013, -0.4493124441713, -0.4500088184253563, -0.45070546276036416, -0.45140237681612044, -0.4520995602330624, -0.45279701265226585, -0.45349473371544435, -0.454192723064947, -0.454890980343758, -0.4555895051954944, -0.45628829726440495, -0.4569873561953689, -0.4576866816338947, -0.45838627322611786, -0.45908613061880066, -0.45978625345932966, -0.4604866413957155, -0.46118729407659, -0.4618882111512065, -0.46258939226943707, -0.46329083708177216, -0.4639925452393183, -0.4646945163937979, -0.46539675019754667, -0.46609924630351296, -0.46680200436525643, -0.4675050240369465, -0.4682083049733611, -0.4689118468298852, -0.4696156492625094, -0.47031971192782973, -0.47102403448304375, -0.47172861658595255, -0.4724334578949564, -0.47313855806905547, -0.47384391676784765, -0.4745495336515275, -0.4752554083808844, -0.4759615406173022, -0.4766679300227573, -0.4773745762598173, -0.4780814789916398, -0.47878863788197157, -0.4794960525951465, -0.4802037227960848, -0.4809116481502915, -0.48161982832385597, -0.4823282629834489, -0.4830369517963228, -0.4837458944303097, -0.48445509055382074, -0.4851645398358434, -0.4858742419459424, -0.48658419655425655, -0.4872944033314983, -0.48800486194895276, -0.4887155720784756, -0.48942653339249287, -0.4901377455639988, -0.4908492082665551, -0.49156092117428996, -0.49227288396189606, -0.49298509630462994, -0.4936975578783106, -0.49441026835931823, -0.49512322742459336, -0.49583643475163486]
+**** log-parameter_analysis 运行时间： 2025-01-17 23:04:47 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.060844997898674216
+DataOwner2: noise random: 0.08859484346216961
+DataOwner3: noise random: 0.07297759892194641
+DataOwner4: noise random: 0.03258939539398142
+DataOwner5: noise random: 0.014190322344247663
+DataOwner6: noise random: 0.09687091208096475
+DataOwner7: noise random: 0.012757541076017865
+DataOwner8: noise random: 0.0956735099567791
+DataOwner9: noise random: 0.06761704240284887
+DataOwner10: noise random: 0.010326141665297817
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9984967969145012, 0.9968164249254796, 0.9978449775306767, 0.9995706045057651, 0.9999185989480246, 0.9962084998221096, 0.9999341436382053, 0.9962994461648321, 0.9981477762483458, 0.9999568230947059]
+归一化后的数据质量列表avg_f_list: [0.9610485522719235, 0.916218587863393, 0.9436589266601221, 0.9896962305315434, 0.9989802334563627, 0.9, 0.999394943956238, 0.9024263206801679, 0.9517371711350017, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3363
+DataOwner1的最优x_1 = 0.1265
+DataOwner2的最优x_2 = 0.0779
+DataOwner3的最优x_3 = 0.1088
+DataOwner4的最优x_4 = 0.1529
+DataOwner5的最优x_5 = 0.1607
+DataOwner6的最优x_6 = 0.0577
+DataOwner7的最优x_7 = 0.1611
+DataOwner8的最优x_8 = 0.0608
+DataOwner9的最优x_9 = 0.1172
+DataOwner10的最优x_10 = 0.1616
+每个DataOwner应该贡献数据比例 xn_list = [0.12649655758900466, 0.077857812360099, 0.10877858731403715, 0.15286247751951798, 0.16071651715685614, 0.05769794233110358, 0.1610599285227827, 0.06080914759933146, 0.11718023593075123, 0.1615598395336469]
+ModelOwner的最大效用 U(Eta) = 0.5754
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.336258710303773
+DataOwner1的分配到的支付 ： 0.1415
+DataOwner2的分配到的支付 ： 0.0830
+DataOwner3的分配到的支付 ： 0.1195
+DataOwner4的分配到的支付 ： 0.1761
+DataOwner5的分配到的支付 ： 0.1868
+DataOwner6的分配到的支付 ： 0.0604
+DataOwner7的分配到的支付 ： 0.1873
+DataOwner8的分配到的支付 ： 0.0639
+DataOwner9的分配到的支付 ： 0.1298
+DataOwner10的分配到的支付 ： 0.1880
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5', 'DataOwner6': 'CPC6', 'DataOwner7': 'CPC7', 'DataOwner8': 'CPC8', 'DataOwner9': 'CPC9', 'DataOwner10': 'CPC10'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 1: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：220.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2972
+Epoch 2/5, Loss: 2.2912
+Epoch 3/5, Loss: 2.2942
+Epoch 4/5, Loss: 2.2929
+Epoch 5/5, Loss: 2.2885
+新模型评估：
+Accuracy: 28.87%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：203.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 28.87%
+Epoch 1/5, Loss: 2.2938
+Epoch 2/5, Loss: 2.2862
+Epoch 3/5, Loss: 2.2840
+Epoch 4/5, Loss: 2.2838
+Epoch 5/5, Loss: 2.2756
+新模型评估：
+Accuracy: 31.28%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：756.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 31.28%
+Epoch 1/5, Loss: 2.2799
+Epoch 2/5, Loss: 2.2749
+Epoch 3/5, Loss: 2.2686
+Epoch 4/5, Loss: 2.2616
+Epoch 5/5, Loss: 2.2536
+新模型评估：
+Accuracy: 37.18%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：1594.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 37.18%
+Epoch 1/5, Loss: 2.2503
+Epoch 2/5, Loss: 2.2317
+Epoch 3/5, Loss: 2.2080
+Epoch 4/5, Loss: 2.1781
+Epoch 5/5, Loss: 2.1407
+新模型评估：
+Accuracy: 44.13%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：1956.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 44.13%
+Epoch 1/5, Loss: 2.1038
+Epoch 2/5, Loss: 2.0556
+Epoch 3/5, Loss: 2.0001
+Epoch 4/5, Loss: 1.9323
+Epoch 5/5, Loss: 1.8542
+新模型评估：
+Accuracy: 55.15%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：200.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 55.15%
+Epoch 1/5, Loss: 1.8438
+Epoch 2/5, Loss: 1.7266
+Epoch 3/5, Loss: 1.7231
+Epoch 4/5, Loss: 1.7262
+Epoch 5/5, Loss: 1.7169
+新模型评估：
+Accuracy: 56.34%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：840.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 56.34%
+Epoch 1/5, Loss: 1.7357
+Epoch 2/5, Loss: 1.7123
+Epoch 3/5, Loss: 1.6747
+Epoch 4/5, Loss: 1.6395
+Epoch 5/5, Loss: 1.6260
+新模型评估：
+Accuracy: 60.36%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：52.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 60.36%
+Epoch 1/5, Loss: 1.5703
+Epoch 2/5, Loss: 1.5641
+Epoch 3/5, Loss: 1.5580
+Epoch 4/5, Loss: 1.5518
+Epoch 5/5, Loss: 1.5458
+新模型评估：
+Accuracy: 60.51%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：713.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 60.51%
+Epoch 1/5, Loss: 1.6000
+Epoch 2/5, Loss: 1.5826
+Epoch 3/5, Loss: 1.5531
+Epoch 4/5, Loss: 1.5498
+Epoch 5/5, Loss: 1.5127
+新模型评估：
+Accuracy: 65.34%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：1685.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.34%
+Epoch 1/5, Loss: 1.4290
+Epoch 2/5, Loss: 1.3617
+Epoch 3/5, Loss: 1.3012
+Epoch 4/5, Loss: 1.2434
+Epoch 5/5, Loss: 1.1781
+新模型评估：
+Accuracy: 71.18%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3363
+DataOwner1的最优x_1 = 0.1265
+DataOwner2的最优x_2 = 0.0779
+DataOwner3的最优x_3 = 0.1088
+DataOwner4的最优x_4 = 0.1529
+DataOwner5的最优x_5 = 0.1607
+DataOwner6的最优x_6 = 0.0577
+DataOwner7的最优x_7 = 0.1611
+DataOwner8的最优x_8 = 0.0608
+DataOwner9的最优x_9 = 0.1172
+DataOwner10的最优x_10 = 0.1616
+每个DataOwner应该贡献数据比例 xn_list = [0.12649655758900466, 0.077857812360099, 0.10877858731403715, 0.15286247751951798, 0.16071651715685614, 0.05769794233110358, 0.1610599285227827, 0.06080914759933146, 0.11718023593075123, 0.1615598395336469]
+ModelOwner的最大效用 U(Eta) = 0.5754
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.336258710303773
+DataOwner1的分配到的支付 ： 0.1415
+DataOwner2的分配到的支付 ： 0.0830
+DataOwner3的分配到的支付 ： 0.1195
+DataOwner4的分配到的支付 ： 0.1761
+DataOwner5的分配到的支付 ： 0.1868
+DataOwner6的分配到的支付 ： 0.0604
+DataOwner7的分配到的支付 ： 0.1873
+DataOwner8的分配到的支付 ： 0.0639
+DataOwner9的分配到的支付 ： 0.1298
+DataOwner10的分配到的支付 ： 0.1880
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：220.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.18%
+Epoch 1/5, Loss: 1.1288
+Epoch 2/5, Loss: 1.0814
+Epoch 3/5, Loss: 1.0971
+Epoch 4/5, Loss: 1.0759
+Epoch 5/5, Loss: 1.0609
+新模型评估：
+Accuracy: 71.52%
+loss差为：
+0.067889004945755
+单位数据loss差为：
+0.0003085863861170682
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：203.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 66.75%
+Epoch 1/5, Loss: 1.2954
+Epoch 2/5, Loss: 1.3029
+Epoch 3/5, Loss: 1.3381
+Epoch 4/5, Loss: 1.3007
+Epoch 5/5, Loss: 1.2733
+新模型评估：
+Accuracy: 67.61%
+loss差为：
+0.022067010402679443
+单位数据loss差为：
+0.00010870448474226326
+正在评估DataOwner3的数据质量, 本轮评估的样本数据量为：756.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.48%
+Epoch 1/5, Loss: 1.2581
+Epoch 2/5, Loss: 1.2259
+Epoch 3/5, Loss: 1.1980
+Epoch 4/5, Loss: 1.1706
+Epoch 5/5, Loss: 1.1469
+新模型评估：
+Accuracy: 72.00%
+loss差为：
+0.11124676465988159
+单位数据loss差为：
+0.0001471518051056635
+正在评估DataOwner4的数据质量, 本轮评估的样本数据量为：1594.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.48%
+Epoch 1/5, Loss: 1.2490
+Epoch 2/5, Loss: 1.1938
+Epoch 3/5, Loss: 1.1398
+Epoch 4/5, Loss: 1.0878
+Epoch 5/5, Loss: 1.0375
+新模型评估：
+Accuracy: 72.50%
+loss差为：
+0.21151057243347182
+单位数据loss差为：
+0.0001326917016521153
+正在评估DataOwner5的数据质量, 本轮评估的样本数据量为：1956.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.00%
+Epoch 1/5, Loss: 1.0400
+Epoch 2/5, Loss: 0.9815
+Epoch 3/5, Loss: 0.9275
+Epoch 4/5, Loss: 0.8808
+Epoch 5/5, Loss: 0.8354
+新模型评估：
+Accuracy: 75.55%
+loss差为：
+0.20451863542679816
+单位数据loss差为：
+0.00010455962956380274
+正在评估DataOwner6的数据质量, 本轮评估的样本数据量为：200.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.03%
+Epoch 1/5, Loss: 0.9916
+Epoch 2/5, Loss: 0.9052
+Epoch 3/5, Loss: 0.8538
+Epoch 4/5, Loss: 0.9147
+Epoch 5/5, Loss: 0.9569
+新模型评估：
+Accuracy: 75.75%
+loss差为：
+0.03463219106197357
+单位数据loss差为：
+0.00017316095530986786
+正在评估DataOwner7的数据质量, 本轮评估的样本数据量为：840.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.03%
+Epoch 1/5, Loss: 0.8684
+Epoch 2/5, Loss: 0.8402
+Epoch 3/5, Loss: 0.8238
+Epoch 4/5, Loss: 0.8230
+Epoch 5/5, Loss: 0.7862
+新模型评估：
+Accuracy: 76.05%
+loss差为：
+0.08214651686804642
+单位数据loss差为：
+9.779347246196002e-05
+正在评估DataOwner8的数据质量, 本轮评估的样本数据量为：52.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.48%
+Epoch 1/5, Loss: 1.0612
+Epoch 2/5, Loss: 1.0523
+Epoch 3/5, Loss: 1.0436
+Epoch 4/5, Loss: 1.0355
+Epoch 5/5, Loss: 1.0277
+新模型评估：
+Accuracy: 76.23%
+loss差为：
+0.03354454040527344
+单位数据loss差为：
+0.0006450873154860276
+正在评估DataOwner9的数据质量, 本轮评估的样本数据量为：713.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.48%
+Epoch 1/5, Loss: 0.8851
+Epoch 2/5, Loss: 0.8418
+Epoch 3/5, Loss: 0.8542
+Epoch 4/5, Loss: 0.8131
+Epoch 5/5, Loss: 0.8067
+新模型评估：
+Accuracy: 75.53%
+loss差为：
+0.07837816576162981
+单位数据loss差为：
+0.00010992730120845696
+正在评估DataOwner10的数据质量, 本轮评估的样本数据量为：1685.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.48%
+Epoch 1/5, Loss: 0.8653
+Epoch 2/5, Loss: 0.8224
+Epoch 3/5, Loss: 0.7881
+Epoch 4/5, Loss: 0.7615
+Epoch 5/5, Loss: 0.7254
+新模型评估：
+Accuracy: 76.18%
+loss差为：
+0.13983362471615823
+单位数据loss差为：
+8.298731437160726e-05
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [0.0003085863861170682, 0.00010870448474226326, 0.0001471518051056635, 0.0001326917016521153, 0.00010455962956380274, 0.00017316095530986786, 9.779347246196002e-05, 0.0006450873154860276, 0.00010992730120845696, 8.298731437160726e-05]
+归一化后的数据质量列表avg_f_list:[0.9401350420384608, 0.9045751948620653, 0.9114151379837829, 0.9088426235868998, 0.9038378073562402, 0.9160422773099951, 0.9026340790003555, 1.0, 0.9047927391537873, 0.9]
+CPC1调整模型中, 本轮训练的数据量为：220.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.48%
+Epoch 1/5, Loss: 0.7802
+Epoch 2/5, Loss: 0.7421
+Epoch 3/5, Loss: 0.7607
+Epoch 4/5, Loss: 0.7402
+Epoch 5/5, Loss: 0.7439
+新模型评估：
+Accuracy: 75.36%
+CPC2调整模型中, 本轮训练的数据量为：203.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.48%
+Epoch 1/5, Loss: 0.8609
+Epoch 2/5, Loss: 0.8407
+Epoch 3/5, Loss: 0.8096
+Epoch 4/5, Loss: 0.7613
+Epoch 5/5, Loss: 0.9122
+新模型评估：
+Accuracy: 74.70%
+CPC3调整模型中, 本轮训练的数据量为：756.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.48%
+Epoch 1/5, Loss: 0.8584
+Epoch 2/5, Loss: 0.8274
+Epoch 3/5, Loss: 0.8069
+Epoch 4/5, Loss: 0.7877
+Epoch 5/5, Loss: 0.7661
+新模型评估：
+Accuracy: 75.73%
+CPC4调整模型中, 本轮训练的数据量为：1594.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2923
+Epoch 2/5, Loss: 2.2848
+Epoch 3/5, Loss: 2.2735
+Epoch 4/5, Loss: 2.2568
+Epoch 5/5, Loss: 2.2324
+新模型评估：
+Accuracy: 41.16%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：1956.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 41.16%
+Epoch 1/5, Loss: 2.2136
+Epoch 2/5, Loss: 2.1798
+Epoch 3/5, Loss: 2.1414
+Epoch 4/5, Loss: 2.0894
+Epoch 5/5, Loss: 2.0297
+新模型评估：
+Accuracy: 48.84%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：200.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 48.84%
+Epoch 1/5, Loss: 1.9802
+Epoch 2/5, Loss: 2.0141
+Epoch 3/5, Loss: 1.9765
+Epoch 4/5, Loss: 1.9809
+Epoch 5/5, Loss: 1.9607
+新模型评估：
+Accuracy: 51.78%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：840.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 51.78%
+Epoch 1/5, Loss: 1.9473
+Epoch 2/5, Loss: 1.9109
+Epoch 3/5, Loss: 1.8896
+Epoch 4/5, Loss: 1.8604
+Epoch 5/5, Loss: 1.8278
+新模型评估：
+Accuracy: 56.17%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：52.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 56.17%
+Epoch 1/5, Loss: 1.8958
+Epoch 2/5, Loss: 1.8910
+Epoch 3/5, Loss: 1.8862
+Epoch 4/5, Loss: 1.8814
+Epoch 5/5, Loss: 1.8767
+新模型评估：
+Accuracy: 57.70%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：713.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 57.70%
+Epoch 1/5, Loss: 1.7988
+Epoch 2/5, Loss: 1.7739
+Epoch 3/5, Loss: 1.7274
+Epoch 4/5, Loss: 1.6807
+Epoch 5/5, Loss: 1.7009
+新模型评估：
+Accuracy: 60.47%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：1685.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 60.47%
+Epoch 1/5, Loss: 1.6540
+Epoch 2/5, Loss: 1.5851
+Epoch 3/5, Loss: 1.5227
+Epoch 4/5, Loss: 1.4579
+Epoch 5/5, Loss: 1.3945
+新模型评估：
+Accuracy: 66.41%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.2901
+DataOwner1的最优x_1 = 0.1371
+DataOwner2的最优x_2 = 0.1017
+DataOwner3的最优x_3 = 0.1090
+DataOwner4的最优x_4 = 0.1063
+DataOwner5的最优x_5 = 0.1009
+DataOwner6的最优x_6 = 0.1137
+DataOwner7的最优x_7 = 0.0996
+DataOwner8的最优x_8 = 0.1850
+DataOwner9的最优x_9 = 0.1019
+DataOwner10的最优x_10 = 0.0967
+每个DataOwner应该贡献数据比例 xn_list = [0.13705976587204313, 0.10170727855035702, 0.10896669811019864, 0.10626344575678817, 0.10091079626258781, 0.11374853736794928, 0.09960471266608664, 0.18497603084924624, 0.10194173545609242, 0.09672098315226577]
+ModelOwner的最大效用 U(Eta) = 0.5243
+xn开始变化：
+DONE
+----- literation 3: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.290119037327765
+DataOwner1的分配到的支付 ： 0.5800
+DataOwner2的分配到的支付 ： 0.0563
+DataOwner3的分配到的支付 ： 0.0607
+DataOwner4的分配到的支付 ： 0.0849
+DataOwner5的分配到的支付 ： 0.0888
+DataOwner6的分配到的支付 ： 0.0637
+DataOwner7的分配到的支付 ： 0.0889
+DataOwner8的分配到的支付 ： 0.1131
+DataOwner9的分配到的支付 ： 0.0648
+DataOwner10的分配到的支付 ： 0.0889
+DONE
+----- literation 3: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 3: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：1745.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 66.41%
+Epoch 1/5, Loss: 1.3111
+Epoch 2/5, Loss: 1.2520
+Epoch 3/5, Loss: 1.1924
+Epoch 4/5, Loss: 1.1413
+Epoch 5/5, Loss: 1.0688
+新模型评估：
+Accuracy: 71.92%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：265.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.92%
+Epoch 1/5, Loss: 1.1286
+Epoch 2/5, Loss: 1.0371
+Epoch 3/5, Loss: 1.0645
+Epoch 4/5, Loss: 1.0201
+Epoch 5/5, Loss: 1.0380
+新模型评估：
+Accuracy: 70.77%
+CPC3调整模型中, 本轮训练的数据量为：757.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.92%
+Epoch 1/5, Loss: 1.0207
+Epoch 2/5, Loss: 0.9927
+Epoch 3/5, Loss: 0.9644
+Epoch 4/5, Loss: 0.9426
+Epoch 5/5, Loss: 0.9170
+新模型评估：
+Accuracy: 74.09%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：1594.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 74.09%
+Epoch 1/5, Loss: 0.9186
+Epoch 2/5, Loss: 0.8726
+Epoch 3/5, Loss: 0.8338
+Epoch 4/5, Loss: 0.7968
+Epoch 5/5, Loss: 0.7632
+新模型评估：
+Accuracy: 76.71%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：1956.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.71%
+Epoch 1/5, Loss: 0.7505
+Epoch 2/5, Loss: 0.7109
+Epoch 3/5, Loss: 0.6790
+Epoch 4/5, Loss: 0.6490
+Epoch 5/5, Loss: 0.6239
+新模型评估：
+Accuracy: 78.30%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：395.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.30%
+Epoch 1/5, Loss: 0.6495
+Epoch 2/5, Loss: 0.5869
+Epoch 3/5, Loss: 0.6227
+Epoch 4/5, Loss: 0.5882
+Epoch 5/5, Loss: 0.6021
+新模型评估：
+Accuracy: 75.62%
+CPC7调整模型中, 本轮训练的数据量为：840.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.10%
+Epoch 1/5, Loss: 0.7089
+Epoch 2/5, Loss: 0.6868
+Epoch 3/5, Loss: 0.7119
+Epoch 4/5, Loss: 0.6570
+Epoch 5/5, Loss: 0.6426
+新模型评估：
+Accuracy: 76.89%
+CPC8调整模型中, 本轮训练的数据量为：160.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.10%
+Epoch 1/5, Loss: 0.8095
+Epoch 2/5, Loss: 0.8168
+Epoch 3/5, Loss: 0.7830
+Epoch 4/5, Loss: 0.7715
+Epoch 5/5, Loss: 0.7396
+新模型评估：
+Accuracy: 77.62%
+CPC9调整模型中, 本轮训练的数据量为：713.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.10%
+Epoch 1/5, Loss: 0.7301
+Epoch 2/5, Loss: 0.6864
+Epoch 3/5, Loss: 0.6919
+Epoch 4/5, Loss: 0.7069
+Epoch 5/5, Loss: 0.6617
+新模型评估：
+Accuracy: 77.03%
+CPC10调整模型中, 本轮训练的数据量为：1685.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.10%
+Epoch 1/5, Loss: 0.7096
+Epoch 2/5, Loss: 0.6762
+Epoch 3/5, Loss: 0.6475
+Epoch 4/5, Loss: 0.6260
+Epoch 5/5, Loss: 0.5967
+新模型评估：
+Accuracy: 76.48%
+DONE
+最终的列表：
+[0.00035869405027408145, 0.0003854218104024625, 0.00041050344227540163, 0.000433942901519482, 0.0004557441310976528, 0.0004759110613598884, 0.0004944476100935714, 0.0005113576825736439, 0.0005266451716125185, 0.0005403139576097594, 0.0005523679086015081, 0.0005628108803096797, 0.0005716467161909732, 0.000578879247485533, 0.0005845122932654906, 0.0005885496604832348, 0.0005909951440194183, 0.000591852526730826, 0.0005911255794979059, 0.000588818061272145, 0.0005849337191232012, 0.0005794762882858281, 0.0005724494922065212, 0.0005638570425900644, 0.000553702639445687, 0.0005419899711331458, 0.0005287227144085277, 0.000513904534469839, 0.0004975390850023784, 0.0004796300082239441, 0.0004601809349297631, 0.0004391954845371984, 0.0004166772651303316, 0.00039262987350427436, 0.00036705689520930007, 0.00033996190459472525, 0.00031134846485261075, 0.0002812201280613033, 0.00024958043522868567, 0.00021643291633526018, 0.00018178109037717688, 0.00014562846540872032, 0.00010797853858494216, 6.883479620391209e-05, 2.820071374884381e-05, -1.3920244070056431e-05, -5.752462327378999e-05, -0.00010260898057314061, -0.00014916988332732556, -0.0001972039095028133, -0.00024670764763248115, -0.0002976776967747313, -0.00035011066647306494, -0.00040400317671562824, -0.0004593518578950434, -0.000516153350768378, -0.0005744043064174059, -0.0006341013862088407, -0.0006952412617550058, -0.0007578206148745326, -0.0008218361375531835, -0.0008872845319051054, -0.0009541625101338741, -0.0010224667944941923, -0.0010921941172532673, -0.0011633412206528276, -0.0012359048568709174, -0.0013098817879841768, -0.0013852687859300106, -0.0014620626324692299, -0.001540260119148651, -0.001619858047263903, -0.0017008532278224575, -0.0017832424815068387, -0.0018670226386378053, -0.00195219053913806, -0.0020387430324957795, -0.002126676977728517, -0.0022159892433471773, -0.0023066767073201405, -0.002398736257037584, -0.002492164789276108, -0.002586959210163206, -0.00268311643514213, -0.002780633388936929, -0.0028795070055173955, -0.002979734228064551, -0.003081312008935952, -0.0031842373096312993, -0.0032885071007582034, -0.0033941183619981136, -0.003501068082072248, -0.0036093532587079674, -0.003718970898604998, -0.003829918017402026, -0.003942191639643336, -0.004055788798745477, -0.004170706536964441, -0.004286941905362676, -0.004404491963776264, -0.0045233537807824326, -0.004643524433666987, -0.004765001008392028, -0.00488778059956381, -0.005011860310400754, -0.005137237252701418, -0.00526390854681294, -0.005391871321599281, -0.005521122714409715, -0.005651659871047779, -0.005783479945739772, -0.005916580101103977, -0.00605095750811957, -0.006186609346095759, -0.006323532802641502, -0.006461725073634655, -0.006601183363191737, -0.006741904883637795, -0.00688388685547614, -0.007027126507358317, -0.0071716210760545684, -0.007317367806423863, -0.0074643639513844035, -0.007612606771884217, -0.007762093536871795, -0.007912821523266833, -0.008064788015931301, -0.008217990307640505, -0.008372425699054109, -0.008528091498687745, -0.008684985022884006, -0.00884310359578458, -0.009002444549301464, -0.009163005223089077, -0.00932478296451597, -0.00948777512863716, -0.009651979078165979, -0.009817392183446516, -0.009984011822426309, -0.010151835380628443, -0.01032086025112447, -0.01049108383450717, -0.01066250353886325, -0.01083511677974669, -0.011008920980151576, -0.011183913570485537, -0.01136009198854307, -0.011537453679478726, -0.011715996095781223, -0.011895716697246761, -0.012076612950952997, -0.012258682331232867, -0.012441922319648774, -0.012626330404966496, -0.012811904083129794, -0.012998640857234539, -0.013186538237503154, -0.013375593741259434, -0.013565804892903127, -0.013757169223884591, -0.013949684272679952, -0.01414334758476607, -0.014338156712595557, -0.014534109215572188, -0.014731202660025922, -0.014929434619188775, -0.015128802673170072, -0.015329304408932237, -0.015530937420266427, -0.015733699307768606, -0.01593758767881512, -0.016142600147539293, -0.016348734334807158, -0.0165559878681939, -0.01676435838196022, -0.016973843517028797, -0.017184440920960747, -0.017396148247932453, -0.017608963158712326, -0.017822883320637417, -0.018037906407590842, -0.01825403009997814, -0.01847125208470518, -0.018689570055155008, -0.01890898171116509, -0.019129484759005028, -0.019351076911354043, -0.019573755887278332, -0.01979751941220914, -0.02002236521792039, -0.02024829104250664, -0.02047529463036102, -0.020703373732153474, -0.02093252610480864, -0.021162749511484447, -0.021394041721550405, -0.021626400510565885, -0.021859823660258904, -0.022094308958504505, -0.02232985419930375, -0.022566457182762234, -0.022804115715069295, -0.023042827608476757, -0.023282590681278137, -0.02352340275778758, -0.02376526166831952, -0.024008165249167712, -0.024252111342584565, -0.024497097796760903, -0.024743122465805484, -0.02499018320972446, -0.025238277894401417, -0.02548740439157693, -0.02573756057882884, -0.025988744339552006, -0.026240953562938235, -0.026494186143956877, -0.026748439983334787, -0.02700371298753662, -0.02726000306874543, -0.027517308144843128, -0.027775626139390774, -0.028034954981609517, -0.028295292606361433, -0.028556636954129827, -0.028818985971000688, -0.029082337608643344, -0.029346689824291394, -0.02961204058072414, -0.029878387846247606, -0.03014572959467582, -0.030414063805312225, -0.03068338846293084, -0.0309537015577582, -0.031225001085454673, -0.03149728504709595, -0.03177055144915511, -0.032044798303484334, -0.03232002362729641, -0.03259622544314714, -0.03287340177891726, -0.03315155066779424, -0.03343067014825479, -0.033710758264047014, -0.0339918130641724, -0.034273832602868703, -0.03455681493959206, -0.034840758138999534, -0.035125660270931836, -0.035411519410395775, -0.03569833363754718, -0.03598610103767372, -0.03627481970117749, -0.03656448772355825, -0.03685510320539637, -0.03714666425233559, -0.037439168975066606, -0.03773261548931006, -0.03802700191579966, -0.038322326380266, -0.03861858701341936, -0.03891578195093348, -0.039213909333429164, -0.0395129673064579, -0.039812954020485236, -0.04011386763087485, -0.040415706297872, -0.04071846818658781, -0.04102215146698293, -0.041326754313851355, -0.041632274906805045, -0.04193871143025743, -0.04224606207340781, -0.0425543250302258, -0.0428634984994353, -0.043173580684499197, -0.043484569793603406, -0.04379646403964188, -0.04410926164020043, -0.04442296081754202, -0.04473755979859115, -0.04505305681491861, -0.045369450102726194, -0.04568673790283162, -0.04600491846065349, -0.04632399002619619, -0.04664395085403503, -0.04696479920330099, -0.047286533337666525, -0.04760915152532991, -0.04793265203900121, -0.04825703315588731, -0.0485822931576772, -0.04890843033052772, -0.049235442965048726, -0.049563329356288766, -0.049892087803720564, -0.050221716611227096, -0.05055221408708682, -0.05088357854395964, -0.05121580829887257, -0.05154890167320608, -0.05188285699267953, -0.05221767258733717, -0.05255334679153478, -0.05288987794392502, -0.05322726438744391, -0.05356550446929714, -0.05390459654094626, -0.05424453895809467, -0.05458533008067468, -0.05492696827283322, -0.05526945190291849, -0.05561277934346687, -0.05595694897118908, -0.05630195916695696, -0.05664780831579003, -0.05699449480684243, -0.05734201703338937, -0.05769037339281452, -0.058039562286596125, -0.05838958212029455, -0.058740431303539176, -0.059092108250014874, -0.05944461137744994, -0.05979793910760256, -0.060152089866248315, -0.06050706208316736, -0.060862854192131444, -0.06121946463089162, -0.06157689184116533, -0.061935134268624015, -0.062294190362880475, -0.06265405857747647, -0.06301473736986996, -0.06337622520142328, -0.06373852053739026, -0.06410162184690443, -0.06446552760296614, -0.06483023628243112, -0.06519574636599756, -0.06556205633819445, -0.06592916468736959, -0.06629706990567719, -0.06666577048906625, -0.06703526493726847, -0.06740555175378626, -0.06777662944588103, -0.06814849652456162, -0.06852115150457211, -0.06889459290438038, -0.06926881924616629, -0.06964382905581029, -0.07001962086288172, -0.07039619320062707, -0.07077354460595897, -0.0711516736194443, -0.07153057878529301, -0.07191025865134659, -0.07229071176906693, -0.07267193669352517, -0.07305393198339011, -0.07343669620091703, -0.07382022791193693, -0.07420452568584518, -0.07458958809559035, -0.07497541371766347, -0.07536200113208669, -0.07574934892240248, -0.07613745567566299, -0.07652631998241888, -0.07691594043670852, -0.07730631563604723, -0.07769744418141694, -0.07808932467725449, -0.07848195573144223, -0.07887533595529633, -0.079269463963557, -0.07966433837437731, -0.08005995780931313, -0.08045632089331228, -0.08085342625470449, -0.08125127252519093, -0.08164985833983351, -0.08204918233704506, -0.0824492431585786, -0.08285003944951741, -0.08325156985826482, -0.08365383303653379, -0.08405682763933714, -0.08446055232497729, -0.08486500575503597, -0.08527018659436453, -0.08567609351107408, -0.0860827251765251, -0.08649008026531801, -0.08689815745528262, -0.08730695542746914, -0.08771647286613798, -0.08812670845874981, -0.08853766089595616, -0.08894932887158946, -0.08936171108265362, -0.08977480622931427, -0.09018861301488923, -0.09060313014583898, -0.09101835633175687, -0.09143429028536043, -0.09185093072248063, -0.09226827636205381, -0.09268632592611148, -0.09310507813977109, -0.0935245317312271, -0.09394468543174112, -0.09436553797563324, -0.09478708810027237, -0.0952093345460675, -0.09563227605645802, -0.09605591137790531, -0.09648023925988264, -0.0969052584548673, -0.09733096771833089, -0.09775736580873029, -0.0981844514874991, -0.09861222351903853, -0.09904068067070837, -0.09946982171281837, -0.09989964541861945, -0.10033015056429467, -0.10076133592895059, -0.10119320029460865, -0.10162574244619638, -0.10205896117153856, -0.10249285526134905, -0.1029274235092218, -0.10336266471162248, -0.10379857766787948, -0.10423516118017617, -0.104672414053542, -0.10511033509584383, -0.10554892311777808, -0.10598817693286178, -0.10642809535742465, -0.10686867721060034, -0.10730992131431843, -0.10775182649329629, -0.10819439157503041, -0.10863761538978861, -0.10908149677060158, -0.10952603455325483, -0.10997122757628047, -0.11041707468094941, -0.11086357471126296, -0.11131072651394491, -0.11175852893843347, -0.11220698083687347, -0.11265608106410824, -0.11310582847767159, -0.11355622193778031, -0.11400726030732589, -0.11445894245186672, -0.11491126723962058, -0.11536423354145653, -0.11581784023088737, -0.11627208618406176, -0.11672697027975643, -0.11718249139936893, -0.11763864842690935, -0.11809544024899338, -0.11855286575483415, -0.1190109238362349, -0.1194696133875815, -0.1199289333058346, -0.12038888249052265, -0.12084945984373408, -0.12131066427010984, -0.12177249467683637, -0.12223494997363749, -0.12269802907276778, -0.12316173088900484, -0.12362605433964219, -0.12409099834448178, -0.12455656182582686, -0.12502274370847455, -0.12548954291970887, -0.12595695838929372, -0.1264249890494652, -0.12689363383492475, -0.12736289168283205, -0.127832761532798, -0.1283032423268775, -0.12877433300956248, -0.129246032527775, -0.12971833983086012, -0.13019125387057873, -0.13066477360110113, -0.1311388979789998, -0.1316136259632424, -0.1320889565151852, -0.13256488859856602, -0.13304142117949724, -0.13351855322645956, -0.13399628371029465, -0.13447461160419882, -0.13495353588371595, -0.13543305552673096, -0.13591316951346305, -0.13639387682645937, -0.13687517645058778, -0.13735706737303072, -0.13783954858327863, -0.1383226190731227, -0.13880627783664934, -0.13929052387023283, -0.1397753561725294, -0.14026077374447038, -0.14074677558925563, -0.14123336071234766, -0.14172052812146463, -0.1422082768265744, -0.1426966058398878, -0.1431855141758525, -0.1436750008511467, -0.1441650648846725, -0.14465570529755034, -0.14514692111311167, -0.14563871135689377, -0.14613107505663292, -0.14662401124225805, -0.14711751894588526, -0.1476115972018111, -0.14810624504650666, -0.1486014615186112, -0.14909724565892618, -0.14959359651040943, -0.150090513118169, -0.15058799452945665, -0.15108603979366264, -0.15158464796230897, -0.15208381808904364, -0.15258354922963535, -0.15308384044196643, -0.153584690786028, -0.1540860993239132, -0.1545880651198117, -0.15509058724000413, -0.1555936647528559, -0.15609729672881112, -0.1566014822403876, -0.1571062203621703, -0.157611510170806, -0.1581173507449971, -0.15862374116549677, -0.15913068051510249, -0.15963816787865037, -0.16014620234301014, -0.16065478299707875, -0.161163908931775, -0.16167357924003445, -0.16218379301680297, -0.162694549359032, -0.16320584736567206, -0.16371768613766813, -0.16423006477795365, -0.16474298239144536, -0.16525643808503715, -0.16577043096759553, -0.16628496014995325, -0.16680002474490457, -0.16731562386719978, -0.16783175663353933, -0.16834842216256918, -0.16886561957487461, -0.1693833479929755, -0.16990160654132108, -0.17042039434628398, -0.1709397105361557, -0.17145955424114112, -0.1719799245933526, -0.17250082072680573, -0.1730222417774135, -0.17354418688298145, -0.1740666551832024, -0.17458964581965092, -0.17511315793577859, -0.17563719067690892, -0.17616174319023187, -0.17668681462479924, -0.17721240413151917, -0.17773851086315123, -0.17826513397430138, -0.17879227262141695, -0.17931992596278185, -0.17984809315851097, -0.18037677337054597, -0.1809059657626496, -0.1814356695004014, -0.1819658837511921, -0.1824966076842195, -0.18302784047048282, -0.18355958128277822, -0.18409182929569373, -0.18462458368560475, -0.18515784363066906, -0.1856916083108215, -0.18622587690777004, -0.18676064860499025, -0.187295922587721, -0.1878316980429594, -0.18836797415945628, -0.1889047501277114, -0.18944202513996877, -0.18997979839021167, -0.1905180690741583, -0.19105683638925708, -0.19159609953468182, -0.1921358577113274, -0.1926761101218049, -0.1932168559704368, -0.1937580944632527, -0.19429982480798497, -0.19484204621406376, -0.1953847578926124, -0.19592795905644328, -0.19647164892005292, -0.19701582669961792, -0.19756049161299, -0.19810564287969168, -0.1986512797209123, -0.19919740135950265, -0.1997440070199712, -0.20029109592847966, -0.2008386673128385, -0.20138672040250216, -0.20193525442856547, -0.20248426862375835, -0.20303376222244235, -0.20358373446060574, -0.20413418457585936, -0.2046851118074326, -0.2052365153961685, -0.20578839458451975, -0.20634074861654478, -0.20689357673790332, -0.20744687819585145, -0.20800065223923875, -0.20855489811850259, -0.20910961508566528, -0.20966480239432872, -0.2102204592996712, -0.21077658505844288, -0.21133317892896125, -0.2118902401711073, -0.21244776804632182, -0.21300576181760073, -0.21356422074949116, -0.21412314410808736, -0.21468253116102654, -0.2152423811774854, -0.21580269342817499, -0.21636346718533778, -0.21692470172274314, -0.21748639631568312, -0.21804855024096886, -0.2186111627769266, -0.2191742332033934, -0.21973776080171348, -0.22030174485473414, -0.22086618464680186, -0.22143107946375828, -0.2219964285929366, -0.22256223132315744, -0.2231284869447251, -0.2236951947494233, -0.22426235403051203, -0.22482996408272293, -0.2253980242022563, -0.22596653368677627, -0.22653549183540794, -0.22710489794873334, -0.227674751328787, -0.22824505127905298, -0.2288157971044607, -0.22938698811138147, -0.22995862360762448, -0.23053070290243322, -0.23110322530648153, -0.2316761901318704, -0.23224959669212375, -0.2328234443021851, -0.23339773227841382, -0.23397245993858135, -0.2345476266018675, -0.23512323158885717, -0.23569927422153658, -0.23627575382328925, -0.23685266971889324, -0.23743002123451667, -0.2380078076977145, -0.23858602843742538, -0.23916468278396752, -0.23974377006903524, -0.24032328962569577, -0.2409032407883851, -0.24148362289290531, -0.24206443527642058, -0.24264567727745345, -0.2432273482358817, -0.24380944749293515, -0.24439197439119142, -0.2449749282745733, -0.24555830848834492, -0.246142114379108, -0.24672634529479903, -0.24731100058468564, -0.24789607959936322, -0.2484815816907513, -0.24906750621209067, -0.2496538525179393, -0.25024061996416996, -0.25082780790796577, -0.2514154157078178, -0.2520034427235212, -0.2525918883161721, -0.2531807518481642, -0.25377003268318554, -0.25435973018621555, -0.2549498437235208, -0.2555403726626531, -0.2561313163724449, -0.2567226742230071, -0.2573144455857251, -0.25790662983325613, -0.25849922633952566, -0.25909223447972435, -0.2596856536303045, -0.2602794831689776, -0.2608737224747108, -0.26146837092772324, -0.2620634279094836, -0.2626588928027068, -0.2632547649913506, -0.26385104386061237, -0.2644477287969267, -0.26504481918796174, -0.2656423144226159, -0.26624021389101526, -0.2668385169845103, -0.2674372230956726, -0.26803633161829216, -0.26863584194737405, -0.26923575347913575, -0.2698360656110035, -0.2704367777416096, -0.27103788927078987, -0.2716393995995799, -0.27224130813021213, -0.27284361426611353, -0.27344631741190184, -0.274049416973383, -0.2746529123575481, -0.27525680297257044, -0.2758610882278028, -0.276465767533774, -0.2770708403021862, -0.27767630594591236, -0.2782821638789929, -0.2788884135166327, -0.2794950542751988, -0.2801020855722166, -0.28070950682636814, -0.28131731745748817, -0.28192551688656187, -0.28253410453572203, -0.2831430798282457, -0.2837524421885519, -0.28436219104219873, -0.2849723258158803, -0.2855828459374238, -0.2861937508357876, -0.2868050399410569, -0.2874167126844427, -0.28802876849827763, -0.288641206816014, -0.2892540270722207, -0.28986722870258064, -0.29048081114388746, -0.2910947738340438, -0.29170911621205764, -0.29232383771804027, -0.2929389377932028, -0.2935544158798543, -0.2941702714213985, -0.2947865038623314, -0.2954031126482386, -0.2960200972257926, -0.2966374570427498, -0.29725519154794844, -0.2978733001913052, -0.2984917824238137, -0.29911063769754065, -0.29972986546562386, -0.3003494651822697, -0.3009694363027501, -0.30158977828340006, -0.30221049058161553, -0.30283157265585026, -0.30345302396561347, -0.3040748439714671, -0.3046970321350233, -0.3053195879189423, -0.30594251078692913, -0.3065658002037318, -0.3071894556351382, -0.3078134765479741, -0.30843786241009974, -0.30906261269040836, -0.3096877268588234, -0.3103132043862953, -0.3109390447448003, -0.3115652474073366, -0.31219181184792266, -0.31281873754159484, -0.31344602396440435, -0.3140736705934155, -0.3147016769067027, -0.31533004238334783, -0.3159587665034389, -0.31658784874806634, -0.3172172885993215, -0.31784708554029395, -0.3184772390550683, -0.3191077486287236, -0.3197386137473289, -0.3203698338979425, -0.3210014085686088, -0.32163333724835586, -0.322265619427193, -0.32289825459610944, -0.3235312422470704, -0.3241645818730159, -0.3247982729678581, -0.32543231502647896, -0.32606670754472733, -0.3267014500194181, -0.3273365419483283, -0.3279719828301958, -0.3286077721647167, -0.3292439094525428, -0.3298803941952799, -0.3305172258954848, -0.33115440405666396, -0.3317919281832701, -0.3324297977807009, -0.33306801235529615, -0.333706571414336, -0.33434547446603846, -0.334984721019557, -0.33562431058497855, -0.3362642426733212, -0.3369045167965323, -0.33754513246748563, -0.3381860891999796, -0.33882738650873534, -0.3394690239093937, -0.3401110009185141, -0.34075331705357115, -0.3413959718329538, -0.34203896477596196, -0.34268229540280526, -0.3433259632346005, -0.3439699677933695, -0.3446143086020369, -0.3452589851844282, -0.34590399706526787, -0.3465493437701763, -0.3471950248256692, -0.3478410397591539, -0.3484873880989281, -0.3491340693741779, -0.34978108311497513, -0.350428428852276, -0.3510761061179182, -0.35172411444461926, -0.3523724533659749, -0.3530211224164562, -0.35367012113140783, -0.35431944904704615, -0.35496910570045714, -0.3556190906295942, -0.35626940337327595, -0.3569200434711851, -0.3575710104638655, -0.35822230389272014, -0.35887392330000945, -0.3595258682288499, -0.36017813822321065, -0.36083073282791256, -0.36148365158862616, -0.362136894051869, -0.36279045976500424, -0.3634443482762387, -0.36409855913462075, -0.36475309189003824, -0.3654079460932167, -0.36606312129571705, -0.3667186170499346, -0.3673744329090959, -0.36803056842725745, -0.36868702315930413, -0.3693437966609463, -0.3700008884887187, -0.3706582981999783, -0.3713160253529023, -0.3719740695064865, -0.3726324302205427, -0.3732911070556978, -0.3739500995733913, -0.37460940733587345, -0.3752690299062036, -0.3759289668482483, -0.37658921772667897, -0.3772497821069709, -0.3779106595554005, -0.37857184963904433, -0.37923335192577645, -0.379895165984267, -0.3805572913839803, -0.3812197276951731, -0.3818824744888929, -0.3825455313369752, -0.38320889781204315, -0.3838725734875048, -0.38453655793755137, -0.3852008507371554, -0.3858654514620694, -0.3865303596888241, -0.3871955749947258, -0.3878610969578554, -0.3885269251570663, -0.389193059171983, -0.3898594985829986, -0.39052624297127403, -0.3911932919187352, -0.3918606450080724, -0.39252830182273757, -0.393196261946943, -0.3938645249656597, -0.3945330904646155, -0.39520195803029345, -0.39587112724992957, -0.3965405977115123, -0.3972103690037794, -0.3978804407162171, -0.39855081243905854, -0.3992214837632815, -0.3998924542806065, -0.40056372358349634, -0.40123529126515334, -0.4019071569195177, -0.4025793201412664, -0.4032517805258111, -0.4039245376692966, -0.40459759116859906, -0.40527094062132485, -0.40594458562580793, -0.40661852578110946, -0.4072927606870147, -0.40796728994403275, -0.40864211315339427, -0.40931722991704944, -0.4099926398376674, -0.4106683425186337, -0.41134433756404887, -0.41202062457872723, -0.4126972031681949, -0.41337407293868855, -0.414051233497153, -0.41472868445124056, -0.41540642540930905, -0.4160844559804202, -0.41676277577433785, -0.41744138440152734, -0.41812028147315206, -0.4187994666010739, -0.41947893939785097, -0.420158699476735, -0.4208387464516715, -0.4215190799372972, -0.4221996995489382, -0.4228806049026096, -0.42356179561501284, -0.4242432713035348, -0.42492503158624584, -0.4256070760818992, -0.42628940440992746, -0.426972016190444, -0.42765491104423836, -0.4283380885927771, -0.42902154845820084]
+**** log-parameter_analysis 运行时间： 2025-01-17 23:21:39 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.07551143441603081
+DataOwner2: noise random: 0.04070712554427178
+DataOwner3: noise random: 0.02823653622747249
+DataOwner4: noise random: 0.019764649839168216
+DataOwner5: noise random: 0.08515412716727835
+DataOwner6: noise random: 0.020087710822993522
+DataOwner7: noise random: 0.009880279141453775
+DataOwner8: noise random: 0.049396118774037226
+DataOwner9: noise random: 0.07307698522038925
+DataOwner10: noise random: 0.03084922818151108
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9977008621642304, 0.9993295748813182, 0.9996777088468973, 0.999842078254062, 0.9970687507188313, 0.9998365332926609, 0.9999604666760351, 0.999011726033934, 0.9978424636474736, 0.9996158289167915]
+归一化后的数据质量列表avg_f_list: [0.9218593891915415, 0.9781827882110898, 0.9902217979454941, 0.9959059456832833, 0.9, 0.995714192361615, 1.0, 0.9671910845967546, 0.9267561869869998, 0.9880818944756629]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3487
+DataOwner1的最优x_1 = 0.0734
+DataOwner2的最优x_2 = 0.1342
+DataOwner3的最优x_3 = 0.1453
+DataOwner4的最优x_4 = 0.1504
+DataOwner5的最优x_5 = 0.0454
+DataOwner6的最优x_6 = 0.1502
+DataOwner7的最优x_7 = 0.1539
+DataOwner8的最优x_8 = 0.1235
+DataOwner9的最优x_9 = 0.0793
+DataOwner10的最优x_10 = 0.1434
+每个DataOwner应该贡献数据比例 xn_list = [0.0734177478124918, 0.1341659241550416, 0.14530712131282325, 0.15036705600219624, 0.04541205870108592, 0.15019839819440925, 0.15393457224031828, 0.12346742500970169, 0.07932317853509877, 0.14336943550656742]
+ModelOwner的最大效用 U(Eta) = 0.5898
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.348729244257586
+DataOwner1的分配到的支付 ： 0.0779
+DataOwner2的分配到的支付 ： 0.1511
+DataOwner3的分配到的支付 ： 0.1657
+DataOwner4的分配到的支付 ： 0.1724
+DataOwner5的分配到的支付 ： 0.0471
+DataOwner6的分配到的支付 ： 0.1722
+DataOwner7的分配到的支付 ： 0.1772
+DataOwner8的分配到的支付 ： 0.1375
+DataOwner9的分配到的支付 ： 0.0846
+DataOwner10的分配到的支付 ： 0.1631
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC10', 'DataOwner5': 'CPC4', 'DataOwner6': 'CPC5', 'DataOwner7': 'CPC6', 'DataOwner8': 'CPC7', 'DataOwner9': 'CPC8', 'DataOwner10': 'CPC9'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC10
+DataOwner5 把数据交给 CPC4
+DataOwner6 把数据交给 CPC5
+DataOwner7 把数据交给 CPC6
+DataOwner8 把数据交给 CPC7
+DataOwner9 把数据交给 CPC8
+DataOwner10 把数据交给 CPC9
+DONE
+----- literation 1: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：440.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2953
+Epoch 2/5, Loss: 2.2939
+Epoch 3/5, Loss: 2.2922
+Epoch 4/5, Loss: 2.2906
+Epoch 5/5, Loss: 2.2884
+新模型评估：
+Accuracy: 34.56%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：1006.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 34.56%
+Epoch 1/5, Loss: 2.2897
+Epoch 2/5, Loss: 2.2836
+Epoch 3/5, Loss: 2.2767
+Epoch 4/5, Loss: 2.2680
+Epoch 5/5, Loss: 2.2571
+新模型评估：
+Accuracy: 45.51%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：1307.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 45.51%
+Epoch 1/5, Loss: 2.2383
+Epoch 2/5, Loss: 2.2214
+Epoch 3/5, Loss: 2.1992
+Epoch 4/5, Loss: 2.1735
+Epoch 5/5, Loss: 2.1435
+新模型评估：
+Accuracy: 50.19%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：1127.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 50.19%
+Epoch 1/5, Loss: 2.1211
+Epoch 2/5, Loss: 2.0934
+Epoch 3/5, Loss: 2.0661
+Epoch 4/5, Loss: 2.0373
+Epoch 5/5, Loss: 2.0011
+新模型评估：
+Accuracy: 53.05%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：136.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 53.05%
+Epoch 1/5, Loss: 2.0714
+Epoch 2/5, Loss: 2.0280
+Epoch 3/5, Loss: 2.0310
+Epoch 4/5, Loss: 2.0262
+Epoch 5/5, Loss: 1.9987
+新模型评估：
+Accuracy: 54.05%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：1126.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 54.05%
+Epoch 1/5, Loss: 1.9483
+Epoch 2/5, Loss: 1.9105
+Epoch 3/5, Loss: 1.8734
+Epoch 4/5, Loss: 1.8332
+Epoch 5/5, Loss: 1.7916
+新模型评估：
+Accuracy: 57.10%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：1385.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 57.10%
+Epoch 1/5, Loss: 1.7618
+Epoch 2/5, Loss: 1.7137
+Epoch 3/5, Loss: 1.6660
+Epoch 4/5, Loss: 1.6110
+Epoch 5/5, Loss: 1.5606
+新模型评估：
+Accuracy: 64.97%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：370.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 64.97%
+Epoch 1/5, Loss: 1.4975
+Epoch 2/5, Loss: 1.4781
+Epoch 3/5, Loss: 1.4657
+Epoch 4/5, Loss: 1.4401
+Epoch 5/5, Loss: 1.4294
+新模型评估：
+Accuracy: 65.48%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：237.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.48%
+Epoch 1/5, Loss: 1.4629
+Epoch 2/5, Loss: 1.4399
+Epoch 3/5, Loss: 1.4234
+Epoch 4/5, Loss: 1.4250
+Epoch 5/5, Loss: 1.3986
+新模型评估：
+Accuracy: 67.28%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：645.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 67.28%
+Epoch 1/5, Loss: 1.4006
+Epoch 2/5, Loss: 1.3435
+Epoch 3/5, Loss: 1.3282
+Epoch 4/5, Loss: 1.2704
+Epoch 5/5, Loss: 1.2457
+新模型评估：
+Accuracy: 69.72%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3487
+DataOwner1的最优x_1 = 0.0734
+DataOwner2的最优x_2 = 0.1342
+DataOwner3的最优x_3 = 0.1453
+DataOwner4的最优x_4 = 0.1504
+DataOwner5的最优x_5 = 0.0454
+DataOwner6的最优x_6 = 0.1502
+DataOwner7的最优x_7 = 0.1539
+DataOwner8的最优x_8 = 0.1235
+DataOwner9的最优x_9 = 0.0793
+DataOwner10的最优x_10 = 0.1434
+每个DataOwner应该贡献数据比例 xn_list = [0.0734177478124918, 0.1341659241550416, 0.14530712131282325, 0.15036705600219624, 0.04541205870108592, 0.15019839819440925, 0.15393457224031828, 0.12346742500970169, 0.07932317853509877, 0.14336943550656742]
+ModelOwner的最大效用 U(Eta) = 0.5898
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.348729244257586
+DataOwner1的分配到的支付 ： 0.0779
+DataOwner2的分配到的支付 ： 0.1511
+DataOwner3的分配到的支付 ： 0.1657
+DataOwner4的分配到的支付 ： 0.1724
+DataOwner5的分配到的支付 ： 0.0471
+DataOwner6的分配到的支付 ： 0.1722
+DataOwner7的分配到的支付 ： 0.1772
+DataOwner8的分配到的支付 ： 0.1375
+DataOwner9的分配到的支付 ： 0.0846
+DataOwner10的分配到的支付 ： 0.1631
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC10
+DataOwner5 把数据交给 CPC4
+DataOwner6 把数据交给 CPC5
+DataOwner7 把数据交给 CPC6
+DataOwner8 把数据交给 CPC7
+DataOwner9 把数据交给 CPC8
+DataOwner10 把数据交给 CPC9
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：440.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.3210
+Epoch 2/5, Loss: 1.2941
+Epoch 3/5, Loss: 1.2751
+Epoch 4/5, Loss: 1.2572
+Epoch 5/5, Loss: 1.2402
+新模型评估：
+Accuracy: 68.34%
+loss差为：
+0.0807795354298182
+单位数据loss差为：
+0.0001835898532495868
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：1006.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.2855
+Epoch 2/5, Loss: 1.2469
+Epoch 3/5, Loss: 1.2118
+Epoch 4/5, Loss: 1.1751
+Epoch 5/5, Loss: 1.1425
+新模型评估：
+Accuracy: 71.50%
+loss差为：
+0.14302995055913925
+单位数据loss差为：
+0.00014217688922379647
+正在评估DataOwner3的数据质量, 本轮评估的样本数据量为：1307.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.2111
+Epoch 2/5, Loss: 1.1683
+Epoch 3/5, Loss: 1.1118
+Epoch 4/5, Loss: 1.0661
+Epoch 5/5, Loss: 1.0312
+新模型评估：
+Accuracy: 72.71%
+loss差为：
+0.17994001649674907
+单位数据loss差为：
+0.00013767407536094037
+正在评估DataOwner4的数据质量, 本轮评估的样本数据量为：1127.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.3004
+Epoch 2/5, Loss: 1.2575
+Epoch 3/5, Loss: 1.2222
+Epoch 4/5, Loss: 1.1838
+Epoch 5/5, Loss: 1.1414
+新模型评估：
+Accuracy: 74.52%
+loss差为：
+0.15907244549857258
+单位数据loss差为：
+0.00014114680168462519
+正在评估DataOwner5的数据质量, 本轮评估的样本数据量为：136.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.2964
+Epoch 2/5, Loss: 1.2764
+Epoch 3/5, Loss: 1.2712
+Epoch 4/5, Loss: 1.2412
+Epoch 5/5, Loss: 1.2548
+新模型评估：
+Accuracy: 70.05%
+loss差为：
+0.0415571928024292
+单位数据loss差为：
+0.00030556759413550883
+正在评估DataOwner6的数据质量, 本轮评估的样本数据量为：1126.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.3085
+Epoch 2/5, Loss: 1.2639
+Epoch 3/5, Loss: 1.2279
+Epoch 4/5, Loss: 1.1903
+Epoch 5/5, Loss: 1.1517
+新模型评估：
+Accuracy: 74.38%
+loss差为：
+0.15677164660559773
+单位数据loss差为：
+0.00013922881581314184
+正在评估DataOwner7的数据质量, 本轮评估的样本数据量为：1385.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.2718
+Epoch 2/5, Loss: 1.2212
+Epoch 3/5, Loss: 1.1769
+Epoch 4/5, Loss: 1.1290
+Epoch 5/5, Loss: 1.0830
+新模型评估：
+Accuracy: 74.07%
+loss差为：
+0.18882001800970594
+单位数据loss差为：
+0.00013633214296729671
+正在评估DataOwner8的数据质量, 本轮评估的样本数据量为：370.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.2820
+Epoch 2/5, Loss: 1.2566
+Epoch 3/5, Loss: 1.2437
+Epoch 4/5, Loss: 1.2288
+Epoch 5/5, Loss: 1.2178
+新模型评估：
+Accuracy: 70.99%
+loss差为：
+0.06415724754333496
+单位数据loss差为：
+0.00017339796633333772
+正在评估DataOwner9的数据质量, 本轮评估的样本数据量为：237.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.3422
+Epoch 2/5, Loss: 1.3410
+Epoch 3/5, Loss: 1.3269
+Epoch 4/5, Loss: 1.3086
+Epoch 5/5, Loss: 1.2919
+新模型评估：
+Accuracy: 68.84%
+loss差为：
+0.050275593996047974
+单位数据loss差为：
+0.00021213330800020242
+正在评估DataOwner10的数据质量, 本轮评估的样本数据量为：645.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.2823
+Epoch 2/5, Loss: 1.2752
+Epoch 3/5, Loss: 1.2705
+Epoch 4/5, Loss: 1.2100
+Epoch 5/5, Loss: 1.2285
+新模型评估：
+Accuracy: 70.02%
+loss差为：
+0.05386860804124316
+单位数据loss差为：
+8.351722176936925e-05
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [0.0001835898532495868, 0.00014217688922379647, 0.00013767407536094037, 0.00014114680168462519, 0.00030556759413550883, 0.00013922881581314184, 0.00013633214296729671, 0.00017339796633333772, 0.00021213330800020242, 8.351722176936925e-05]
+归一化后的数据质量列表avg_f_list:[0.9450675359891798, 0.9264172794800376, 0.924389445068019, 0.9259533813436847, 1.0, 0.9250896197336295, 0.9237851081424178, 0.940477637396511, 0.9579220313212345, 0.9]
+CPC1调整模型中, 本轮训练的数据量为：440.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.3213
+Epoch 2/5, Loss: 1.2984
+Epoch 3/5, Loss: 1.2765
+Epoch 4/5, Loss: 1.2597
+Epoch 5/5, Loss: 1.2430
+新模型评估：
+Accuracy: 68.10%
+CPC2调整模型中, 本轮训练的数据量为：1006.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.72%
+Epoch 1/5, Loss: 1.2880
+Epoch 2/5, Loss: 1.2480
+Epoch 3/5, Loss: 1.2112
+Epoch 4/5, Loss: 1.1762
+Epoch 5/5, Loss: 1.1460
+新模型评估：
+Accuracy: 71.98%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：1307.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.98%
+Epoch 1/5, Loss: 1.0434
+Epoch 2/5, Loss: 0.9942
+Epoch 3/5, Loss: 0.9593
+Epoch 4/5, Loss: 0.9176
+Epoch 5/5, Loss: 0.8761
+新模型评估：
+Accuracy: 74.31%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：1127.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 74.31%
+Epoch 1/5, Loss: 0.9407
+Epoch 2/5, Loss: 0.9072
+Epoch 3/5, Loss: 0.8756
+Epoch 4/5, Loss: 0.8491
+Epoch 5/5, Loss: 0.8215
+新模型评估：
+Accuracy: 76.92%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：136.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.92%
+Epoch 1/5, Loss: 0.8637
+Epoch 2/5, Loss: 0.8577
+Epoch 3/5, Loss: 0.8629
+Epoch 4/5, Loss: 0.6564
+Epoch 5/5, Loss: 0.7263
+新模型评估：
+Accuracy: 76.70%
+CPC5调整模型中, 本轮训练的数据量为：1126.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.92%
+Epoch 1/5, Loss: 0.8222
+Epoch 2/5, Loss: 0.7969
+Epoch 3/5, Loss: 0.7703
+Epoch 4/5, Loss: 0.7499
+Epoch 5/5, Loss: 0.7316
+新模型评估：
+Accuracy: 78.42%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：1385.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.42%
+Epoch 1/5, Loss: 0.6894
+Epoch 2/5, Loss: 0.6640
+Epoch 3/5, Loss: 0.6435
+Epoch 4/5, Loss: 0.6192
+Epoch 5/5, Loss: 0.6014
+新模型评估：
+Accuracy: 78.12%
+CPC7调整模型中, 本轮训练的数据量为：370.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.42%
+Epoch 1/5, Loss: 0.6607
+Epoch 2/5, Loss: 0.6402
+Epoch 3/5, Loss: 0.6333
+Epoch 4/5, Loss: 0.6249
+Epoch 5/5, Loss: 0.6130
+新模型评估：
+Accuracy: 76.60%
+CPC8调整模型中, 本轮训练的数据量为：237.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.42%
+Epoch 1/5, Loss: 0.7149
+Epoch 2/5, Loss: 0.7142
+Epoch 3/5, Loss: 0.6970
+Epoch 4/5, Loss: 0.6873
+Epoch 5/5, Loss: 0.6726
+新模型评估：
+Accuracy: 74.87%
+CPC9调整模型中, 本轮训练的数据量为：645.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.42%
+Epoch 1/5, Loss: 0.7437
+Epoch 2/5, Loss: 0.6877
+Epoch 3/5, Loss: 0.6787
+Epoch 4/5, Loss: 0.6935
+Epoch 5/5, Loss: 0.6586
+新模型评估：
+Accuracy: 76.25%
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3132
+DataOwner1的最优x_1 = 0.1269
+DataOwner2的最优x_2 = 0.1081
+DataOwner3的最优x_3 = 0.1059
+DataOwner4的最优x_4 = 0.1076
+DataOwner5的最优x_5 = 0.1742
+DataOwner6的最优x_6 = 0.1066
+DataOwner7的最优x_7 = 0.1053
+DataOwner8的最优x_8 = 0.1224
+DataOwner9的最优x_9 = 0.1391
+DataOwner10的最优x_10 = 0.0784
+每个DataOwner应该贡献数据比例 xn_list = [0.12693609243944445, 0.10805307459901223, 0.10590174703339068, 0.10756267802204363, 0.17415713178396075, 0.10664681035408176, 0.10525675031969639, 0.12243608624519058, 0.13905298594901133, 0.07840149914229286]
+ModelOwner的最大效用 U(Eta) = 0.5494
+xn开始变化：
+DONE
+----- literation 3: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3132073461145717
+DataOwner1的分配到的支付 ： 0.5702
+DataOwner2的分配到的支付 ： 0.0750
+DataOwner3的分配到的支付 ： 0.0810
+DataOwner4的分配到的支付 ： 0.0840
+DataOwner5的分配到的支付 ： 0.1051
+DataOwner6的分配到的支付 ： 0.0838
+DataOwner7的分配到的支付 ： 0.0858
+DataOwner8的分配到的支付 ： 0.0701
+DataOwner9的分配到的支付 ： 0.0804
+DataOwner10的分配到的支付 ： 0.0779
+DONE
+----- literation 3: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC10
+DataOwner5 把数据交给 CPC4
+DataOwner6 把数据交给 CPC5
+DataOwner7 把数据交给 CPC6
+DataOwner8 把数据交给 CPC7
+DataOwner9 把数据交给 CPC8
+DataOwner10 把数据交给 CPC9
+DONE
+----- literation 3: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：6000.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.42%
+Epoch 1/5, Loss: 0.6606
+Epoch 2/5, Loss: 0.5874
+Epoch 3/5, Loss: 0.5346
+Epoch 4/5, Loss: 0.4954
+Epoch 5/5, Loss: 0.4630
+新模型评估：
+Accuracy: 75.68%
+CPC2调整模型中, 本轮训练的数据量为：1006.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.42%
+Epoch 1/5, Loss: 0.6975
+Epoch 2/5, Loss: 0.6777
+Epoch 3/5, Loss: 0.6600
+Epoch 4/5, Loss: 0.6441
+Epoch 5/5, Loss: 0.6285
+新模型评估：
+Accuracy: 77.90%
+CPC3调整模型中, 本轮训练的数据量为：1307.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.42%
+Epoch 1/5, Loss: 0.6560
+Epoch 2/5, Loss: 0.6212
+Epoch 3/5, Loss: 0.6050
+Epoch 4/5, Loss: 0.5861
+Epoch 5/5, Loss: 0.5619
+新模型评估：
+Accuracy: 77.93%
+CPC10调整模型中, 本轮训练的数据量为：1127.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.42%
+Epoch 1/5, Loss: 0.6991
+Epoch 2/5, Loss: 0.6769
+Epoch 3/5, Loss: 0.6650
+Epoch 4/5, Loss: 0.6402
+Epoch 5/5, Loss: 0.6241
+新模型评估：
+Accuracy: 78.57%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：522.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.57%
+Epoch 1/5, Loss: 0.6259
+Epoch 2/5, Loss: 0.6237
+Epoch 3/5, Loss: 0.6111
+Epoch 4/5, Loss: 0.5995
+Epoch 5/5, Loss: 0.6075
+新模型评估：
+Accuracy: 75.93%
+CPC5调整模型中, 本轮训练的数据量为：1126.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.57%
+Epoch 1/5, Loss: 0.6059
+Epoch 2/5, Loss: 0.5817
+Epoch 3/5, Loss: 0.5728
+Epoch 4/5, Loss: 0.5569
+Epoch 5/5, Loss: 0.5402
+新模型评估：
+Accuracy: 77.72%
+CPC6调整模型中, 本轮训练的数据量为：1385.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.57%
+Epoch 1/5, Loss: 0.6053
+Epoch 2/5, Loss: 0.5855
+Epoch 3/5, Loss: 0.5657
+Epoch 4/5, Loss: 0.5510
+Epoch 5/5, Loss: 0.5380
+新模型评估：
+Accuracy: 77.61%
+CPC7调整模型中, 本轮训练的数据量为：370.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.57%
+Epoch 1/5, Loss: 0.5927
+Epoch 2/5, Loss: 0.5796
+Epoch 3/5, Loss: 0.5684
+Epoch 4/5, Loss: 0.5621
+Epoch 5/5, Loss: 0.5552
+新模型评估：
+Accuracy: 76.70%
+CPC8调整模型中, 本轮训练的数据量为：417.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.57%
+Epoch 1/5, Loss: 0.6327
+Epoch 2/5, Loss: 0.6122
+Epoch 3/5, Loss: 0.6099
+Epoch 4/5, Loss: 0.5992
+Epoch 5/5, Loss: 0.5893
+新模型评估：
+Accuracy: 76.07%
+CPC9调整模型中, 本轮训练的数据量为：645.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 78.57%
+Epoch 1/5, Loss: 0.6285
+Epoch 2/5, Loss: 0.5637
+Epoch 3/5, Loss: 0.5787
+Epoch 4/5, Loss: 0.5366
+Epoch 5/5, Loss: 0.5277
+新模型评估：
+Accuracy: 76.28%
+DONE
+最终的列表：
+[9.084331145450819e-07, -0.00014935838399141727, -0.00044739838236248705, -0.000889910813844319, -0.0014736925070257534, -0.002195634287985644, -0.00305271755744288, -0.004042011016393676, -0.005160667532774915, -0.006405921142117771, -0.007775084175554281, -0.009265544508912288, -0.010874762926984416, -0.012600270597384, -0.014439666648709104, -0.016390615848023732, -0.018450846372937646, -0.02061814767381817, -0.022890368421910362, -0.02526541453936318, -0.027741247307373262, -0.030315881548855672, -0.03298738388223907, -0.035753871043158414, -0.0386135082709855, -0.041564507757293506, -0.044605127153498986, -0.04773366813506552, -0.0509484750197835, -0.05424793343776402, -0.057630469050904076, -0.061094546319687804, -0.0646386673152971, -0.06826137057509823, -0.07196122999967047, -0.07573685378962713, -0.0795868834205638, -0.08350999265454845, -0.08750488658664224, -0.0915703007250126, -0.09570500010326372, -0.09990777842367721, -0.1041774572301139, -0.108512885109386, -0.11291293691996246, -0.11737651304692204, -0.12190253868211859, -0.12648996312856858, -0.13113775912811432, -0.13584492221146122, -0.14061047006972288, -0.14543344194664992, -0.15031289805075237, -0.1552479189865596, -0.16023760520429486, -0.16528107646727375, -0.17037747133636189, -0.17552594667086086, -0.1807256771452112, -0.18597585478093492, -0.19127568849325532, -0.1966244036518638, -0.2020212416553192, -0.20746545951858947, -0.21295632947326387, -0.21849313857998387, -0.22407518835266155, -0.22970179439406535, -0.23537228604237725, -0.24108600602833757, -0.24684231014260716, -0.2526405669129953, -0.25848015729121426, -0.2643604743488309, -0.2702809229821063, -0.27624091962541714, -0.2822398919729732, -0.28827727870854913, -0.294352529242964, -0.3004651034590513, -0.30661447146386833, -0.31280011334791047, -0.3190215189510974, -0.3252781876353108, -0.3315696280632706, -0.33789535798354653, -0.3442549040215024, -0.35064780147598884, -0.3570735941215981, -0.36353183401630196, -0.3700220813143077, -0.3765439040839629, -0.3830968781305548, -0.389680586823847, -0.39629462093021184, -0.4029385784492111, -0.40961206445449116, -0.41631469093885975, -0.42304607666341587, -0.42980584701060964]
+**** log-parameter_analysis 运行时间： 2025-01-17 23:45:20 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.05865967695000649
+DataOwner2: noise random: 0.017118920390866776
+DataOwner3: noise random: 0.0556531704516965
+DataOwner4: noise random: 0.003336871706305178
+DataOwner5: noise random: 0.08199438610118182
+DataOwner6: noise random: 0.01958503040917018
+DataOwner7: noise random: 0.0873878437757346
+DataOwner8: noise random: 0.03196876253454185
+DataOwner9: noise random: 0.027561147637308294
+DataOwner10: noise random: 0.036046981169154016
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9986089767412821, 0.9998814855991429, 0.9987455181226688, 0.9999955010011535, 0.9972687806704239, 0.9998446133750168, 0.99692381698804, 0.9995861679373431, 0.9996929183539068, 0.9994728275897179]
+归一化后的数据质量列表avg_f_list: [0.9548611037479083, 0.9962881793334255, 0.9593062674041867, 1.0, 0.9112304417027011, 0.9950877881483733, 0.9, 0.986673985277688, 0.9901492912045992, 0.9829841412982502]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3503
+DataOwner1的最优x_1 = 0.1096
+DataOwner2的最优x_2 = 0.1497
+DataOwner3的最优x_3 = 0.1143
+DataOwner4的最优x_4 = 0.1530
+DataOwner5的最优x_5 = 0.0587
+DataOwner6的最优x_6 = 0.1486
+DataOwner7的最优x_7 = 0.0438
+DataOwner8的最优x_8 = 0.1410
+DataOwner9的最优x_9 = 0.1442
+DataOwner10的最优x_10 = 0.1376
+每个DataOwner应该贡献数据比例 xn_list = [0.10961210378669053, 0.1497013727018006, 0.11427135324392541, 0.15295129020735582, 0.058650358807870465, 0.14863906590895334, 0.043840364457304576, 0.14103496181834013, 0.144209701129785, 0.13761106142760743]
+ModelOwner的最大效用 U(Eta) = 0.5916
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.350259967138263
+DataOwner1的分配到的支付 ： 0.1203
+DataOwner2的分配到的支付 ： 0.1715
+DataOwner3的分配到的支付 ： 0.1260
+DataOwner4的分配到的支付 ： 0.1759
+DataOwner5的分配到的支付 ： 0.0614
+DataOwner6的分配到的支付 ： 0.1701
+DataOwner7的分配到的支付 ： 0.0454
+DataOwner8的分配到的支付 ： 0.1600
+DataOwner9的分配到的支付 ： 0.1642
+DataOwner10的分配到的支付 ： 0.1555
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC2', 'DataOwner3': 'CPC1', 'DataOwner2': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5', 'DataOwner6': 'CPC6', 'DataOwner7': 'CPC7', 'DataOwner8': 'CPC8', 'DataOwner9': 'CPC9', 'DataOwner10': 'CPC10'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner3 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 1: 模型训练 -----
+CPC2调整模型中, 本轮训练的数据量为：212.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2869
+Epoch 2/5, Loss: 2.2989
+Epoch 3/5, Loss: 2.2937
+Epoch 4/5, Loss: 2.2919
+Epoch 5/5, Loss: 2.2836
+新模型评估：
+Accuracy: 28.91%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC1调整模型中, 本轮训练的数据量为：442.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 28.91%
+Epoch 1/5, Loss: 2.2951
+Epoch 2/5, Loss: 2.2930
+Epoch 3/5, Loss: 2.2905
+Epoch 4/5, Loss: 2.2886
+Epoch 5/5, Loss: 2.2859
+新模型评估：
+Accuracy: 34.50%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：1158.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 34.50%
+Epoch 1/5, Loss: 2.2802
+Epoch 2/5, Loss: 2.2793
+Epoch 3/5, Loss: 2.2668
+Epoch 4/5, Loss: 2.2487
+Epoch 5/5, Loss: 2.2326
+新模型评估：
+Accuracy: 43.94%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：2072.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 43.94%
+Epoch 1/5, Loss: 2.2021
+Epoch 2/5, Loss: 2.1649
+Epoch 3/5, Loss: 2.1142
+Epoch 4/5, Loss: 2.0547
+Epoch 5/5, Loss: 1.9768
+新模型评估：
+Accuracy: 53.05%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：113.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 53.05%
+Epoch 1/5, Loss: 1.9571
+Epoch 2/5, Loss: 1.9578
+Epoch 3/5, Loss: 1.9534
+Epoch 4/5, Loss: 1.9514
+Epoch 5/5, Loss: 1.9341
+新模型评估：
+Accuracy: 52.85%
+CPC6调整模型中, 本轮训练的数据量为：575.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 53.05%
+Epoch 1/5, Loss: 1.9284
+Epoch 2/5, Loss: 1.9068
+Epoch 3/5, Loss: 1.8855
+Epoch 4/5, Loss: 1.8639
+Epoch 5/5, Loss: 1.8414
+新模型评估：
+Accuracy: 52.87%
+CPC7调整模型中, 本轮训练的数据量为：84.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 53.05%
+Epoch 1/5, Loss: 1.9428
+Epoch 2/5, Loss: 1.9090
+Epoch 3/5, Loss: 1.9262
+Epoch 4/5, Loss: 1.9631
+Epoch 5/5, Loss: 1.9381
+新模型评估：
+Accuracy: 52.56%
+CPC8调整模型中, 本轮训练的数据量为：818.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 53.05%
+Epoch 1/5, Loss: 1.9337
+Epoch 2/5, Loss: 1.9021
+Epoch 3/5, Loss: 1.8736
+Epoch 4/5, Loss: 1.8408
+Epoch 5/5, Loss: 1.8109
+新模型评估：
+Accuracy: 54.89%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：2511.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 54.89%
+Epoch 1/5, Loss: 1.7731
+Epoch 2/5, Loss: 1.6762
+Epoch 3/5, Loss: 1.5705
+Epoch 4/5, Loss: 1.4650
+Epoch 5/5, Loss: 1.3668
+新模型评估：
+Accuracy: 69.21%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：266.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 69.21%
+Epoch 1/5, Loss: 1.2425
+Epoch 2/5, Loss: 1.1991
+Epoch 3/5, Loss: 1.2384
+Epoch 4/5, Loss: 1.2053
+Epoch 5/5, Loss: 1.2473
+新模型评估：
+Accuracy: 71.20%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3503
+DataOwner1的最优x_1 = 0.1096
+DataOwner2的最优x_2 = 0.1497
+DataOwner3的最优x_3 = 0.1143
+DataOwner4的最优x_4 = 0.1530
+DataOwner5的最优x_5 = 0.0587
+DataOwner6的最优x_6 = 0.1486
+DataOwner7的最优x_7 = 0.0438
+DataOwner8的最优x_8 = 0.1410
+DataOwner9的最优x_9 = 0.1442
+DataOwner10的最优x_10 = 0.1376
+每个DataOwner应该贡献数据比例 xn_list = [0.10961210378669053, 0.1497013727018006, 0.11427135324392541, 0.15295129020735582, 0.058650358807870465, 0.14863906590895334, 0.043840364457304576, 0.14103496181834013, 0.144209701129785, 0.13761106142760743]
+ModelOwner的最大效用 U(Eta) = 0.5916
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.350259967138263
+DataOwner1的分配到的支付 ： 0.1203
+DataOwner2的分配到的支付 ： 0.1715
+DataOwner3的分配到的支付 ： 0.1260
+DataOwner4的分配到的支付 ： 0.1759
+DataOwner5的分配到的支付 ： 0.0614
+DataOwner6的分配到的支付 ： 0.1701
+DataOwner7的分配到的支付 ： 0.0454
+DataOwner8的分配到的支付 ： 0.1600
+DataOwner9的分配到的支付 ： 0.1642
+DataOwner10的分配到的支付 ： 0.1555
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner3 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：212.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2719
+Epoch 2/5, Loss: 1.2810
+Epoch 3/5, Loss: 1.2235
+Epoch 4/5, Loss: 1.2057
+Epoch 5/5, Loss: 1.1953
+新模型评估：
+Accuracy: 72.70%
+loss差为：
+0.07656246423721313
+单位数据loss差为：
+0.00036114369923213744
+正在评估DataOwner3的数据质量, 本轮评估的样本数据量为：442.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2649
+Epoch 2/5, Loss: 1.2407
+Epoch 3/5, Loss: 1.2206
+Epoch 4/5, Loss: 1.2023
+Epoch 5/5, Loss: 1.1859
+新模型评估：
+Accuracy: 72.67%
+loss差为：
+0.07893712180001389
+单位数据loss差为：
+0.00017859077330319883
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：1158.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2660
+Epoch 2/5, Loss: 1.2088
+Epoch 3/5, Loss: 1.1809
+Epoch 4/5, Loss: 1.1319
+Epoch 5/5, Loss: 1.1020
+新模型评估：
+Accuracy: 73.84%
+loss差为：
+0.16403943927664488
+单位数据loss差为：
+0.0001416575468710232
+正在评估DataOwner4的数据质量, 本轮评估的样本数据量为：2072.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%

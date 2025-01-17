@@ -285,7 +285,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
             model = MNISTCNN(num_classes=10).to(device)
 
             unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
-                                                               device='cpu',
+                                                               device=str(device),
                                                                lr=1e-5,
                                                                model_path="../../../data/model/mnist_cnn_model")
             avg_f_list[dataowner_index] = unitDataLossDiff
@@ -315,7 +315,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = MNISTCNN(num_classes=10).to(device)
 
-        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu',
+        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
                         lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
 
     return UtilsMNIST.normalize_list(avg_f_list)

@@ -300,7 +300,7 @@ if __name__ == "__main__":
     last_random_U_qn = 0
 
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 101):
+    for n in range(1,101):
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  f"========================= 客户端数量: {n + 1} =========================")
 
@@ -347,10 +347,11 @@ if __name__ == "__main__":
                 # 在0.5eta-eat的范围内取eta值
                 random_Eta = random.uniform(0.5, 1) * best_Eta
                 random_x_opt = Stackelberg._solve_followers(random_Eta, np.array(avg_f_list), Lambda, Rho)
+                # 如果算不出最优解 就用上一轮的解
                 if random_x_opt is None:
                     U_Eta_list.append(last_random_U_Eta)
                     U_qn_list.append(last_random_U_qn)
-                    continue
+                    break
                 random_xn_list = []
                 for i, xi in enumerate(random_x_opt):
                     UtilsMNIST.print_and_log(global_minst_parent_path,
