@@ -14256,3 +14256,3157 @@ loss差为：
 Model loaded from ../../../data/model/mnist_cnn_model
 原模型评估：
 Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2480
+Epoch 2/5, Loss: 1.1691
+Epoch 3/5, Loss: 1.1060
+Epoch 4/5, Loss: 1.0380
+Epoch 5/5, Loss: 0.9788
+新模型评估：
+Accuracy: 74.40%
+loss差为：
+0.26918480432394765
+单位数据loss差为：
+0.00012991544610229134
+正在评估DataOwner5的数据质量, 本轮评估的样本数据量为：113.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.1950
+Epoch 2/5, Loss: 1.1885
+Epoch 3/5, Loss: 1.1614
+Epoch 4/5, Loss: 1.1627
+Epoch 5/5, Loss: 1.1538
+新模型评估：
+Accuracy: 69.91%
+loss差为：
+0.0411759614944458
+单位数据loss差为：
+0.00036438903977385664
+正在评估DataOwner6的数据质量, 本轮评估的样本数据量为：575.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2404
+Epoch 2/5, Loss: 1.2165
+Epoch 3/5, Loss: 1.1935
+Epoch 4/5, Loss: 1.1726
+Epoch 5/5, Loss: 1.1512
+新模型评估：
+Accuracy: 73.96%
+loss差为：
+0.0892343521118164
+单位数据loss差为：
+0.00015519017758576766
+正在评估DataOwner7的数据质量, 本轮评估的样本数据量为：84.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2154
+Epoch 2/5, Loss: 1.2156
+Epoch 3/5, Loss: 1.2911
+Epoch 4/5, Loss: 1.2667
+Epoch 5/5, Loss: 1.1843
+新模型评估：
+Accuracy: 71.00%
+loss差为：
+0.031066536903381348
+单位数据loss差为：
+0.00036983972504025413
+正在评估DataOwner8的数据质量, 本轮评估的样本数据量为：818.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2257
+Epoch 2/5, Loss: 1.1875
+Epoch 3/5, Loss: 1.1588
+Epoch 4/5, Loss: 1.1261
+Epoch 5/5, Loss: 1.1010
+新模型评估：
+Accuracy: 73.75%
+loss差为：
+0.12476970599247861
+单位数据loss差为：
+0.00015253020292479047
+正在评估DataOwner9的数据质量, 本轮评估的样本数据量为：2511.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2289
+Epoch 2/5, Loss: 1.1455
+Epoch 3/5, Loss: 1.0595
+Epoch 4/5, Loss: 0.9817
+Epoch 5/5, Loss: 0.9129
+新模型评估：
+Accuracy: 75.84%
+loss差为：
+0.31598547101020813
+单位数据loss差为：
+0.00012584049024699646
+正在评估DataOwner10的数据质量, 本轮评估的样本数据量为：266.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2330
+Epoch 2/5, Loss: 1.2950
+Epoch 3/5, Loss: 1.1854
+Epoch 4/5, Loss: 1.2043
+Epoch 5/5, Loss: 1.2240
+新模型评估：
+Accuracy: 70.31%
+loss差为：
+0.008962392807006836
+单位数据loss差为：
+3.3693206041379085e-05
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [0.00036114369923213744, 0.0001416575468710232, 0.00017859077330319883, 0.00012991544610229134, 0.00036438903977385664, 0.00015519017758576766, 0.00036983972504025413, 0.00015253020292479047, 0.00012584049024699646, 3.3693206041379085e-05]
+归一化后的数据质量列表avg_f_list:[0.9974130251790155, 0.9321182385440694, 0.9431054790313936, 0.9286250889485589, 0.9983784793361445, 0.936144051679082, 1.0, 0.9353527376208852, 0.9274128330943465, 0.9]
+CPC2调整模型中, 本轮训练的数据量为：212.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 71.20%
+Epoch 1/5, Loss: 1.2589
+Epoch 2/5, Loss: 1.2900
+Epoch 3/5, Loss: 1.2188
+Epoch 4/5, Loss: 1.2243
+Epoch 5/5, Loss: 1.1768
+新模型评估：
+Accuracy: 72.93%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC1调整模型中, 本轮训练的数据量为：442.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.93%
+Epoch 1/5, Loss: 1.2262
+Epoch 2/5, Loss: 1.2013
+Epoch 3/5, Loss: 1.1801
+Epoch 4/5, Loss: 1.1618
+Epoch 5/5, Loss: 1.1445
+新模型评估：
+Accuracy: 73.01%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：1158.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 73.01%
+Epoch 1/5, Loss: 1.1524
+Epoch 2/5, Loss: 1.0770
+Epoch 3/5, Loss: 1.0737
+Epoch 4/5, Loss: 1.0217
+Epoch 5/5, Loss: 0.9931
+新模型评估：
+Accuracy: 73.85%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：2072.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 73.85%
+Epoch 1/5, Loss: 0.9638
+Epoch 2/5, Loss: 0.9066
+Epoch 3/5, Loss: 0.8595
+Epoch 4/5, Loss: 0.8069
+Epoch 5/5, Loss: 0.7620
+新模型评估：
+Accuracy: 75.59%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：113.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.59%
+Epoch 1/5, Loss: 0.6744
+Epoch 2/5, Loss: 0.6608
+Epoch 3/5, Loss: 0.6517
+Epoch 4/5, Loss: 0.6359
+Epoch 5/5, Loss: 0.6227
+新模型评估：
+Accuracy: 74.71%
+CPC6调整模型中, 本轮训练的数据量为：575.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.59%
+Epoch 1/5, Loss: 0.7220
+Epoch 2/5, Loss: 0.7052
+Epoch 3/5, Loss: 0.6933
+Epoch 4/5, Loss: 0.6800
+Epoch 5/5, Loss: 0.6694
+新模型评估：
+Accuracy: 77.58%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：84.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6066
+Epoch 2/5, Loss: 0.7220
+Epoch 3/5, Loss: 0.7781
+Epoch 4/5, Loss: 0.6397
+Epoch 5/5, Loss: 0.6149
+新模型评估：
+Accuracy: 76.12%
+CPC8调整模型中, 本轮训练的数据量为：818.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6538
+Epoch 2/5, Loss: 0.6345
+Epoch 3/5, Loss: 0.6243
+Epoch 4/5, Loss: 0.6117
+Epoch 5/5, Loss: 0.5953
+新模型评估：
+Accuracy: 76.93%
+CPC9调整模型中, 本轮训练的数据量为：2511.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6756
+Epoch 2/5, Loss: 0.6414
+Epoch 3/5, Loss: 0.6057
+Epoch 4/5, Loss: 0.5767
+Epoch 5/5, Loss: 0.5487
+新模型评估：
+Accuracy: 76.83%
+CPC10调整模型中, 本轮训练的数据量为：266.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6840
+Epoch 2/5, Loss: 0.6332
+Epoch 3/5, Loss: 0.6590
+Epoch 4/5, Loss: 0.6757
+Epoch 5/5, Loss: 0.6435
+新模型评估：
+Accuracy: 75.16%
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3288
+DataOwner1的最优x_1 = 0.1638
+DataOwner2的最优x_2 = 0.1022
+DataOwner3的最优x_3 = 0.1139
+DataOwner4的最优x_4 = 0.0984
+DataOwner5的最优x_5 = 0.1645
+DataOwner6的最优x_6 = 0.1066
+DataOwner7的最优x_7 = 0.1659
+DataOwner8的最优x_8 = 0.1057
+DataOwner9的最优x_9 = 0.0971
+DataOwner10的最优x_10 = 0.0647
+每个DataOwner应该贡献数据比例 xn_list = [0.16376416538514993, 0.10224938090024879, 0.11389559198737591, 0.09842435460550782, 0.16454649274820438, 0.10658361711274231, 0.16585296452623385, 0.10573787311444983, 0.09708276804931043, 0.06469082933254318]
+ModelOwner的最大效用 U(Eta) = 0.5668
+xn开始变化：
+new_U_qn_list: []
+DONE
+----- literation 3: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3287834509116727
+DataOwner1的分配到的支付 ： 0.5902
+DataOwner2的分配到的支付 ： 0.0826
+DataOwner3的分配到的支付 ： 0.0638
+DataOwner4的分配到的支付 ： 0.0840
+DataOwner5的分配到的支付 ： 0.0972
+DataOwner6的分配到的支付 ： 0.0823
+DataOwner7的分配到的支付 ： 0.0981
+DataOwner8的分配到的支付 ： 0.0781
+DataOwner9的分配到的支付 ： 0.0791
+DataOwner10的分配到的支付 ： 0.0733
+DONE
+----- literation 3: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner3 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 3: 模型训练 -----
+CPC2调整模型中, 本轮训练的数据量为：1941.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.7006
+Epoch 2/5, Loss: 0.6747
+Epoch 3/5, Loss: 0.6439
+Epoch 4/5, Loss: 0.6182
+Epoch 5/5, Loss: 0.6000
+新模型评估：
+Accuracy: 76.24%
+CPC1调整模型中, 本轮训练的数据量为：442.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.7250
+Epoch 2/5, Loss: 0.7086
+Epoch 3/5, Loss: 0.6995
+Epoch 4/5, Loss: 0.6878
+Epoch 5/5, Loss: 0.6793
+新模型评估：
+Accuracy: 76.21%
+CPC3调整模型中, 本轮训练的数据量为：1158.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6432
+Epoch 2/5, Loss: 0.6309
+Epoch 3/5, Loss: 0.6125
+Epoch 4/5, Loss: 0.5904
+Epoch 5/5, Loss: 0.5689
+新模型评估：
+Accuracy: 75.50%
+CPC4调整模型中, 本轮训练的数据量为：2072.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6452
+Epoch 2/5, Loss: 0.6226
+Epoch 3/5, Loss: 0.5886
+Epoch 4/5, Loss: 0.5658
+Epoch 5/5, Loss: 0.5454
+新模型评估：
+Accuracy: 76.35%
+CPC5调整模型中, 本轮训练的数据量为：318.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.7859
+Epoch 2/5, Loss: 0.7698
+Epoch 3/5, Loss: 0.7578
+Epoch 4/5, Loss: 0.7486
+Epoch 5/5, Loss: 0.7409
+新模型评估：
+Accuracy: 76.30%
+CPC6调整模型中, 本轮训练的数据量为：575.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6588
+Epoch 2/5, Loss: 0.6390
+Epoch 3/5, Loss: 0.6262
+Epoch 4/5, Loss: 0.6146
+Epoch 5/5, Loss: 0.6049
+新模型评估：
+Accuracy: 75.32%
+CPC7调整模型中, 本轮训练的数据量为：320.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6914
+Epoch 2/5, Loss: 0.6742
+Epoch 3/5, Loss: 0.6617
+Epoch 4/5, Loss: 0.6520
+Epoch 5/5, Loss: 0.6435
+新模型评估：
+Accuracy: 76.31%
+CPC8调整模型中, 本轮训练的数据量为：818.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6757
+Epoch 2/5, Loss: 0.6519
+Epoch 3/5, Loss: 0.6350
+Epoch 4/5, Loss: 0.6198
+Epoch 5/5, Loss: 0.6082
+新模型评估：
+Accuracy: 75.48%
+CPC9调整模型中, 本轮训练的数据量为：2511.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.6686
+Epoch 2/5, Loss: 0.6306
+Epoch 3/5, Loss: 0.6020
+Epoch 4/5, Loss: 0.5808
+Epoch 5/5, Loss: 0.5495
+新模型评估：
+Accuracy: 76.68%
+CPC10调整模型中, 本轮训练的数据量为：266.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 77.58%
+Epoch 1/5, Loss: 0.7344
+Epoch 2/5, Loss: 0.6814
+Epoch 3/5, Loss: 0.7017
+Epoch 4/5, Loss: 0.6539
+Epoch 5/5, Loss: 0.6621
+新模型评估：
+Accuracy: 76.48%
+DONE
+最终的列表：
+[0.0005344418723075596, 0.0009031658576833627, 0.0011100518148399428, 0.0011588594244734615, 0.0010532328066272037, 0.0007967049267938731, 0.00039270180194816984, -0.000155453482971038, -0.0008445369382374945, -0.0016714200028665194, -0.002633066039737564, -0.0037265269840614096, -0.00494894013742167, -0.0062975251000667865, -0.007769580834546375, -0.009362482854178233, -0.011073680530197721, -0.01290069451178566, -0.014841114253493187, -0.01689259564488299, -0.019052858737491574, -0.02131968556448191, -0.023690918048606985, -0.02616445599433867, -0.028738255160238646, -0.03141032540785388, -0.0341787289236164, -0.03704157851041018, -0.039997035945641135, -0.04304331040280934, -0.04617865693373696, -0.04940137500874958, -0.052709807112245655, -0.05610233739121723, -0.05957739035440884, -0.06313342961991247, -0.06676895670910943, -0.0704825098849699, -0.07427266303281721, -0.078138024581759, -0.08207723646507004, -0.08608897311789582, -0.09017194051072341, -0.09432487521713973, -0.09854654351446468, -0.10283574051591704, -0.1071912893330289, -0.1116120402670861, -0.11609687002842894, -0.1206446809824977, -0.12525440042156194, -0.12992497986111756, -0.13465539435998258, -0.13944464186316569, -0.14429174256662203, -0.14919573830305177, -0.15415569194793094, -0.15917068684500274, -0.164239826250488, -0.16936223279530954, -0.17453704796464925, -0.17976343159419367, -0.1850405613824433, -0.19036763241849441, -0.19574385672472155, -0.20116846281381578, -0.20664069525965556, -0.21215981428150937, -0.21772509534108836, -0.22333582875198926, -0.2289913193010843, -0.23469088588143444, -0.24043386113631954, -0.24621959111399228, -0.2520474349327843, -0.2579167644562005, -0.26382696397765903, -0.2697774299145419, -0.2757675705112389, -0.2817968055508766, -0.28786456607543787, -0.2939702941139889, -0.30011344241874083, -0.3062934742086826, -0.3125098629205354, -0.31876209196678307, -0.325049654500546, -0.3313720531870762, -0.33772879998165184, -0.34411941591366924, -0.3505434308767257, -0.35700038342450524, -0.36348982057227697, -0.3700112976038292, -0.37656437788366537, -0.38314863267429633, -0.38976364095846594, -0.3964089892661592, -0.4030842715062396, -0.4097890888025729]
+**** log-parameter_analysis 运行时间： 2025-01-17 23:58:00 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.03429654041700715
+DataOwner2: noise random: 0.051581109733914776
+DataOwner3: noise random: 0.052654130700702254
+DataOwner4: noise random: 0.06735070894685188
+DataOwner5: noise random: 0.05885984624075233
+DataOwner6: noise random: 0.048427533207979594
+DataOwner7: noise random: 0.042945622102513674
+DataOwner8: noise random: 0.0830848920039093
+DataOwner9: noise random: 0.07171997801542394
+DataOwner10: noise random: 0.0010146959564973025
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9995225731125665, 0.998923936426997, 0.9988701950424489, 0.9981613522805676, 0.9986033593622502, 0.9990519610466909, 0.9992520979116599, 0.9972037442077079, 0.9979194571094367, 0.999999582633949]
+归一化后的数据质量列表avg_f_list: [0.9829385876914307, 0.9615268823528488, 0.9596046902818174, 0.9342511950573335, 0.9500606594932626, 0.9661059960273859, 0.9732643805424052, 0.9, 0.9255992225806534, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3359
+DataOwner1的最优x_1 = 0.1471
+DataOwner2的最优x_2 = 0.1272
+DataOwner3的最优x_3 = 0.1253
+DataOwner4的最优x_4 = 0.0989
+DataOwner5的最优x_5 = 0.1157
+DataOwner6的最优x_6 = 0.1316
+DataOwner7的最优x_7 = 0.1384
+DataOwner8的最优x_8 = 0.0580
+DataOwner9的最优x_9 = 0.0891
+DataOwner10的最优x_10 = 0.1617
+每个DataOwner应该贡献数据比例 xn_list = [0.1471391414137425, 0.12718574779746322, 0.12530010474241382, 0.09885595895445935, 0.11569499889951142, 0.13161348239225265, 0.1383576018712863, 0.057993608198503833, 0.08912259426348496, 0.16174208514360713]
+ModelOwner的最大效用 U(Eta) = 0.5750
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3359485287806874
+DataOwner1的分配到的支付 ： 0.1684
+DataOwner2的分配到的支付 ： 0.1424
+DataOwner3的分配到的支付 ： 0.1400
+DataOwner4的分配到的支付 ： 0.1075
+DataOwner5的分配到的支付 ： 0.1279
+DataOwner6的分配到的支付 ： 0.1480
+DataOwner7的分配到的支付 ： 0.1567
+DataOwner8的分配到的支付 ： 0.0608
+DataOwner9的分配到的支付 ： 0.0960
+DataOwner10的分配到的支付 ： 0.1883
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5', 'DataOwner6': 'CPC6', 'DataOwner7': 'CPC7', 'DataOwner8': 'CPC8', 'DataOwner9': 'CPC9', 'DataOwner10': 'CPC10'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+----- literation 1: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：201.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.3061
+Epoch 2/5, Loss: 2.2920
+Epoch 3/5, Loss: 2.2899
+Epoch 4/5, Loss: 2.2834
+Epoch 5/5, Loss: 2.2983
+新模型评估：
+Accuracy: 28.25%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：693.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 28.25%
+Epoch 1/5, Loss: 2.2914
+Epoch 2/5, Loss: 2.2878
+Epoch 3/5, Loss: 2.2839
+Epoch 4/5, Loss: 2.2791
+Epoch 5/5, Loss: 2.2733
+新模型评估：
+Accuracy: 36.93%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：341.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 36.93%
+Epoch 1/5, Loss: 2.2676
+Epoch 2/5, Loss: 2.2636
+Epoch 3/5, Loss: 2.2630
+Epoch 4/5, Loss: 2.2623
+Epoch 5/5, Loss: 2.2518
+新模型评估：
+Accuracy: 38.74%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：539.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 38.74%
+Epoch 1/5, Loss: 2.2460
+Epoch 2/5, Loss: 2.2375
+Epoch 3/5, Loss: 2.2273
+Epoch 4/5, Loss: 2.2211
+Epoch 5/5, Loss: 2.2131
+新模型评估：
+Accuracy: 43.77%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：157.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 43.77%
+Epoch 1/5, Loss: 2.2461
+Epoch 2/5, Loss: 2.2403
+Epoch 3/5, Loss: 2.2466
+Epoch 4/5, Loss: 2.2389
+Epoch 5/5, Loss: 2.2276
+新模型评估：
+Accuracy: 42.30%
+CPC6调整模型中, 本轮训练的数据量为：538.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 43.77%
+Epoch 1/5, Loss: 2.2276
+Epoch 2/5, Loss: 2.2172
+Epoch 3/5, Loss: 2.2121
+Epoch 4/5, Loss: 2.2056
+Epoch 5/5, Loss: 2.1883
+新模型评估：
+Accuracy: 44.88%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：188.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 44.88%
+Epoch 1/5, Loss: 2.1831
+Epoch 2/5, Loss: 2.1792
+Epoch 3/5, Loss: 2.1748
+Epoch 4/5, Loss: 2.1713
+Epoch 5/5, Loss: 2.1656
+新模型评估：
+Accuracy: 44.76%
+CPC8调整模型中, 本轮训练的数据量为：79.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 44.88%
+Epoch 1/5, Loss: 2.1552
+Epoch 2/5, Loss: 2.1643
+Epoch 3/5, Loss: 2.1502
+Epoch 4/5, Loss: 2.1397
+Epoch 5/5, Loss: 2.1738
+新模型评估：
+Accuracy: 46.00%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：2795.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 46.00%
+Epoch 1/5, Loss: 2.1530
+Epoch 2/5, Loss: 2.0916
+Epoch 3/5, Loss: 2.0093
+Epoch 4/5, Loss: 1.9059
+Epoch 5/5, Loss: 1.7832
+新模型评估：
+Accuracy: 57.05%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：882.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 57.05%
+Epoch 1/5, Loss: 1.6878
+Epoch 2/5, Loss: 1.6537
+Epoch 3/5, Loss: 1.6193
+Epoch 4/5, Loss: 1.5862
+Epoch 5/5, Loss: 1.5506
+新模型评估：
+Accuracy: 62.83%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3359
+DataOwner1的最优x_1 = 0.1471
+DataOwner2的最优x_2 = 0.1272
+DataOwner3的最优x_3 = 0.1253
+DataOwner4的最优x_4 = 0.0989
+DataOwner5的最优x_5 = 0.1157
+DataOwner6的最优x_6 = 0.1316
+DataOwner7的最优x_7 = 0.1384
+DataOwner8的最优x_8 = 0.0580
+DataOwner9的最优x_9 = 0.0891
+DataOwner10的最优x_10 = 0.1617
+每个DataOwner应该贡献数据比例 xn_list = [0.1471391414137425, 0.12718574779746322, 0.12530010474241382, 0.09885595895445935, 0.11569499889951142, 0.13161348239225265, 0.1383576018712863, 0.057993608198503833, 0.08912259426348496, 0.16174208514360713]
+ModelOwner的最大效用 U(Eta) = 0.5750
+DONE
+最终的列表：
+**** log-parameter_analysis 运行时间： 2025-01-18 00:01:25 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.09762852919849112
+DataOwner2: noise random: 0.07762487588949622
+DataOwner3: noise random: 0.07316004837419555
+DataOwner4: noise random: 0.03435927126038773
+DataOwner5: noise random: 0.02381142276240572
+DataOwner6: noise random: 0.06198857748847456
+DataOwner7: noise random: 0.07184154092387193
+DataOwner8: noise random: 0.07250891078545167
+DataOwner9: noise random: 0.02580131155617642
+DataOwner10: noise random: 0.05778103545140544
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9961401461043454, 0.9975671550252484, 0.9978320947369989, 0.9995213018151529, 0.9997705500985905, 0.9984353901037903, 0.9979085778914053, 0.9978773006365703, 0.9997307749076578, 0.9986459328410289]
+归一化后的数据质量列表avg_f_list: [0.9, 0.939307165901235, 0.9466049683543625, 0.9931344201958584, 1.0, 0.9632228259742812, 0.9487117078392157, 0.9478501713577506, 0.9989043866468931, 0.969022255943295]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3423
+DataOwner1的最优x_1 = 0.0519
+DataOwner2的最优x_2 = 0.0993
+DataOwner3的最优x_3 = 0.1072
+DataOwner4的最优x_4 = 0.1521
+DataOwner5的最优x_5 = 0.1579
+DataOwner6的最优x_6 = 0.1243
+DataOwner7的最优x_7 = 0.1094
+DataOwner8的最优x_8 = 0.1085
+DataOwner9的最优x_9 = 0.1570
+DataOwner10的最优x_10 = 0.1300
+每个DataOwner应该贡献数据比例 xn_list = [0.05185166758054109, 0.09925680527899347, 0.10717510277140546, 0.15206429619181722, 0.15794365952033243, 0.12427573328346891, 0.1094135136019216, 0.10850066520684538, 0.15701723555063024, 0.12995351028079152]
+ModelOwner的最大效用 U(Eta) = 0.5823
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3422907221722253
+DataOwner1的分配到的支付 ： 0.0540
+DataOwner2的分配到的支付 ： 0.1079
+DataOwner3的分配到的支付 ： 0.1175
+DataOwner4的分配到的支付 ： 0.1748
+DataOwner5的分配到的支付 ： 0.1829
+DataOwner6的分配到的支付 ： 0.1386
+DataOwner7的分配到的支付 ： 0.1202
+DataOwner8的分配到的支付 ： 0.1191
+DataOwner9的分配到的支付 ： 0.1816
+DataOwner10的分配到的支付 ： 0.1458
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC2', 'DataOwner9': 'CPC1', 'DataOwner2': 'CPC3', 'DataOwner3': 'CPC4', 'DataOwner4': 'CPC5', 'DataOwner5': 'CPC10', 'DataOwner6': 'CPC6', 'DataOwner7': 'CPC7', 'DataOwner8': 'CPC8', 'DataOwner10': 'CPC9'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner9 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DataOwner3 把数据交给 CPC4
+DataOwner4 把数据交给 CPC5
+DataOwner5 把数据交给 CPC10
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner10 把数据交给 CPC9
+DONE
+----- literation 1: 模型训练 -----
+CPC2调整模型中, 本轮训练的数据量为：259.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.3074
+Epoch 2/5, Loss: 2.3178
+Epoch 3/5, Loss: 2.3005
+Epoch 4/5, Loss: 2.2967
+Epoch 5/5, Loss: 2.3095
+新模型评估：
+Accuracy: 29.44%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC1调整模型中, 本轮训练的数据量为：1099.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 29.44%
+Epoch 1/5, Loss: 2.2915
+Epoch 2/5, Loss: 2.2852
+Epoch 3/5, Loss: 2.2786
+Epoch 4/5, Loss: 2.2697
+Epoch 5/5, Loss: 2.2551
+新模型评估：
+Accuracy: 43.47%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：496.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 43.47%
+Epoch 1/5, Loss: 2.2526
+Epoch 2/5, Loss: 2.2453
+Epoch 3/5, Loss: 2.2397
+Epoch 4/5, Loss: 2.2335
+Epoch 5/5, Loss: 2.2269
+新模型评估：
+Accuracy: 43.30%
+CPC4调整模型中, 本轮训练的数据量为：1071.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 43.47%
+Epoch 1/5, Loss: 2.2477
+Epoch 2/5, Loss: 2.2347
+Epoch 3/5, Loss: 2.2198
+Epoch 4/5, Loss: 2.2012
+Epoch 5/5, Loss: 2.1813
+新模型评估：
+Accuracy: 49.64%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：304.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 49.64%
+Epoch 1/5, Loss: 2.1789
+Epoch 2/5, Loss: 2.1730
+Epoch 3/5, Loss: 2.1659
+Epoch 4/5, Loss: 2.1609
+Epoch 5/5, Loss: 2.1550
+新模型评估：
+Accuracy: 50.67%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：789.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 50.67%
+Epoch 1/5, Loss: 2.1451
+Epoch 2/5, Loss: 2.1254
+Epoch 3/5, Loss: 2.1094
+Epoch 4/5, Loss: 2.0886
+Epoch 5/5, Loss: 2.0644
+新模型评估：
+Accuracy: 53.87%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：124.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 53.87%
+Epoch 1/5, Loss: 2.0557
+Epoch 2/5, Loss: 2.0471
+Epoch 3/5, Loss: 2.0439
+Epoch 4/5, Loss: 2.0406
+Epoch 5/5, Loss: 2.0359
+新模型评估：
+Accuracy: 53.59%
+CPC7调整模型中, 本轮训练的数据量为：1422.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 53.87%
+Epoch 1/5, Loss: 2.0343
+Epoch 2/5, Loss: 1.9901
+Epoch 3/5, Loss: 1.9500
+Epoch 4/5, Loss: 1.8888
+Epoch 5/5, Loss: 1.8349
+新模型评估：
+Accuracy: 56.96%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：1193.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 56.96%
+Epoch 1/5, Loss: 1.7950
+Epoch 2/5, Loss: 1.7487
+Epoch 3/5, Loss: 1.7028
+Epoch 4/5, Loss: 1.6609
+Epoch 5/5, Loss: 1.6135
+新模型评估：
+Accuracy: 62.18%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：129.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.7141
+Epoch 2/5, Loss: 1.4350
+Epoch 3/5, Loss: 1.5308
+Epoch 4/5, Loss: 1.3926
+Epoch 5/5, Loss: 1.7408
+新模型评估：
+Accuracy: 61.34%
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3423
+DataOwner1的最优x_1 = 0.0519
+DataOwner2的最优x_2 = 0.0993
+DataOwner3的最优x_3 = 0.1072
+DataOwner4的最优x_4 = 0.1521
+DataOwner5的最优x_5 = 0.1579
+DataOwner6的最优x_6 = 0.1243
+DataOwner7的最优x_7 = 0.1094
+DataOwner8的最优x_8 = 0.1085
+DataOwner9的最优x_9 = 0.1570
+DataOwner10的最优x_10 = 0.1300
+每个DataOwner应该贡献数据比例 xn_list = [0.05185166758054109, 0.09925680527899347, 0.10717510277140546, 0.15206429619181722, 0.15794365952033243, 0.12427573328346891, 0.1094135136019216, 0.10850066520684538, 0.15701723555063024, 0.12995351028079152]
+ModelOwner的最大效用 U(Eta) = 0.5823
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3422907221722253
+DataOwner1的分配到的支付 ： 0.0540
+DataOwner2的分配到的支付 ： 0.1079
+DataOwner3的分配到的支付 ： 0.1175
+DataOwner4的分配到的支付 ： 0.1748
+DataOwner5的分配到的支付 ： 0.1829
+DataOwner6的分配到的支付 ： 0.1386
+DataOwner7的分配到的支付 ： 0.1202
+DataOwner8的分配到的支付 ： 0.1191
+DataOwner9的分配到的支付 ： 0.1816
+DataOwner10的分配到的支付 ： 0.1458
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner9 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DataOwner3 把数据交给 CPC4
+DataOwner4 把数据交给 CPC5
+DataOwner5 把数据交给 CPC10
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner10 把数据交给 CPC9
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：259.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.5828
+Epoch 2/5, Loss: 1.6244
+Epoch 3/5, Loss: 1.5924
+Epoch 4/5, Loss: 1.6171
+Epoch 5/5, Loss: 1.6916
+新模型评估：
+Accuracy: 61.38%
+loss差为：
+-0.1087210893630981
+单位数据loss差为：
+-0.0004197725458034676
+正在评估DataOwner9的数据质量, 本轮评估的样本数据量为：1099.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.5566
+Epoch 2/5, Loss: 1.5148
+Epoch 3/5, Loss: 1.4846
+Epoch 4/5, Loss: 1.4484
+Epoch 5/5, Loss: 1.4038
+新模型评估：
+Accuracy: 65.49%
+loss差为：
+0.15274850527445483
+单位数据loss差为：
+0.00013898863082297984
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：496.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.6212
+Epoch 2/5, Loss: 1.5934
+Epoch 3/5, Loss: 1.5709
+Epoch 4/5, Loss: 1.5605
+Epoch 5/5, Loss: 1.5355
+新模型评估：
+Accuracy: 63.56%
+loss差为：
+0.08576446771621704
+单位数据loss差为：
+0.00017291223329882468
+正在评估DataOwner3的数据质量, 本轮评估的样本数据量为：1071.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.5790
+Epoch 2/5, Loss: 1.5361
+Epoch 3/5, Loss: 1.4962
+Epoch 4/5, Loss: 1.4558
+Epoch 5/5, Loss: 1.4169
+新模型评估：
+Accuracy: 67.57%
+loss差为：
+0.16213330801795522
+单位数据loss差为：
+0.0001513849748066809
+正在评估DataOwner4的数据质量, 本轮评估的样本数据量为：304.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.5782
+Epoch 2/5, Loss: 1.5657
+Epoch 3/5, Loss: 1.5478
+Epoch 4/5, Loss: 1.5343
+Epoch 5/5, Loss: 1.5255
+新模型评估：
+Accuracy: 64.43%
+loss差为：
+0.05271513462066646
+单位数据loss差为：
+0.00017340504809429757
+正在评估DataOwner5的数据质量, 本轮评估的样本数据量为：789.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.5945
+Epoch 2/5, Loss: 1.5566
+Epoch 3/5, Loss: 1.5330
+Epoch 4/5, Loss: 1.5034
+Epoch 5/5, Loss: 1.4716
+新模型评估：
+Accuracy: 64.63%
+loss差为：
+0.12298402419457055
+单位数据loss差为：
+0.00015587328795256091
+正在评估DataOwner6的数据质量, 本轮评估的样本数据量为：124.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.6618
+Epoch 2/5, Loss: 1.6530
+Epoch 3/5, Loss: 1.6421
+Epoch 4/5, Loss: 1.6340
+Epoch 5/5, Loss: 1.6312
+新模型评估：
+Accuracy: 61.74%
+loss差为：
+0.03065413236618042
+单位数据loss差为：
+0.00024721074488855176
+正在评估DataOwner7的数据质量, 本轮评估的样本数据量为：1422.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.5811
+Epoch 2/5, Loss: 1.5230
+Epoch 3/5, Loss: 1.4741
+Epoch 4/5, Loss: 1.4200
+Epoch 5/5, Loss: 1.3620
+新模型评估：
+Accuracy: 68.73%
+loss差为：
+0.21917538020921778
+单位数据loss差为：
+0.00015413177229902798
+正在评估DataOwner8的数据质量, 本轮评估的样本数据量为：1193.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.5616
+Epoch 2/5, Loss: 1.5133
+Epoch 3/5, Loss: 1.4659
+Epoch 4/5, Loss: 1.4250
+Epoch 5/5, Loss: 1.3818
+新模型评估：
+Accuracy: 65.30%
+loss差为：
+0.17979364018691202
+单位数据loss差为：
+0.00015070715858081477
+正在评估DataOwner10的数据质量, 本轮评估的样本数据量为：129.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.4502
+Epoch 2/5, Loss: 1.6423
+Epoch 3/5, Loss: 1.3549
+Epoch 4/5, Loss: 1.6101
+Epoch 5/5, Loss: 1.3449
+新模型评估：
+Accuracy: 63.98%
+loss差为：
+0.1053011417388916
+单位数据loss差为：
+0.000816287920456524
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [-0.0004197725458034676, 0.00017291223329882468, 0.0001513849748066809, 0.00017340504809429757, 0.00015587328795256091, 0.00024721074488855176, 0.00015413177229902798, 0.00015070715858081477, 0.00013898863082297984, 0.000816287920456524]
+归一化后的数据质量列表avg_f_list:[0.9, 0.9479494972358115, 0.9462078948563356, 0.9479893670325508, 0.9465710092239895, 0.9539604096157321, 0.9464301167918577, 0.9461530580385287, 0.9452050034669517, 1.0]
+CPC2调整模型中, 本轮训练的数据量为：259.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.18%
+Epoch 1/5, Loss: 1.5541
+Epoch 2/5, Loss: 1.7054
+Epoch 3/5, Loss: 1.5911
+Epoch 4/5, Loss: 1.6238
+Epoch 5/5, Loss: 1.5827
+新模型评估：
+Accuracy: 62.24%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC1调整模型中, 本轮训练的数据量为：1099.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 62.24%
+Epoch 1/5, Loss: 1.5190
+Epoch 2/5, Loss: 1.4759
+Epoch 3/5, Loss: 1.4388
+Epoch 4/5, Loss: 1.3951
+Epoch 5/5, Loss: 1.3629
+新模型评估：
+Accuracy: 66.61%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：496.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 66.61%
+Epoch 1/5, Loss: 1.3904
+Epoch 2/5, Loss: 1.3633
+Epoch 3/5, Loss: 1.3407
+Epoch 4/5, Loss: 1.3305
+Epoch 5/5, Loss: 1.3052
+新模型评估：
+Accuracy: 67.38%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC4调整模型中, 本轮训练的数据量为：1071.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 67.38%
+Epoch 1/5, Loss: 1.2578
+Epoch 2/5, Loss: 1.2142
+Epoch 3/5, Loss: 1.1758
+Epoch 4/5, Loss: 1.1408
+Epoch 5/5, Loss: 1.1051
+新模型评估：
+Accuracy: 72.49%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：304.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.49%
+Epoch 1/5, Loss: 1.0755
+Epoch 2/5, Loss: 1.0616
+Epoch 3/5, Loss: 1.0537
+Epoch 4/5, Loss: 1.0361
+Epoch 5/5, Loss: 1.0242
+新模型评估：
+Accuracy: 72.99%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：789.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.99%
+Epoch 1/5, Loss: 1.0777
+Epoch 2/5, Loss: 1.0553
+Epoch 3/5, Loss: 1.0224
+Epoch 4/5, Loss: 0.9826
+Epoch 5/5, Loss: 0.9633
+新模型评估：
+Accuracy: 75.30%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：124.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.30%
+Epoch 1/5, Loss: 1.0369
+Epoch 2/5, Loss: 1.0282
+Epoch 3/5, Loss: 1.0195
+Epoch 4/5, Loss: 1.0151
+Epoch 5/5, Loss: 1.0060
+新模型评估：
+Accuracy: 73.89%
+CPC7调整模型中, 本轮训练的数据量为：1422.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.30%
+Epoch 1/5, Loss: 0.9287
+Epoch 2/5, Loss: 0.8790
+Epoch 3/5, Loss: 0.8542
+Epoch 4/5, Loss: 0.8089
+Epoch 5/5, Loss: 0.7978
+新模型评估：
+Accuracy: 75.37%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：1193.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.37%
+Epoch 1/5, Loss: 0.7580
+Epoch 2/5, Loss: 0.7300
+Epoch 3/5, Loss: 0.7103
+Epoch 4/5, Loss: 0.6849
+Epoch 5/5, Loss: 0.6633
+新模型评估：
+Accuracy: 75.46%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：129.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 75.46%
+Epoch 1/5, Loss: 0.4976
+Epoch 2/5, Loss: 0.5123
+Epoch 3/5, Loss: 0.4806
+Epoch 4/5, Loss: 0.5299
+Epoch 5/5, Loss: 0.5799
+新模型评估：
+Accuracy: 76.92%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3273
+DataOwner1的最优x_1 = 0.0660
+DataOwner2的最优x_2 = 0.1199
+DataOwner3的最优x_3 = 0.1181
+DataOwner4的最优x_4 = 0.1199
+DataOwner5的最优x_5 = 0.1185
+DataOwner6的最优x_6 = 0.1259
+DataOwner7的最优x_7 = 0.1184
+DataOwner8的最优x_8 = 0.1181
+DataOwner9的最优x_9 = 0.1171
+DataOwner10的最优x_10 = 0.1667
+每个DataOwner应该贡献数据比例 xn_list = [0.06600935461483472, 0.11989869202643164, 0.11813862778701073, 0.11993882369399153, 0.11850672694028846, 0.12586885177046955, 0.1183639715621538, 0.1180829860287108, 0.11711884701615327, 0.16665828752058792]
+ModelOwner的最大效用 U(Eta) = 0.5652
+xn开始变化：
+new_xn_list: [0.06600935461483472, 0.11989869202643164, 0.11813862778701073, 0.15206429619181722, 0.15794365952033243, 0.12586885177046955, 0.1183639715621538, 0.1180829860287108, 0.15701723555063024, 0.16665828752058792]
+avg_f_list: [0.9, 0.9479494972358115, 0.9462078948563356, 0.9479893670325508, 0.9465710092239895, 0.9539604096157321, 0.9464301167918577, 0.9461530580385287, 0.9452050034669517, 1.0]
+============= xn0: 0.01 =============
+new_qn: 0.009000000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.1869953035623877
+new_xn: 0.01
+Lambda: 1
+Rho: 1
+============= xn0: 0.02 =============
+new_qn: 0.018000000000000002
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.1959953035623878
+new_xn: 0.02
+Lambda: 1
+Rho: 1
+============= xn0: 0.03 =============
+new_qn: 0.027
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2049953035623877
+new_xn: 0.03
+Lambda: 1
+Rho: 1
+============= xn0: 0.04 =============
+new_qn: 0.036000000000000004
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2139953035623878
+new_xn: 0.04
+Lambda: 1
+Rho: 1
+============= xn0: 0.05 =============
+new_qn: 0.045000000000000005
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2229953035623877
+new_xn: 0.05
+Lambda: 1
+Rho: 1
+============= xn0: 0.060000000000000005 =============
+new_qn: 0.054000000000000006
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2319953035623878
+new_xn: 0.060000000000000005
+Lambda: 1
+Rho: 1
+============= xn0: 0.06999999999999999 =============
+new_qn: 0.063
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2409953035623877
+new_xn: 0.06999999999999999
+Lambda: 1
+Rho: 1
+============= xn0: 0.08 =============
+new_qn: 0.07200000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2499953035623879
+new_xn: 0.08
+Lambda: 1
+Rho: 1
+============= xn0: 0.09 =============
+new_qn: 0.081
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2589953035623878
+new_xn: 0.09
+Lambda: 1
+Rho: 1
+============= xn0: 0.09999999999999999 =============
+new_qn: 0.09
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2679953035623877
+new_xn: 0.09999999999999999
+Lambda: 1
+Rho: 1
+============= xn0: 0.11 =============
+new_qn: 0.099
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2769953035623878
+new_xn: 0.11
+Lambda: 1
+Rho: 1
+============= xn0: 0.12 =============
+new_qn: 0.108
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2859953035623877
+new_xn: 0.12
+Lambda: 1
+Rho: 1
+============= xn0: 0.13 =============
+new_qn: 0.117
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.2949953035623878
+new_xn: 0.13
+Lambda: 1
+Rho: 1
+============= xn0: 0.14 =============
+new_qn: 0.12600000000000003
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3039953035623877
+new_xn: 0.14
+Lambda: 1
+Rho: 1
+============= xn0: 0.15000000000000002 =============
+new_qn: 0.13500000000000004
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3129953035623878
+new_xn: 0.15000000000000002
+Lambda: 1
+Rho: 1
+============= xn0: 0.16 =============
+new_qn: 0.14400000000000002
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3219953035623877
+new_xn: 0.16
+Lambda: 1
+Rho: 1
+============= xn0: 0.17 =============
+new_qn: 0.15300000000000002
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3309953035623878
+new_xn: 0.17
+Lambda: 1
+Rho: 1
+============= xn0: 0.18000000000000002 =============
+new_qn: 0.16200000000000003
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3399953035623877
+new_xn: 0.18000000000000002
+Lambda: 1
+Rho: 1
+============= xn0: 0.19 =============
+new_qn: 0.171
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3489953035623878
+new_xn: 0.19
+Lambda: 1
+Rho: 1
+============= xn0: 0.2 =============
+new_qn: 0.18000000000000002
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3579953035623877
+new_xn: 0.2
+Lambda: 1
+Rho: 1
+============= xn0: 0.21000000000000002 =============
+new_qn: 0.18900000000000003
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3669953035623879
+new_xn: 0.21000000000000002
+Lambda: 1
+Rho: 1
+============= xn0: 0.22 =============
+new_qn: 0.198
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3759953035623878
+new_xn: 0.22
+Lambda: 1
+Rho: 1
+============= xn0: 0.23 =============
+new_qn: 0.20700000000000002
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3849953035623879
+new_xn: 0.23
+Lambda: 1
+Rho: 1
+============= xn0: 0.24000000000000002 =============
+new_qn: 0.21600000000000003
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.3939953035623878
+new_xn: 0.24000000000000002
+Lambda: 1
+Rho: 1
+============= xn0: 0.25 =============
+new_qn: 0.225
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4029953035623877
+new_xn: 0.25
+Lambda: 1
+Rho: 1
+============= xn0: 0.26 =============
+new_qn: 0.234
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4119953035623878
+new_xn: 0.26
+Lambda: 1
+Rho: 1
+============= xn0: 0.27 =============
+new_qn: 0.24300000000000002
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4209953035623877
+new_xn: 0.27
+Lambda: 1
+Rho: 1
+============= xn0: 0.28 =============
+new_qn: 0.25200000000000006
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4299953035623878
+new_xn: 0.28
+Lambda: 1
+Rho: 1
+============= xn0: 0.29000000000000004 =============
+new_qn: 0.26100000000000007
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.438995303562388
+new_xn: 0.29000000000000004
+Lambda: 1
+Rho: 1
+============= xn0: 0.3 =============
+new_qn: 0.27
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4479953035623878
+new_xn: 0.3
+Lambda: 1
+Rho: 1
+============= xn0: 0.31 =============
+new_qn: 0.279
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4569953035623877
+new_xn: 0.31
+Lambda: 1
+Rho: 1
+============= xn0: 0.32 =============
+new_qn: 0.28800000000000003
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4659953035623878
+new_xn: 0.32
+Lambda: 1
+Rho: 1
+============= xn0: 0.33 =============
+new_qn: 0.29700000000000004
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4749953035623877
+new_xn: 0.33
+Lambda: 1
+Rho: 1
+============= xn0: 0.34 =============
+new_qn: 0.30600000000000005
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4839953035623878
+new_xn: 0.34
+Lambda: 1
+Rho: 1
+============= xn0: 0.35000000000000003 =============
+new_qn: 0.31500000000000006
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.4929953035623877
+new_xn: 0.35000000000000003
+Lambda: 1
+Rho: 1
+============= xn0: 0.36000000000000004 =============
+new_qn: 0.32400000000000007
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5019953035623879
+new_xn: 0.36000000000000004
+Lambda: 1
+Rho: 1
+============= xn0: 0.37 =============
+new_qn: 0.333
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5109953035623878
+new_xn: 0.37
+Lambda: 1
+Rho: 1
+============= xn0: 0.38 =============
+new_qn: 0.342
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5199953035623879
+new_xn: 0.38
+Lambda: 1
+Rho: 1
+============= xn0: 0.39 =============
+new_qn: 0.35100000000000003
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5289953035623878
+new_xn: 0.39
+Lambda: 1
+Rho: 1
+============= xn0: 0.4 =============
+new_qn: 0.36000000000000004
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.537995303562388
+new_xn: 0.4
+Lambda: 1
+Rho: 1
+============= xn0: 0.41000000000000003 =============
+new_qn: 0.36900000000000005
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5469953035623878
+new_xn: 0.41000000000000003
+Lambda: 1
+Rho: 1
+============= xn0: 0.42000000000000004 =============
+new_qn: 0.37800000000000006
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.555995303562388
+new_xn: 0.42000000000000004
+Lambda: 1
+Rho: 1
+============= xn0: 0.43 =============
+new_qn: 0.387
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5649953035623878
+new_xn: 0.43
+Lambda: 1
+Rho: 1
+============= xn0: 0.44 =============
+new_qn: 0.396
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5739953035623877
+new_xn: 0.44
+Lambda: 1
+Rho: 1
+============= xn0: 0.45 =============
+new_qn: 0.405
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5829953035623878
+new_xn: 0.45
+Lambda: 1
+Rho: 1
+============= xn0: 0.46 =============
+new_qn: 0.41400000000000003
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.5919953035623877
+new_xn: 0.46
+Lambda: 1
+Rho: 1
+============= xn0: 0.47000000000000003 =============
+new_qn: 0.42300000000000004
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6009953035623878
+new_xn: 0.47000000000000003
+Lambda: 1
+Rho: 1
+============= xn0: 0.48000000000000004 =============
+new_qn: 0.43200000000000005
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6099953035623877
+new_xn: 0.48000000000000004
+Lambda: 1
+Rho: 1
+============= xn0: 0.49 =============
+new_qn: 0.441
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6189953035623876
+new_xn: 0.49
+Lambda: 1
+Rho: 1
+============= xn0: 0.5 =============
+new_qn: 0.45
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6279953035623878
+new_xn: 0.5
+Lambda: 1
+Rho: 1
+============= xn0: 0.51 =============
+new_qn: 0.459
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6369953035623876
+new_xn: 0.51
+Lambda: 1
+Rho: 1
+============= xn0: 0.52 =============
+new_qn: 0.468
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6459953035623878
+new_xn: 0.52
+Lambda: 1
+Rho: 1
+============= xn0: 0.53 =============
+new_qn: 0.47700000000000004
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6549953035623877
+new_xn: 0.53
+Lambda: 1
+Rho: 1
+============= xn0: 0.54 =============
+new_qn: 0.48600000000000004
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6639953035623878
+new_xn: 0.54
+Lambda: 1
+Rho: 1
+============= xn0: 0.55 =============
+new_qn: 0.49500000000000005
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6729953035623877
+new_xn: 0.55
+Lambda: 1
+Rho: 1
+============= xn0: 0.56 =============
+new_qn: 0.5040000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6819953035623878
+new_xn: 0.56
+Lambda: 1
+Rho: 1
+============= xn0: 0.5700000000000001 =============
+new_qn: 0.5130000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.690995303562388
+new_xn: 0.5700000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.5800000000000001 =============
+new_qn: 0.5220000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.6999953035623878
+new_xn: 0.5800000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.59 =============
+new_qn: 0.531
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7089953035623877
+new_xn: 0.59
+Lambda: 1
+Rho: 1
+============= xn0: 0.6 =============
+new_qn: 0.54
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7179953035623878
+new_xn: 0.6
+Lambda: 1
+Rho: 1
+============= xn0: 0.61 =============
+new_qn: 0.549
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7269953035623877
+new_xn: 0.61
+Lambda: 1
+Rho: 1
+============= xn0: 0.62 =============
+new_qn: 0.558
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7359953035623878
+new_xn: 0.62
+Lambda: 1
+Rho: 1
+============= xn0: 0.63 =============
+new_qn: 0.5670000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7449953035623877
+new_xn: 0.63
+Lambda: 1
+Rho: 1
+============= xn0: 0.64 =============
+new_qn: 0.5760000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7539953035623879
+new_xn: 0.64
+Lambda: 1
+Rho: 1
+============= xn0: 0.65 =============
+new_qn: 0.5850000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7629953035623878
+new_xn: 0.65
+Lambda: 1
+Rho: 1
+============= xn0: 0.66 =============
+new_qn: 0.5940000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7719953035623879
+new_xn: 0.66
+Lambda: 1
+Rho: 1
+============= xn0: 0.67 =============
+new_qn: 0.6030000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7809953035623878
+new_xn: 0.67
+Lambda: 1
+Rho: 1
+============= xn0: 0.68 =============
+new_qn: 0.6120000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.789995303562388
+new_xn: 0.68
+Lambda: 1
+Rho: 1
+============= xn0: 0.6900000000000001 =============
+new_qn: 0.6210000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.7989953035623878
+new_xn: 0.6900000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.7000000000000001 =============
+new_qn: 0.6300000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.807995303562388
+new_xn: 0.7000000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.7100000000000001 =============
+new_qn: 0.6390000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8169953035623878
+new_xn: 0.7100000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.72 =============
+new_qn: 0.648
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8259953035623877
+new_xn: 0.72
+Lambda: 1
+Rho: 1
+============= xn0: 0.73 =============
+new_qn: 0.657
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8349953035623878
+new_xn: 0.73
+Lambda: 1
+Rho: 1
+============= xn0: 0.74 =============
+new_qn: 0.666
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8439953035623877
+new_xn: 0.74
+Lambda: 1
+Rho: 1
+============= xn0: 0.75 =============
+new_qn: 0.675
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8529953035623878
+new_xn: 0.75
+Lambda: 1
+Rho: 1
+============= xn0: 0.76 =============
+new_qn: 0.684
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8619953035623877
+new_xn: 0.76
+Lambda: 1
+Rho: 1
+============= xn0: 0.77 =============
+new_qn: 0.6930000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8709953035623879
+new_xn: 0.77
+Lambda: 1
+Rho: 1
+============= xn0: 0.78 =============
+new_qn: 0.7020000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8799953035623878
+new_xn: 0.78
+Lambda: 1
+Rho: 1
+============= xn0: 0.79 =============
+new_qn: 0.7110000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8889953035623879
+new_xn: 0.79
+Lambda: 1
+Rho: 1
+============= xn0: 0.8 =============
+new_qn: 0.7200000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.8979953035623878
+new_xn: 0.8
+Lambda: 1
+Rho: 1
+============= xn0: 0.81 =============
+new_qn: 0.7290000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9069953035623879
+new_xn: 0.81
+Lambda: 1
+Rho: 1
+============= xn0: 0.8200000000000001 =============
+new_qn: 0.7380000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9159953035623878
+new_xn: 0.8200000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.8300000000000001 =============
+new_qn: 0.7470000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.924995303562388
+new_xn: 0.8300000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.8400000000000001 =============
+new_qn: 0.7560000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9339953035623878
+new_xn: 0.8400000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.85 =============
+new_qn: 0.765
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9429953035623877
+new_xn: 0.85
+Lambda: 1
+Rho: 1
+============= xn0: 0.86 =============
+new_qn: 0.774
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9519953035623878
+new_xn: 0.86
+Lambda: 1
+Rho: 1
+============= xn0: 0.87 =============
+new_qn: 0.783
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9609953035623877
+new_xn: 0.87
+Lambda: 1
+Rho: 1
+============= xn0: 0.88 =============
+new_qn: 0.792
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9699953035623878
+new_xn: 0.88
+Lambda: 1
+Rho: 1
+============= xn0: 0.89 =============
+new_qn: 0.801
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9789953035623877
+new_xn: 0.89
+Lambda: 1
+Rho: 1
+============= xn0: 0.9 =============
+new_qn: 0.81
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9879953035623878
+new_xn: 0.9
+Lambda: 1
+Rho: 1
+============= xn0: 0.91 =============
+new_qn: 0.8190000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 1.9969953035623877
+new_xn: 0.91
+Lambda: 1
+Rho: 1
+============= xn0: 0.92 =============
+new_qn: 0.8280000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.0059953035623876
+new_xn: 0.92
+Lambda: 1
+Rho: 1
+============= xn0: 0.93 =============
+new_qn: 0.8370000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.0149953035623875
+new_xn: 0.93
+Lambda: 1
+Rho: 1
+============= xn0: 0.9400000000000001 =============
+new_qn: 0.8460000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.023995303562388
+new_xn: 0.9400000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.9500000000000001 =============
+new_qn: 0.8550000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.032995303562388
+new_xn: 0.9500000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.9600000000000001 =============
+new_qn: 0.8640000000000001
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.0419953035623877
+new_xn: 0.9600000000000001
+Lambda: 1
+Rho: 1
+============= xn0: 0.97 =============
+new_qn: 0.873
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.0509953035623876
+new_xn: 0.97
+Lambda: 1
+Rho: 1
+============= xn0: 0.98 =============
+new_qn: 0.882
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.0599953035623875
+new_xn: 0.98
+Lambda: 1
+Rho: 1
+============= xn0: 0.99 =============
+new_qn: 0.891
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.0689953035623874
+new_xn: 0.99
+Lambda: 1
+Rho: 1
+============= xn0: 1.0 =============
+new_qn: 0.9
+best_Eta: 1.3273403386954499
+sum(new_qn_list): 2.0779953035623877
+new_xn: 1.0
+Lambda: 1
+Rho: 1
+DONE
+最终的列表：
+[6.411989365649046e-05, -2.322749482954259e-05, -0.00025864827951866537, -0.000638849217277429, -0.0011606340046355912, -0.0018208997369569754, -0.0026166335216840364, -0.003544909237890956, -0.004602884434823706, -0.0057877973625216905, -0.007096964128004993, -0.008527775970875381, -0.010077696652522311, -0.01174425995344458, -0.013525067273501196, -0.015417785330184675, -0.017420143950278993, -0.019529933950509892, -0.021745005103033066, -0.02406326418182292, -0.02648267308623506, -0.029001247038207556, -0.031617052849752525, -0.03432820725756072, -0.037132875321705616, -0.0400292688855875, -0.04301564509440106, -0.04609030496955033, -0.049251592036559655, -0.05249789100415381, -0.055827626492295446, -0.05923926180707484, -0.06273129776045128, -0.06630227153294205, -0.06995075557744707, -0.07367535656248303, -0.0774747143531841, -0.08134750102850458, -0.08529241993313103, -0.08930820476268209, -0.09339361868084134, -0.09754745346712868, -0.10176852869407893, -0.10605569093264822, -0.11040781298472702, -0.11482379314168528, -0.11930255446792698, -0.12384304410847341, -0.12844423261964277, -0.13310511332192992, -0.13782470167423283, -0.14260203466860893, -0.14743617024478023, -0.1523261867236379, -0.15727118225903242, -0.16227027430716406, -0.16732259911291725, -0.17242731121251165, -0.17758358295186838, -0.182790604020115, -0.18804758099767616, -0.19335373691842273, -0.19870831084536905, -0.20411055745943446, -0.2095597466607998, -0.21505516318241297, -0.2205961062152127, -0.2261818890446588, -0.23181183869817196, -0.23748529560310433, -0.24320161325487433, -0.24896015789491627, -0.2547603081981068, -0.260601454969345, -0.2664830008489748, -0.27240436002675034, -0.2783649579640568, -0.2843642311241102, -0.2904016267098697, -0.2964766024094062, -0.3025886261484825, -0.30873717585010485, -0.31492173920082167, -0.32114181342354553, -0.3273969050566904, -0.33368652973941815, -0.3400102120027987, -0.3463674850666951, -0.35275789064219065, -0.3591809787393826, -0.3656363074803737, -0.37212344291729704, -0.3786419588552189, -0.3851914366797654, -0.3917714651893278, -0.3983816404317061, -0.4050215655450523, -0.4116908506029846, -0.4183891124637419, -0.42511597462326056]
+**** log-parameter_analysis 运行时间： 2025-01-18 00:18:45 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from ../../../data/model/initial/mnist_cnn_initial_model
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.02784850326365579
+DataOwner2: noise random: 0.06629090374061021
+DataOwner3: noise random: 0.08276295014073162
+DataOwner4: noise random: 0.08906825438273014
+DataOwner5: noise random: 0.0850626027297014
+DataOwner6: noise random: 0.037112498415870325
+DataOwner7: noise random: 0.013223230663772158
+DataOwner8: noise random: 0.030552238669615796
+DataOwner9: noise random: 0.015201265796472197
+DataOwner10: noise random: 0.09195623362875928
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9996861425865886, 0.9982218453159829, 0.9972287400907122, 0.9968014650309558, 0.9970694251847845, 0.999440235129353, 0.9999293431665475, 0.9996223425617536, 0.99990633953505, 0.9965845841479302]
+归一化后的数据质量列表avg_f_list: [0.9927289057715316, 0.9489500486863047, 0.9192586652490226, 0.9064842005602928, 0.9144955446462849, 0.9853768826252638, 1.0, 0.9908214432464334, 0.9993122484648553, 0.9]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3354
+DataOwner1的最优x_1 = 0.1560
+DataOwner2的最优x_2 = 0.1150
+DataOwner3的最优x_3 = 0.0822
+DataOwner4的最优x_4 = 0.0667
+DataOwner5的最优x_5 = 0.0766
+DataOwner6的最优x_6 = 0.1496
+DataOwner7的最优x_7 = 0.1621
+DataOwner8的最优x_8 = 0.1544
+DataOwner9的最优x_9 = 0.1615
+DataOwner10的最优x_10 = 0.0585
+每个DataOwner应该贡献数据比例 xn_list = [0.15599495209799633, 0.11497572308425803, 0.08223454473181768, 0.06674290310425791, 0.07656280385233347, 0.14964928708103348, 0.16207197763123637, 0.15436828051260218, 0.1615054529648605, 0.05852906742201197]
+ModelOwner的最大效用 U(Eta) = 0.5744
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.335385497747093
+DataOwner1的分配到的支付 ： 0.1804
+DataOwner2的分配到的支付 ： 0.1271
+DataOwner3的分配到的支付 ： 0.0880
+DataOwner4的分配到的支付 ： 0.0705
+DataOwner5的分配到的支付 ： 0.0815
+DataOwner6的分配到的支付 ： 0.1717
+DataOwner7的分配到的支付 ： 0.1888
+DataOwner8的分配到的支付 ： 0.1781
+DataOwner9的分配到的支付 ： 0.1880
+DataOwner10的分配到的支付 ： 0.0613
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC8', 'DataOwner4': 'CPC2', 'DataOwner3': 'CPC9', 'DataOwner5': 'CPC3', 'DataOwner6': 'CPC4', 'DataOwner8': 'CPC5', 'DataOwner9': 'CPC6', 'DataOwner7': 'CPC10', 'DataOwner10': 'CPC7'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC8
+DataOwner4 把数据交给 CPC2
+DataOwner3 把数据交给 CPC9
+DataOwner5 把数据交给 CPC3
+DataOwner6 把数据交给 CPC4
+DataOwner8 把数据交给 CPC5
+DataOwner9 把数据交给 CPC6
+DataOwner7 把数据交给 CPC10
+DataOwner10 把数据交给 CPC7
+DONE
+----- literation 1: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：918.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2957
+Epoch 2/5, Loss: 2.2922
+Epoch 3/5, Loss: 2.2857
+Epoch 4/5, Loss: 2.2797
+Epoch 5/5, Loss: 2.2726
+新模型评估：
+Accuracy: 39.91%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：676.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 39.91%
+Epoch 1/5, Loss: 2.2795
+Epoch 2/5, Loss: 2.2734
+Epoch 3/5, Loss: 2.2665
+Epoch 4/5, Loss: 2.2609
+Epoch 5/5, Loss: 2.2508
+新模型评估：
+Accuracy: 43.10%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：78.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 43.10%
+Epoch 1/5, Loss: 2.2514
+Epoch 2/5, Loss: 2.2810
+Epoch 3/5, Loss: 2.2355
+Epoch 4/5, Loss: 2.2382
+Epoch 5/5, Loss: 2.2484
+新模型评估：
+Accuracy: 44.28%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC9调整模型中, 本轮训练的数据量为：193.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 44.28%
+Epoch 1/5, Loss: 2.2218
+Epoch 2/5, Loss: 2.2399
+Epoch 3/5, Loss: 2.2451
+Epoch 4/5, Loss: 2.2204
+Epoch 5/5, Loss: 2.2249
+新模型评估：
+Accuracy: 45.97%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC3调整模型中, 本轮训练的数据量为：540.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 45.97%
+Epoch 1/5, Loss: 2.2161
+Epoch 2/5, Loss: 2.2065
+Epoch 3/5, Loss: 2.2005
+Epoch 4/5, Loss: 2.1888
+Epoch 5/5, Loss: 2.1759
+新模型评估：
+Accuracy: 41.09%
+CPC4调整模型中, 本轮训练的数据量为：175.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 45.97%
+Epoch 1/5, Loss: 2.2153
+Epoch 2/5, Loss: 2.2092
+Epoch 3/5, Loss: 2.2093
+Epoch 4/5, Loss: 2.2067
+Epoch 5/5, Loss: 2.1974
+新模型评估：
+Accuracy: 48.19%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：544.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 48.19%
+Epoch 1/5, Loss: 2.1981
+Epoch 2/5, Loss: 2.1842
+Epoch 3/5, Loss: 2.1774
+Epoch 4/5, Loss: 2.1627
+Epoch 5/5, Loss: 2.1535
+新模型评估：
+Accuracy: 50.22%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：2090.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 50.22%
+Epoch 1/5, Loss: 2.1391
+Epoch 2/5, Loss: 2.0928
+Epoch 3/5, Loss: 2.0380
+Epoch 4/5, Loss: 1.9698
+Epoch 5/5, Loss: 1.8894
+新模型评估：
+Accuracy: 59.26%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：1334.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 59.26%
+Epoch 1/5, Loss: 1.8170
+Epoch 2/5, Loss: 1.7685
+Epoch 3/5, Loss: 1.7198
+Epoch 4/5, Loss: 1.6698
+Epoch 5/5, Loss: 1.6190
+新模型评估：
+Accuracy: 63.85%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC7调整模型中, 本轮训练的数据量为：688.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 63.85%
+Epoch 1/5, Loss: 1.6167
+Epoch 2/5, Loss: 1.5877
+Epoch 3/5, Loss: 1.5628
+Epoch 4/5, Loss: 1.5358
+Epoch 5/5, Loss: 1.5117
+新模型评估：
+Accuracy: 65.29%
+Model saved to ../../../data/model/mnist_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3354
+DataOwner1的最优x_1 = 0.1560
+DataOwner2的最优x_2 = 0.1150
+DataOwner3的最优x_3 = 0.0822
+DataOwner4的最优x_4 = 0.0667
+DataOwner5的最优x_5 = 0.0766
+DataOwner6的最优x_6 = 0.1496
+DataOwner7的最优x_7 = 0.1621
+DataOwner8的最优x_8 = 0.1544
+DataOwner9的最优x_9 = 0.1615
+DataOwner10的最优x_10 = 0.0585
+每个DataOwner应该贡献数据比例 xn_list = [0.15599495209799633, 0.11497572308425803, 0.08223454473181768, 0.06674290310425791, 0.07656280385233347, 0.14964928708103348, 0.16207197763123637, 0.15436828051260218, 0.1615054529648605, 0.05852906742201197]
+ModelOwner的最大效用 U(Eta) = 0.5744
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.335385497747093
+DataOwner1的分配到的支付 ： 0.1804
+DataOwner2的分配到的支付 ： 0.1271
+DataOwner3的分配到的支付 ： 0.0880
+DataOwner4的分配到的支付 ： 0.0705
+DataOwner5的分配到的支付 ： 0.0815
+DataOwner6的分配到的支付 ： 0.1717
+DataOwner7的分配到的支付 ： 0.1888
+DataOwner8的分配到的支付 ： 0.1781
+DataOwner9的分配到的支付 ： 0.1880
+DataOwner10的分配到的支付 ： 0.0613
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC8
+DataOwner4 把数据交给 CPC2
+DataOwner3 把数据交给 CPC9
+DataOwner5 把数据交给 CPC3
+DataOwner6 把数据交给 CPC4
+DataOwner8 把数据交给 CPC5
+DataOwner9 把数据交给 CPC6
+DataOwner7 把数据交给 CPC10
+DataOwner10 把数据交给 CPC7
+DONE
+----- literation 2: 模型训练 -----
+重新调整fn，进而调整xn、Eta
+正在评估DataOwner1的数据质量, 本轮评估的样本数据量为：918.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4579
+Epoch 2/5, Loss: 1.4133
+Epoch 3/5, Loss: 1.3857
+Epoch 4/5, Loss: 1.3510
+Epoch 5/5, Loss: 1.3126
+新模型评估：
+Accuracy: 68.58%
+loss差为：
+0.14524223009745274
+单位数据loss差为：
+0.0001582159369253298
+正在评估DataOwner2的数据质量, 本轮评估的样本数据量为：676.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.5257
+Epoch 2/5, Loss: 1.5042
+Epoch 3/5, Loss: 1.4732
+Epoch 4/5, Loss: 1.4454
+Epoch 5/5, Loss: 1.4273
+新模型评估：
+Accuracy: 69.49%
+loss差为：
+0.09843862056732178
+单位数据loss差为：
+0.00014561926119426298
+正在评估DataOwner4的数据质量, 本轮评估的样本数据量为：78.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4073
+Epoch 2/5, Loss: 1.3786
+Epoch 3/5, Loss: 1.4111
+Epoch 4/5, Loss: 1.4209
+Epoch 5/5, Loss: 1.3300
+新模型评估：
+Accuracy: 62.88%
+loss差为：
+0.07731783390045166
+单位数据loss差为：
+0.0009912542807750213
+正在评估DataOwner3的数据质量, 本轮评估的样本数据量为：193.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4975
+Epoch 2/5, Loss: 1.7071
+Epoch 3/5, Loss: 1.5980
+Epoch 4/5, Loss: 1.4481
+Epoch 5/5, Loss: 1.4999
+新模型评估：
+Accuracy: 66.67%
+loss差为：
+-0.0023751556873321533
+单位数据loss差为：
+-1.2306506151980069e-05
+正在评估DataOwner5的数据质量, 本轮评估的样本数据量为：540.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4762
+Epoch 2/5, Loss: 1.4592
+Epoch 3/5, Loss: 1.4256
+Epoch 4/5, Loss: 1.4088
+Epoch 5/5, Loss: 1.3875
+新模型评估：
+Accuracy: 65.78%
+loss差为：
+0.08864871660868334
+单位数据loss差为：
+0.00016416429001608025
+正在评估DataOwner6的数据质量, 本轮评估的样本数据量为：175.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4504
+Epoch 2/5, Loss: 1.4403
+Epoch 3/5, Loss: 1.4208
+Epoch 4/5, Loss: 1.4242
+Epoch 5/5, Loss: 1.4223
+新模型评估：
+Accuracy: 66.20%
+loss差为：
+0.028066913286844963
+单位数据loss差为：
+0.00016038236163911406
+正在评估DataOwner8的数据质量, 本轮评估的样本数据量为：544.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4443
+Epoch 2/5, Loss: 1.4242
+Epoch 3/5, Loss: 1.3954
+Epoch 4/5, Loss: 1.3768
+Epoch 5/5, Loss: 1.3461
+新模型评估：
+Accuracy: 67.47%
+loss差为：
+0.09818904929690886
+单位数据loss差为：
+0.00018049457591343541
+正在评估DataOwner9的数据质量, 本轮评估的样本数据量为：2090.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4373
+Epoch 2/5, Loss: 1.3596
+Epoch 3/5, Loss: 1.2850
+Epoch 4/5, Loss: 1.2103
+Epoch 5/5, Loss: 1.1388
+新模型评估：
+Accuracy: 72.98%
+loss差为：
+0.2985326412952307
+单位数据loss差为：
+0.00014283858435178504
+正在评估DataOwner7的数据质量, 本轮评估的样本数据量为：1334.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4620
+Epoch 2/5, Loss: 1.4068
+Epoch 3/5, Loss: 1.3558
+Epoch 4/5, Loss: 1.3060
+Epoch 5/5, Loss: 1.2555
+新模型评估：
+Accuracy: 70.96%
+loss差为：
+0.2064365602674938
+单位数据loss差为：
+0.00015475004517803134
+正在评估DataOwner10的数据质量, 本轮评估的样本数据量为：688.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4912
+Epoch 2/5, Loss: 1.4573
+Epoch 3/5, Loss: 1.4321
+Epoch 4/5, Loss: 1.4059
+Epoch 5/5, Loss: 1.3768
+新模型评估：
+Accuracy: 66.49%
+loss差为：
+0.11432087421417236
+单位数据loss差为：
+0.00016616406135780868
+经过服务器调节后的真实数据质量：
+数据质量列表avg_f_list: [0.0001582159369253298, 0.00014561926119426298, -1.2306506151980069e-05, 0.0009912542807750213, 0.00016416429001608025, 0.00016038236163911406, 0.00015475004517803134, 0.00018049457591343541, 0.00014283858435178504, 0.00016616406135780868]
+归一化后的数据质量列表avg_f_list:[0.9169917403408583, 0.9157365422606664, 0.9, 1.0, 0.9175844650834187, 0.9172076141316645, 0.9166463809174484, 0.919211699438336, 0.9154594612030263, 0.9177837326681808]
+CPC1调整模型中, 本轮训练的数据量为：918.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 65.29%
+Epoch 1/5, Loss: 1.4594
+Epoch 2/5, Loss: 1.4207
+Epoch 3/5, Loss: 1.3796
+Epoch 4/5, Loss: 1.3521
+Epoch 5/5, Loss: 1.3271
+新模型评估：
+Accuracy: 68.77%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC8调整模型中, 本轮训练的数据量为：676.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 68.77%
+Epoch 1/5, Loss: 1.3615
+Epoch 2/5, Loss: 1.3456
+Epoch 3/5, Loss: 1.3127
+Epoch 4/5, Loss: 1.2884
+Epoch 5/5, Loss: 1.2627
+新模型评估：
+Accuracy: 72.51%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：78.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.51%
+Epoch 1/5, Loss: 1.0456
+Epoch 2/5, Loss: 1.1548
+Epoch 3/5, Loss: 1.1003
+Epoch 4/5, Loss: 1.0377
+Epoch 5/5, Loss: 1.0148
+新模型评估：
+Accuracy: 68.70%
+CPC9调整模型中, 本轮训练的数据量为：193.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.51%
+Epoch 1/5, Loss: 1.2494
+Epoch 2/5, Loss: 1.1597
+Epoch 3/5, Loss: 1.2309
+Epoch 4/5, Loss: 1.2119
+Epoch 5/5, Loss: 1.3607
+新模型评估：
+Accuracy: 72.03%
+CPC3调整模型中, 本轮训练的数据量为：540.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.51%
+Epoch 1/5, Loss: 1.1864
+Epoch 2/5, Loss: 1.1837
+Epoch 3/5, Loss: 1.1487
+Epoch 4/5, Loss: 1.1420
+Epoch 5/5, Loss: 1.1180
+新模型评估：
+Accuracy: 71.06%
+CPC4调整模型中, 本轮训练的数据量为：175.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.51%
+Epoch 1/5, Loss: 1.1799
+Epoch 2/5, Loss: 1.1602
+Epoch 3/5, Loss: 1.1570
+Epoch 4/5, Loss: 1.1497
+Epoch 5/5, Loss: 1.1388
+新模型评估：
+Accuracy: 72.84%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC5调整模型中, 本轮训练的数据量为：544.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.84%
+Epoch 1/5, Loss: 1.1199
+Epoch 2/5, Loss: 1.0980
+Epoch 3/5, Loss: 1.0734
+Epoch 4/5, Loss: 1.0482
+Epoch 5/5, Loss: 1.0421
+新模型评估：
+Accuracy: 73.77%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC6调整模型中, 本轮训练的数据量为：2090.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 73.77%
+Epoch 1/5, Loss: 1.0412
+Epoch 2/5, Loss: 0.9762
+Epoch 3/5, Loss: 0.9189
+Epoch 4/5, Loss: 0.8656
+Epoch 5/5, Loss: 0.8167
+新模型评估：
+Accuracy: 76.70%
+Model saved to ../../../data/model/mnist_cnn_model
+CPC10调整模型中, 本轮训练的数据量为：1334.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.70%
+Epoch 1/5, Loss: 0.7798
+Epoch 2/5, Loss: 0.7488
+Epoch 3/5, Loss: 0.7204
+Epoch 4/5, Loss: 0.6942
+Epoch 5/5, Loss: 0.6688
+新模型评估：
+Accuracy: 76.52%
+CPC7调整模型中, 本轮训练的数据量为：688.00 :
+Model loaded from ../../../data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 76.70%
+Epoch 1/5, Loss: 0.8114
+Epoch 2/5, Loss: 0.7852
+Epoch 3/5, Loss: 0.7683
+Epoch 4/5, Loss: 0.7529
+Epoch 5/5, Loss: 0.7358
+新模型评估：
+Accuracy: 75.71%
+DONE
+========================= literation: 3 =========================
+----- literation 3: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.2962
+DataOwner1的最优x_1 = 0.1105
+DataOwner2的最优x_2 = 0.1092
+DataOwner3的最优x_3 = 0.0921
+DataOwner4的最优x_4 = 0.1823
+DataOwner5的最优x_5 = 0.1111
+DataOwner6的最优x_6 = 0.1107
+DataOwner7的最优x_7 = 0.1102
+DataOwner8的最优x_8 = 0.1128
+DataOwner9的最优x_9 = 0.1089
+DataOwner10的最优x_10 = 0.1113
+每个DataOwner应该贡献数据比例 xn_list = [0.11051712151933754, 0.10920866671235967, 0.0921431271183382, 0.18230603817484353, 0.11113236500981065, 0.11074139162433874, 0.11015786451367077, 0.11281279747184338, 0.10891880636308894, 0.11133882550614851]
+ModelOwner的最大效用 U(Eta) = 0.5308
+xn开始变化：
+new_xn_list: [0.15599495209799633, 0.11497572308425803, 0.0921431271183382, 0.18230603817484353, 0.11113236500981065, 0.14964928708103348, 0.16207197763123637, 0.15436828051260218, 0.1615054529648605, 0.11133882550614851]
+avg_f_list: [0.9169917403408583, 0.9157365422606664, 0.9, 1.0, 0.9175844650834187, 0.9172076141316645, 0.9166463809174484, 0.919211699438336, 0.9154594612030263, 0.9177837326681808]
+============= xn0: -1.01 =============
+new_qn: -0.9261616577442668
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.22408994222891637
+============= xn0: -1.0 =============
+new_qn: -0.9169917403408583
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.23325985963232493
+============= xn0: -0.99 =============
+new_qn: -0.9078218229374497
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.24242977703573348
+============= xn0: -0.98 =============
+new_qn: -0.8986519055340411
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.25159969443914226
+============= xn0: -0.97 =============
+new_qn: -0.8894819881306325
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.2607696118425508
+============= xn0: -0.96 =============
+new_qn: -0.880312070727224
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.2699395292459594
+============= xn0: -0.95 =============
+new_qn: -0.8711421533238153
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.27910944664936793
+============= xn0: -0.94 =============
+new_qn: -0.8619722359204067
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.2882793640527765
+============= xn0: -0.9299999999999999 =============
+new_qn: -0.8528023185169982
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.2974492814561851
+============= xn0: -0.9199999999999999 =============
+new_qn: -0.8436324011135895
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.30661919885959377
+============= xn0: -0.9099999999999999 =============
+new_qn: -0.834462483710181
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.3157891162630023
+============= xn0: -0.8999999999999999 =============
+new_qn: -0.8252925663067724
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.3249590336664109
+============= xn0: -0.8899999999999999 =============
+new_qn: -0.8161226489033638
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.33412895106981944
+============= xn0: -0.8799999999999999 =============
+new_qn: -0.8069527314999552
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.3432988684732281
+============= xn0: -0.8699999999999999 =============
+new_qn: -0.7977828140965466
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.35246878587663666
+============= xn0: -0.8599999999999999 =============
+new_qn: -0.788612896693138
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.3616387032800452
+============= xn0: -0.8499999999999999 =============
+new_qn: -0.7794429792897294
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.3708086206834539
+============= xn0: -0.8399999999999999 =============
+new_qn: -0.7702730618863208
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.37997853808686244
+============= xn0: -0.8299999999999998 =============
+new_qn: -0.7611031444829123
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.389148455490271
+============= xn0: -0.8199999999999998 =============
+new_qn: -0.7519332270795036
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.39831837289367966
+============= xn0: -0.8099999999999998 =============
+new_qn: -0.742763309676095
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.4074882902970882
+============= xn0: -0.7999999999999998 =============
+new_qn: -0.7335933922726865
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.4166582077004968
+============= xn0: -0.7899999999999998 =============
+new_qn: -0.7244234748692778
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.42582812510390544
+============= xn0: -0.7799999999999998 =============
+new_qn: -0.7152535574658693
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.434998042507314
+============= xn0: -0.7699999999999998 =============
+new_qn: -0.7060836400624607
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.44416795991072255
+============= xn0: -0.7599999999999998 =============
+new_qn: -0.696913722659052
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.4533378773141312
+============= xn0: -0.7499999999999998 =============
+new_qn: -0.6877438052556435
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.46250779471753983
+============= xn0: -0.7399999999999998 =============
+new_qn: -0.6785738878522349
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.4716777121209484
+============= xn0: -0.7299999999999998 =============
+new_qn: -0.6694039704488264
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.48084762952435695
+============= xn0: -0.7199999999999998 =============
+new_qn: -0.6602340530454177
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.4900175469277656
+============= xn0: -0.7099999999999997 =============
+new_qn: -0.6510641356420092
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.49918746433117417
+============= xn0: -0.6999999999999997 =============
+new_qn: -0.6418942182386006
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5083573817345827
+============= xn0: -0.6899999999999997 =============
+new_qn: -0.6327243008351919
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5175272991379913
+============= xn0: -0.6799999999999997 =============
+new_qn: -0.6235543834317834
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5266972165413999
+============= xn0: -0.6699999999999997 =============
+new_qn: -0.6143844660283748
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5358671339448084
+============= xn0: -0.6599999999999997 =============
+new_qn: -0.6052145486249662
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5450370513482171
+============= xn0: -0.6499999999999997 =============
+new_qn: -0.5960446312215576
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5542069687516257
+============= xn0: -0.6399999999999997 =============
+new_qn: -0.586874713818149
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5633768861550342
+============= xn0: -0.6299999999999997 =============
+new_qn: -0.5777047964147404
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5725468035584429
+============= xn0: -0.6199999999999997 =============
+new_qn: -0.5685348790113318
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.5817167209618515
+============= xn0: -0.6099999999999997 =============
+new_qn: -0.5593649616079233
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.59088663836526
+============= xn0: -0.5999999999999996 =============
+new_qn: -0.5501950442045146
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6000565557686687
+============= xn0: -0.5899999999999996 =============
+new_qn: -0.541025126801106
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6092264731720772
+============= xn0: -0.5799999999999996 =============
+new_qn: -0.5318552093976975
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6183963905754858
+============= xn0: -0.5699999999999996 =============
+new_qn: -0.5226852919942889
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6275663079788943
+============= xn0: -0.5599999999999996 =============
+new_qn: -0.5135153745908803
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.636736225382303
+============= xn0: -0.5499999999999996 =============
+new_qn: -0.5043454571874717
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6459061427857116
+============= xn0: -0.5399999999999996 =============
+new_qn: -0.4951755397840631
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6550760601891201
+============= xn0: -0.5299999999999996 =============
+new_qn: -0.48600562238065453
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6642459775925287
+============= xn0: -0.5199999999999996 =============
+new_qn: -0.4768357049772459
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6734158949959373
+============= xn0: -0.5099999999999996 =============
+new_qn: -0.4676657875738373
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6825858123993459
+============= xn0: -0.49999999999999956 =============
+new_qn: -0.45849587017042875
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.6917557298027545
+============= xn0: -0.48999999999999955 =============
+new_qn: -0.44932595276702014
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7009256472061631
+============= xn0: -0.47999999999999954 =============
+new_qn: -0.44015603536361153
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7100955646095717
+============= xn0: -0.46999999999999953 =============
+new_qn: -0.430986117960203
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7192654820129802
+============= xn0: -0.4599999999999995 =============
+new_qn: -0.42181620055679436
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7284353994163889
+============= xn0: -0.4499999999999995 =============
+new_qn: -0.4126462831533858
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7376053168197975
+============= xn0: -0.4399999999999995 =============
+new_qn: -0.4034763657499772
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.746775234223206
+============= xn0: -0.4299999999999995 =============
+new_qn: -0.3943064483465686
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7559451516266147
+============= xn0: -0.4199999999999995 =============
+new_qn: -0.38513653094316
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7651150690300232
+============= xn0: -0.4099999999999995 =============
+new_qn: -0.3759666135397514
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7742849864334318
+============= xn0: -0.39999999999999947 =============
+new_qn: -0.3667966961363428
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.7834549038368405
+============= xn0: -0.38999999999999946 =============
+new_qn: -0.35762677873293425
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.792624821240249
+============= xn0: -0.37999999999999945 =============
+new_qn: -0.34845686132952564
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8017947386436576
+============= xn0: -0.36999999999999944 =============
+new_qn: -0.3392869439261171
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8109646560470661
+============= xn0: -0.35999999999999943 =============
+new_qn: -0.33011702652270847
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8201345734504747
+============= xn0: -0.3499999999999994 =============
+new_qn: -0.32094710911929986
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8293044908538834
+============= xn0: -0.3399999999999994 =============
+new_qn: -0.3117771917158913
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8384744082572919
+============= xn0: -0.3299999999999994 =============
+new_qn: -0.3026072743124827
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8476443256607005
+============= xn0: -0.3199999999999994 =============
+new_qn: -0.2934373569090741
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8568142430641091
+============= xn0: -0.3099999999999994 =============
+new_qn: -0.2842674395056655
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8659841604675177
+============= xn0: -0.2999999999999994 =============
+new_qn: -0.2750975221022569
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8751540778709263
+============= xn0: -0.28999999999999937 =============
+new_qn: -0.26592760469884835
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8843239952743348
+============= xn0: -0.27999999999999936 =============
+new_qn: -0.25675768729543974
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.8934939126777436
+============= xn0: -0.26999999999999935 =============
+new_qn: -0.24758776989203113
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9026638300811521
+============= xn0: -0.25999999999999934 =============
+new_qn: -0.23841785248862254
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9118337474845607
+============= xn0: -0.24999999999999933 =============
+new_qn: -0.22924793508521396
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9210036648879693
+============= xn0: -0.23999999999999932 =============
+new_qn: -0.22007801768180538
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9301735822913778
+============= xn0: -0.22999999999999932 =============
+new_qn: -0.21090810027839677
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9393434996947866
+============= xn0: -0.2199999999999993 =============
+new_qn: -0.20173818287498818
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9485134170981951
+============= xn0: -0.2099999999999993 =============
+new_qn: -0.1925682654715796
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9576833345016037
+============= xn0: -0.1999999999999993 =============
+new_qn: -0.183398348068171
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9668532519050123
+============= xn0: -0.18999999999999928 =============
+new_qn: -0.1742284306647624
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9760231693084208
+============= xn0: -0.17999999999999927 =============
+new_qn: -0.16505851326135382
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9851930867118294
+============= xn0: -0.16999999999999926 =============
+new_qn: -0.15588859585794523
+best_Eta: 1.296166836280543
+sum(new_qn_list): 0.9943630041152379
+============= xn0: -0.15999999999999925 =============
+new_qn: -0.14671867845453665
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.0035329215186468
+============= xn0: -0.14999999999999925 =============
+new_qn: -0.13754876105112804
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.0127028389220554
+============= xn0: -0.13999999999999924 =============
+new_qn: -0.12837884364771945
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.021872756325464
+============= xn0: -0.12999999999999923 =============
+new_qn: -0.11920892624431087
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.0310426737288725
+============= xn0: -0.11999999999999922 =============
+new_qn: -0.11003900884090227
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.040212591132281
+============= xn0: -0.10999999999999921 =============
+new_qn: -0.10086909143749369
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.0493825085356896
+============= xn0: -0.0999999999999992 =============
+new_qn: -0.09169917403408509
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.0585524259390984
+============= xn0: -0.08999999999999919 =============
+new_qn: -0.0825292566306765
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.067722343342507
+============= xn0: -0.07999999999999918 =============
+new_qn: -0.07335933922726791
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.0768922607459155
+============= xn0: -0.06999999999999917 =============
+new_qn: -0.06418942182385932
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.086062178149324
+============= xn0: -0.059999999999999165 =============
+new_qn: -0.055019504420450734
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.0952320955527326
+============= xn0: -0.049999999999999156 =============
+new_qn: -0.04584958701704214
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1044020129561412
+============= xn0: -0.03999999999999915 =============
+new_qn: -0.03667966961363355
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1135719303595495
+============= xn0: -0.02999999999999914 =============
+new_qn: -0.027509752210224957
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1227418477629583
+============= xn0: -0.01999999999999913 =============
+new_qn: -0.018339834806816366
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.131911765166367
+============= xn0: -0.00999999999999912 =============
+new_qn: -0.009169917403407777
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1410816825697754
+============= xn0: 8.881784197001252e-16 =============
+new_qn: 8.144522748140111e-16
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1502515999731842
+============= xn0: 0.010000000000000897 =============
+new_qn: 0.009169917403409406
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1594215173765925
+============= xn0: 0.020000000000000906 =============
+new_qn: 0.018339834806817997
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1685914347800013
+============= xn0: 0.030000000000000915 =============
+new_qn: 0.027509752210226588
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.17776135218341
+============= xn0: 0.040000000000000924 =============
+new_qn: 0.036679669613635175
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1869312695868184
+============= xn0: 0.05000000000000093 =============
+new_qn: 0.045849587017043766
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.1961011869902272
+============= xn0: 0.06000000000000094 =============
+new_qn: 0.05501950442045236
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2052711043936355
+============= xn0: 0.07000000000000095 =============
+new_qn: 0.06418942182386095
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2144410217970443
+============= xn0: 0.08000000000000096 =============
+new_qn: 0.07335933922726955
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.223610939200453
+============= xn0: 0.09000000000000097 =============
+new_qn: 0.08252925663067813
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2327808566038614
+============= xn0: 0.10000000000000098 =============
+new_qn: 0.09169917403408673
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2419507740072702
+============= xn0: 0.11000000000000099 =============
+new_qn: 0.10086909143749531
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2511206914106785
+============= xn0: 0.120000000000001 =============
+new_qn: 0.11003900884090391
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.260290608814087
+============= xn0: 0.130000000000001 =============
+new_qn: 0.1192089262443125
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2694605262174956
+============= xn0: 0.140000000000001 =============
+new_qn: 0.1283788436477211
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2786304436209044
+============= xn0: 0.15000000000000102 =============
+new_qn: 0.13754876105112968
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2878003610243127
+============= xn0: 0.16000000000000103 =============
+new_qn: 0.14671867845453826
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.2969702784277215
+============= xn0: 0.17000000000000104 =============
+new_qn: 0.15588859585794687
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.30614019583113
+============= xn0: 0.18000000000000105 =============
+new_qn: 0.16505851326135546
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3153101132345386
+============= xn0: 0.19000000000000106 =============
+new_qn: 0.17422843066476404
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3244800306379472
+============= xn0: 0.20000000000000107 =============
+new_qn: 0.18339834806817262
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3336499480413557
+============= xn0: 0.21000000000000107 =============
+new_qn: 0.19256826547158123
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3428198654447643
+============= xn0: 0.22000000000000108 =============
+new_qn: 0.20173818287498982
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.351989782848173
+============= xn0: 0.2300000000000011 =============
+new_qn: 0.2109081002783984
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3611597002515816
+============= xn0: 0.2400000000000011 =============
+new_qn: 0.220078017681807
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3703296176549902
+============= xn0: 0.2500000000000011 =============
+new_qn: 0.2292479350852156
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3794995350583987
+============= xn0: 0.2600000000000011 =============
+new_qn: 0.23841785248862418
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3886694524618073
+============= xn0: 0.27000000000000113 =============
+new_qn: 0.24758776989203277
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.3978393698652158
+============= xn0: 0.28000000000000114 =============
+new_qn: 0.25675768729544135
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4070092872686244
+============= xn0: 0.29000000000000115 =============
+new_qn: 0.26592760469884996
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4161792046720332
+============= xn0: 0.30000000000000115 =============
+new_qn: 0.2750975221022585
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4253491220754417
+============= xn0: 0.31000000000000116 =============
+new_qn: 0.28426743950566713
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4345190394788503
+============= xn0: 0.3200000000000012 =============
+new_qn: 0.29343735690907574
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4436889568822588
+============= xn0: 0.3300000000000012 =============
+new_qn: 0.3026072743124843
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4528588742856674
+============= xn0: 0.3400000000000012 =============
+new_qn: 0.3117771917158929
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.462028791689076
+============= xn0: 0.3500000000000012 =============
+new_qn: 0.3209471091193015
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4711987090924845
+============= xn0: 0.3600000000000012 =============
+new_qn: 0.3301170265227101
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.480368626495893
+============= xn0: 0.3700000000000012 =============
+new_qn: 0.3392869439261187
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4895385438993018
+============= xn0: 0.3800000000000012 =============
+new_qn: 0.34845686132952725
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.4987084613027104
+============= xn0: 0.39000000000000123 =============
+new_qn: 0.35762677873293586
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.507878378706119
+============= xn0: 0.40000000000000124 =============
+new_qn: 0.36679669613634447
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.5170482961095275
+============= xn0: 0.41000000000000125 =============
+new_qn: 0.375966613539753
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.526218213512936
+============= xn0: 0.42000000000000126 =============
+new_qn: 0.38513653094316164
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.5353881309163446
+============= xn0: 0.43000000000000127 =============
+new_qn: 0.39430644834657025
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.5445580483197534
+============= xn0: 0.4400000000000013 =============
+new_qn: 0.4034763657499788
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.553727965723162
+============= xn0: 0.4500000000000013 =============
+new_qn: 0.4126462831533874
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.5628978831265705
+============= xn0: 0.4600000000000013 =============
+new_qn: 0.42181620055679603
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.572067800529979
+============= xn0: 0.4700000000000013 =============
+new_qn: 0.4309861179602046
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.5812377179333876
+============= xn0: 0.4800000000000013 =============
+new_qn: 0.4401560353636132
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.5904076353367962
+============= xn0: 0.4900000000000013 =============
+new_qn: 0.44932595276702175
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.5995775527402047
+============= xn0: 0.5000000000000013 =============
+new_qn: 0.45849587017043036
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.6087474701436135
+============= xn0: 0.5100000000000013 =============
+new_qn: 0.467665787573839
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.617917387547022
+============= xn0: 0.5200000000000014 =============
+new_qn: 0.47683570497724753
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.6270873049504306
+============= xn0: 0.5300000000000014 =============
+new_qn: 0.48600562238065614
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.6362572223538392
+============= xn0: 0.5400000000000014 =============
+new_qn: 0.49517553978406476
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.6454271397572477
+============= xn0: 0.5500000000000014 =============
+new_qn: 0.5043454571874734
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.6545970571606565
+============= xn0: 0.5600000000000014 =============
+new_qn: 0.5135153745908819
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.663766974564065
+============= xn0: 0.5700000000000014 =============
+new_qn: 0.5226852919942905
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.6729368919674736
+============= xn0: 0.5800000000000014 =============
+new_qn: 0.5318552093976991
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.6821068093708822
+============= xn0: 0.5900000000000014 =============
+new_qn: 0.5410251268011077
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.6912767267742908
+============= xn0: 0.6000000000000014 =============
+new_qn: 0.5501950442045163
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7004466441776993
+============= xn0: 0.6100000000000014 =============
+new_qn: 0.5593649616079248
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7096165615811079
+============= xn0: 0.6200000000000014 =============
+new_qn: 0.5685348790113335
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7187864789845166
+============= xn0: 0.6300000000000014 =============
+new_qn: 0.577704796414742
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7279563963879252
+============= xn0: 0.6400000000000015 =============
+new_qn: 0.5868747138181506
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7371263137913338
+============= xn0: 0.6500000000000015 =============
+new_qn: 0.5960446312215593
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7462962311947423
+============= xn0: 0.6600000000000015 =============
+new_qn: 0.6052145486249678
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7554661485981509
+============= xn0: 0.6700000000000015 =============
+new_qn: 0.6143844660283764
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7646360660015594
+============= xn0: 0.6800000000000015 =============
+new_qn: 0.623554383431785
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7738059834049682
+============= xn0: 0.6900000000000015 =============
+new_qn: 0.6327243008351936
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7829759008083768
+============= xn0: 0.7000000000000015 =============
+new_qn: 0.6418942182386022
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.7921458182117853
+============= xn0: 0.7100000000000015 =============
+new_qn: 0.6510641356420108
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.8013157356151939
+============= xn0: 0.7200000000000015 =============
+new_qn: 0.6602340530454194
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.8104856530186024
+============= xn0: 0.7300000000000015 =============
+new_qn: 0.6694039704488279
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.819655570422011
+============= xn0: 0.7400000000000015 =============
+new_qn: 0.6785738878522366
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.8288254878254198
+============= xn0: 0.7500000000000016 =============
+new_qn: 0.6877438052556452
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.8379954052288283
+============= xn0: 0.7600000000000016 =============
+new_qn: 0.6969137226590537
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.8471653226322369
+============= xn0: 0.7700000000000016 =============
+new_qn: 0.7060836400624623
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.8563352400356454
+============= xn0: 0.7800000000000016 =============
+new_qn: 0.7152535574658709
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.865505157439054
+============= xn0: 0.7900000000000016 =============
+new_qn: 0.7244234748692795
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.8746750748424625
+============= xn0: 0.8000000000000016 =============
+new_qn: 0.733593392272688
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.883844992245871
+============= xn0: 0.8100000000000016 =============
+new_qn: 0.7427633096760967
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.8930149096492799
+============= xn0: 0.8200000000000016 =============
+new_qn: 0.7519332270795053
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.9021848270526884
+============= xn0: 0.8300000000000016 =============
+new_qn: 0.7611031444829138
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.911354744456097
+============= xn0: 0.8400000000000016 =============
+new_qn: 0.7702730618863225
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.9205246618595055
+============= xn0: 0.8500000000000016 =============
+new_qn: 0.779442979289731
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.929694579262914
+============= xn0: 0.8600000000000017 =============
+new_qn: 0.7886128966931396
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.9388644966663227
+============= xn0: 0.8700000000000017 =============
+new_qn: 0.7977828140965483
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.9480344140697314
+============= xn0: 0.8800000000000017 =============
+new_qn: 0.8069527314999568
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.95720433147314
+============= xn0: 0.8900000000000017 =============
+new_qn: 0.8161226489033654
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.9663742488765485
+============= xn0: 0.9000000000000017 =============
+new_qn: 0.8252925663067741
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.9755441662799573
+============= xn0: 0.9100000000000017 =============
+new_qn: 0.8344624837101826
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.9847140836833659
+============= xn0: 0.9200000000000017 =============
+new_qn: 0.8436324011135912
+best_Eta: 1.296166836280543
+sum(new_qn_list): 1.9938840010867744
+============= xn0: 0.9300000000000017 =============
+new_qn: 0.8528023185169997
+best_Eta: 1.296166836280543
+sum(new_qn_list): 2.003053918490183
+============= xn0: 0.9400000000000017 =============
+new_qn: 0.8619722359204084
+best_Eta: 1.296166836280543
+sum(new_qn_list): 2.0122238358935918
+============= xn0: 0.9500000000000017 =============
+new_qn: 0.871142153323817
+best_Eta: 1.296166836280543
+sum(new_qn_list): 2.021393753297
+============= xn0: 0.9600000000000017 =============
+new_qn: 0.8803120707272255
+best_Eta: 1.296166836280543
+sum(new_qn_list): 2.030563670700409
+============= xn0: 0.9700000000000017 =============
+new_qn: 0.8894819881306342
+best_Eta: 1.296166836280543
+sum(new_qn_list): 2.0397335881038177
+============= xn0: 0.9800000000000018 =============
+new_qn: 0.8986519055340427
+best_Eta: 1.296166836280543
+sum(new_qn_list): 2.048903505507226
+============= xn0: 0.9900000000000018 =============
+new_qn: 0.9078218229374513
+best_Eta: 1.296166836280543
+sum(new_qn_list): 2.0580734229106343
+============= xn0: 1.0000000000000016 =============
+new_qn: 0.9169917403408597
+best_Eta: 1.296166836280543
+sum(new_qn_list): 2.067243340314043
+DONE
+最终的列表：
+[-4.347045541010555, -4.095494290558546, -3.863729416126257, -3.6495874878150363, -3.4512093822493597, -3.2669885957103073, -3.0955297460527795, -2.935614994731562, -2.7861766797803256, -2.6462748595070416, -2.5150787687205334, -2.3918514146427, -2.2759367093422727, -2.1667486644157306, -2.0637622723517657, -1.9665057751997028, -1.8745540803904246, -1.7875231299223704, -1.7050650656565518, -1.6268640624267934, -1.552632723767888, -1.482108953586001, -1.4150532320277163, -1.3512462359031225, -1.2904867538693343, -1.2325898546384746, -1.1773852730939571, -1.124715984660486, -1.0744369427973626, -1.0264139582469085, -0.9805227018100198, -0.9366478150512902, -0.8946821155471008, -0.854525885154569, -0.8160862313566126, -0.7792765130769039, -0.7440158234976781, -0.7102285233856538, -0.6778438192635114, -0.6467953814784462, -0.6170209978336787, -0.5884622589786819, -0.5610642722119488, -0.5347754007470873, -0.5095470258377766, -0.4853333294571789, -0.4620910954891304, -0.43977952761718, -0.4183600822978849, -0.3977963153805393, -0.37805374109004897, -0.3590997022257453, -0.34090325054900994, -0.32343503643868443, -0.30666720698718064, -0.2905733117934993, -0.27512821578334623, -0.26030801845231866, -0.2460899789867712, -0.23245244676924648, -0.21937479682208183, -0.20683736978460587, -0.19482141605677372, -0.1833090437756919, -0.1722831703216502, -0.16172747707741686, -0.15162636718899136, -0.14196492609803535, -0.13272888463609356, -0.12390458448868397, -0.1154789458535947, -0.10743943713245124, -0.09977404650796695, -0.09247125527140654, -0.08552001277580651, -0.0789097129005002, -0.07263017192162219, -0.06667160769156566, -0.061024620037945954, -0.05568017229954403, -0.0506295739230197, -0.04586446404997335, -0.04137679602922245, -0.03715882279401189, -0.033203083048324145, -0.0295023882105358, -0.026049810066417628, -0.022838669086918756, -0.019862523369349572, -0.01711515816349321, -0.014590575946867163, -0.012282987015834454, -0.010186800561553092, -0.008296616201864102, -0.006607215942171021, -0.005113556540168318, -0.003810762250946731, -0.002694117930549189, -0.001759062477484273, -0.001001182593031915, -0.0004162068424081976, 2.959124771157755e-17, 0.00025144233705764844, 0.0003419988817008751, 0.0002754275499754835, 5.537012726113122e-05, -0.00031464328014622206, -0.0008311899966623598, -0.0014909507215129097, -0.0022907056552042976, -0.0032273307988721495, -0.004297794417571554, -0.0054991536590984075, -0.006828551320420179, -0.008283212754252284, -0.00986044290874466, -0.011557623493643449, -0.013372210266668932, -0.01530173043420091, -0.01734378016069385, -0.01949602218155211, -0.021756183514485217, -0.024122053264636623, -0.02659148051903265, -0.029162372326140246, -0.03183269175654685, -0.03460045604098691, -0.0374637347821411, -0.04042064823681904, -0.04346936566531587, -0.046608103744897156, -0.049835125044524586, -0.05314873655808183, -0.056547288293499975, -0.060029171915311874, -0.06359281943829109, -0.06723670196994558, -0.07095932849974751, -0.07475924473308587, -0.07863503196802657, -0.08258530601305691, -0.08660871614408089, -0.09070394409901406, -0.09486970310840692, -0.09910473696059857, -0.10340781909997443, -0.10777775175696874, -0.11221336510851526, -0.11671351646771028, -0.1212770895015084, -0.12590299347532802, -0.13059016252348982, -0.1353375549444661, -0.14014415251996065, -0.14500895985688478, -0.14993100375133644, -0.15490933257372813, -0.15994301567424862, -0.16503114280787756, -0.1701728235782075, -0.17536718689935865, -0.18061338047530395, -0.18591057029595126, -0.19125794014935504, -0.1966546911494616, -0.20210004127880954, -0.2075932249456401, -0.21313349255488734, -0.21872011009254472, -0.22435235872292353, -0.23002953439833967, -0.2357509474807828, -0.2415159223751409, -0.2473237971735721, -0.2531739233106281, -0.25906566522875346, -0.26499840005379854, -0.2709715172801968, -0.2769844184654736, -0.28303651693376436, -0.28912723748803526, -0.29525601613070696, -0.3014222997924, -0.307625546068525, -0.31386522296345587, -0.32014080864203154, -0.32645179118814327, -0.332797668370172, -0.3391779474130515, -0.3455921447767385, -0.3520397859408806, -0.3585204051954831, -0.3650335454373774, -0.37157875797230544, -0.3781556023224417, -0.38476364603917756, -0.391402464521001, -0.3980716408363111, -0.4047707655510121, -0.4114994365607376, -0.4182572589275587, -0.4250438447210394]

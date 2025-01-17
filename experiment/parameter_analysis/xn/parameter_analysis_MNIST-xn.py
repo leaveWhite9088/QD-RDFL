@@ -374,17 +374,26 @@ if __name__ == "__main__":
                 UtilsMNIST.print_and_log(global_minst_parent_path, "xn开始变化：")
                 # 在这里要遍历xn的值，形成一个列表（这里变化第一个客户端的xn值）
                 new_xn_list = xn_list
-                UtilsMNIST.print_and_log(global_minst_parent_path, f"new_U_qn_list: {new_U_qn_list}")
-                for xn0 in np.arange(0.01, 1.01, 0.01):
+                UtilsMNIST.print_and_log(global_minst_parent_path, f"new_xn_list: {new_xn_list}")
+                UtilsMNIST.print_and_log(global_minst_parent_path, f"avg_f_list: {avg_f_list}")
+                for xn0 in np.arange(-1.01, 1.01, 0.01):
                     new_xn_list[0] = xn0
                     # 计算被观察的DO的效用
                     new_qn_list = [a * b for a, b in zip(new_xn_list, avg_f_list)]
                     new_qn = new_qn_list[0]
                     new_xn = xn0
                     new_U_qn = new_qn * best_Eta / sum(new_qn_list) - new_xn * Lambda * Rho
+                    UtilsMNIST.print_and_log(global_minst_parent_path, f"============= xn0: {xn0} =============")
+                    UtilsMNIST.print_and_log(global_minst_parent_path, f"new_qn: {new_qn}")
+                    UtilsMNIST.print_and_log(global_minst_parent_path, f"best_Eta: {best_Eta}")
+                    UtilsMNIST.print_and_log(global_minst_parent_path, f"sum(new_qn_list): {sum(new_qn_list)}")
                     new_U_qn_list.append(new_U_qn)
 
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
+            # 提前中止
+            if literation > adjustment_literation:
+                break
 
             UtilsMNIST.print_and_log(global_minst_parent_path,
                                      f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")

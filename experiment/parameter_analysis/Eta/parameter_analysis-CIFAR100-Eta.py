@@ -431,6 +431,10 @@ if __name__ == "__main__":
 
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
+            # 提前中止
+            if literation > adjustment_literation:
+                break
+
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                         f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
             compute_contribution_rates(xn_list, avg_f_list, best_Eta)
