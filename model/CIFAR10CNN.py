@@ -253,8 +253,9 @@ def fine_tune_model(model, train_loader, test_loader, num_epochs=5, device='cpu'
     newloss, new_accuracy = model.evaluate(test_loader, device=str(device))
     if new_accuracy > ori_accuracy:
         model.save_model(model_path)
-
-    return model
+        return model, new_accuracy
+    else:
+        return model, ori_accuracy
 
 
 # 微调整个网络，不更新模型，用于计算数据质量

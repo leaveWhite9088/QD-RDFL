@@ -317,22 +317,18 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = MNISTCNN(num_classes=10).to(device)
 
-        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
+        tempmodel, accuracy = fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
                         lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
 
-    return UtilsMNIST.normalize_list(avg_f_list)
+    return UtilsMNIST.normalize_list(avg_f_list), accuracy
 
 
 if __name__ == "__main__":
     UtilsMNIST.print_and_log(global_minst_parent_path,
                              f"**** {global_minst_parent_path} 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
 
-    # 记录第 adjustment_literation+1 轮的 U(Eta) 和 U(qn)/N
-    U_Eta_list = []
-    U_qn_list = []
-
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 101):
+    for n in [9]:
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  f"========================= 客户端数量: {n + 1} =========================")
 
@@ -351,6 +347,7 @@ if __name__ == "__main__":
         adjustment_literation = 1  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
         avg_f_list = []
         last_xn_list = [0] * N
+        accuracy_list = [] # 记录每一轮的精度
         while True:
             UtilsMNIST.print_and_log(global_minst_parent_path,
                                      f"========================= literation: {literation + 1} =========================")
@@ -371,16 +368,7 @@ if __name__ == "__main__":
                                      f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
             xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
             last_xn_list = xn_list
-
-            # 只有在调整轮次之后的轮次才记录
-            if literation == adjustment_literation + 1:
-                U_Eta_list.append(U_Eta)
-                U_qn_list.append(U_qn)
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
-
-            # 提前中止
-            if literation > adjustment_literation:
-                break
 
             UtilsMNIST.print_and_log(global_minst_parent_path,
                                      f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
@@ -400,16 +388,15 @@ if __name__ == "__main__":
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             UtilsMNIST.print_and_log(global_minst_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
-            avg_f_list = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list,
+            avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list,
                                               adjustment_literation)
+            accuracy_list.append(new_accuracy)
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             literation += 1
-            if literation > adjustment_literation + 1:
-                UtilsMNIST.print_and_log(global_minst_parent_path, f"U_Eta_list: {U_Eta_list}")
-                UtilsMNIST.print_and_log(global_minst_parent_path, f"U_qn_list: {U_qn_list}")
+            # 第100轮终止
+            if literation > 100:
                 break
 
     UtilsMNIST.print_and_log(global_minst_parent_path, "最终的列表：")
-    UtilsMNIST.print_and_log(global_minst_parent_path, f"U_Eta_list: {U_Eta_list}")
-    UtilsMNIST.print_and_log(global_minst_parent_path, f"U_qn_list: {U_qn_list}")
+    UtilsMNIST.print_and_log(global_minst_parent_path, f"accuracy_list: {accuracy_list}")
