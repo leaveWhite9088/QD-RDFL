@@ -2,9 +2,9 @@
 
 """================================= 路径参数 ================================="""
 
-# 可选：log-parameter_analysis，log-comparison
+# 可选：log-parameter_analysis,log-comparison,log-ablation
 
-global_minst_parent_path = "log-parameter_analysis"
+global_minst_parent_path = "log-ablation"
 global_cifar10_parent_path = "log-comparison"
 global_cifar100_parent_path = "log-comparison"
 

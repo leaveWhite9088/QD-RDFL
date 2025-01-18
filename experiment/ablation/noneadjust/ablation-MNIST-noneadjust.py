@@ -35,10 +35,10 @@ def define_parameters(Lambda=1, Rho=1, Alpha=1, Epsilon=1, N=5, M=5, SigmaM=[1, 
 
 # 为联邦学习任务做准备工作
 def ready_for_task():
-    train_images_path = "../../data/dataset/MNIST/train-images.idx3-ubyte"
-    train_labels_path = "../../data/dataset/MNIST/train-labels.idx1-ubyte"
-    test_images_path = "../../data/dataset/MNIST/t10k-images.idx3-ubyte"
-    test_labels_path = "../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
+    train_images_path = "../../../data/dataset/MNIST/train-images.idx3-ubyte"
+    train_labels_path = "../../../data/dataset/MNIST/train-labels.idx1-ubyte"
+    test_images_path = "../../../data/dataset/MNIST/t10k-images.idx3-ubyte"
+    test_labels_path = "../../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
 
     # 加载训练数据和测试数据
     train_images, train_labels = UtilsMNIST.load_mnist_dataset(train_images_path, train_labels_path)
@@ -69,10 +69,10 @@ def init_model(rate):
     UtilsMNIST.print_and_log(global_minst_parent_path, f"初始数据占MNIST的比例：{rate * 100}%")
     UtilsMNIST.print_and_log(global_minst_parent_path, "model initing...")
 
-    train_images_path = "../../data/dataset/MNIST/train-images.idx3-ubyte"
-    train_labels_path = "../../data/dataset/MNIST/train-labels.idx1-ubyte"
-    test_images_path = "../../data/dataset/MNIST/t10k-images.idx3-ubyte"
-    test_labels_path = "../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
+    train_images_path = "../../../data/dataset/MNIST/train-images.idx3-ubyte"
+    train_labels_path = "../../../data/dataset/MNIST/train-labels.idx1-ubyte"
+    test_images_path = "../../../data/dataset/MNIST/t10k-images.idx3-ubyte"
+    test_labels_path = "../../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
 
     # 加载训练数据和测试数据
     train_images, train_labels = UtilsMNIST.load_mnist_dataset(train_images_path, train_labels_path)
@@ -100,16 +100,16 @@ def init_model(rate):
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # 如果不存在初始化模型，就训练模型，如果存在，就加载到model中
-    model_save_path = "../../data/model/initial/mnist_cnn_initial_model"
+    model_save_path = "../../../data/model/initial/mnist_cnn_initial_model"
     if os.path.exists(model_save_path):
         print(f"{model_save_path} 存在，加载初始化模型")
         model.load_model(model_save_path)
-        model.save_model("../../data/model/mnist_cnn_model")
+        model.save_model("../../../data/model/mnist_cnn_model")
     else:
         print(f"{model_save_path} 不存在，初始化模型")
         model.train_model(train_loader, criterion, optimizer, num_epochs=5, device=str(device),
                           model_save_path=model_save_path)
-        model.save_model("../../data/model/mnist_cnn_model")
+        model.save_model("../../../data/model/mnist_cnn_model")
 
     UtilsMNIST.print_and_log(global_minst_parent_path, "初始化模型的准确率：")
     model.evaluate(test_loader, device=str(device))
@@ -262,41 +262,6 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
     :param avg_f_list:fn的列表
     :return: 第二轮要使用的fn的列表
     """
-
-    # 指定轮次的时候要评估数据质量, 其余轮次直接训练即可
-    if literation == adjustment_literation:
-        UtilsMNIST.print_and_log(global_minst_parent_path, "重新调整fn，进而调整xn、Eta")
-        avg_f_list = [0] * N
-        for item in matching.items():
-            dataowner_match = re.search(r'\d+$', item[0])
-            dataowner_index = int(dataowner_match.group()) - 1
-            cpc_match = re.search(r'\d+$', item[1])
-            cpc_index = int(cpc_match.group()) - 1
-
-            UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     f"正在评估{item[0]}的数据质量, 本轮评估的样本数据量为：{len(cpcs[cpc_index].imgData) :.2f} :")
-            if len(cpcs[cpc_index].imgData) == 0:
-                UtilsMNIST.print_and_log(global_minst_parent_path, "数据量为0，跳过此轮评估")
-                continue
-
-            train_loader = UtilsMNIST.create_data_loader(cpcs[cpc_index].imgData, cpcs[cpc_index].labelData,
-                                                         batch_size=64, shuffle=True)
-            test_loader = UtilsMNIST.create_data_loader(test_images, test_labels, batch_size=64, shuffle=False)
-
-            # 创建CNN模型
-            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            model = MNISTCNN(num_classes=10).to(device)
-
-            unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
-                                                               device=str(device),
-                                                               lr=1e-5, model_path="../../data/model/mnist_cnn_model")
-            avg_f_list[dataowner_index] = unitDataLossDiff
-
-        UtilsMNIST.print_and_log(global_minst_parent_path, "经过服务器调节后的真实数据质量：")
-        UtilsMNIST.print_and_log(global_minst_parent_path, f"数据质量列表avg_f_list: {avg_f_list}")
-        UtilsMNIST.print_and_log(global_minst_parent_path,
-                                 f"归一化后的数据质量列表avg_f_list:{UtilsMNIST.normalize_list(avg_f_list)}")
-
     for item in matching.items():
         dataowner_match = re.search(r'\d+$', item[0])
         dataowner_index = int(dataowner_match.group()) - 1
@@ -317,22 +282,18 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = MNISTCNN(num_classes=10).to(device)
 
-        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
-                        lr=1e-5, model_path="../../data/model/mnist_cnn_model")
+        tempmodel, accuracy = fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
+                        lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
 
-    return UtilsMNIST.normalize_list(avg_f_list)
+    return UtilsMNIST.normalize_list(avg_f_list), accuracy
 
 
 if __name__ == "__main__":
     UtilsMNIST.print_and_log(global_minst_parent_path,
                              f"**** {global_minst_parent_path} 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
 
-    # 记录第 adjustment_literation+1 轮的 U(Eta) 和 U(qn)/N
-    U_Eta_list = []
-    U_qn_list = []
-
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 101):
+    for n in [9]:
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  f"========================= 客户端数量: {n + 1} =========================")
 
@@ -351,6 +312,7 @@ if __name__ == "__main__":
         adjustment_literation = 1  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
         avg_f_list = []
         last_xn_list = [0] * N
+        accuracy_list = [] # 记录每一轮的精度
         while True:
             UtilsMNIST.print_and_log(global_minst_parent_path,
                                      f"========================= literation: {literation + 1} =========================")
@@ -371,11 +333,6 @@ if __name__ == "__main__":
                                      f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
             xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
             last_xn_list = xn_list
-
-            # 只有在调整轮次之后的轮次才记录
-            if literation == adjustment_literation + 1:
-                U_Eta_list.append(U_Eta)
-                U_qn_list.append(U_qn)
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             UtilsMNIST.print_and_log(global_minst_parent_path,
@@ -396,16 +353,15 @@ if __name__ == "__main__":
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             UtilsMNIST.print_and_log(global_minst_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
-            avg_f_list = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list,
+            avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list,
                                               adjustment_literation)
+            accuracy_list.append(new_accuracy)
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             literation += 1
-            if literation > adjustment_literation + 1:
-                UtilsMNIST.print_and_log(global_minst_parent_path, f"U_Eta_list: {U_Eta_list}")
-                UtilsMNIST.print_and_log(global_minst_parent_path, f"U_qn_list: {U_qn_list}")
+            # 第100轮终止
+            if literation > 100:
                 break
 
     UtilsMNIST.print_and_log(global_minst_parent_path, "最终的列表：")
-    UtilsMNIST.print_and_log(global_minst_parent_path, f"U_Eta_list: {U_Eta_list}")
-    UtilsMNIST.print_and_log(global_minst_parent_path, f"U_qn_list: {U_qn_list}")
+    UtilsMNIST.print_and_log(global_minst_parent_path, f"accuracy_list: {accuracy_list}")
