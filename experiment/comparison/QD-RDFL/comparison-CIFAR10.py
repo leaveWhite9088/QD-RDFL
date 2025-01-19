@@ -13,7 +13,7 @@ import torch.optim as optim
 import re
 from datetime import datetime
 import os
-from global_variable import global_cifar10_parent_path,Lambda,Rho,Alpha,Epsilon
+from global_variable import global_cifar10_parent_path,Lambda,Rho,Alpha,Epsilon, adjustment_literation
 
 
 # 定义参数值
@@ -391,7 +391,7 @@ if __name__ == "__main__":
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
         literation = 0  # 迭代次数
-        adjustment_literation = 1  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
+        adjustment_literation = adjustment_literation  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
         avg_f_list = []
         last_xn_list = [0] * N
         while True:

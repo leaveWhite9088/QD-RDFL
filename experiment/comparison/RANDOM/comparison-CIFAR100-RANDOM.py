@@ -13,7 +13,7 @@ import torch.optim as optim
 import re
 from datetime import datetime
 import os
-from global_variable import global_cifar100_parent_path,Lambda,Rho,Alpha,Epsilon
+from global_variable import global_cifar100_parent_path,Lambda,Rho,Alpha,Epsilon, adjustment_literation
 
 # 定义参数值
 def define_parameters(Lambda=1, Rho=1, Alpha=1, Epsilon=1, N=5, M=5, SigmaM=None):
@@ -118,9 +118,6 @@ def init_model():
     # 加载完整的训练数据进行评估
     test_loader = UtilsCIFAR100.create_data_loader(train_data, train_labels, batch_size=128,
                                                    shuffle=False)  # 使用全部数据进行测试
-
-    UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "初始化模型的准确率：")
-    model.evaluate(test_loader, device=str(device))
 
     return model
 
@@ -349,7 +346,7 @@ if __name__ == "__main__":
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
         literation = 0  # 迭代次数
-        adjustment_literation = 1  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
+        adjustment_literation = adjustment_literation  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
         avg_f_list = []
         last_xn_list = [0] * N
         while True:
