@@ -373,7 +373,7 @@ if __name__ == "__main__":
                 UtilsMNIST.print_and_log(global_minst_parent_path, "Eta开始变化：")
                 # 在这里要遍历Eta的值，形成一个列表
                 last_new_U_Eta = 0
-                for eta in np.arange(0, 3.001, 0.001):
+                for eta in np.arange(0, 3.01, 0.01):
                     new_Eta = eta
                     UtilsMNIST.print_and_log(global_minst_parent_path, f"eta:{eta}")
                     new_x_opt = Stackelberg._solve_followers(new_Eta, np.array(avg_f_list), Lambda, Rho)
