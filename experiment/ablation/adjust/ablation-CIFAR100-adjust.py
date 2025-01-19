@@ -370,7 +370,7 @@ if __name__ == "__main__":
                                 f"**** {global_cifar100_parent_path} 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
 
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 101):
+    for n in [9]:
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                     f"========================= 客户端数量: {n + 1} =========================")
 
@@ -414,10 +414,6 @@ if __name__ == "__main__":
             xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
             last_xn_list = xn_list
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
-
-            # 提前中止
-            if literation > adjustment_literation:
-                break
 
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                         f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")

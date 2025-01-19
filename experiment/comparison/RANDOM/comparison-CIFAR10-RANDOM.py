@@ -406,6 +406,8 @@ if __name__ == "__main__":
 
             # 提前中止
             if literation > adjustment_literation:
+                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"U_Eta_list: {U_Eta_list}")
+                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"U_qn_list: {U_qn_list}")
                 break
 
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
@@ -431,10 +433,6 @@ if __name__ == "__main__":
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
             literation += 1
-            if literation > adjustment_literation + 1:
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"U_Eta_list: {U_Eta_list}")
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"U_qn_list: {U_qn_list}")
-                break
 
     UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "最终的列表：")
     UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"U_Eta_list: {U_Eta_list}")

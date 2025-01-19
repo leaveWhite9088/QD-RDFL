@@ -372,6 +372,8 @@ if __name__ == "__main__":
 
             # 提前中止
             if literation > adjustment_literation:
+                UtilsMNIST.print_and_log(global_minst_parent_path, f"U_Eta_list: {U_Eta_list}")
+                UtilsMNIST.print_and_log(global_minst_parent_path, f"U_qn_list: {U_qn_list}")
                 break
 
             UtilsMNIST.print_and_log(global_minst_parent_path,
@@ -397,10 +399,6 @@ if __name__ == "__main__":
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             literation += 1
-            if literation > adjustment_literation + 1:
-                UtilsMNIST.print_and_log(global_minst_parent_path, f"U_Eta_list: {U_Eta_list}")
-                UtilsMNIST.print_and_log(global_minst_parent_path, f"U_qn_list: {U_qn_list}")
-                break
 
     UtilsMNIST.print_and_log(global_minst_parent_path, "最终的列表：")
     UtilsMNIST.print_and_log(global_minst_parent_path, f"U_Eta_list: {U_Eta_list}")
