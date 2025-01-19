@@ -111,9 +111,6 @@ def init_model(rate):
                           model_save_path=model_save_path)
         model.save_model("../../../data/model/mnist_cnn_model")
 
-    UtilsMNIST.print_and_log(global_minst_parent_path, "初始化模型的准确率：")
-    model.evaluate(test_loader, device=str(device))
-
     return model
 
 

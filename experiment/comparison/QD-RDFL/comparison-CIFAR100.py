@@ -119,9 +119,6 @@ def init_model():
     test_loader = UtilsCIFAR100.create_data_loader(train_data, train_labels, batch_size=128,
                                                    shuffle=False)  # 使用全部数据进行测试
 
-    UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "初始化模型的准确率：")
-    model.evaluate(test_loader, device=str(device))
-
     return model
 
 
