@@ -1,5 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib
+
+# 设置全局字体为 Times New Roman
+matplotlib.rcParams['font.family'] = 'Times New Roman'
+matplotlib.rcParams['font.size'] = 14  # 同时设置字体大小
 
 # 定义支付值范围
 eta_list = np.arange(0, 3.01, 0.01)
@@ -69,17 +74,20 @@ us_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.12458147834570993, 0.1245814783
 best_response = np.full_like(eta_list, max(us_list))
 
 # 绘制BS效用曲线
-plt.plot(eta_list[20::10], us_list[20::10], 'b--o', label='MO utility')
+plt.plot(eta_list[20::10], us_list[20::10], 'b--o', label='Model owner utility')
 
 # 绘制最佳响应线
-plt.plot(eta_list[20::10], best_response[20::10], 'r--', label='Best response')
+plt.plot(eta_list[20::10], best_response[20::10], 'r--', label='Optimal strategy')
 
 # 添加图例
 plt.legend()
 
+plt.tick_params(axis='x', labelsize=12)
+plt.tick_params(axis='y', labelsize=12)
+
 # 设置标题和坐标轴标签
-plt.xlabel('Eta')
-plt.ylabel('Us')
+plt.xlabel(r'$η$')
+plt.ylabel(r'$U_s$')
 
 # 显示网格
 plt.grid(True)
