@@ -1,5 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib
+
+# 设置全局字体为 Times New Roman
+matplotlib.rcParams['font.family'] = 'Times New Roman'
+matplotlib.rcParams['font.size'] = 14  # 同时设置字体大小
 
 # 定义支付值范围
 xn_list = np.arange(0, 1.001, 0.001)
@@ -225,17 +230,20 @@ un_list = [0.0, 0.00015649706182115216, 0.0003109898520949465, 0.000463483576575
 best_response = np.full_like(xn_list, max(un_list))
 
 # 绘制BS效用曲线
-plt.plot(xn_list[0:190:10], un_list[0:190:10], 'b--o', label='DO utility')
+plt.plot(xn_list[0:190:10], un_list[0:190:10], 'b--o', label='Data owner utility')
 
 # 绘制最佳响应线
-plt.plot(xn_list[0:190:10], best_response[0:190:10], 'r--', label='Best response')
+plt.plot(xn_list[0:190:10], best_response[0:190:10], 'r--', label='Optimal strategy')
 
 # 添加图例
 plt.legend()
 
+plt.tick_params(axis='x', labelsize=12)
+plt.tick_params(axis='y', labelsize=12)
+
 # 设置标题和坐标轴标签
-plt.xlabel('xn')
-plt.ylabel('Un')
+plt.xlabel(r'$x_n$')
+plt.ylabel(r'$U_n$')
 
 # 显示网格
 plt.grid(True)
