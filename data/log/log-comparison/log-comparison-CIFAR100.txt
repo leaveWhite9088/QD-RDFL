@@ -1507,3 +1507,118 @@ DONE
 模型已从 ../../data/model/initial/cifar100_cnn_initial_model 加载
 模型已保存至 ../../data/model/cifar100_cnn_model
 初始化模型的准确率：
+**** log-comparison 运行时间： 2025-01-20 11:23:44 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+----- 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.022168917369532706
+DataOwner2: noise random: 0.03210954046133072
+DONE
+----- 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.999524390375148, 0.9990096561480829]
+归一化后的数据质量列表avg_f_list: [1.0, 0.9]
+DONE
+========================= literation: 1 =========================
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+U_Eta_list: [0.03380193622101457]
+U_qn_list: [0.09749147610231523]
+========================= literation: 1 =========================
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+random: DataOwner1的最优x_1 = 0.0688
+random: DataOwner2的最优x_2 = 0.0688
+DONE
+U_Eta_list_RANDOM: [0.03117902435806652]
+U_qn_list_RANDOM: [0.06921920440753804]
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.0155219512740722
+DataOwner2: noise random: 0.07821181787393128
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9992925736815043, 0.9933618818987392]
+归一化后的数据质量列表avg_f_list: [1.0, 0.9]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+fix: DataOwner1的最优x_1 = 0.2493
+fix: DataOwner2的最优x_2 = 0.2493
+DONE
+U_Eta_list_FIX: [-0.030586172447248705]
+U_qn_list_FIX: [0.2506925207667152]
+========================= 客户端数量: 3 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+----- 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.0982020314401591
+DataOwner2: noise random: 1.929365290010976e-05
+DataOwner3: noise random: 0.06697841194393077
+DONE
+----- 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.991192418312234, 0.9999999996324734, 0.9957967243559236]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0, 0.9522766225627584]
+DONE
+========================= literation: 1 =========================
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.9194
+DataOwner1的最优x_1 = 0.1920
+DataOwner2的最优x_2 = 0.2137
+DataOwner3的最优x_3 = 0.2050
+每个DataOwner应该贡献数据比例 xn_list = [0.19197377010292185, 0.2136652042056467, 0.20500650896930311]
+ModelOwner的最大效用 U(Eta) = 0.2268
+DONE
+U_Eta_list: [0.03380193622101457, 0.22680792073964628]
+U_qn_list: [0.09749147610231523, 0.10291367832150404]
+========================= literation: 1 =========================
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.9194
+DataOwner1的最优x_1 = 0.1920
+DataOwner2的最优x_2 = 0.2137
+DataOwner3的最优x_3 = 0.2050
+每个DataOwner应该贡献数据比例 xn_list = [0.19197377010292185, 0.2136652042056467, 0.20500650896930311]
+ModelOwner的最大效用 U(Eta) = 0.2268
+random: DataOwner1的最优x_1 = 0.1294
+random: DataOwner2的最优x_2 = 0.1440
+random: DataOwner3的最优x_3 = 0.1382
+DONE
+U_Eta_list_RANDOM: [0.03117902435806652, 0.20725602302912227]
+U_qn_list_RANDOM: [0.06921920440753804, 0.06935841743707516]
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----

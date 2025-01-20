@@ -343,18 +343,21 @@ if __name__ == "__main__":
             if literation == adjustment_literation + 1:
                 # 在0.5eta-eat的范围内取eta值
                 random_Eta = random.uniform(0.5, 1) * best_Eta
-                random_x_opt = Stackelberg._solve_followers(random_Eta, np.array(avg_f_list), Lambda, Rho)
-                # 如果算不出最优解 就用上一轮的解
-                if random_x_opt is None:
-                    U_Eta_list.append(last_random_U_Eta)
-                    U_qn_list.append(last_random_U_qn)
-                    break
-                random_xn_list = []
-                for i, xi in enumerate(random_x_opt):
-                    UtilsMNIST.print_and_log(global_minst_parent_path,
-                                             f"random: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
-                    random_xn_list.append(xi)
-                random_xn_list = UtilsMNIST.compare_elements(random_xn_list, [0] * N)
+
+                # random_x_opt = Stackelberg._solve_followers(random_Eta, np.array(avg_f_list), Lambda, Rho)
+                # # 如果算不出最优解 就用上一轮的解
+                # if random_x_opt is None:
+                #     U_Eta_list.append(last_random_U_Eta)
+                #     U_qn_list.append(last_random_U_qn)
+                #     break
+                # random_xn_list = []
+                # for i, xi in enumerate(random_x_opt):
+                #     UtilsMNIST.print_and_log(global_minst_parent_path,
+                #                              f"random: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
+                #     random_xn_list.append(xi)
+                # random_xn_list = UtilsMNIST.compare_elements(random_xn_list, [0] * N)
+
+                random_xn_list = xn_list
                 random_U_Eta = Stackelberg._leader_utility(random_Eta, Alpha, avg_f_list, random_xn_list)
                 random_U_qn = (random_Eta - Lambda * Rho * (sum(random_xn_list))) / N
 
