@@ -3,7 +3,7 @@ import matplotlib
 
 # 设置全局字体为 Times New Roman
 matplotlib.rcParams['font.family'] = 'Times New Roman'
-matplotlib.rcParams['font.size'] = 14  # 同时设置字体大小
+matplotlib.rcParams['font.size'] = 16  # 同时设置字体大小
 
 # 假设这是您的算法和对比算法的精度数据
 # 精度值
@@ -34,9 +34,9 @@ accuracy_comparison_algorithm = [x / 100 for x in accuracy_comparison_algorithm]
 tests = range(1, len(accuracy_your_algorithm) + 1)
 
 # 创建折线图
-plt.plot(tests[:70:5], accuracy_your_algorithm[:70:5], marker='o', label='With Dynamic Adjustment')  # 绘制您的算法精度折线图
+plt.plot(tests[:70:5], accuracy_your_algorithm[:70:5], marker='o', label='With dynamic adjustment')  # 绘制您的算法精度折线图
 plt.plot(tests[:70:5], accuracy_comparison_algorithm[:70:5], marker='s',
-         label='Without Dynamic Adjustment')  # 绘制对比算法精度折线图
+         label='Without dynamic adjustment')  # 绘制对比算法精度折线图
 
 # 添加标题和标签
 plt.xlabel('Training round')  # x轴标签
