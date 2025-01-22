@@ -4,7 +4,7 @@ import matplotlib
 
 # 设置全局字体为 Times New Roman
 matplotlib.rcParams['font.family'] = 'Times New Roman'
-matplotlib.rcParams['font.size'] = 14  # 同时设置字体大小
+matplotlib.rcParams['font.size'] = 16  # 同时设置字体大小
 
 # 定义支付值范围
 eta_list = np.arange(0, 3.01, 0.01)
@@ -82,8 +82,8 @@ plt.plot(eta_list[20::10], best_response[20::10], 'r--', label='Optimal strategy
 # 添加图例
 plt.legend()
 
-plt.tick_params(axis='x', labelsize=12)
-plt.tick_params(axis='y', labelsize=12)
+plt.tick_params(axis='x', labelsize=14)
+plt.tick_params(axis='y', labelsize=14)
 
 # 设置标题和坐标轴标签
 plt.xlabel(r'$η$')

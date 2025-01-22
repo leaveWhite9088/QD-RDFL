@@ -4,7 +4,7 @@ import matplotlib
 
 # 设置全局字体为 Times New Roman
 matplotlib.rcParams['font.family'] = 'Times New Roman'
-matplotlib.rcParams['font.size'] = 14  # 同时设置字体大小
+matplotlib.rcParams['font.size'] = 16  # 同时设置字体大小
 
 # 定义用户数量
 users = np.arange(0, 100)
@@ -94,14 +94,14 @@ plt.plot(users[10:70:10], utility_random[8:68:10], 'g--^', label='Random')  # �
 plt.plot(users[10:70:10], utility_fix[8:68:10], 'r--o', label='Fix')  # 红色虚线，圆形标记
 
 # 添加图例
-plt.legend(fontsize=12)
+plt.legend()
 
-plt.tick_params(axis='x', labelsize=12)
-plt.tick_params(axis='y', labelsize=12)
+plt.tick_params(axis='x', labelsize=14)
+plt.tick_params(axis='y', labelsize=14)
 
 # 设置标题和坐标轴标签
 plt.xlabel(r'$N$')
-plt.ylabel(r'average of  $U_n$')
+plt.ylabel(r'Average of  $U_n$')
 
 # 显示网格
 plt.grid(True)
