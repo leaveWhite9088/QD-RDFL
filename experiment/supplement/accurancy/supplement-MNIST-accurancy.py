@@ -14,7 +14,7 @@ import torch.optim as optim
 import re
 from datetime import datetime
 import os
-from global_variable import global_minst_parent_path, Lambda, Rho, Alpha, Epsilon, adjustment_literation
+from global_variable import global_minst_parent_path, Lambda, Rho, Alpha, Epsilon
 
 
 # 定义参数值
@@ -48,7 +48,7 @@ def ready_for_task():
     dataowners = [DataOwner(Lambda=Lambda, Rho=Rho) for _ in range(N)]  # 假设有5个DataOwner
 
     # 切分数据
-    UtilsMNIST.split_data_to_dataowners_with_large_gap(dataowners, train_images, train_labels)
+    UtilsMNIST.split_data_to_dataowners(dataowners, train_images, train_labels)
 
     # 初始化ModelOwner
     modelowner = ModelOwner(Alpha, model=init_model(0.001))
@@ -111,11 +111,14 @@ def init_model(rate):
                           model_save_path=model_save_path)
         model.save_model("../../../data/model/mnist_cnn_model")
 
+    UtilsMNIST.print_and_log(global_minst_parent_path, "初始化模型的准确率：")
+    model.evaluate(test_loader, device=str(device))
+
     return model
 
 
 # 给数据集添加噪声
-def dataowner_add_noise(dataowners, rate):
+def dataowner_add_noise(dataowners, rate, report_rate, client_rate):
     """
     给数据集添加噪声
     :param dataowners:
@@ -124,21 +127,22 @@ def dataowner_add_noise(dataowners, rate):
     """
     # 第一次训练时：添加噪声，以1-MSE为fn
     for i, do in enumerate(dataowners):
-        random_num = random.random() * rate
+        if i < client_rate * N:
+            random_num = 0.5 * rate * (1 + report_rate)
+        else:
+            random_num = 0.5 * rate
         UtilsMNIST.add_noise(do, severity=random_num)
         UtilsMNIST.print_and_log(global_minst_parent_path, f"DataOwner{i + 1}: noise random: {random_num}")
 
 
 # ModelOwner发布任务， DataOwner计算数据质量（Dataowner自己计算）
-def evaluate_data_quality(dataowners, report_rate, client_rate):
+def evaluate_data_quality(dataowners):
     """
     加噪声，模拟DataOwner的数据不好的情况
     :param dataowners:
     :param avg_f_list:
     :return:
     """
-
-    avg_f_list = []
 
     # 评价数据质量
     for i, do in enumerate(dataowners):
@@ -152,10 +156,6 @@ def evaluate_data_quality(dataowners, report_rate, client_rate):
             # UtilsMNIST.print_and_log(global_minst_parent_path,f"DataOwner{i + 1}: Image {j + 1}: MSE = {mse:.4f}, SNR = {snr:.2f} dB")
             mse_sum += mse
         avg_mse = mse_sum / len(mse_scores)
-        if i < N * client_rate:
-            UtilsMNIST.print_and_log(global_minst_parent_path, f"准备调整avg_mse：{avg_mse}")
-            avg_mse = avg_mse * (1 - report_rate)
-            UtilsMNIST.print_and_log(global_minst_parent_path, f"avg_mse调整完毕：{avg_mse}")
         avg_f_list.append(1 - avg_mse)
 
     UtilsMNIST.print_and_log(global_minst_parent_path, "DataOwners自行评估数据质量：")
@@ -265,42 +265,6 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
     :param avg_f_list:fn的列表
     :return: 第二轮要使用的fn的列表
     """
-
-    # 指定轮次的时候要评估数据质量, 其余轮次直接训练即可
-    if literation == adjustment_literation:
-        UtilsMNIST.print_and_log(global_minst_parent_path, "重新调整fn，进而调整xn、Eta")
-        avg_f_list = [0] * N
-        for item in matching.items():
-            dataowner_match = re.search(r'\d+$', item[0])
-            dataowner_index = int(dataowner_match.group()) - 1
-            cpc_match = re.search(r'\d+$', item[1])
-            cpc_index = int(cpc_match.group()) - 1
-
-            UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     f"正在评估{item[0]}的数据质量, 本轮评估的样本数据量为：{len(cpcs[cpc_index].imgData) :.2f} :")
-            if len(cpcs[cpc_index].imgData) == 0:
-                UtilsMNIST.print_and_log(global_minst_parent_path, "数据量为0，跳过此轮评估")
-                continue
-
-            train_loader = UtilsMNIST.create_data_loader(cpcs[cpc_index].imgData, cpcs[cpc_index].labelData,
-                                                         batch_size=64, shuffle=True)
-            test_loader = UtilsMNIST.create_data_loader(test_images, test_labels, batch_size=64, shuffle=False)
-
-            # 创建CNN模型
-            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            model = MNISTCNN(num_classes=10).to(device)
-
-            unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
-                                                               device=str(device),
-                                                               lr=1e-5,
-                                                               model_path="../../../data/model/mnist_cnn_model")
-            avg_f_list[dataowner_index] = unitDataLossDiff
-
-        UtilsMNIST.print_and_log(global_minst_parent_path, "经过服务器调节后的真实数据质量：")
-        UtilsMNIST.print_and_log(global_minst_parent_path, f"数据质量列表avg_f_list: {avg_f_list}")
-        UtilsMNIST.print_and_log(global_minst_parent_path,
-                                 f"归一化后的数据质量列表avg_f_list:{UtilsMNIST.normalize_list(avg_f_list)}")
-
     for item in matching.items():
         dataowner_match = re.search(r'\d+$', item[0])
         dataowner_index = int(dataowner_match.group()) - 1
@@ -321,10 +285,10 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = MNISTCNN(num_classes=10).to(device)
 
-        fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
-                        lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
+        tempmodel, accuracy = fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
+                                              lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
 
-    return UtilsMNIST.normalize_list(avg_f_list)
+    return UtilsMNIST.normalize_list(avg_f_list), accuracy
 
 
 if __name__ == "__main__":
@@ -343,58 +307,81 @@ if __name__ == "__main__":
                                                                       SigmaM=[1] * (n + 1))
         UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-        UtilsMNIST.print_and_log(global_minst_parent_path,
-                                 "---------------------------------- 准备工作 ----------------------------------")
-        dataowners, modelowner, cpcs, test_images, test_labels = ready_for_task()
-        UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
-
-        literation = 0  # 迭代次数
-        adjustment_literation = adjustment_literation  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
-        avg_f_list = []
-        last_xn_list = [0] * N
-        while True:
-            UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     f"========================= literation: {literation + 1} =========================")
+        dataowners_backup = []
+        client_rate = 0.2
+        accuracy_dict = {}
+        accuracy_dict[-0.5] = []
+        accuracy_dict[0.0] = []
+        accuracy_dict[0.5] = []
+        for ite_report_rate in [-0.5, 0.0, 0.5]:
 
             UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
-            dataowner_add_noise(dataowners, 0.1)
+                                     "---------------------------------- 准备工作 ----------------------------------")
+            dataowners, modelowner, cpcs, test_images, test_labels = ready_for_task()
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-            Us_dict = {}
-            Us_dict[0.0] = []
-            Us_dict[0.2] = []
-            Us_dict[0.4] = []
-            Us_dict[0.6] = []
-            Us_dict[0.8] = []
-            Us_dict[1.0] = []
-            for temprate in [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]:
-                client_rate = temprate
+            if dataowners_backup == []:
+                dataowners_backup = dataowners.copy()
+            else:
+                dataowners = dataowners_backup.copy()
 
-                # 应该采用相同的加噪数据
-                for rate in [-0.6, -0.4, -0.2, 0.2, 0.4, 0.6]:
+            literation = 0  # 迭代次数
+            adjustment_literation = 1  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
+            avg_f_list = []
+            last_xn_list = [0] * N
+            while True:
+                UtilsMNIST.print_and_log(global_minst_parent_path,
+                                         f"========================= literation: {literation + 1} =========================")
+
+                # DataOwner自己报数据质量的机会只有一次
+                if literation == 0:
+                    UtilsMNIST.print_and_log(global_minst_parent_path,
+                                             f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
+                    dataowner_add_noise(dataowners, 0.1, report_rate=ite_report_rate, client_rate=client_rate)
+                    UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
                     UtilsMNIST.print_and_log(global_minst_parent_path,
                                              f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
-                    report_rate = rate
-                    avg_f_list = evaluate_data_quality(dataowners, report_rate, client_rate)
+                    avg_f_list = evaluate_data_quality(dataowners)
                     UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
+                UtilsMNIST.print_and_log(global_minst_parent_path,
+                                         f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
+                xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
+                last_xn_list = xn_list
+                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
+                UtilsMNIST.print_and_log(global_minst_parent_path,
+                                         f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
+                compute_contribution_rates(xn_list, avg_f_list, best_Eta)
+                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
+                # 一旦匹配成功，就无法改变
+                if literation == 0:
                     UtilsMNIST.print_and_log(global_minst_parent_path,
-                                             f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
-                    xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
-                    last_xn_list = xn_list
-
-                    # 只有在调整轮次之后的轮次才记录(这里是第三轮)
-                    if literation == adjustment_literation + 1:
-                        # 在这里要记录UEta的值：正常算即可
-                        new_U_Eta = Stackelberg._leader_utility(best_Eta, Alpha, avg_f_list, xn_list)
-                        Us_dict[client_rate].append(new_U_Eta)
-
+                                             f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
+                    matching = match_data_owners_to_cpc(xn_list, cpcs)
                     UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-            # 提前中止
-            if literation > adjustment_literation:
-                break
+                UtilsMNIST.print_and_log(global_minst_parent_path,
+                                         f"----- literation {literation + 1}: DataOwner 向 CPC 提交数据 -----")
+                submit_data_to_cpc(matching, dataowners, cpcs, xn_list)
+                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
+                UtilsMNIST.print_and_log(global_minst_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
+                avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation,
+                                                                avg_f_list,
+                                                                adjustment_literation)
+                accuracy_dict[ite_report_rate].append(new_accuracy)
+                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
+                literation += 1
+                # 第100轮终止
+                if literation > 100:
+                    break
 
         UtilsMNIST.print_and_log(global_minst_parent_path, "最终的列表：")
-        UtilsMNIST.print_and_log(global_minst_parent_path, Us_dict)
+        UtilsMNIST.print_and_log(global_minst_parent_path,f"accuracy_dict[{ite_report_rate}]: {accuracy_dict[ite_report_rate]}")
+
+    UtilsMNIST.print_and_log(global_minst_parent_path, "最终的字典：")
+    UtilsMNIST.print_and_log(global_minst_parent_path, f"accuracy_dict: {accuracy_dict}")
