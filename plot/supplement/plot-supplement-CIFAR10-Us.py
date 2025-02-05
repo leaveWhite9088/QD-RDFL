@@ -39,14 +39,20 @@ r4 = [x + bar_width for x in r1]
 r5 = [x + 2 * bar_width for x in r1]
 r6 = [x + 3 * bar_width for x in r1]
 
-plt.figure(figsize=(12, 8))
+# 创建图形和轴
+fig, ax = plt.subplots(figsize=(12, 8))
 
 # 绘制柱状图
-plt.bar(r2, clients20, color='#5470C6', width=bar_width, label='20% Data owners')
-plt.bar(r3, clients40, color='#91CC75', width=bar_width, label='40% Data owners')
-plt.bar(r4, clients60, color='#FAC858', width=bar_width, label='60% Data owners')
-plt.bar(r5, clients80, color='#EF6765', width=bar_width, label='80% Data owners')
-plt.bar(r6, clients100, color='#73C0DF', width=bar_width, label='100% Data owners')
+plt.bar(r2, clients20, color='#FFCCCC', width=bar_width, label='20% Data owners', edgecolor='white', linewidth=0.5)
+plt.bar(r3, clients40, color='#FF8888', width=bar_width, label='40% Data owners', edgecolor='white', linewidth=0.5)
+plt.bar(r4, clients60, color='#FF3333', width=bar_width, label='60% Data owners', edgecolor='white', linewidth=0.5)
+plt.bar(r5, clients80, color='#FF0000', width=bar_width, label='80% Data owners', alpha=0.8, edgecolor='white',
+        linewidth=0.5)
+plt.bar(r6, clients100, color='#CC0000', width=bar_width, label='100% Data owners', alpha=0.8, edgecolor='white',
+        linewidth=0.5)
+
+# 添加格子背景
+ax.grid(axis='y', linestyle='--', alpha=0.7)
 
 # 添加图例
 plt.legend(loc='upper right')

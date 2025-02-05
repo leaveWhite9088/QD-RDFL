@@ -1,0 +1,85 @@
+**** log-parameter_analysis 运行时间： 2025-02-05 19:44:40 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR10的比例：1.0%
+../../../data/model/initial/cifar10_cnn_initial_model 存在，加载初始化模型
+Model loaded from ../../../data/model/initial/cifar10_cnn_initial_model
+Model saved to ../../../data/model/cifar10_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.09046897791160087
+DataOwner2: noise random: 0.08858248720634693
+DataOwner3: noise random: 0.05460152144896402
+DataOwner4: noise random: 0.033605928299134794
+DataOwner5: noise random: 0.03287005617110107
+DataOwner6: noise random: 0.058483876593092204
+DataOwner7: noise random: 0.007013358928024849
+DataOwner8: noise random: 0.07729811225628606
+DataOwner9: noise random: 0.02579201559136786
+DataOwner10: noise random: 0.049240467352246735
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9923329562311228, 0.9926360122550443, 0.9971284240234362, 0.9988974565291534, 0.9989501609421799, 0.9967188253416425, 0.9999513350417203, 0.9943559569479571, 0.9993493404674638, 0.9976544158136095]
+归一化后的数据质量列表avg_f_list: [0.9, 0.9039779595036661, 0.9629460402473378, 0.9861666302140175, 0.9868584363625015, 0.9575695855976435, 1.0, 0.9265542153669254, 0.9920981275777588, 0.9698502885559365]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3394
+DataOwner1的最优x_1 = 0.0547
+DataOwner2的最优x_2 = 0.0599
+DataOwner3的最优x_3 = 0.1261
+DataOwner4的最优x_4 = 0.1478
+DataOwner5的最优x_5 = 0.1484
+DataOwner6的最优x_6 = 0.1208
+DataOwner7的最优x_7 = 0.1597
+DataOwner8的最优x_8 = 0.0873
+DataOwner9的最优x_9 = 0.1530
+DataOwner10的最优x_10 = 0.1328
+每个DataOwner应该贡献数据比例 xn_list = [0.0547193059408953, 0.05985626620258667, 0.12613539503395976, 0.14781834799649735, 0.14843090615097934, 0.12078947214129727, 0.15972037955885934, 0.08732133457717078, 0.1530103802610831, 0.13281630947408726]
+ModelOwner的最大效用 U(Eta) = 0.5789
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3394
+DataOwner1的分配到的支付 ： 0.0572
+DataOwner2的分配到的支付 ： 0.0628
+DataOwner3的分配到的支付 ： 0.1410
+DataOwner4的分配到的支付 ： 0.1692
+DataOwner5的分配到的支付 ： 0.1700
+DataOwner6的分配到的支付 ： 0.1342
+DataOwner7的分配到的支付 ： 0.1854
+DataOwner8的分配到的支付 ： 0.0939
+DataOwner9的分配到的支付 ： 0.1762
+DataOwner10的分配到的支付 ： 0.1495
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC10', 'DataOwner2': 'CPC9', 'DataOwner3': 'CPC6', 'DataOwner6': 'CPC7', 'DataOwner8': 'CPC8', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC3', 'DataOwner10': 'CPC5', 'DataOwner7': 'CPC1', 'DataOwner9': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC10
+DataOwner2 把数据交给 CPC9
+DataOwner3 把数据交给 CPC6
+DataOwner6 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC3
+DataOwner10 把数据交给 CPC5
+DataOwner7 把数据交给 CPC1
+DataOwner9 把数据交给 CPC2
+DONE
+最终Um的列表：
+[('DataOwner1', 'CPC10', 10, 882, -0.4924737534680577), ('DataOwner2', 'CPC9', 9, 724, -0.4788501296206934), ('DataOwner3', 'CPC6', 6, 101, -0.6306769751697988), ('DataOwner6', 'CPC7', 7, 194, -0.7247368328477836), ('DataOwner8', 'CPC8', 8, 211, -0.6112493420401954), ('DataOwner4', 'CPC4', 4, 1072, -0.44345504398949204), ('DataOwner5', 'CPC3', 3, 119, -0.29686181230195874), ('DataOwner10', 'CPC5', 5, 214, -0.531265237896349), ('DataOwner7', 'CPC1', 1, 1030, 0.0), ('DataOwner9', 'CPC2', 2, 123, -0.1530103802610831)]
+('DataOwner1', 'CPC10', 10, 882, -0.4924737534680577)
+('DataOwner2', 'CPC9', 9, 724, -0.4788501296206934)
+('DataOwner3', 'CPC6', 6, 101, -0.6306769751697988)
+('DataOwner6', 'CPC7', 7, 194, -0.7247368328477836)
+('DataOwner8', 'CPC8', 8, 211, -0.6112493420401954)
+('DataOwner4', 'CPC4', 4, 1072, -0.44345504398949204)
+('DataOwner5', 'CPC3', 3, 119, -0.29686181230195874)
+('DataOwner10', 'CPC5', 5, 214, -0.531265237896349)
+('DataOwner7', 'CPC1', 1, 1030, 0.0)
+('DataOwner9', 'CPC2', 2, 123, -0.1530103802610831)

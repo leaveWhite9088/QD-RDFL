@@ -1,0 +1,448 @@
+**** log-parameter_analysis 运行时间： 2025-02-05 19:38:42 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.012556197456694519
+DataOwner2: noise random: 0.07665591327777503
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9998463240250746, 0.994524153329747]
+归一化后的数据质量列表avg_f_list: [1.0, 0.9]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.09695284916255063, 0.09695284916257853]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3889
+DataOwner1的分配到的支付 ： 0.2047
+DataOwner2的分配到的支付 ： 0.1842
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+========================= 客户端数量: 3 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.06852726772001365
+DataOwner2: noise random: 0.07518593805304635
+DataOwner3: noise random: 0.03578639705195207
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9956019447334482, 0.9947347518750563, 0.9987754184952267]
+归一化后的数据质量列表avg_f_list: [0.9214616284863244, 0.9, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.9018
+DataOwner1的最优x_1 = 0.1965
+DataOwner2的最优x_2 = 0.1911
+DataOwner3的最优x_3 = 0.2112
+每个DataOwner应该贡献数据比例 xn_list = [0.1965459264758643, 0.19108024795382908, 0.21120352905866996]
+ModelOwner的最大效用 U(Eta) = 0.2167
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.9018
+DataOwner1的分配到的支付 ： 0.2894
+DataOwner2的分配到的支付 ： 0.2748
+DataOwner3的分配到的支付 ： 0.3375
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DONE
+========================= 客户端数量: 4 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.07696015825259317
+DataOwner2: noise random: 0.03466024758941053
+DataOwner3: noise random: 0.05883558770712197
+DataOwner4: noise random: 0.04810037109291038
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9944920235996689, 0.9988465060869312, 0.9967366253572117, 0.9978013590196129]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0, 0.9515469235232603, 0.9759983632871286]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.1045
+DataOwner1的最优x_1 = 0.1792
+DataOwner2的最优x_2 = 0.2243
+DataOwner3的最优x_3 = 0.2054
+DataOwner4的最优x_4 = 0.2155
+每个DataOwner应该贡献数据比例 xn_list = [0.1792244332015525, 0.2243137807752336, 0.20538824662047228, 0.21554090854654137]
+ModelOwner的最大效用 U(Eta) = 0.3531
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.1045
+DataOwner1的分配到的支付 ： 0.2251
+DataOwner2的分配到的支付 ： 0.3130
+DataOwner3的分配到的支付 ： 0.2727
+DataOwner4的分配到的支付 ： 0.2936
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DONE
+========================= 客户端数量: 5 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.023793048738874546
+DataOwner2: noise random: 0.018905199424038423
+DataOwner3: noise random: 0.0757407090727282
+DataOwner4: noise random: 0.019805835451339217
+DataOwner5: noise random: 0.09886417172614768
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9994532936284518, 0.9996530188957129, 0.9946546947427554, 0.9996197540027207, 0.9910730906428954]
+归一化后的数据质量列表avg_f_list: [0.997672180216711, 1.0, 0.9417439865966692, 0.9996122940424212, 0.9]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.2061
+DataOwner1的最优x_1 = 0.2105
+DataOwner2的最优x_2 = 0.2117
+DataOwner3的最优x_3 = 0.1775
+DataOwner4的最优x_4 = 0.2115
+DataOwner5的最优x_5 = 0.1463
+每个DataOwner应该贡献数据比例 xn_list = [0.2105438413440093, 0.21173454728044486, 0.1775136396312395, 0.2115371597785727, 0.14632551600507646]
+ModelOwner的最大效用 U(Eta) = 0.4405
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.2061
+DataOwner1的分配到的支付 ： 0.2718
+DataOwner2的分配到的支付 ： 0.2740
+DataOwner3的分配到的支付 ： 0.2163
+DataOwner4的分配到的支付 ： 0.2736
+DataOwner5的分配到的支付 ： 0.1704
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DONE
+========================= 客户端数量: 6 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.07625331162012988
+DataOwner2: noise random: 0.010669995664382072
+DataOwner3: noise random: 0.04291240197689875
+DataOwner4: noise random: 0.06772376721025565
+DataOwner5: noise random: 0.08955184714219999
+DataOwner6: noise random: 0.08850244028695274
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9946014690812096, 0.9998886523386215, 0.9982433030669682, 0.9957078845466841, 0.9926139990462317, 0.9927877173058784]
+归一化后的数据质量列表avg_f_list: [0.9273204777615596, 1.0, 0.9773824372719656, 0.9425296625983405, 0.9, 0.9023879936632646]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.2236
+DataOwner1的最优x_1 = 0.1604
+DataOwner2的最优x_2 = 0.2076
+DataOwner3的最优x_3 = 0.1946
+DataOwner4的最优x_4 = 0.1716
+DataOwner5的最优x_5 = 0.1379
+DataOwner6的最优x_6 = 0.1400
+每个DataOwner应该贡献数据比例 xn_list = [0.16036215982560845, 0.20757727992984668, 0.19459680271697713, 0.17164199525648358, 0.13790976458874007, 0.13999228168572092]
+ModelOwner的最大效用 U(Eta) = 0.4571
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.2236
+DataOwner1的分配到的支付 ： 0.1898
+DataOwner2的分配到的支付 ： 0.2649
+DataOwner3的分配到的支付 ： 0.2428
+DataOwner4的分配到的支付 ： 0.2065
+DataOwner5的分配到的支付 ： 0.1584
+DataOwner6的分配到的支付 ： 0.1612
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2', 'DataOwner3': 'CPC3', 'DataOwner4': 'CPC4', 'DataOwner5': 'CPC5', 'DataOwner6': 'CPC6'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DataOwner3 把数据交给 CPC3
+DataOwner4 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DONE
+========================= 客户端数量: 7 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.011555377453620674
+DataOwner2: noise random: 0.007332479810501203
+DataOwner3: noise random: 0.030339590418464457
+DataOwner4: noise random: 0.041026233719915706
+**** log-parameter_analysis 运行时间： 2025-02-05 19:40:29 ****
+========================= 客户端数量: 1 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.09209469857299418
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.992211706639582]
+归一化后的数据质量列表avg_f_list: [1]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+**** log-parameter_analysis 运行时间： 2025-02-05 19:41:07 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.022844798404344436
+DataOwner2: noise random: 0.0024074765610305306
+DataOwner3: noise random: 0.029927775447034278
+DataOwner4: noise random: 0.08783025311311587
+DataOwner5: noise random: 0.02122988822789791
+DataOwner6: noise random: 0.09142333932354076
+DataOwner7: noise random: 0.08752775386983697
+DataOwner8: noise random: 0.04482540618458204
+DataOwner9: noise random: 0.0925476889316273
+DataOwner10: noise random: 0.07710392737354427
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9994954065721942, 0.9999942742413492, 0.9991383827400233, 0.992895751007765, 0.999563274470462, 0.9923235413437562, 0.9929278322180016, 0.9980867884784672, 0.9921377774067963, 0.9944702157220633]
+归一化后的数据质量列表avg_f_list: [0.9936502530369381, 1.0, 0.9891059397165196, 0.909647729986157, 0.9945140973138092, 0.9023644626972026, 0.9100560698723972, 0.9757209122201528, 0.9, 0.9296880195382871]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3288
+DataOwner1的最优x_1 = 0.1607
+DataOwner2的最优x_2 = 0.1659
+DataOwner3的最优x_3 = 0.1569
+DataOwner4的最优x_4 = 0.0766
+DataOwner5的最优x_5 = 0.1614
+DataOwner6的最优x_6 = 0.0676
+DataOwner7的最优x_7 = 0.0770
+DataOwner8的最优x_8 = 0.1453
+DataOwner9的最优x_9 = 0.0647
+DataOwner10的最优x_10 = 0.0996
+每个DataOwner应该贡献数据比例 xn_list = [0.16068094414196932, 0.16585090191720187, 0.15689088555331537, 0.07655071888461752, 0.16139283608528052, 0.06764339187643874, 0.07704141628651012, 0.14527389028793752, 0.06468745567547783, 0.09959172759021628]
+ModelOwner的最大效用 U(Eta) = 0.5668
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3288
+DataOwner1的分配到的支付 ： 0.1870
+DataOwner2的分配到的支付 ： 0.1942
+DataOwner3的分配到的支付 ： 0.1818
+DataOwner4的分配到的支付 ： 0.0816
+DataOwner5的分配到的支付 ： 0.1880
+DataOwner6的分配到的支付 ： 0.0715
+DataOwner7的分配到的支付 ： 0.0821
+DataOwner8的分配到的支付 ： 0.1660
+DataOwner9的分配到的支付 ： 0.0682
+DataOwner10的分配到的支付 ： 0.1084
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC2', 'DataOwner4': 'CPC1', 'DataOwner2': 'CPC3', 'DataOwner3': 'CPC4', 'DataOwner5': 'CPC5', 'DataOwner6': 'CPC6', 'DataOwner7': 'CPC7', 'DataOwner8': 'CPC8', 'DataOwner9': 'CPC9', 'DataOwner10': 'CPC10'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC2
+DataOwner4 把数据交给 CPC1
+DataOwner2 把数据交给 CPC3
+DataOwner3 把数据交给 CPC4
+DataOwner5 把数据交给 CPC5
+DataOwner6 把数据交给 CPC6
+DataOwner7 把数据交给 CPC7
+DataOwner8 把数据交给 CPC8
+DataOwner9 把数据交给 CPC9
+DataOwner10 把数据交给 CPC10
+DONE
+最终Um的列表：
+[('DataOwner1', 'CPC2', 1, 635, 0.0), ('DataOwner4', 'CPC1', 1, 402, 1.3877787807814457e-17), ('DataOwner2', 'CPC3', 1, 436, 0.0), ('DataOwner3', 'CPC4', 1, 206, 0.0), ('DataOwner5', 'CPC5', 1, 637, 0.0), ('DataOwner6', 'CPC6', 1, 979, 0.0), ('DataOwner7', 'CPC7', 1, 304, 0.0), ('DataOwner8', 'CPC8', 1, 573, 0.0), ('DataOwner9', 'CPC9', 1, 510, 0.0), ('DataOwner10', 'CPC10', 1, 262, 0.0)]
+('DataOwner1', 'CPC2', 1, 635, 0.0)
+('DataOwner4', 'CPC1', 1, 402, 1.3877787807814457e-17)
+('DataOwner2', 'CPC3', 1, 436, 0.0)
+('DataOwner3', 'CPC4', 1, 206, 0.0)
+('DataOwner5', 'CPC5', 1, 637, 0.0)
+('DataOwner6', 'CPC6', 1, 979, 0.0)
+('DataOwner7', 'CPC7', 1, 304, 0.0)
+('DataOwner8', 'CPC8', 1, 573, 0.0)
+('DataOwner9', 'CPC9', 1, 510, 0.0)
+('DataOwner10', 'CPC10', 1, 262, 0.0)
+**** log-parameter_analysis 运行时间： 2025-02-05 19:42:10 ****
+========================= 客户端数量: 10 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始化模型中...
+初始数据占CIFAR100的比例：10.0%
+../../../data/model/initial/cifar100_cnn_initial_model 存在，加载初始化模型
+模型已从 ../../../data/model/initial/cifar100_cnn_initial_model 加载
+模型已保存至 ../../../data/model/cifar100_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.06880881138460797
+DataOwner2: noise random: 0.09869127569715082
+DataOwner3: noise random: 0.06469416417128422
+DataOwner4: noise random: 0.059192222705488684
+DataOwner5: noise random: 0.06883927935350546
+DataOwner6: noise random: 0.004458116449317651
+DataOwner7: noise random: 0.08259323816920962
+DataOwner8: noise random: 0.05425052930525359
+DataOwner9: noise random: 0.024183805199942832
+DataOwner10: noise random: 0.057599787133614626
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9955680378788268, 0.9911038511172365, 0.9960718958473044, 0.9966974817133181, 0.9955602336609897, 0.9999804535664254, 0.9936798805594892, 0.9972132285402932, 0.9994347894133261, 0.996873108387644]
+归一化后的数据质量列表avg_f_list: [0.9502916153691006, 0.9, 0.955967863363328, 0.963015445696711, 0.9502036963946758, 1.0, 0.9290204439930512, 0.9688256284769731, 0.9938527814417422, 0.964993980562176]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 1.3387
+DataOwner1的最优x_1 = 0.1138
+DataOwner2的最优x_2 = 0.0553
+DataOwner3的最优x_3 = 0.1196
+DataOwner4的最优x_4 = 0.1266
+DataOwner5的最优x_5 = 0.1137
+DataOwner6的最优x_6 = 0.1601
+DataOwner7的最优x_7 = 0.0907
+DataOwner8的最优x_8 = 0.1323
+DataOwner9的最优x_9 = 0.1549
+DataOwner10的最优x_10 = 0.1286
+每个DataOwner应该贡献数据比例 xn_list = [0.1138178507790699, 0.055315768483215566, 0.11963070528292627, 0.12664687539815248, 0.11372665638953064, 0.16008922494507308, 0.0906771495860174, 0.1322685680366181, 0.15490106709878337, 0.12857748761253135]
+ModelOwner的最大效用 U(Eta) = 0.5782
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：1.3387
+DataOwner1的分配到的支付 ： 0.1256
+DataOwner2的分配到的支付 ： 0.0578
+DataOwner3的分配到的支付 ： 0.1328
+DataOwner4的分配到的支付 ： 0.1416
+DataOwner5的分配到的支付 ： 0.1255
+DataOwner6的分配到的支付 ： 0.1859
+DataOwner7的分配到的支付 ： 0.0978
+DataOwner8的分配到的支付 ： 0.1488
+DataOwner9的分配到的支付 ： 0.1788
+DataOwner10的分配到的支付 ： 0.1441
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+Matching结果: {'DataOwner1': 'CPC7', 'DataOwner2': 'CPC10', 'DataOwner5': 'CPC8', 'DataOwner7': 'CPC9', 'DataOwner3': 'CPC6', 'DataOwner4': 'CPC5', 'DataOwner6': 'CPC1', 'DataOwner8': 'CPC3', 'DataOwner10': 'CPC4', 'DataOwner9': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC7
+DataOwner2 把数据交给 CPC10
+DataOwner5 把数据交给 CPC8
+DataOwner7 把数据交给 CPC9
+DataOwner3 把数据交给 CPC6
+DataOwner4 把数据交给 CPC5
+DataOwner6 把数据交给 CPC1
+DataOwner8 把数据交给 CPC3
+DataOwner10 把数据交给 CPC4
+DataOwner9 把数据交给 CPC2
+DONE
+最终Um的列表：
+[('DataOwner1', 'CPC7', 7, 1035, -0.6829071046744194), ('DataOwner2', 'CPC10', 10, 62, -0.4978419163489401), ('DataOwner5', 'CPC8', 8, 129, -0.7960865947267145), ('DataOwner7', 'CPC9', 9, 515, -0.7254171966881392), ('DataOwner3', 'CPC6', 6, 135, -0.5981535264146313), ('DataOwner4', 'CPC5', 5, 1007, -0.5065875015926099), ('DataOwner6', 'CPC1', 1, 909, 0.0), ('DataOwner8', 'CPC3', 3, 450, -0.26453713607323615), ('DataOwner10', 'CPC4', 4, 584, -0.38573246283759405), ('DataOwner9', 'CPC2', 2, 1584, -0.15490106709878337)]
+('DataOwner1', 'CPC7', 7, 1035, -0.6829071046744194)
+('DataOwner2', 'CPC10', 10, 62, -0.4978419163489401)
+('DataOwner5', 'CPC8', 8, 129, -0.7960865947267145)
+('DataOwner7', 'CPC9', 9, 515, -0.7254171966881392)
+('DataOwner3', 'CPC6', 6, 135, -0.5981535264146313)
+('DataOwner4', 'CPC5', 5, 1007, -0.5065875015926099)
+('DataOwner6', 'CPC1', 1, 909, 0.0)
+('DataOwner8', 'CPC3', 3, 450, -0.26453713607323615)
+('DataOwner10', 'CPC4', 4, 584, -0.38573246283759405)
+('DataOwner9', 'CPC2', 2, 1584, -0.15490106709878337)

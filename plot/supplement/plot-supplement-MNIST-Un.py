@@ -23,10 +23,16 @@ r1 = np.arange(len(years))
 r2 = [x + bar_width for x in r1]
 r3 = [x + bar_width for x in r2]
 
+# 创建图形和轴
+fig, ax = plt.subplots()
+
 # 绘制柱状图
-plt.bar(r1, user0, color='#5470C6', width=bar_width, label='User 0')
-plt.bar(r2, user1, color='#91CC75', width=bar_width, label='User 1')
-plt.bar(r3, user2, color='#FAC858', width=bar_width, label='User 2')
+plt.bar(r1, user0, color='#0066FF', width=bar_width, label='User 0', edgecolor='white', linewidth=0.5)
+plt.bar(r2, user1, color='#5599FF', width=bar_width, label='User 1', edgecolor='white', linewidth=0.5)
+plt.bar(r3, user2, color='#99BBFF', width=bar_width, label='User 2', edgecolor='white', linewidth=0.5)
+
+# 添加格子背景
+ax.grid(axis='y', linestyle='--', alpha=0.7)
 
 # 添加图例
 plt.legend()
@@ -37,6 +43,9 @@ plt.ylabel(r'$U_n$')
 
 # 设置x轴刻度
 plt.xticks([r + bar_width for r in range(len(years))], years)
+
+# 强制显示完全
+plt.tight_layout()
 
 # 显示图表
 plt.show()
