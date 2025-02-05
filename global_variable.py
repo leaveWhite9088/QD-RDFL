@@ -4,9 +4,9 @@
 
 # 可选：log-parameter_analysis,log-comparison,log-ablation,log-supplement
 
-global_minst_parent_path = "log-supplement"
-global_cifar10_parent_path = "log-supplement"
-global_cifar100_parent_path = "log-supplement"
+global_minst_parent_path = "log-parameter_analysis"
+global_cifar10_parent_path = "log-parameter_analysis"
+global_cifar100_parent_path = "log-parameter_analysis"
 
 """================================= 超参数 ================================="""
 
