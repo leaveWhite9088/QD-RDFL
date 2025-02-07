@@ -220,7 +220,6 @@ def match_data_owners_to_cpc(xn_list, cpcs):
 
     # 调用Gale-Shapley算法
     matching = GaleShapley.gale_shapley(proposals, preferences)
-
     UtilsMNIST.print_and_log(global_minst_parent_path, matching)
     return matching
 
@@ -331,87 +330,66 @@ if __name__ == "__main__":
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  f"========================= 客户端数量: {n + 1} =========================")
 
+        alpha_U_Eta_list = []
+        alpha_U_qn_list = []
+
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  "---------------------------------- 定义参数值 ----------------------------------")
         Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Lambda=Lambda, Rho=Rho, Alpha=Alpha,
                                                                       Epsilon=Epsilon, M=n + 1, N=n + 1,
-                                                                      SigmaM=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+                                                                      SigmaM=[1] * (n + 1))
         UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  "---------------------------------- 准备工作 ----------------------------------")
         dataowners, modelowner, cpcs, test_images, test_labels = ready_for_task()
-        for cpc in cpcs:
-            print(cpc.SigmaM)
         UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-        literation = 0  # 迭代次数
-        adjustment_literation = adjustment_literation  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
+        UtilsMNIST.print_and_log(global_minst_parent_path,
+                                 f"----- 为 DataOwner 的数据添加噪声 -----")
+        dataowner_add_noise(dataowners, 0.1)
+        UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
         avg_f_list = []
-        last_xn_list = [0] * N
-
-        # DataOwner自己报数据质量的机会只有一次
-        if literation == 0:
-            UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
-            dataowner_add_noise(dataowners, 0.1)
-            UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
-
-            UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
-            avg_f_list = evaluate_data_quality(dataowners)
-            UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
         UtilsMNIST.print_and_log(global_minst_parent_path,
-                                 f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
-        xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
-        last_xn_list = xn_list
-
-        UtilsMNIST.print_and_log(global_minst_parent_path,
-                                 f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
-        compute_contribution_rates(xn_list, avg_f_list, best_Eta)
+                                 f"----- 计算 DataOwner 的数据质量 -----")
+        avg_f_list = evaluate_data_quality(dataowners)
         UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-        # 一旦匹配成功，就无法改变
-        if literation == 0:
+        # 这里写循环，改变Alpha
+        for alpha in np.arange(0, 10.1, 0.1):
+
             UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-            matching = match_data_owners_to_cpc(xn_list, cpcs)
+                                     "---------------------------------- 定义参数值 ----------------------------------")
+            Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Lambda=Lambda, Rho=Rho, Alpha=alpha,
+                                                                          Epsilon=Epsilon, M=n + 1, N=n + 1,
+                                                                          SigmaM=[1] * (n + 1))
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-        UtilsMNIST.print_and_log(global_minst_parent_path,
-                                 f"----- literation {literation + 1}: DataOwner 向 CPC 提交数据 -----")
-        submit_data_to_cpc(matching, dataowners, cpcs, xn_list)
-        UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+            literation = 0  # 迭代次数
+            adjustment_literation = adjustment_literation  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
+            last_xn_list = [0] * N
+            while True:
+                UtilsMNIST.print_and_log(global_minst_parent_path,
+                                         f"========================= literation: {literation + 1} =========================")
 
-        # 改变：从Eta复制过来，加了下面的这段代码，，修改了range，SigmaM，删除了while,训练代码和提前终止
+                UtilsMNIST.print_and_log(global_minst_parent_path,
+                                         f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
+                xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
+                last_xn_list = xn_list
 
-        new_Um_list = []
+                # 修改这里：修改Alpha，记录UEta Uqn
+                alpha_U_Eta_list.append(U_Eta)
+                alpha_U_qn_list.append(U_qn)
 
-        # 这里对matching进行处理，获取需要的Um，data，Sigma
-        for key_do, val_cpc in matching.items():
-            do_number = int(re.findall(r'\d+', key_do)[-1])
-            cpc_number = int(re.findall(r'\d+', val_cpc)[-1])
+                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-            # 获取 cpc
-            temp_cpc = cpcs[cpc_number - 1]
+                # 提前中止
+                if literation > adjustment_literation:
+                    break
 
-            # 计算 Um
-            sumdm = sum(xn_list)
-            sumxn = sum(xn_list)
-            Um = temp_cpc.cal_cpc_utility(Rho, sumdm, sumxn, xn_list[do_number - 1])
-
-            # 同时要记录数据量
-            data_volume = len(temp_cpc.imgData)
-
-            temp_tuple = (key_do, val_cpc, SigmaM[cpc_number - 1], data_volume, Um)
-
-            new_Um_list.append(temp_tuple)
-
-        if literation > adjustment_literation + 1:
-            break
-
-    UtilsMNIST.print_and_log(global_minst_parent_path, "最终Um的列表：")
-    UtilsMNIST.print_and_log(global_minst_parent_path, new_Um_list)
-    for temp_print_item in new_Um_list:
-        UtilsMNIST.print_and_log(global_minst_parent_path, temp_print_item)
+    UtilsMNIST.print_and_log(global_minst_parent_path, "最终的列表 alpha_U_Eta_list：")
+    UtilsMNIST.print_and_log(global_minst_parent_path, alpha_U_Eta_list)
+    UtilsMNIST.print_and_log(global_minst_parent_path, "最终的列表 alpha_U_qn_list：")
+    UtilsMNIST.print_and_log(global_minst_parent_path, alpha_U_qn_list)
