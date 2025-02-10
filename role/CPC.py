@@ -10,6 +10,7 @@ class CPC:
         self.SigmaM = SigmaM
         self.imgData = None
         self.labelData = None
+        self.bestDm = 0.5
 
     # 效用函数
     def cal_cpc_utility(self, Rho, sumdm, sumxn, dm):

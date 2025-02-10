@@ -221,7 +221,7 @@ def compute_contribution_rates(xn_list, avg_f_list, best_Eta):
 
 
 # 匹配DataOwner和CPC
-def match_data_owners_to_cpc(xn_list, cpcs):
+def match_data_owners_to_cpc(xn_list, cpcs, dataowners):
     """
     匹配DataOwner和CPC
     :param xn_list: DataOwner的贡献比例列表
@@ -230,7 +230,7 @@ def match_data_owners_to_cpc(xn_list, cpcs):
     :param SigmaM: CPC的计算能力列表
     :return: matching
     """
-    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho)
+    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho, dataowners)
     proposals = GaleShapley.make_proposals(SigmaM, N)
 
     # 调用Gale-Shapley算法
@@ -409,41 +409,22 @@ if __name__ == "__main__":
         xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
         last_xn_list = xn_list
 
-        # 只有在调整轮次之后的轮次才记录(这里是第三轮)
-        if literation == adjustment_literation + 1:
-            new_U_Eta_list = []
-            UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "Eta开始变化：")
-            # 在这里要遍历Eta的值，形成一个列表
-            last_new_U_Eta = 0
-            for eta in np.arange(0.01, 3.01, 0.01):
-                new_Eta = eta
-                UtilsCIFAR100.print_and_log(global_cifar100_parent_path, f"eta:{eta}")
-                new_x_opt = Stackelberg._solve_followers(new_Eta, np.array(avg_f_list), Lambda, Rho)
-                # 处理求效用失败的情况(new_x_opt == None)，new_U_Eta应该和上一轮一样，如果上一轮没有，就置0
-                if new_x_opt is None:
-                    new_U_Eta_list.append(last_new_U_Eta)
-                    continue
-                new_xn_list = []
-                for i, xi in enumerate(new_x_opt):
-                    UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
-                                                f"new: DataOwner{i + 1}的最优x_{i + 1} = {xi:.4f}")
-                    new_xn_list.append(xi)
-                new_U_Eta = Stackelberg._leader_utility(new_Eta, Alpha, avg_f_list, new_xn_list)
-                new_U_Eta_list.append(new_U_Eta)
-                last_new_U_Eta = new_U_Eta
-
-        UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
-
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                     f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
         compute_contribution_rates(xn_list, avg_f_list, best_Eta)
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
+        # 数据量列表
+        data_volume_list = []
+        for do in dataowners:
+            data_volume_list.append(len(do.imgData))
+        data_volume_list = [x * y for x, y in zip(data_volume_list, xn_list)]
+
         # 一旦匹配成功，就无法改变
         if literation == 0:
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                         f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-            matching = match_data_owners_to_cpc(xn_list, cpcs)  # 确保传递正确的参数
+            matching = match_data_owners_to_cpc(xn_list, cpcs,dataowners)  # 确保传递正确的参数
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
@@ -452,6 +433,20 @@ if __name__ == "__main__":
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
         new_Um_list = []
+
+        sumdm = sum(xn_list)
+        sumxn = sum(xn_list)
+
+        # 这里再次计算dm*并归一化
+        bestDm_list = GaleShapley.nash_equilibrium(cpcs, Rho, sumxn, xn_list)
+
+        min_value = min(bestDm_list)
+        max_value = max(bestDm_list)
+        minVal = min(data_volume_list)
+        maxVal = max(data_volume_list)
+
+        normalized_lst = [minVal + (x - min_value) * (maxVal - minVal) / (max_value - min_value) for x in
+                          bestDm_list]
 
         # 这里对matching进行处理，获取需要的Um，data，Sigma
         for key_do, val_cpc in matching.items():
@@ -469,7 +464,9 @@ if __name__ == "__main__":
             # 同时要记录数据量
             data_volume = len(temp_cpc.imgData)
 
-            temp_tuple = (key_do, val_cpc, SigmaM[cpc_number - 1], data_volume, Um)
+            # DO，CPC，SigmaM，xm，Um
+            # TODO DO，CPC，SigmaM，dm，xm，Um
+            temp_tuple = (key_do, val_cpc, SigmaM[cpc_number - 1], normalized_lst[cpc_number - 1], data_volume, Um)
 
             new_Um_list.append(temp_tuple)
 

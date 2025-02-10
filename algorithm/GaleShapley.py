@@ -1,3 +1,7 @@
+import numpy as np
+from scipy.optimize import minimize
+
+
 class GaleShapley:
 
     # Gale - Shapley 婚姻匹配算法。
@@ -72,7 +76,7 @@ class GaleShapley:
 
     # 根据 DataOwner 对每个 CPC 的效用，生成 CPC 对每个 DataOwner 的优先顺序。
     @staticmethod
-    def make_preferences(xn_array, CPCs, Rho):
+    def make_preferences(xn_array, CPCs, Rho, dataowners):
         """
         根据 DataOwner 对每个 CPC 的效用，生成 CPC 对每个 DataOwner 的优先顺序。
         :param xn_array: 一个长度为 N 的数组，每个元素代表一个 DataOwner 对所有 CPC 的数据量。
@@ -87,18 +91,80 @@ class GaleShapley:
         sumdm = sum(xn_array)
         sumxn = sum(xn_array)
 
-        # 对每个 CPC，计算其对所有 DataOwner 的效用
-        for cpc in CPCs:
-            utility_list = []
-            for i in range(N):
-                # 每个 DataOwner 提供的具体数据量为 xn_array[i]
-                dm = xn_array[i]
-                # 计算该 DataOwner 对当前 CPC 的效用
-                utility = cpc.cal_cpc_utility(Rho, sumdm, sumxn, dm)
-                utility_list.append((f"DataOwner{i + 1}", utility))
+        # TODO 这里需要修改获取 CPC 偏好列表的方式：先算出 dm*，再取得最近的 do
+        bestDm_list = GaleShapley.nash_equilibrium(CPCs, Rho, sumxn, xn_array)
 
-            # 按照效用值降序排列 DataOwner
-            sorted_dataowners = [item[0] for item in sorted(utility_list, key=lambda x: x[1], reverse=True)]
-            preferences[f"CPC{CPCs.index(cpc) + 1}"] = sorted_dataowners
+        # data_volume_list 是数据量列表
+        data_volume_list = []
+        for do in dataowners:
+            data_volume_list.append(len(do.imgData))
+        data_volume_list = [x * y for x, y in zip(data_volume_list, xn_array)]
+
+        # 对 bestDm_list 归一化，然后根据这个值确定偏好
+        min_value = min(bestDm_list)
+        max_value = max(bestDm_list)
+        minVal = min(data_volume_list)
+        maxVal = max(data_volume_list)
+
+        # normalized_arr 是最优数据量列表
+        normalized_lst = [minVal + (x - min_value) * (maxVal - minVal) / (max_value - min_value) for x in bestDm_list]
+
+        print(f"normalized_lst:{normalized_lst}")
+
+        # 对每个 CPC，计算 diff_list
+        for index in range(len(CPCs)):
+
+            diff_list = [x - normalized_lst[index] for x in data_volume_list]
+
+            diff_list = [abs(x) for x in diff_list]
+
+            # 使用enumerate获取索引和值，然后根据值排序
+            sorted_indices = [index for value, index in sorted((value, index) for index, value in enumerate(diff_list))]
+
+            sorted_dataowners = []
+            for index2 in sorted_indices:
+                sorted_dataowners.append((f"DataOwner{index2 + 1}"))
+
+            # 形成 preferences
+            preferences[f"CPC{index + 1}"] = sorted_dataowners
 
         return preferences
+
+    @staticmethod
+    def update_bestDm(cpc, Rho, sumdm, sumxn, xn_array, learning_rate=0.01):
+        # 使用梯度下降法来优化dm
+        dm = cpc.bestDm  # 初始的dm值
+        for _ in range(100):  # 最大迭代次数
+            utility_current = cpc.cal_cpc_utility(Rho, sumdm, sumxn, dm)
+            # 计算效用对dm的梯度
+            gradient = (cpc.cal_cpc_utility(Rho, sumdm, sumxn, dm + 0.001) - utility_current) / 0.001
+            # 更新dm值
+            dm = dm + learning_rate * gradient
+            # # 确保dm值在[0,1]之间
+            # dm = np.clip(dm, min(xn_array), max(xn_array))
+        cpc.bestDm = dm
+
+    @staticmethod
+    def nash_equilibrium(cpcs, Rho, sumxn, xn_array):
+        iteration = 0
+        converged = False
+        while not converged:
+            iteration += 1
+            sumdm = sum(cpc.bestDm for cpc in cpcs)  # 计算所有CPC的bestDm之和
+            prev_bestDm_values = [cpc.bestDm for cpc in cpcs]
+
+            # 每个CPC计算自己通过调整bestDm得到的最优效用
+            for cpc in cpcs:
+                GaleShapley.update_bestDm(cpc, Rho, sumdm, sumxn, xn_array)
+
+            # 检查是否收敛：如果所有CPC的bestDm值都没有变化，则认为收敛
+            converged = all(prev == cpc.bestDm for prev, cpc in zip(prev_bestDm_values, cpcs))
+
+            # 防止无限循环，可以设置一个最大迭代次数
+            if iteration > 100:
+                converged = True
+                print("最大迭代次数已达到，退出")
+
+        return_list = [cpc.bestDm for cpc in cpcs]
+
+        return return_list  # 返回每个CPC的最优bestDm值

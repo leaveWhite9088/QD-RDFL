@@ -223,7 +223,7 @@ def compute_contribution_rates(xn_list, avg_f_list, best_Eta):
 
 
 # 匹配DataOwner和CPC
-def match_data_owners_to_cpc(xn_list, cpcs):
+def match_data_owners_to_cpc(xn_list, cpcs, dataowners):
     """
     匹配DataOwner和CPC
     :param xn_list: DataOwner的贡献比例列表
@@ -232,7 +232,7 @@ def match_data_owners_to_cpc(xn_list, cpcs):
     :param SigmaM: CPC的计算能力列表
     :return: matching
     """
-    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho)
+    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho, dataowners)
     proposals = GaleShapley.make_proposals(SigmaM, N)
 
     # 调用Gale-Shapley算法
@@ -440,7 +440,7 @@ if __name__ == "__main__":
             if literation == 0:
                 UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                             f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                matching = match_data_owners_to_cpc(xn_list, cpcs)  # 确保传递正确的参数
+                matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)  # 确保传递正确的参数
                 UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
@@ -515,7 +515,7 @@ if __name__ == "__main__":
             if literation == 0:
                 UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                             f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                matching = match_data_owners_to_cpc(xn_list, cpcs)  # 确保传递正确的参数
+                matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)  # 确保传递正确的参数
                 UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
@@ -603,7 +603,7 @@ if __name__ == "__main__":
             if literation == 0:
                 UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                             f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                matching = match_data_owners_to_cpc(xn_list, cpcs)  # 确保传递正确的参数
+                matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)  # 确保传递正确的参数
                 UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
