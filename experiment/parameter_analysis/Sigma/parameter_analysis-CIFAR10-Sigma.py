@@ -223,14 +223,14 @@ def compute_contribution_rates(xn_list, avg_f_list, best_Eta):
 
 
 # 匹配DataOwner和CPC
-def match_data_owners_to_cpc(xn_list, cpcs):
+def match_data_owners_to_cpc(xn_list, cpcs, dataowners):
     """
     匹配DataOwner和CPC
     :param xn_list: DataOwner的贡献比例列表
     :param cpcs: CPC对象列表
     :return: matching
     """
-    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho)
+    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho, dataowners)
     proposals = GaleShapley.make_proposals(SigmaM, N)
 
     # 调用Gale-Shapley算法
@@ -376,7 +376,8 @@ if __name__ == "__main__":
                                    "---------------------------------- 定义参数值 ----------------------------------")
         Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Lambda=Lambda, Rho=Rho, Alpha=Alpha,
                                                                       Epsilon=Epsilon, M=n + 1, N=n + 1,
-                                                                      SigmaM=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+                                                                      SigmaM=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8,
+                                                                              0.9, 1.0])
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
@@ -441,11 +442,17 @@ if __name__ == "__main__":
         compute_contribution_rates(xn_list, avg_f_list, best_Eta)
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
+        # 数据量列表
+        data_volume_list = []
+        for do in dataowners:
+            data_volume_list.append(len(do.imgData))
+        data_volume_list = [x * y for x, y in zip(data_volume_list, xn_list)]
+
         # 一旦匹配成功，就无法改变
         if literation == 0:
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
                                        f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-            matching = match_data_owners_to_cpc(xn_list, cpcs)
+            matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
@@ -454,6 +461,20 @@ if __name__ == "__main__":
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
         new_Um_list = []
+
+        sumdm = sum(xn_list)
+        sumxn = sum(xn_list)
+
+        # 这里再次计算dm*并归一化
+        bestDm_list = GaleShapley.nash_equilibrium(cpcs, Rho, sumxn, xn_list)
+
+        min_value = min(bestDm_list)
+        max_value = max(bestDm_list)
+        minVal = min(data_volume_list)
+        maxVal = max(data_volume_list)
+
+        normalized_lst = [minVal + (x - min_value) * (maxVal - minVal) / (max_value - min_value) for x in
+                          bestDm_list]
 
         # 这里对matching进行处理，获取需要的Um，data，Sigma
         for key_do, val_cpc in matching.items():
@@ -471,7 +492,9 @@ if __name__ == "__main__":
             # 同时要记录数据量
             data_volume = len(temp_cpc.imgData)
 
-            temp_tuple = (key_do, val_cpc, SigmaM[cpc_number - 1], data_volume, Um)
+            # DO，CPC，SigmaM，xm，Um
+            # TODO DO，CPC，SigmaM，dm，xm，Um
+            temp_tuple = (key_do, val_cpc, SigmaM[cpc_number - 1], normalized_lst[cpc_number - 1], data_volume, Um)
 
             new_Um_list.append(temp_tuple)
 

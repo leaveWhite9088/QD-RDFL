@@ -229,14 +229,14 @@ def compute_contribution_rates(xn_list, avg_f_list, best_Eta):
 
 
 # 匹配DataOwner和CPC
-def match_data_owners_to_cpc(xn_list, cpcs):
+def match_data_owners_to_cpc(xn_list, cpcs, dataowners):
     """
     匹配DataOwner和CPC
     :param xn_list: DataOwner的贡献比例列表
     :param cpcs: CPC对象列表
     :return: matching
     """
-    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho)
+    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho, dataowners)
     proposals = GaleShapley.make_proposals(SigmaM, N)
 
     # 调用Gale-Shapley算法
@@ -360,7 +360,7 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         model = CIFAR10CNN(num_classes=10).to(device)
 
         tempmodel, accuracy = fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
-                        lr=1e-5, model_path="../../../data/model/cifar10_cnn_model")
+                                              lr=1e-5, model_path="../../../data/model/cifar10_cnn_model")
 
     return UtilsCIFAR10.normalize_list(avg_f_list), accuracy
 
@@ -424,7 +424,7 @@ if __name__ == "__main__":
             if literation == 0:
                 UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
                                            f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                matching = match_data_owners_to_cpc(xn_list, cpcs)
+                matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)
                 UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
@@ -433,8 +433,9 @@ if __name__ == "__main__":
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
-            avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_data, test_labels, literation, avg_f_list,
-                                              adjustment_literation, N)
+            avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_data, test_labels, literation,
+                                                            avg_f_list,
+                                                            adjustment_literation, N)
             accuracy_list.append(new_accuracy)
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 

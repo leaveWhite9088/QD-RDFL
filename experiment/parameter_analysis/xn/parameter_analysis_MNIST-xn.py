@@ -207,7 +207,7 @@ def compute_contribution_rates(xn_list, avg_f_list, best_Eta):
 
 
 # 匹配DataOwner和CPC
-def match_data_owners_to_cpc(xn_list, cpcs):
+def match_data_owners_to_cpc(xn_list, cpcs, dataowners):
     """
     匹配DataOwner和CPC
     :param xn_list:
@@ -216,7 +216,7 @@ def match_data_owners_to_cpc(xn_list, cpcs):
     """
     proposals = GaleShapley.make_proposals(SigmaM, N)
 
-    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho)
+    preferences = GaleShapley.make_preferences(xn_list, cpcs, Rho, dataowners)
 
     # 调用Gale-Shapley算法
     matching = GaleShapley.gale_shapley(proposals, preferences)
@@ -404,7 +404,7 @@ if __name__ == "__main__":
             if literation == 0:
                 UtilsMNIST.print_and_log(global_minst_parent_path,
                                          f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                matching = match_data_owners_to_cpc(xn_list, cpcs)
+                matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)
                 UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             UtilsMNIST.print_and_log(global_minst_parent_path,
