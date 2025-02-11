@@ -42,15 +42,15 @@ accurancy_list3 = accuracy_dict[0.5]
 
 x = np.arange(1, len(accurancy_list) + 1)  # 轮数
 
-plt.figure(figsize=(8, 6))
+# plt.figure(figsize=(8, 6))
 
-plt.plot(x[0:80], accurancy_list[0:80], label=r'20% data owners with -60% $f_n$', marker='o', markersize=2)
-plt.plot(x[0:80], accurancy_list2[0:80], label=r'100% data owners with $f_n$', marker='o', markersize=2)
-plt.plot(x[0:80], accurancy_list3[0:80], label=r'20% data owners with +60% $f_n$', marker='o', markersize=2)
+plt.plot(x[0:80], accurancy_list[0:80], label=r'20% Data owners with -60% $f_n$', marker='o', markersize=2)
+plt.plot(x[0:80], accurancy_list2[0:80], label=r'100% Data owners with $f_n$', marker='o', markersize=2)
+plt.plot(x[0:80], accurancy_list3[0:80], label=r'20% Data owners with +60% $f_n$', marker='o', markersize=2)
 
 plt.legend()
-plt.xlabel('Round')
-plt.ylabel('Accurancy')
+plt.xlabel(r'$Round$')
+plt.ylabel(r'$Accurancy$')
 
 # 显示网格
 plt.grid(True)

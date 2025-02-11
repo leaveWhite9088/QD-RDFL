@@ -27,9 +27,9 @@ r3 = [x + bar_width for x in r2]
 fig, ax = plt.subplots()
 
 # 绘制柱状图
-plt.bar(r1, user0, color='#0066FF', width=bar_width, label='User 0', edgecolor='white', linewidth=0.5)
-plt.bar(r2, user1, color='#5599FF', width=bar_width, label='User 1', edgecolor='white', linewidth=0.5)
-plt.bar(r3, user2, color='#99BBFF', width=bar_width, label='User 2', edgecolor='white', linewidth=0.5)
+plt.bar(r1, user0, color='#0066FF', width=bar_width, label='Data owner 0', edgecolor='white', linewidth=0.5)
+plt.bar(r2, user1, color='#5599FF', width=bar_width, label='Data owner 1', edgecolor='white', linewidth=0.5)
+plt.bar(r3, user2, color='#99BBFF', width=bar_width, label='Data owner 2', edgecolor='white', linewidth=0.5)
 
 # 添加格子背景
 ax.grid(axis='y', linestyle='--', alpha=0.7)

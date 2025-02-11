@@ -2,7 +2,17 @@
 
 Quality-aware Dynamic Resources-decoupled FL 
 
-## 目录结构
+## Requirements
+```
+torch==2.3.0
+torchvision==0.18.1a0
+scikit-learn==1.3.0
+pandas==2.0.3
+numpy==1.24.3
+matplotlib==3.7.2
+```
+
+## Code Structures
 ```
 .
 │  .gitignore
@@ -105,35 +115,26 @@ Quality-aware Dynamic Resources-decoupled FL
 │  │          mnist_cnn_initial_model
 │  │
 │  └─saved
-│      ├─参数分析
-│      │  │  parameter_analysis-Alpha.txt
-│      │  │  parameter_analysis-Eta.txt
-│      │  │  parameter_analysis-SigmaM.txt
-│      │  │  parameter_analysis-xn.txt
-│      │  │
-│      │  └─参数分析 步长0.01
-│      │          parameter_analysis-Eta.txt
-│      │          parameter_analysis-xn.txt
+│      ├─parameter_analysis
+│      │       parameter_analysis-Alpha.txt
+│      │       parameter_analysis-Eta.txt
+│      │       parameter_analysis-SigmaM.txt
+│      │       parameter_analysis-xn.txt
 │      │
-│      ├─对比实验
-│      │  │  comparison-FIX.txt
-│      │  │  comparison-MIX.txt
-│      │  │  comparison-RANDOM.txt
-│      │  │  comparison.txt
-│      │  │
-│      │  └─动态调整+第三轮
-│      │          comparison-FIX.txt
-│      │          comparison-RANDOM.txt
-│      │          comparison.txt
+│      ├─comparison
+│      │       comparison-FIX.txt
+│      │       comparison-MIX.txt
+│      │       comparison-RANDOM.txt
+│      │       comparison.txt
 │      │
-│      └─消融实验
+│      └─ablation
 │              ablation-adjust.txt
 │              ablation-noneadjust.txt
 │
 ├─dataset
 │  │  CIFAR100Dataset.py
 │  │  CIFAR10Dataset.py
-│  │  MNISTDataset.py
+│  └─ MNISTDataset.py
 │
 ├─experiment
 │  ├─ablation
@@ -175,8 +176,6 @@ Quality-aware Dynamic Resources-decoupled FL
 │  │  │      parameter_analysis-MNIST-Alpha.py
 │  │  │
 │  │  ├─Eta
-│  │  │      parameter_analysis-CIFAR10-Eta.py
-│  │  │      parameter_analysis-CIFAR100-Eta.py
 │  │  │      parameter_analysis-MNIST-Eta.py
 │  │  │
 │  │  ├─Sigma
@@ -185,8 +184,6 @@ Quality-aware Dynamic Resources-decoupled FL
 │  │  │      parameter_analysis-MNIST-Sigma.py
 │  │  │
 │  │  └─xn
-│  │          parameter_analysis-CIFAR10-xn.py
-│  │          parameter_analysis-CIFAR100-xn.py
 │  │          parameter_analysis_MNIST-xn.py
 │  │
 │  └─supplement
@@ -205,7 +202,7 @@ Quality-aware Dynamic Resources-decoupled FL
 ├─model
 │  │  CIFAR100CNN.py
 │  │  CIFAR10CNN.py
-│  │  MNISTCNN.py
+│  └─ MNISTCNN.py
 │
 ├─plot
 │  ├─ablation
@@ -236,20 +233,100 @@ Quality-aware Dynamic Resources-decoupled FL
 ├─role
 │  │  CPC.py
 │  │  DataOwner.py
-│  │  ModelOwner.py
+│  └─ ModelOwner.py
 │
-├─utils
-│  │  UtilsCIFAR10.py
-│  │  UtilsCIFAR100.py
-│  │  UtilsMNIST.py
+└─utils
+   │  UtilsCIFAR10.py
+   │  UtilsCIFAR100.py
+   └─ UtilsMNIST.py
 ```
 
-## 数据集
-### 获取
-- MNIST：https://pan.baidu.com/s/1jAPlVKLYamJn6I63GD6HDg?pwd=azq2 
-- CIFAR10：https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
-- CIFAR100：https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz
-### 使用
-- MNIST：解压后，把全部内容放置于data/dataset/MNIST目录下
-- CIFAR10：解压后，把全部内容放置于data/dataset/CIFAR10目录下
-- CIFAR100：解压后，把全部内容放置于data/dataset/CIFAR100目录下
+## Run Code
+
+### ablation
+- Ablation studies are time-consuming due to the need for training, with each experiment taking approximately 30 minutes.
+
+#### adjust
+```shell
+python -m experiment.ablation.adjust.ablation-MNIST-adjust --adjustment_literation 2 
+```
+```shell
+python -m experiment.ablation.adjust.ablation-CIFAR10-adjust --adjustment_literation 2 
+```
+```shell
+python -m experiment.ablation.adjust.ablation-CIFAR100-adjust --adjustment_literation 2 
+```
+#### noneadjust
+```shell
+python -m experiment.ablation.noneadjust.ablation-MNIST-noneadjust --adjustment_literation 2 
+```
+```shell
+python -m experiment.ablation.noneadjust.ablation-CIFAR10-noneadjust --adjustment_literation 2 
+```
+```shell
+python -m experiment.ablation.noneadjust.ablation-CIFAR100-noneadjust --adjustment_literation 2 
+```
+
+### comparison
+
+### parameter_analysis
+- The experimental run speed of parameter analysis is very fast, and it can be completed within 30 seconds.
+
+#### Alpha
+- Investigate the changes in Us and the average Un under different values of Alpha.
+```shell
+python -m experiment.parameter_analysis.Alpha.parameter_analysis-MNIST-Alpha --adjustment_literation -1
+```
+```shell
+python -m experiment.parameter_analysis.Alpha.parameter_analysis-CIFAR10-Alpha --adjustment_literation -1
+```
+```shell
+python -m experiment.parameter_analysis.Alpha.parameter_analysis-CIFAR100-Alpha --adjustment_literation -1
+```
+
+#### Eta
+- Investigate the changes in Us under different values of Eta.
+```shell
+python -m experiment.parameter_analysis.Eta.parameter_analysis-MNIST-Eta --adjustment_literation -1
+```
+
+#### Sigma
+- Verify the impact of changes in SigmaM on the matching results.
+```shell
+python -m experiment.parameter_analysis.Sigma.parameter_analysis-MNIST-Sigma --adjustment_literation -1
+```
+```shell
+python -m experiment.parameter_analysis.Sigma.parameter_analysis-CIFAR10-Sigma --adjustment_literation -1
+```
+```shell
+python -m experiment.parameter_analysis.Sigma.parameter_analysis-CIFAR100-Sigma --adjustment_literation -1
+```
+
+#### xn
+- Investigate the changes in the average Un under different values of xn.
+```shell
+python -m experiment.parameter_analysis.xn.parameter_analysis-MNIST-xn --adjustment_literation -1
+```
+
+### supplement
+
+## Dataset
+
+### Get
+
+#### MNIST：
+- Training images：https://storage.googleapis.com/cvdf-datasets/mnist/train-images-idx3-ubyte.gz
+- Training labels：https://storage.googleapis.com/cvdf-datasets/mnist/train-labels-idx1-ubyte.gz
+- Testing images：https://storage.googleapis.com/cvdf-datasets/mnist/t10k-images-idx3-ubyte.gz
+- Testing labels：https://storage.googleapis.com/cvdf-datasets/mnist/t10k-labels-idx1-ubyte.gz
+
+#### CIFAR10：
+- https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+
+#### CIFAR100：
+- https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz
+
+### Use
+- MNIST: After extracting, place all the contents in the data/dataset/MNIST directory.
+- CIFAR10: After extracting, place all the contents in the data/dataset/CIFAR10 directory.
+- CIFAR100: After extracting, place all the contents in the data/dataset/CIFAR100 directory.
