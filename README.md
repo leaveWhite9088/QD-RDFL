@@ -2,6 +2,12 @@
 
 Quality-aware Dynamic Resources-decoupled FL 
 
+## Model Framework
+
+![framework](./data/imgs/framework.png)
+
+In this paper, we focus on the approach of data assetization, that data do not circulate but the information does. We first propose a framework for resource-decoupled FL that involves model owners, data owners, and computing centers. Then, we design a Tripartite Stackelberg Model and theoretically analyze the Stackelberg-Nash equilibrium (SNE) for participants to optimize global utility. Next, we propose the Quality-aware Dynamic Resources-decoupled FL algorithm (QD-RDFL), in which we derive and solve the optimal strategies of all parties to achieve SNE using backward induction. We also design a dynamic optimization mechanism to improve the optimal strategy profile by evaluating the contribution of data quality from data owners to the global model during real training. Finally, our extensive experiments demonstrate that our method effectively encourages the linkage of the three parties involved, maximizing the global utility and value of data assets
+
 ## Requirements
 ```
 torch==2.3.0
@@ -247,6 +253,8 @@ matplotlib==3.7.2
 - Ablation studies are time-consuming due to the need for training, with each experiment taking approximately 30 minutes.
 
 #### adjust
+- Observe the accuracy with dynamic adjustment.
+
 ```shell
 python -m experiment.ablation.adjust.ablation-MNIST-adjust --adjustment_literation 2 
 ```
@@ -257,6 +265,8 @@ python -m experiment.ablation.adjust.ablation-CIFAR10-adjust --adjustment_litera
 python -m experiment.ablation.adjust.ablation-CIFAR100-adjust --adjustment_literation 2 
 ```
 #### noneadjust
+- Observe the accuracy without dynamic adjustment.
+
 ```shell
 python -m experiment.ablation.noneadjust.ablation-MNIST-noneadjust --adjustment_literation 2 
 ```
@@ -268,6 +278,51 @@ python -m experiment.ablation.noneadjust.ablation-CIFAR100-noneadjust --adjustme
 ```
 
 ### comparison
+- The comparative experiment is time-consuming due to the need for training. Each run of the experiment takes about 30 minutes.
+
+#### FIX
+```shell
+python -m experiment.comparison.FIX.comparison-MNIST-FIX --adjustment_literation 2
+```
+```shell
+python -m experiment.comparison.FIX.comparison-CIFAR10-FIX --adjustment_literation 2
+```
+```shell
+python -m experiment.comparison.FIX.comparison-CIFAR100-FIX --adjustment_literation 2
+```
+
+#### MIX
+```shell
+python -m experiment.comparison.MIX.comparison-MNIST-MIX --adjustment_literation 2
+```
+```shell
+python -m experiment.comparison.MIX.comparison-CIFAR10-MIX --adjustment_literation 2
+```
+```shell
+python -m experiment.comparison.MIX.comparison-CIFAR100-MIX --adjustment_literation 2
+```
+
+#### QD-RDFL
+```shell
+python -m experiment.comparison.QD-RDFL.comparison-MNIST-QD-RDFL --adjustment_literation 2
+```
+```shell
+python -m experiment.comparison.QD-RDFL.comparison-CIFAR10-QD-RDFL --adjustment_literation 2
+```
+```shell
+python -m experiment.comparison.QD-RDFL.comparison-CIFAR100-QD-RDFL --adjustment_literation 2
+```
+
+#### RANDOM
+```shell
+python -m experiment.comparison.RANDOM.comparison-MNIST-RANDOM --adjustment_literation 2
+```
+```shell
+python -m experiment.comparison.RANDOM.comparison-CIFAR10-RANDOM --adjustment_literation 2
+```
+```shell
+python -m experiment.comparison.RANDOM.comparison-CIFAR100-RANDOM --adjustment_literation 2
+```
 
 ### parameter_analysis
 - The experimental run speed of parameter analysis is very fast, and it can be completed within 30 seconds.
@@ -309,6 +364,30 @@ python -m experiment.parameter_analysis.xn.parameter_analysis-MNIST-xn --adjustm
 ```
 
 ### supplement
+
+#### accurancy
+```shell
+python -m experiment.supplement.accurancy.supplement-MNIST-accurancy --adjustment_literation -1
+```
+```shell
+python -m experiment.supplement.accurancy.supplement-CIFAR10-accurancy --adjustment_literation -1
+```
+
+#### Un
+```shell
+python -m experiment.supplement.Un.supplement-MNIST-Un --adjustment_literation -1
+```
+```shell
+python -m experiment.supplement.Un.supplement-CIFAR10-Un --adjustment_literation -1
+```
+
+#### Us
+```shell
+python -m experiment.supplement.Us.supplement-MNIST-Us --adjustment_literation -1
+```
+```shell
+python -m experiment.supplement.Us.supplement-CIFAR10-Us --adjustment_literation -1
+```
 
 ## Dataset
 

@@ -77,8 +77,32 @@ def init_model():
     rate = 0.1
     UtilsCIFAR100.print_and_log(global_cifar100_parent_path, f"初始数据占CIFAR100的比例：{rate * 100}%")
 
+    def find_project_root(current_dir):
+        # 向上逐层查找，直到找到项目根目录
+        while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+            current_dir = os.path.dirname(current_dir)
+            if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                return None
+        return current_dir
+
+    # 获取当前文件的绝对路径
+    current_file_path = os.path.abspath(__file__)
+
+    # 获取当前文件所在的目录
+    current_dir = os.path.dirname(current_file_path)
+
+    # 查找项目根目录
+    project_root = find_project_root(current_dir)
+
+    project_root = project_root.replace("\\", "/")
+
+    if project_root:
+        print("项目根目录:", project_root)
+    else:
+        print("未找到项目根目录")
+
     # 加载CIFAR100数据集
-    data_dir = "../../../data/dataset/CIFAR100"  # CIFAR100批处理文件所在目录
+    data_dir = f"{project_root}/data/dataset/CIFAR100"  # CIFAR100批处理文件所在目录
     train_data, train_labels, _, _ = UtilsCIFAR100.load_cifar100_dataset(data_dir)
 
     # 获取图像数量
@@ -104,16 +128,16 @@ def init_model():
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # 如果不存在初始化模型，就训练模型，如果存在，就加载到model中
-    model_save_path = "../../../data/model/initial/cifar100_cnn_initial_model"
+    model_save_path = f"{project_root}/data/model/initial/cifar100_cnn_initial_model"
     if os.path.exists(model_save_path):
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path, f"{model_save_path} 存在，加载初始化模型")
         model.load_model(model_save_path)
-        model.save_model("../../../data/model/cifar100_cnn_model")
+        model.save_model(f"{project_root}/data/model/cifar100_cnn_model")
     else:
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path, f"{model_save_path} 不存在，初始化模型")
         model.train_model(train_loader, criterion, optimizer, num_epochs=20, device=str(device),
                           model_save_path=model_save_path)
-        model.save_model("../../../data/model/cifar100_cnn_model")
+        model.save_model(f"{project_root}/data/model/cifar100_cnn_model")
 
     # 加载完整的训练数据进行评估
     test_loader = UtilsCIFAR100.create_data_loader(train_data, train_labels, batch_size=128,
@@ -317,9 +341,33 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
             device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
             model = CIFAR100CNN(num_classes=100).to(device)
 
+            def find_project_root(current_dir):
+                # 向上逐层查找，直到找到项目根目录
+                while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+                    current_dir = os.path.dirname(current_dir)
+                    if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                        return None
+                return current_dir
+
+            # 获取当前文件的绝对路径
+            current_file_path = os.path.abspath(__file__)
+
+            # 获取当前文件所在的目录
+            current_dir = os.path.dirname(current_file_path)
+
+            # 查找项目根目录
+            project_root = find_project_root(current_dir)
+
+            project_root = project_root.replace("\\", "/")
+
+            if project_root:
+                print("项目根目录:", project_root)
+            else:
+                print("未找到项目根目录")
+
             unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
                                                                device=str(device), lr=1e-5,
-                                                               model_path="../../../data/model/cifar100_cnn_model")
+                                                               model_path=f"{project_root}/data/model/cifar100_cnn_model")
             avg_f_list[dataowner_index] = unitDataLossDiff
 
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "经过服务器调节后的真实数据质量：")
@@ -353,8 +401,32 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = CIFAR100CNN(num_classes=100).to(device)
 
+        def find_project_root(current_dir):
+            # 向上逐层查找，直到找到项目根目录
+            while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+                current_dir = os.path.dirname(current_dir)
+                if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                    return None
+            return current_dir
+
+        # 获取当前文件的绝对路径
+        current_file_path = os.path.abspath(__file__)
+
+        # 获取当前文件所在的目录
+        current_dir = os.path.dirname(current_file_path)
+
+        # 查找项目根目录
+        project_root = find_project_root(current_dir)
+
+        project_root = project_root.replace("\\", "/")
+
+        if project_root:
+            print("项目根目录:", project_root)
+        else:
+            print("未找到项目根目录")
+
         fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=device, lr=1e-5,
-                        model_path="../../../data/model/cifar100_cnn_model")
+                        model_path=f"{project_root}/data/model/cifar100_cnn_model")
 
     return UtilsCIFAR100.normalize_list(avg_f_list)
 
@@ -380,7 +452,32 @@ if __name__ == "__main__":
 
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                     "---------------------------------- 准备工作 ----------------------------------")
-        data_dir = "../../../data/dataset/CIFAR100"  # CIFAR100批处理文件所在目录
+
+        def find_project_root(current_dir):
+            # 向上逐层查找，直到找到项目根目录
+            while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+                current_dir = os.path.dirname(current_dir)
+                if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                    return None
+            return current_dir
+
+        # 获取当前文件的绝对路径
+        current_file_path = os.path.abspath(__file__)
+
+        # 获取当前文件所在的目录
+        current_dir = os.path.dirname(current_file_path)
+
+        # 查找项目根目录
+        project_root = find_project_root(current_dir)
+
+        project_root = project_root.replace("\\", "/")
+
+        if project_root:
+            print("项目根目录:", project_root)
+        else:
+            print("未找到项目根目录")
+
+        data_dir = f"{project_root}/data/dataset/CIFAR100"  # CIFAR100批处理文件所在目录
         dataowners, modelowner, cpcs, test_data, test_labels = ready_for_task(Lambda, Rho, Alpha, Epsilon, N, M, SigmaM,
                                                                               data_dir)
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
