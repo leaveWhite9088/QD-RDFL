@@ -39,14 +39,17 @@ plt.plot(tests[:70:5], accuracy_comparison_algorithm[:70:5], marker='s',
          label='Without dynamic adjustment')  # 绘制对比算法精度折线图
 
 # 添加标题和标签
-plt.xlabel('Training round')  # x轴标签
-plt.ylabel('Accuracy')  # y轴标签
+plt.xlabel(r'$Training$ $round$')  # x轴标签
+plt.ylabel(r'$Accuracy$')  # y轴标签
 
 # 显示图例
 plt.legend()
 
 plt.tick_params(axis='x', labelsize=12)
 plt.tick_params(axis='y', labelsize=12)
+
+# 强制显示完全
+plt.tight_layout()
 
 # 显示网格
 plt.grid(True)
