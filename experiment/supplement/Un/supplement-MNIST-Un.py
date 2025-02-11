@@ -35,10 +35,34 @@ def define_parameters(Lambda=1, Rho=1, Alpha=1, Epsilon=1, N=5, M=5, SigmaM=[1, 
 
 # 为联邦学习任务做准备工作
 def ready_for_task():
-    train_images_path = "../../../data/dataset/MNIST/train-images.idx3-ubyte"
-    train_labels_path = "../../../data/dataset/MNIST/train-labels.idx1-ubyte"
-    test_images_path = "../../../data/dataset/MNIST/t10k-images.idx3-ubyte"
-    test_labels_path = "../../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
+    def find_project_root(current_dir):
+        # 向上逐层查找，直到找到项目根目录
+        while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+            current_dir = os.path.dirname(current_dir)
+            if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                return None
+        return current_dir
+
+    # 获取当前文件的绝对路径
+    current_file_path = os.path.abspath(__file__)
+
+    # 获取当前文件所在的目录
+    current_dir = os.path.dirname(current_file_path)
+
+    # 查找项目根目录
+    project_root = find_project_root(current_dir)
+
+    project_root = project_root.replace("\\", "/")
+
+    if project_root:
+        print("项目根目录:", project_root)
+    else:
+        print("未找到项目根目录")
+
+    train_images_path = f"{project_root}/data/dataset/MNIST/train-images.idx3-ubyte"
+    train_labels_path = f"{project_root}/data/dataset/MNIST/train-labels.idx1-ubyte"
+    test_images_path = f"{project_root}/data/dataset/MNIST/t10k-images.idx3-ubyte"
+    test_labels_path = f"{project_root}/data/dataset/MNIST/t10k-labels.idx1-ubyte"
 
     # 加载训练数据和测试数据
     train_images, train_labels = UtilsMNIST.load_mnist_dataset(train_images_path, train_labels_path)
@@ -69,10 +93,34 @@ def init_model(rate):
     UtilsMNIST.print_and_log(global_minst_parent_path, f"初始数据占MNIST的比例：{rate * 100}%")
     UtilsMNIST.print_and_log(global_minst_parent_path, "model initing...")
 
-    train_images_path = "../../../data/dataset/MNIST/train-images.idx3-ubyte"
-    train_labels_path = "../../../data/dataset/MNIST/train-labels.idx1-ubyte"
-    test_images_path = "../../../data/dataset/MNIST/t10k-images.idx3-ubyte"
-    test_labels_path = "../../../data/dataset/MNIST/t10k-labels.idx1-ubyte"
+    def find_project_root(current_dir):
+        # 向上逐层查找，直到找到项目根目录
+        while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+            current_dir = os.path.dirname(current_dir)
+            if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                return None
+        return current_dir
+
+    # 获取当前文件的绝对路径
+    current_file_path = os.path.abspath(__file__)
+
+    # 获取当前文件所在的目录
+    current_dir = os.path.dirname(current_file_path)
+
+    # 查找项目根目录
+    project_root = find_project_root(current_dir)
+
+    project_root = project_root.replace("\\", "/")
+
+    if project_root:
+        print("项目根目录:", project_root)
+    else:
+        print("未找到项目根目录")
+
+    train_images_path = f"{project_root}/data/dataset/MNIST/train-images.idx3-ubyte"
+    train_labels_path = f"{project_root}/data/dataset/MNIST/train-labels.idx1-ubyte"
+    test_images_path = f"{project_root}/data/dataset/MNIST/t10k-images.idx3-ubyte"
+    test_labels_path = f"{project_root}/data/dataset/MNIST/t10k-labels.idx1-ubyte"
 
     # 加载训练数据和测试数据
     train_images, train_labels = UtilsMNIST.load_mnist_dataset(train_images_path, train_labels_path)
@@ -100,16 +148,16 @@ def init_model(rate):
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # 如果不存在初始化模型，就训练模型，如果存在，就加载到model中
-    model_save_path = "../../../data/model/initial/mnist_cnn_initial_model"
+    model_save_path = f"{project_root}/data/model/initial/mnist_cnn_initial_model"
     if os.path.exists(model_save_path):
         print(f"{model_save_path} 存在，加载初始化模型")
         model.load_model(model_save_path)
-        model.save_model("../../../data/model/mnist_cnn_model")
+        model.save_model(f"{project_root}/data/model/mnist_cnn_model")
     else:
         print(f"{model_save_path} 不存在，初始化模型")
         model.train_model(train_loader, criterion, optimizer, num_epochs=5, device=str(device),
                           model_save_path=model_save_path)
-        model.save_model("../../../data/model/mnist_cnn_model")
+        model.save_model(f"{project_root}/data/model/mnist_cnn_model")
 
     return model
 
@@ -291,10 +339,34 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
             device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
             model = MNISTCNN(num_classes=10).to(device)
 
+            def find_project_root(current_dir):
+                # 向上逐层查找，直到找到项目根目录
+                while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+                    current_dir = os.path.dirname(current_dir)
+                    if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                        return None
+                return current_dir
+
+            # 获取当前文件的绝对路径
+            current_file_path = os.path.abspath(__file__)
+
+            # 获取当前文件所在的目录
+            current_dir = os.path.dirname(current_file_path)
+
+            # 查找项目根目录
+            project_root = find_project_root(current_dir)
+
+            project_root = project_root.replace("\\", "/")
+
+            if project_root:
+                print("项目根目录:", project_root)
+            else:
+                print("未找到项目根目录")
+
             unitDataLossDiff = fine_tune_model_without_replace(model, train_loader, test_loader, num_epochs=5,
                                                                device=str(device),
                                                                lr=1e-5,
-                                                               model_path="../../../data/model/mnist_cnn_model")
+                                                               model_path=f"{project_root}/data/model/mnist_cnn_model")
             avg_f_list[dataowner_index] = unitDataLossDiff
 
         UtilsMNIST.print_and_log(global_minst_parent_path, "经过服务器调节后的真实数据质量：")
@@ -322,8 +394,33 @@ def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, a
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = MNISTCNN(num_classes=10).to(device)
 
+        def find_project_root(current_dir):
+            # 向上逐层查找，直到找到项目根目录
+            while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+                current_dir = os.path.dirname(current_dir)
+                if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                    return None
+            return current_dir
+
+
+        # 获取当前文件的绝对路径
+        current_file_path = os.path.abspath(__file__)
+
+        # 获取当前文件所在的目录
+        current_dir = os.path.dirname(current_file_path)
+
+        # 查找项目根目录
+        project_root = find_project_root(current_dir)
+
+        project_root = project_root.replace("\\", "/")
+
+        if project_root:
+            print("项目根目录:", project_root)
+        else:
+            print("未找到项目根目录")
+
         fine_tune_model(model, train_loader, test_loader, num_epochs=5, device=str(device),
-                        lr=1e-5, model_path="../../../data/model/mnist_cnn_model")
+                        lr=1e-5, model_path=f"{project_root}/data/model/mnist_cnn_model")
 
     return UtilsMNIST.normalize_list(avg_f_list)
 
