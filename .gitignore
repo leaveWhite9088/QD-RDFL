@@ -1,15 +1,5 @@
 .idea/
 **/__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python 
-venv/
-env/
-.env/
-.pytest_cache/
-.coverage
-htmlcov/
 /data/dataset/
 /data/model/
 /data/log/
