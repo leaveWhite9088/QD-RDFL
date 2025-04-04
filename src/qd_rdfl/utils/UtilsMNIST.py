@@ -351,44 +351,26 @@ class UtilsMNIST:
         :param proportion:比例
         :return:
         """
-        cpc.imgData, cpc.labelData = UtilsMNIST.sample_arrays(np.array(dataowner.imgData),
-                                                              np.array(dataowner.labelData), proportion)
+        cpc.imgData, cpc.labelData = UtilsMNIST.sample_arrays(np.array(dataowner.imgData),np.array(dataowner.labelData), proportion)
 
     # 定义一个函数，用于同时打印到控制台和文件
     @staticmethod
-    def print_and_log(min_parent_path, message):
+    def print_and_log(minst_parent_path, message):
         # 获取当前文件的绝对路径
         current_file_path = os.path.abspath(__file__)
-        
+
         # 获取当前文件所在的目录
         current_dir = os.path.dirname(current_file_path)
-        
-        # 找到项目根目录（查找data目录）
-        project_root = current_dir
-        while True:
-            # 向上查找包含data目录的父目录
-            parent_dir = os.path.dirname(project_root)
-            if os.path.exists(os.path.join(parent_dir, 'data')) and os.path.isdir(os.path.join(parent_dir, 'data')):
-                project_root = parent_dir
-                break
-            elif parent_dir == project_root:  # 已经到达根目录
-                # 尝试直接查找QD-RDFL目录
-                parts = current_dir.split(os.sep)
-                for i, part in enumerate(parts):
-                    if part == "QD-RDFL":
-                        project_root = os.sep.join(parts[:i+1])
-                        break
-                break
-            else:
-                project_root = parent_dir
-        
-        # 构建日志文件路径
-        log_dir = os.path.join(project_root, 'data', 'log', min_parent_path)
-        log_file_path = os.path.join(log_dir, f'{min_parent_path}-MNIST.txt')
-        
+
+        # 获取项目根目录（假设项目根目录是当前文件所在目录的父目录）
+        project_root = os.path.dirname(current_dir)
+
+        # 构建日志文件的完整路径
+        log_file_path = os.path.join(project_root, 'data', 'log', minst_parent_path, f'{minst_parent_path}-MNIST.txt')
+
         # 确保日志目录存在
-        os.makedirs(log_dir, exist_ok=True)
-        
+        os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+
         # 打开一个文件用于追加写入
         with open(log_file_path, 'a') as f:
             # 将message转换为字符串
