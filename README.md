@@ -107,31 +107,33 @@ matplotlib==3.7.2
 
 ## 🚀 Running Experiments
 
+Note: The `--parent_path` parameter specifies where logs will be stored. Optional values: log-parameter_analysis, log-comparison, log-ablation, log-supplement, log-main.
+
 ### ⚙️ Ablation Studies
 Each experiment takes approximately 30 minutes due to training requirements.
 
 #### With Dynamic Adjustment
 ```bash
 # MNIST with dynamic adjustment
-python -m src.qd_rdfl.experiments.ablation.adjust.ablation-MNIST-adjust --adjustment_literation 2 
+python -m src.qd_rdfl.experiments.ablation.adjust.ablation-MNIST-adjust --adjustment_literation 2 --parent_path log-ablation
 
 # CIFAR10 with dynamic adjustment
-python -m src.qd_rdfl.experiments.ablation.adjust.ablation-CIFAR10-adjust --adjustment_literation 2 
+python -m src.qd_rdfl.experiments.ablation.adjust.ablation-CIFAR10-adjust --adjustment_literation 2 --parent_path log-ablation
 
 # CIFAR100 with dynamic adjustment
-python -m src.qd_rdfl.experiments.ablation.adjust.ablation-CIFAR100-adjust --adjustment_literation 2 
+python -m src.qd_rdfl.experiments.ablation.adjust.ablation-CIFAR100-adjust --adjustment_literation 2 --parent_path log-ablation
 ```
 
 #### Without Dynamic Adjustment
 ```bash
 # MNIST without dynamic adjustment
-python -m src.qd_rdfl.experiments.ablation.noneadjust.ablation-MNIST-noneadjust --adjustment_literation 2 
+python -m src.qd_rdfl.experiments.ablation.noneadjust.ablation-MNIST-noneadjust --adjustment_literation 2 --parent_path log-ablation
 
 # CIFAR10 without dynamic adjustment
-python -m src.qd_rdfl.experiments.ablation.noneadjust.ablation-CIFAR10-noneadjust --adjustment_literation 2 
+python -m src.qd_rdfl.experiments.ablation.noneadjust.ablation-CIFAR10-noneadjust --adjustment_literation 2 --parent_path log-ablation
 
 # CIFAR100 without dynamic adjustment
-python -m src.qd_rdfl.experiments.ablation.noneadjust.ablation-CIFAR100-noneadjust --adjustment_literation 2 
+python -m src.qd_rdfl.experiments.ablation.noneadjust.ablation-CIFAR100-noneadjust --adjustment_literation 2 --parent_path log-ablation
 ```
 
 ### 📊 Comparison Experiments
@@ -140,49 +142,49 @@ Each comparison experiment takes about 30 minutes to run.
 #### FIX Strategy
 ```bash
 # MNIST with FIX strategy
-python -m src.qd_rdfl.experiments.comparison.FIX.comparison-MNIST-FIX --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.FIX.comparison-MNIST-FIX --adjustment_literation 2 --parent_path log-comparison
 
 # CIFAR10 with FIX strategy
-python -m src.qd_rdfl.experiments.comparison.FIX.comparison-CIFAR10-FIX --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.FIX.comparison-CIFAR10-FIX --adjustment_literation 2 --parent_path log-comparison
 
 # CIFAR100 with FIX strategy
-python -m src.qd_rdfl.experiments.comparison.FIX.comparison-CIFAR100-FIX --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.FIX.comparison-CIFAR100-FIX --adjustment_literation 2 --parent_path log-comparison
 ```
 
 #### MIX Strategy
 ```bash
 # MNIST with MIX strategy
-python -m src.qd_rdfl.experiments.comparison.MIX.comparison-MNIST-MIX --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.MIX.comparison-MNIST-MIX --adjustment_literation 2 --parent_path log-comparison
 
 # CIFAR10 with MIX strategy
-python -m src.qd_rdfl.experiments.comparison.MIX.comparison-CIFAR10-MIX --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.MIX.comparison-CIFAR10-MIX --adjustment_literation 2 --parent_path log-comparison
 
 # CIFAR100 with MIX strategy
-python -m src.qd_rdfl.experiments.comparison.MIX.comparison-CIFAR100-MIX --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.MIX.comparison-CIFAR100-MIX --adjustment_literation 2 --parent_path log-comparison
 ```
 
 #### QD-RDFL (Our Method)
 ```bash
 # MNIST with QD-RDFL
-python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-MNIST --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-MNIST --adjustment_literation 2 --parent_path log-comparison
 
 # CIFAR10 with QD-RDFL
-python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-CIFAR10 --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-CIFAR10 --adjustment_literation 2 --parent_path log-comparison
 
 # CIFAR100 with QD-RDFL
-python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-CIFAR100 --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-CIFAR100 --adjustment_literation 2 --parent_path log-comparison
 ```
 
 #### RANDOM Strategy
 ```bash
 # MNIST with RANDOM strategy
-python -m src.qd_rdfl.experiments.comparison.RANDOM.comparison-MNIST-RANDOM --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.RANDOM.comparison-MNIST-RANDOM --adjustment_literation 2 --parent_path log-comparison
 
 # CIFAR10 with RANDOM strategy
-python -m src.qd_rdfl.experiments.comparison.RANDOM.comparison-CIFAR10-RANDOM --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.RANDOM.comparison-CIFAR10-RANDOM --adjustment_literation 2 --parent_path log-comparison
 
 # CIFAR100 with RANDOM strategy
-python -m src.qd_rdfl.experiments.comparison.RANDOM.comparison-CIFAR100-RANDOM --adjustment_literation 2
+python -m src.qd_rdfl.experiments.comparison.RANDOM.comparison-CIFAR100-RANDOM --adjustment_literation 2 --parent_path log-comparison
 ```
 
 ### 📈 Parameter Analysis
@@ -191,49 +193,56 @@ Parameter analysis experiments run quickly (approximately 30 seconds each).
 #### Alpha Parameter
 Investigate changes in Us and average Un under different Alpha values:
 ```bash
-python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-MNIST-Alpha --adjustment_literation -1
-python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-CIFAR10-Alpha --adjustment_literation -1
-python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-CIFAR100-Alpha --adjustment_literation -1
+python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-MNIST-Alpha --adjustment_literation -1 --parent_path log-parameter_analysis
+
+python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-CIFAR10-Alpha --adjustment_literation -1 --parent_path log-parameter_analysis
+
+python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-CIFAR100-Alpha --adjustment_literation -1 --parent_path log-parameter_analysis
 ```
 
 #### Eta Parameter
 Investigate changes in Us under different Eta values:
 ```bash
-python -m src.qd_rdfl.experiments.parameter_analysis.Eta.parameter_analysis-MNIST-Eta --adjustment_literation -1
+python -m src.qd_rdfl.experiments.parameter_analysis.Eta.parameter_analysis-MNIST-Eta --adjustment_literation -1 --parent_path log-parameter_analysis
 ```
 
 #### Sigma Parameter
 Verify the impact of SigmaM changes on matching results:
 ```bash
-python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-MNIST-Sigma --adjustment_literation -1
-python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-CIFAR10-Sigma --adjustment_literation -1
-python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-CIFAR100-Sigma --adjustment_literation -1
+python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-MNIST-Sigma --adjustment_literation -1 --parent_path log-parameter_analysis
+
+python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-CIFAR10-Sigma --adjustment_literation -1 --parent_path log-parameter_analysis
+
+python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-CIFAR100-Sigma --adjustment_literation -1 --parent_path log-parameter_analysis
 ```
 
 #### xn Parameter
 Investigate changes in average Un under different xn values:
 ```bash
-python -m src.qd_rdfl.experiments.parameter_analysis.xn.parameter_analysis-MNIST-xn --adjustment_literation -1
+python -m src.qd_rdfl.experiments.parameter_analysis.xn.parameter_analysis-MNIST-xn --adjustment_literation -1 --parent_path log-parameter_analysis
 ```
 
 ### 📋 Supplementary Experiments
 
 #### Accuracy Analysis
 ```bash
-python -m src.qd_rdfl.experiments.supplement.accurancy.supplement-MNIST-accurancy --adjustment_literation -1
-python -m src.qd_rdfl.experiments.supplement.accurancy.supplement-CIFAR10-accurancy --adjustment_literation -1
+python -m src.qd_rdfl.experiments.supplement.accurancy.supplement-MNIST-accurancy --adjustment_literation -1 --parent_path log-supplement
+
+python -m src.qd_rdfl.experiments.supplement.accurancy.supplement-CIFAR10-accurancy --adjustment_literation -1 --parent_path log-supplement
 ```
 
 #### Un (Data Owner Utility) Analysis
 ```bash
-python -m src.qd_rdfl.experiments.supplement.Un.supplement-MNIST-Un --adjustment_literation -1
-python -m src.qd_rdfl.experiments.supplement.Un.supplement-CIFAR10-Un --adjustment_literation -1
+python -m src.qd_rdfl.experiments.supplement.Un.supplement-MNIST-Un --adjustment_literation -1 --parent_path log-supplement
+
+python -m src.qd_rdfl.experiments.supplement.Un.supplement-CIFAR10-Un --adjustment_literation -1 --parent_path log-supplement
 ```
 
 #### Us (Model Owner Utility) Analysis
 ```bash
-python -m src.qd_rdfl.experiments.supplement.Us.supplement-MNIST-Us --adjustment_literation -1
-python -m src.qd_rdfl.experiments.supplement.Us.supplement-CIFAR10-Us --adjustment_literation -1
+python -m src.qd_rdfl.experiments.supplement.Us.supplement-MNIST-Us --adjustment_literation -1 --parent_path log-supplement
+
+python -m src.qd_rdfl.experiments.supplement.Us.supplement-CIFAR10-Us --adjustment_literation -1 --parent_path log-supplement
 ```
 
 ## 📊 Datasets

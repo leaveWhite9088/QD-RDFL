@@ -288,32 +288,42 @@ class UtilsCIFAR10:
 
     @staticmethod
     def print_and_log(cifar_parent_path, message):
-        """
-        定义一个函数，用于同时打印到控制台和文件
-        """
         # 获取当前文件的绝对路径
         current_file_path = os.path.abspath(__file__)
-        
+
         # 获取当前文件所在的目录
         current_dir = os.path.dirname(current_file_path)
-        
-        # 正确获取项目根目录（src/qd_rdfl/utils的上两级）
-        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
-        
+
+        # 查找项目根目录（假设项目根目录包含 README.md 文件）
+        def find_project_root(current_dir):
+            # 向上逐层查找，直到找到项目根目录
+            while not os.path.exists(os.path.join(current_dir, 'README.md')):
+                current_dir = os.path.dirname(current_dir)
+                # 防止在 Unix/Linux 系统中向上查找过多
+                if current_dir == '/' or (os.name == 'nt' and current_dir == os.path.splitdrive(current_dir)[0] + '\\'):
+                    return None
+            return current_dir
+
+        # 查找项目根目录
+        project_root = find_project_root(current_dir)
+
+        if project_root is None:
+            raise FileNotFoundError("未找到项目根目录，请确保项目根目录包含 README.md 文件")
+
         # 构建日志文件的完整路径
         log_file_path = os.path.join(project_root, 'data', 'log', cifar_parent_path, f'{cifar_parent_path}-CIFAR10.txt')
-        
+
         # 确保日志目录存在
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
-        
+
         # 打开一个文件用于追加写入
         with open(log_file_path, 'a') as f:
             # 将message转换为字符串
             message_str = str(message)
-            
+
             # 打印到控制台
             print(message_str)
-            
+
             # 写入到文件
             f.write(message_str + '\n')
 

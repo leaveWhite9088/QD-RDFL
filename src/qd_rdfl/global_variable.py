@@ -27,7 +27,7 @@ import argparse
 parser = argparse.ArgumentParser(description="Parameter Analysis for MNIST with XN.")
 
 # 添加命令行参数
-parser.add_argument('--adjustment_literation', type=float, default=0.01, help="adjustment_literation")
+parser.add_argument('--adjustment_literation', type=float, default=-1, help="adjustment_literation")
 
 # 解析命令行参数
 args = parser.parse_args()

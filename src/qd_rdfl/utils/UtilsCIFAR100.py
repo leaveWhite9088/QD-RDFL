@@ -299,17 +299,27 @@ class UtilsCIFAR100:
 
     @staticmethod
     def print_and_log(cifar_parent_path, message):
-        """
-        定义一个函数，用于同时打印到控制台和文件
-        """
         # 获取当前文件的绝对路径
         current_file_path = os.path.abspath(__file__)
 
         # 获取当前文件所在的目录
         current_dir = os.path.dirname(current_file_path)
 
-        # 获取项目根目录（假设项目根目录是当前文件所在目录的父目录）
-        project_root = os.path.dirname(current_dir)
+        # 查找项目根目录（假设项目根目录包含 README.md 文件）
+        def find_project_root(current_dir):
+            # 向上逐层查找，直到找到项目根目录
+            while not os.path.exists(os.path.join(current_dir, 'README.md')):
+                current_dir = os.path.dirname(current_dir)
+                # 防止在 Unix/Linux 系统中向上查找过多
+                if current_dir == '/' or (os.name == 'nt' and current_dir == os.path.splitdrive(current_dir)[0] + '\\'):
+                    return None
+            return current_dir
+
+        # 查找项目根目录
+        project_root = find_project_root(current_dir)
+
+        if project_root is None:
+            raise FileNotFoundError("未找到项目根目录，请确保项目根目录包含 README.md 文件")
 
         # 构建日志文件的完整路径
         log_file_path = os.path.join(project_root, 'data', 'log', cifar_parent_path, f'{cifar_parent_path}-CIFAR100.txt')
