@@ -105,6 +105,46 @@ class UtilsMNIST:
         print("Weights:", weights)
         print("Split sizes:", split_sizes)
 
+    # 将MNIST数据集切分成N等份，并将数据分配给每个DataOwner对象
+    @staticmethod
+    def split_data_to_dataowners_evenly(dataowners, X_data, y_data):
+        """
+        将MNIST数据集切分成N等份，并将数据分配给每个DataOwner对象
+        :param dataowners: 一个长度为N的DataOwner对象数组
+        :param X_data: 数据集的特征（例如MNIST的图像数据）
+        :param y_data: 数据集的标签
+        :return: None (每个DataOwner对象将保存其对应的数据)
+        """
+        N = len(dataowners)
+        total_samples = len(X_data)
+
+        # 生成一个随机的索引排列
+        permutation = np.random.permutation(total_samples)
+
+        # 打乱数据
+        X_shuffled = X_data[permutation]
+        y_shuffled = y_data[permutation]
+
+        # 计算每个DataOwner应分配的样本数量
+        samples_per_owner = total_samples // N
+        remainder = total_samples % N  # 处理不能整除的情况
+
+        start_idx = 0
+        for i, do in enumerate(dataowners):
+            # 如果有余数，将余数分配到前面的DataOwner
+            extra_samples = 1 if i < remainder else 0
+            end_idx = start_idx + samples_per_owner + extra_samples
+
+            do.imgData = X_shuffled[start_idx:end_idx]  # 给每个DataOwner分配数据
+            do.originalData = X_shuffled[start_idx:end_idx]
+            do.labelData = y_shuffled[start_idx:end_idx]
+
+            start_idx = end_idx
+
+        # 输出分配情况
+        for i, do in enumerate(dataowners):
+            print(f"DataOwner {i + 1} holds {len(do.imgData)} samples")
+
     @staticmethod
     def _load_mnist_images(file_path):
         """

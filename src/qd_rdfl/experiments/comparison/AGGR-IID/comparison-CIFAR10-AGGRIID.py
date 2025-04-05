@@ -55,7 +55,7 @@ def ready_for_task(Lambda, Rho, Alpha, Epsilon, N, M, SigmaM, data_dir):
     dataowners = [DataOwner(Lambda=Lambda, Rho=Rho) for _ in range(N)]  # 假设有N个DataOwner
 
     # 切分数据
-    UtilsCIFAR10.split_data_to_dataowners_with_large_gap(dataowners, train_data, train_labels)
+    UtilsCIFAR10.split_data_to_dataowners_evenly(dataowners, train_data, train_labels)
 
     # 初始化ModelOwner
     modelowner = ModelOwner(Alpha, model=init_model())
@@ -145,21 +145,6 @@ def init_model():
     test_loader = UtilsCIFAR10.create_data_loader(train_data, train_labels, batch_size=128, shuffle=False)  # 使用全部数据进行测试
 
     return model
-
-
-# 给数据集添加噪声
-def dataowner_add_noise(dataowners, rate):
-    """
-    给数据集添加噪声
-    :param dataowners: DataOwner对象列表
-    :param rate: 加噪（高斯噪声）的程度，初始程度在0-1之间
-    :return:
-    """
-    # 第一次训练时：添加噪声，以1-MSE为fn
-    for i, do in enumerate(dataowners):
-        random_num = random.random() * rate
-        UtilsCIFAR10.add_noise(do, noise_type="gaussian", severity=random_num)
-        UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"DataOwner{i + 1}: noise random: {random_num}")
 
 
 # ModelOwner发布任务， DataOwner计算数据质量（Dataowner自己计算）
@@ -497,11 +482,6 @@ if __name__ == "__main__":
         avg_f_list = []
 
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                   f"----- 为 DataOwner 的数据添加噪声 -----")
-        dataowner_add_noise(dataowners, 0.1)
-        UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
-
-        UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
                                    f"----- 计算 DataOwner 的数据质量 -----")
         avg_f_list = evaluate_data_quality(dataowners)
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
@@ -561,6 +541,39 @@ if __name__ == "__main__":
 
 
         """RANDOM"""
+        UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                                    "---------------------------------- RANDOM：再次准备工作 ----------------------------------")
+        def find_project_root(current_dir):
+            # 向上逐层查找，直到找到项目根目录
+            while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+                current_dir = os.path.dirname(current_dir)
+                if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                    return None
+            return current_dir
+
+        # 获取当前文件的绝对路径
+        current_file_path = os.path.abspath(__file__)
+
+        # 获取当前文件所在的目录
+        current_dir = os.path.dirname(current_file_path)
+
+        # 查找项目根目录
+        project_root = find_project_root(current_dir)
+
+        project_root = project_root.replace("\\", "/")
+
+        if project_root:
+            print("项目根目录:", project_root)
+        else:
+            print("未找到项目根目录")
+
+        data_dir = f"{project_root}/data/dataset/CIFAR10"  # CIFAR10批处理文件所在目录
+        _, modelowner, _, _, _ = ready_for_task(Lambda, Rho, Alpha, Epsilon, N, M, SigmaM,
+                                                                              data_dir)
+        avg_f_list = []
+        avg_f_list = evaluate_data_quality(dataowners)
+        UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
+
         literation = 0  # 迭代次数
         adjustment_literation = adjustment_literation  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
         last_xn_list = [0] * N
@@ -635,6 +648,39 @@ if __name__ == "__main__":
 
 
         """FIX"""
+        UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                                    "---------------------------------- FIX：再次准备工作 ----------------------------------")
+        def find_project_root(current_dir):
+            # 向上逐层查找，直到找到项目根目录
+            while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+                current_dir = os.path.dirname(current_dir)
+                if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                    return None
+            return current_dir
+
+        # 获取当前文件的绝对路径
+        current_file_path = os.path.abspath(__file__)
+
+        # 获取当前文件所在的目录
+        current_dir = os.path.dirname(current_file_path)
+
+        # 查找项目根目录
+        project_root = find_project_root(current_dir)
+
+        project_root = project_root.replace("\\", "/")
+
+        if project_root:
+            print("项目根目录:", project_root)
+        else:
+            print("未找到项目根目录")
+
+        data_dir = f"{project_root}/data/dataset/CIFAR10"  # CIFAR10批处理文件所在目录
+        _, modelowner, _, _, _ = ready_for_task(Lambda, Rho, Alpha, Epsilon, N, M, SigmaM,
+                                                                              data_dir)
+        avg_f_list = []
+        avg_f_list = evaluate_data_quality(dataowners)
+        UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
+
         literation = 0  # 迭代次数
         adjustment_literation = adjustment_literation  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
         last_xn_list = [0] * N

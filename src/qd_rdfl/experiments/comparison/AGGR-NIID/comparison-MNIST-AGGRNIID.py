@@ -462,7 +462,9 @@ if __name__ == "__main__":
         """RANDOM"""
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  "---------------------------------- RANDOM：再次准备工作 ----------------------------------")
-        ready_for_task()
+        _, modelowner, _, _, _ = ready_for_task()
+        avg_f_list = []
+        avg_f_list = evaluate_data_quality(dataowners)
         UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
         literation = 0  # 迭代次数
@@ -542,7 +544,9 @@ if __name__ == "__main__":
         """FIX"""
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  "---------------------------------- FIX：再次准备工作 ----------------------------------")
-        ready_for_task()
+        _, modelowner, _, _, _ = ready_for_task()
+        avg_f_list = []
+        avg_f_list = evaluate_data_quality(dataowners)
         UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
         literation = 0  # 迭代次数

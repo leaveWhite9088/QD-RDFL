@@ -151,30 +151,6 @@ python -m src.qd_rdfl.experiments.comparison.FIX.comparison-CIFAR10-FIX --adjust
 python -m src.qd_rdfl.experiments.comparison.FIX.comparison-CIFAR100-FIX --adjustment_literation 2 --parent_path log-comparison
 ```
 
-#### MIX Strategy
-```bash
-# MNIST with MIX strategy
-python -m src.qd_rdfl.experiments.comparison.MIX.comparison-MNIST-MIX --adjustment_literation 2 --parent_path log-comparison
-
-# CIFAR10 with MIX strategy
-python -m src.qd_rdfl.experiments.comparison.MIX.comparison-CIFAR10-MIX --adjustment_literation 2 --parent_path log-comparison
-
-# CIFAR100 with MIX strategy
-python -m src.qd_rdfl.experiments.comparison.MIX.comparison-CIFAR100-MIX --adjustment_literation 2 --parent_path log-comparison
-```
-
-#### QD-RDFL (Our Method)
-```bash
-# MNIST with QD-RDFL
-python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-MNIST --adjustment_literation 2 --parent_path log-comparison
-
-# CIFAR10 with QD-RDFL
-python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-CIFAR10 --adjustment_literation 2 --parent_path log-comparison
-
-# CIFAR100 with QD-RDFL
-python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-CIFAR100 --adjustment_literation 2 --parent_path log-comparison
-```
-
 #### RANDOM Strategy
 ```bash
 # MNIST with RANDOM strategy
@@ -185,6 +161,42 @@ python -m src.qd_rdfl.experiments.comparison.RANDOM.comparison-CIFAR10-RANDOM --
 
 # CIFAR100 with RANDOM strategy
 python -m src.qd_rdfl.experiments.comparison.RANDOM.comparison-CIFAR100-RANDOM --adjustment_literation 2 --parent_path log-comparison
+```
+
+#### QD-RDFL (Our Method)
+```bash
+# MNIST with QD-RDFL
+python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-MNIST-QDRDFL --adjustment_literation 2 --parent_path log-comparison
+
+# CIFAR10 with QD-RDFL
+python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-CIFAR10-QDRDFL --adjustment_literation 2 --parent_path log-comparison
+
+# CIFAR100 with QD-RDFL
+python -m src.qd_rdfl.experiments.comparison.QD-RDFL.comparison-CIFAR100-QDRDFL --adjustment_literation 2 --parent_path log-comparison
+```
+
+#### AGGR-NIID (Three ways to run together)
+```bash
+# MNIST with AGGR-NIID strategy
+python -m src.qd_rdfl.experiments.comparison.AGGR-NIID.comparison-MNIST-AGGRNIID --adjustment_literation 2 --parent_path log-comparison
+
+# CIFAR10 with AGGR-NIID strategy
+python -m src.qd_rdfl.experiments.comparison.AGGR-NIID.comparison-CIFAR10-AGGRNIID --adjustment_literation 2 --parent_path log-comparison
+
+# CIFAR100 with AGGR-NIID strategy
+python -m src.qd_rdfl.experiments.comparison.AGGR-NIID.comparison-CIFAR100-AGGRNIID --adjustment_literation 2 --parent_path log-comparison
+```
+
+#### AGGR-IID (Three ways to run together)
+```bash
+# MNIST with AGGR-IID strategy
+python -m src.qd_rdfl.experiments.comparison.AGGR-IID.comparison-MNIST-AGGRIID --adjustment_literation 2 --parent_path log-comparison
+
+# CIFAR10 with AGGR-IID strategy
+python -m src.qd_rdfl.experiments.comparison.AGGR-IID.comparison-CIFAR10-AGGRIID --adjustment_literation 2 --parent_path log-comparison
+
+# CIFAR100 with AGGR-IID strategy
+python -m src.qd_rdfl.experiments.comparison.AGGR-IID.comparison-CIFAR100-AGGRIID --adjustment_literation 2 --parent_path log-comparison
 ```
 
 ### 📈 Parameter Analysis
