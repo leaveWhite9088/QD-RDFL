@@ -1,0 +1,107 @@
+**** log-parameter_analysis 运行时间： 2025-04-05 15:30:41 ****
+========================= 客户端数量: 2 =========================
+---------------------------------- 定义参数值 ----------------------------------
+DONE
+---------------------------------- 准备工作 ----------------------------------
+初始数据占MNIST的比例：0.1%
+model initing...
+Model loaded from D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/initial/mnist_cnn_initial_model
+Model saved to D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/mnist_cnn_model
+DONE
+========================= literation: 1 =========================
+----- literation 1: 为 DataOwner 的数据添加噪声 -----
+DataOwner1: noise random: 0.06198342546413918
+DataOwner2: noise random: 0.036677522372862585
+DONE
+----- literation 1: 计算 DataOwner 的数据质量 -----
+DataOwners自行评估数据质量：
+数据质量列表avg_f_list: [0.9984447776981765, 0.9994554388638087]
+归一化后的数据质量列表avg_f_list: [0.9, 1.0]
+DONE
+----- literation 1: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 1: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3888886505297596
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 1: 匹配 DataOwner 和 CPC -----
+{'DataOwner1': 'CPC1', 'DataOwner2': 'CPC2'}
+DONE
+----- literation 1: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 1: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：2908.00 :
+Model loaded from D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 26.82%
+Epoch 1/5, Loss: 2.2902
+Epoch 2/5, Loss: 2.2721
+Epoch 3/5, Loss: 2.2321
+Epoch 4/5, Loss: 2.1593
+Epoch 5/5, Loss: 2.0473
+新模型评估：
+Accuracy: 47.68%
+Model saved to D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：2908.00 :
+Model loaded from D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 47.68%
+Epoch 1/5, Loss: 1.9437
+Epoch 2/5, Loss: 1.8412
+Epoch 3/5, Loss: 1.7268
+Epoch 4/5, Loss: 1.6031
+Epoch 5/5, Loss: 1.4719
+新模型评估：
+Accuracy: 67.39%
+Model saved to D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/mnist_cnn_model
+DONE
+========================= literation: 2 =========================
+----- literation 2: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----
+Stackelberg均衡结果：
+ModelOwner的最优Eta = 0.3889
+DataOwner1的最优x_1 = 0.0970
+DataOwner2的最优x_2 = 0.0970
+每个DataOwner应该贡献数据比例 xn_list = [0.0969528491625785, 0.09695284916255063]
+ModelOwner的最大效用 U(Eta) = 0.0338
+DONE
+----- literation 2: DataOwner 分配 ModelOwner 的支付 -----
+ModelOwner的最优总支付：0.3888886505297596
+DataOwner1的分配到的支付 ： 0.1842
+DataOwner2的分配到的支付 ： 0.2047
+DONE
+----- literation 2: DataOwner 向 CPC 提交数据 -----
+DataOwner1 把数据交给 CPC1
+DataOwner2 把数据交给 CPC2
+DONE
+----- literation 2: 模型训练 -----
+CPC1调整模型中, 本轮训练的数据量为：2908.00 :
+Model loaded from D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 67.39%
+Epoch 1/5, Loss: 1.3791
+Epoch 2/5, Loss: 1.2748
+Epoch 3/5, Loss: 1.1793
+Epoch 4/5, Loss: 1.0839
+Epoch 5/5, Loss: 0.9942
+新模型评估：
+Accuracy: 72.81%
+Model saved to D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/mnist_cnn_model
+CPC2调整模型中, 本轮训练的数据量为：2908.00 :
+Model loaded from D:/project/academic-paper-writing/Data Assetization via Resources-decoupled Federated Learning/QD-RDFL/data/model/mnist_cnn_model
+原模型评估：
+Accuracy: 72.81%
+Epoch 1/5, Loss: 0.9013
+Epoch 2/5, Loss: 0.8295
+Epoch 3/5, Loss: 0.7659
+Epoch 4/5, Loss: 0.7116
+Epoch 5/5, Loss: 0.6645
+新模型评估：
