@@ -359,7 +359,7 @@ if __name__ == "__main__":
     last_fix_U_qn = 0
 
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 101):
+    for n in [9,19,29,39,49,59]:
         UtilsMNIST.print_and_log(global_minst_parent_path,
                                  f"========================= 客户端数量: {n + 1} =========================")
 
