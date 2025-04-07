@@ -546,6 +546,7 @@ if __name__ == "__main__":
 
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "最终的列表：")
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"accuracy_list: {accuracy_list}")
+        adjustment_literation_list.append(accuracy_list)
 
     UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "最终的 adjustment_literation_list 列表：")
     UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"adjustment_literation_list: {adjustment_literation_list}")
