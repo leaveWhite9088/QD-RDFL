@@ -14,7 +14,7 @@ from src.qd_rdfl.roles.CPC import CPC
 from src.qd_rdfl.roles.DataOwner import DataOwner
 from src.qd_rdfl.roles.ModelOwner import ModelOwner
 from src.qd_rdfl.utils.UtilsCIFAR100 import UtilsCIFAR100
-from src.qd_rdfl.global_variable import global_cifar100_parent_path, Lambda, Rho, Alpha, Epsilon
+from src.qd_rdfl.global_variable import global_cifar100_parent_path, Lambda, Rho, Alpha, Epsilon, adjustment_literation
 
 # 定义参数值
 def define_parameters(Lambda=1, Rho=1, Alpha=1, Epsilon=1, N=5, M=5, SigmaM=None):
@@ -301,7 +301,7 @@ def submit_data_to_cpc(matching, dataowners, cpcs, xn_list):
 
 
 # 使用CPC进行模型训练和全局模型的更新
-def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list, adjustment_literation, N):
+def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list, adjustment_literation):
     """
     使用CPC进行模型训练和全局模型的更新
     :param matching: GaleShapley匹配结果（字典形式，键为DataOwner，值为CPC）
@@ -488,7 +488,7 @@ if __name__ == "__main__":
         UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 
         literation = 0  # 迭代次数
-        adjustment_literation = 1  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
+        # adjustment_literation = 1  # 要进行fn，xn，eta调整的轮次，注意值要取：轮次-1
         avg_f_list = []
         last_xn_list = [0] * N
         accuracy_list = []
@@ -534,7 +534,7 @@ if __name__ == "__main__":
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path,
                                         f"----- literation {literation + 1}: 模型训练 -----")
             avg_f_list, new_accracy = train_model_with_cpc(matching, cpcs, test_data, test_labels, literation, avg_f_list,
-                                              adjustment_literation, N)
+                                              adjustment_literation)
             accuracy_list.append(new_accracy)
             UtilsCIFAR100.print_and_log(global_cifar100_parent_path, "DONE")
 

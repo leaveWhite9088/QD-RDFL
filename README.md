@@ -218,6 +218,16 @@ Investigate changes in Us under different Eta values:
 python -m src.qd_rdfl.experiments.parameter_analysis.Eta.parameter_analysis-MNIST-Eta --adjustment_literation -1 --parent_path log-parameter_analysis
 ```
 
+#### L Parameter
+Verify the impact of adjustment rounds:
+```bash
+python -m src.qd_rdfl.experiments.parameter_analysis.L.parameter_analysis-MNIST-L --adjustment_literation -1 --parent_path log-parameter_analysis
+
+python -m src.qd_rdfl.experiments.parameter_analysis.L.parameter_analysis-CIFAR10-L --adjustment_literation -1 --parent_path log-parameter_analysis
+
+python -m src.qd_rdfl.experiments.parameter_analysis.L.parameter_analysis-CIFAR100-L --adjustment_literation -1 --parent_path log-parameter_analysis
+```
+
 #### Sigma Parameter
 Verify the impact of SigmaM changes on matching results:
 ```bash

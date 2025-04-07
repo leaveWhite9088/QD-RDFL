@@ -323,7 +323,7 @@ def submit_data_to_cpc(matching, dataowners, cpcs, xn_list):
 
 
 # 使用CPC进行模型训练和全局模型的更新
-def train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list, adjustment_literation):
+def train_model_with_cpc(matching, cpcs, test_images, test_labels, avg_f_list):
     """
     使用CPC进行模型训练和全局模型的更新
     :param matching:
@@ -449,8 +449,7 @@ if __name__ == "__main__":
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             UtilsMNIST.print_and_log(global_minst_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
-            avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list,
-                                              adjustment_literation)
+            avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_images, test_labels, avg_f_list)
             accuracy_list.append(new_accuracy)
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
