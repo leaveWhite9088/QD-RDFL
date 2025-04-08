@@ -12,7 +12,7 @@
 
 ## 📋 Overview
 
-In this paper, we focus on **data assetization**, where data does not circulate but the information does. 
+In this paper, we focus on **data assetization**, where data does not circulate but the information does.
 
 Our approach includes:
 
@@ -202,16 +202,6 @@ python -m src.qd_rdfl.experiments.comparison.AGGR-IID.comparison-CIFAR100-AGGRII
 ### 📈 Parameter Analysis
 Parameter analysis experiments run quickly (approximately 30 seconds each).
 
-#### Alpha Parameter
-Investigate changes in Us and average Un under different Alpha values:
-```bash
-python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-MNIST-Alpha --adjustment_literation -1 --parent_path log-parameter_analysis
-
-python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-CIFAR10-Alpha --adjustment_literation -1 --parent_path log-parameter_analysis
-
-python -m src.qd_rdfl.experiments.parameter_analysis.Alpha.parameter_analysis-CIFAR100-Alpha --adjustment_literation -1 --parent_path log-parameter_analysis
-```
-
 #### Eta Parameter
 Investigate changes in Us under different Eta values:
 ```bash
@@ -226,16 +216,6 @@ python -m src.qd_rdfl.experiments.parameter_analysis.L.parameter_analysis-MNIST-
 python -m src.qd_rdfl.experiments.parameter_analysis.L.parameter_analysis-CIFAR10-L --adjustment_literation -1 --parent_path log-parameter_analysis
 
 python -m src.qd_rdfl.experiments.parameter_analysis.L.parameter_analysis-CIFAR100-L --adjustment_literation -1 --parent_path log-parameter_analysis
-```
-
-#### Sigma Parameter
-Verify the impact of SigmaM changes on matching results:
-```bash
-python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-MNIST-Sigma --adjustment_literation -1 --parent_path log-parameter_analysis
-
-python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-CIFAR10-Sigma --adjustment_literation -1 --parent_path log-parameter_analysis
-
-python -m src.qd_rdfl.experiments.parameter_analysis.Sigma.parameter_analysis-CIFAR100-Sigma --adjustment_literation -1 --parent_path log-parameter_analysis
 ```
 
 #### xn Parameter
@@ -287,9 +267,9 @@ python -m src.qd_rdfl.experiments.supplement.Us.supplement-CIFAR10-Us --adjustme
 
 1. Download the dataset files from the links above
 2. Extract each dataset to its designated directory:
-   - MNIST: Extract to `data/dataset/MNIST/`
-   - CIFAR10: Extract to `data/dataset/CIFAR10/`
-   - CIFAR100: Extract to `data/dataset/CIFAR100/`
+    - MNIST: Extract to `data/dataset/MNIST/`
+    - CIFAR10: Extract to `data/dataset/CIFAR10/`
+    - CIFAR100: Extract to `data/dataset/CIFAR100/`
 
 ## 💡 Installation
 
