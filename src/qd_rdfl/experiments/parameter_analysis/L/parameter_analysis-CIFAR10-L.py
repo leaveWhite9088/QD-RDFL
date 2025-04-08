@@ -16,6 +16,7 @@ from src.qd_rdfl.roles.ModelOwner import ModelOwner
 from src.qd_rdfl.utils.UtilsCIFAR10 import UtilsCIFAR10
 from src.qd_rdfl.global_variable import global_cifar10_parent_path, Lambda, Rho, Alpha, Epsilon
 
+
 # 定义参数值
 def define_parameters(Lambda=1, Rho=1, Alpha=1, Epsilon=1, N=5, M=5, SigmaM=None):
     """
@@ -442,107 +443,143 @@ if __name__ == "__main__":
     UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
                                f"**** {global_cifar10_parent_path} 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
 
+    # 固定为10个客户端
+    n = 9
+
+    UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                               f"========================= 客户端数量: {n + 1} =========================")
+
+    UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                               "---------------------------------- 定义参数值 ----------------------------------")
+    Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Lambda=Lambda, Rho=Rho, Alpha=Alpha,
+                                                                  Epsilon=Epsilon, M=n + 1, N=n + 1,
+                                                                  SigmaM=[1] * (n + 1))
+    UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
+
+    UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                               "---------------------------------- 准备工作 ----------------------------------")
+
+
+    def find_project_root(current_dir):
+        # 向上逐层查找，直到找到项目根目录
+        while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+            current_dir = os.path.dirname(current_dir)
+            if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                return None
+        return current_dir
+
+
+    # 获取当前文件的绝对路径
+    current_file_path = os.path.abspath(__file__)
+
+    # 获取当前文件所在的目录
+    current_dir = os.path.dirname(current_file_path)
+
+    # 查找项目根目录
+    project_root = find_project_root(current_dir)
+
+    project_root = project_root.replace("\\", "/")
+
+    if project_root:
+        print("项目根目录:", project_root)
+    else:
+        print("未找到项目根目录")
+
+    data_dir = f"{project_root}/data/dataset/CIFAR10"  # CIFAR10批处理文件所在目录
+    dataowners, modelowner, cpcs, test_data, test_labels = ready_for_task(Lambda, Rho, Alpha, Epsilon, N, M, SigmaM,
+                                                                          data_dir)
+    UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
+
     adjustment_literation_list = []
     # 这里通过 adjustment_literation 控制 L
-    for adjustment_literation in range(2, 21):
-        # 从这里开始进行不同数量客户端的循环 (前闭后开)
-        for n in [9]:
+    for adjustment_literation in range(0, 20):
+
+        UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                                   "---------------------------------- 准备工作 FLASH ----------------------------------")
+
+
+        def find_project_root(current_dir):
+            # 向上逐层查找，直到找到项目根目录
+            while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
+                current_dir = os.path.dirname(current_dir)
+                if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
+                    return None
+            return current_dir
+
+
+        # 获取当前文件的绝对路径
+        current_file_path = os.path.abspath(__file__)
+
+        # 获取当前文件所在的目录
+        current_dir = os.path.dirname(current_file_path)
+
+        # 查找项目根目录
+        project_root = find_project_root(current_dir)
+
+        project_root = project_root.replace("\\", "/")
+
+        if project_root:
+            print("项目根目录:", project_root)
+        else:
+            print("未找到项目根目录")
+
+        data_dir = f"{project_root}/data/dataset/CIFAR10"  # CIFAR10批处理文件所在目录
+        _, modelowner, _, _, _ = ready_for_task(Lambda, Rho, Alpha, Epsilon, N, M, SigmaM, data_dir)
+        UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
+
+        literation = 0  # 迭代次数
+        avg_f_list = []
+        last_xn_list = [0] * N
+        accuracy_list = []
+
+        while True:
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                       f"========================= 客户端数量: {n + 1} =========================")
+                                       f"========================= literation: {literation + 1} =========================")
+
+            # DataOwner自己报数据质量的机会只有一次
+            if literation == 0:
+                UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                                           f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
+                dataowner_add_noise(dataowners, 0.1)
+                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
+
+                UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                                           f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
+                avg_f_list = evaluate_data_quality(dataowners)
+                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                       "---------------------------------- 定义参数值 ----------------------------------")
-            Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Lambda=Lambda, Rho=Rho, Alpha=Alpha,
-                                                                          Epsilon=Epsilon, M=n + 1, N=n + 1,
-                                                                          SigmaM=[1] * (n + 1))
+                                       f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
+            xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
+            last_xn_list = xn_list
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                       "---------------------------------- 准备工作 ----------------------------------")
-
-
-            def find_project_root(current_dir):
-                # 向上逐层查找，直到找到项目根目录
-                while not os.path.exists(os.path.join(current_dir, 'README.md')):  # 假设项目根目录包含 setup.py 文件
-                    current_dir = os.path.dirname(current_dir)
-                    if current_dir == '/':  # 避免在 Unix/Linux 系统中向上查找过多
-                        return None
-                return current_dir
-
-
-            # 获取当前文件的绝对路径
-            current_file_path = os.path.abspath(__file__)
-
-            # 获取当前文件所在的目录
-            current_dir = os.path.dirname(current_file_path)
-
-            # 查找项目根目录
-            project_root = find_project_root(current_dir)
-
-            project_root = project_root.replace("\\", "/")
-
-            if project_root:
-                print("项目根目录:", project_root)
-            else:
-                print("未找到项目根目录")
-
-            data_dir = f"{project_root}/data/dataset/CIFAR10"  # CIFAR10批处理文件所在目录
-            dataowners, modelowner, cpcs, test_data, test_labels = ready_for_task(Lambda, Rho, Alpha, Epsilon, N, M, SigmaM,
-                                                                                  data_dir)
+                                       f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
+            compute_contribution_rates(xn_list, avg_f_list, best_Eta)
             UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
-            literation = 0  # 迭代次数
-            avg_f_list = []
-            last_xn_list = [0] * N
-            accuracy_list = []
-            while True:
+            # 一旦匹配成功，就无法改变
+            if literation == 0:
                 UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                           f"========================= literation: {literation + 1} =========================")
-
-                # DataOwner自己报数据质量的机会只有一次
-                if literation == 0:
-                    UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                               f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
-                    dataowner_add_noise(dataowners, 0.1)
-                    UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
-
-                    UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                               f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
-                    avg_f_list = evaluate_data_quality(dataowners)
-                    UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
-
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                           f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
-                xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
-                last_xn_list = xn_list
+                                           f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
+                matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)
                 UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                           f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
-                compute_contribution_rates(xn_list, avg_f_list, best_Eta)
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
+            UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
+                                       f"----- literation {literation + 1}: DataOwner 向 CPC 提交数据 -----")
+            submit_data_to_cpc(matching, dataowners, cpcs, xn_list)
+            UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
-                # 一旦匹配成功，就无法改变
-                if literation == 0:
-                    UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                               f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                    matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)
-                    UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
+            UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
+            avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_data, test_labels, literation,
+                                                            avg_f_list, adjustment_literation)
+            accuracy_list.append(new_accuracy)
+            UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
 
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path,
-                                           f"----- literation {literation + 1}: DataOwner 向 CPC 提交数据 -----")
-                submit_data_to_cpc(matching, dataowners, cpcs, xn_list)
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
-
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
-                avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_data, test_labels, literation,
-                                                                avg_f_list, adjustment_literation)
-                accuracy_list.append(new_accuracy)
-                UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "DONE")
-
-                literation += 1
-                if literation > 71:
-                    break
+            literation += 1
+            if literation > 71:
+                break
 
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, "最终的列表：")
         UtilsCIFAR10.print_and_log(global_cifar10_parent_path, f"accuracy_list: {accuracy_list}")

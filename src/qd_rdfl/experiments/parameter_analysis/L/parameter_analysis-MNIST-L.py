@@ -423,79 +423,88 @@ if __name__ == "__main__":
     UtilsMNIST.print_and_log(global_minst_parent_path,
                              f"**** {global_minst_parent_path} 运行时间： {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ****")
 
+    # 固定客户端数量为10
+    n = 9
+
+    UtilsMNIST.print_and_log(global_minst_parent_path,
+                             f"========================= 客户端数量: {n + 1} =========================")
+
+    UtilsMNIST.print_and_log(global_minst_parent_path,
+                             "---------------------------------- 定义参数值 ----------------------------------")
+    Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Lambda=Lambda, Rho=Rho, Alpha=Alpha,
+                                                                  Epsilon=Epsilon, M=n + 1, N=n + 1,
+                                                                  SigmaM=[1] * (n + 1))
+    UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
+    UtilsMNIST.print_and_log(global_minst_parent_path,
+                             "---------------------------------- 准备工作 ----------------------------------")
+    dataowners, modelowner, cpcs, test_images, test_labels = ready_for_task()
+    UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
     adjustment_literation_list = []
     # 这里通过 adjustment_literation 控制 L
-    for adjustment_literation in range(2, 21):
+    for adjustment_literation in range(0, 20):
 
-        # 从这里开始进行不同数量客户端的循环 (前闭后开)
-        for n in [9]:
+        UtilsMNIST.print_and_log(global_minst_parent_path,
+                                 "---------------------------------- 准备工作 FLASH ----------------------------------")
+        _, modelowner, _, _, _ = ready_for_task()
+        UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
+        literation = 0  # 迭代次数
+        avg_f_list = []
+        last_xn_list = [0] * N
+        accuracy_list = []  # 记录每一轮的精度
+
+        while True:
             UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     f"========================= 客户端数量: {n + 1} =========================")
+                                     f"========================= literation: {literation + 1} =========================")
+
+            # DataOwner自己报数据质量的机会只有一次
+            if literation == 0:
+                UtilsMNIST.print_and_log(global_minst_parent_path,
+                                         f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
+                dataowner_add_noise(dataowners, 0.1)
+                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+
+                UtilsMNIST.print_and_log(global_minst_parent_path,
+                                         f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
+                avg_f_list = evaluate_data_quality(dataowners)
+                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     "---------------------------------- 定义参数值 ----------------------------------")
-            Lambda, Rho, Alpha, Epsilon, N, M, SigmaM = define_parameters(Lambda=Lambda, Rho=Rho, Alpha=Alpha,
-                                                                          Epsilon=Epsilon, M=n + 1, N=n + 1, SigmaM=[1] * (n + 1))
+                                     f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
+            xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
+            last_xn_list = xn_list
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
             UtilsMNIST.print_and_log(global_minst_parent_path,
-                                     "---------------------------------- 准备工作 ----------------------------------")
-            dataowners, modelowner, cpcs, test_images, test_labels = ready_for_task()
+                                     f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
+            compute_contribution_rates(xn_list, avg_f_list, best_Eta)
             UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-            literation = 0  # 迭代次数
-            avg_f_list = []
-            last_xn_list = [0] * N
-            accuracy_list = [] # 记录每一轮的精度
-            while True:
+            # 一旦匹配成功，就无法改变
+            if literation == 0:
                 UtilsMNIST.print_and_log(global_minst_parent_path,
-                                         f"========================= literation: {literation + 1} =========================")
-
-                # DataOwner自己报数据质量的机会只有一次
-                if literation == 0:
-                    UtilsMNIST.print_and_log(global_minst_parent_path,
-                                             f"----- literation {literation + 1}: 为 DataOwner 的数据添加噪声 -----")
-                    dataowner_add_noise(dataowners, 0.1)
-                    UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
-
-                    UtilsMNIST.print_and_log(global_minst_parent_path,
-                                             f"----- literation {literation + 1}: 计算 DataOwner 的数据质量 -----")
-                    avg_f_list = evaluate_data_quality(dataowners)
-                    UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
-
-                UtilsMNIST.print_and_log(global_minst_parent_path,
-                                         f"----- literation {literation + 1}: 计算 ModelOwner 总体支付和 DataOwners 最优数据量 -----")
-                xn_list, best_Eta, U_Eta, U_qn = calculate_optimal_payment_and_data(avg_f_list, last_xn_list)
-                last_xn_list = xn_list
+                                         f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
+                matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)
                 UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-                UtilsMNIST.print_and_log(global_minst_parent_path,
-                                         f"----- literation {literation + 1}: DataOwner 分配 ModelOwner 的支付 -----")
-                compute_contribution_rates(xn_list, avg_f_list, best_Eta)
-                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+            UtilsMNIST.print_and_log(global_minst_parent_path,
+                                     f"----- literation {literation + 1}: DataOwner 向 CPC 提交数据 -----")
+            submit_data_to_cpc(matching, dataowners, cpcs, xn_list)
+            UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-                # 一旦匹配成功，就无法改变
-                if literation == 0:
-                    UtilsMNIST.print_and_log(global_minst_parent_path,
-                                             f"----- literation {literation + 1}: 匹配 DataOwner 和 CPC -----")
-                    matching = match_data_owners_to_cpc(xn_list, cpcs, dataowners)
-                    UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
+            UtilsMNIST.print_and_log(global_minst_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
+            avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation,
+                                                            avg_f_list,
+                                                            adjustment_literation)
+            accuracy_list.append(new_accuracy)
+            UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
 
-                UtilsMNIST.print_and_log(global_minst_parent_path,
-                                         f"----- literation {literation + 1}: DataOwner 向 CPC 提交数据 -----")
-                submit_data_to_cpc(matching, dataowners, cpcs, xn_list)
-                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
-
-                UtilsMNIST.print_and_log(global_minst_parent_path, f"----- literation {literation + 1}: 模型训练 -----")
-                avg_f_list, new_accuracy = train_model_with_cpc(matching, cpcs, test_images, test_labels, literation, avg_f_list,
-                                                  adjustment_literation)
-                accuracy_list.append(new_accuracy)
-                UtilsMNIST.print_and_log(global_minst_parent_path, "DONE")
-
-                literation += 1
-                # 第100轮终止
-                if literation > 71:
-                    break
+            literation += 1
+            # 第100轮终止
+            if literation > 71:
+                break
 
         UtilsMNIST.print_and_log(global_minst_parent_path, "最终的 accuracy_list 列表：")
         UtilsMNIST.print_and_log(global_minst_parent_path, f"accuracy_list: {accuracy_list}")
