@@ -36,3 +36,4 @@ parent_path = args.parent_path
 global_minst_parent_path = parent_path
 global_cifar10_parent_path = parent_path
 global_cifar100_parent_path = parent_path
+global_imdb_parent_path = parent_path

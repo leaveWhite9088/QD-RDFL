@@ -185,6 +185,9 @@ python -m src.qd_rdfl.experiments.comparison.AGGR-NIID.comparison-CIFAR10-AGGRNI
 
 # CIFAR100 with AGGR-NIID strategy
 python -m src.qd_rdfl.experiments.comparison.AGGR-NIID.comparison-CIFAR100-AGGRNIID --adjustment_literation 2 --parent_path log-comparison
+
+# IMDB with AGGR-NIID strategy
+python -m src.qd_rdfl.experiments.comparison.AGGR-NIID.comparison-IMDB-AGGRNIID --adjustment_literation 2 --parent_path log-comparison
 ```
 
 #### AGGR-IID (Three ways to run together)
@@ -197,6 +200,9 @@ python -m src.qd_rdfl.experiments.comparison.AGGR-IID.comparison-CIFAR10-AGGRIID
 
 # CIFAR100 with AGGR-IID strategy
 python -m src.qd_rdfl.experiments.comparison.AGGR-IID.comparison-CIFAR100-AGGRIID --adjustment_literation 2 --parent_path log-comparison
+
+# IMDB with AGGR-IID strategy
+python -m src.qd_rdfl.experiments.comparison.AGGR-IID.comparison-IMDB-AGGRIID --adjustment_literation 2 --parent_path log-comparison
 ```
 
 ### 📈 Parameter Analysis
