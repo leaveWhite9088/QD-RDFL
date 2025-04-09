@@ -212,8 +212,6 @@ python -m src.qd_rdfl.experiments.parameter_analysis.Eta.parameter_analysis-MNIS
 Verify the impact of adjustment rounds:
 ```bash
 python -m src.qd_rdfl.experiments.parameter_analysis.L.parameter_analysis-MNIST-L --adjustment_literation -1 --parent_path log-parameter_analysis
-
-python -m src.qd_rdfl.experiments.parameter_analysis.L.parameter_analysis-CIFAR10-L --adjustment_literation -1 --parent_path log-parameter_analysis
 ```
 
 #### xn Parameter
