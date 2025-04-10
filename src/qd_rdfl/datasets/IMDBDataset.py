@@ -61,7 +61,7 @@ class IMDBDataset(Dataset):
         :return: 词汇表（单词到索引的映射）
         """
         # 显式设置nltk数据路径
-        nltk.data.path.append("D:/base/code/IDE/Anaconda/anaconda3/envs/py308base/nltk_data")
+        nltk.data.path.append("/root/miniconda3/envs/py38/nltk_data")
         
         try:
             nltk.data.find('tokenizers/punkt')

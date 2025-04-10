@@ -72,7 +72,7 @@ def ready_for_task():
     UtilsIMDB.split_data_to_dataowners_with_large_gap(dataowners, train_texts, train_labels)
 
     # 初始化ModelOwner
-    modelowner = ModelOwner(Alpha, model=init_model(0.001))
+    modelowner = ModelOwner(Alpha, model=init_model(0.1))
 
     # 初始化CPC
     cpcs = [CPC(Lambda, Epsilon, SigmaM[i]) for i in range(M)]
@@ -404,7 +404,7 @@ if __name__ == "__main__":
     last_fix_U_qn = 0
 
     # 从这里开始进行不同数量客户端的循环 (前闭后开)
-    for n in range(1, 3):
+    for n in [9,19,29,39,49,59]:
         UtilsIMDB.print_and_log(global_imdb_parent_path,
                              f"========================= 客户端数量: {n + 1} =========================")
 
@@ -424,7 +424,7 @@ if __name__ == "__main__":
         # DataOwner自己报数据质量的机会只有一次
         UtilsIMDB.print_and_log(global_imdb_parent_path,
                              f"----- 为 DataOwner 的数据添加噪声 -----")
-        dataowner_add_noise(dataowners, 0.1)
+        dataowner_add_noise(dataowners, 0.01)
         UtilsIMDB.print_and_log(global_imdb_parent_path, "DONE")
 
         UtilsIMDB.print_and_log(global_imdb_parent_path,
