@@ -265,6 +265,9 @@ python -m src.qd_rdfl.experiments.supplement.Us.supplement-CIFAR10-Us --adjustme
 #### CIFAR100
 - [CIFAR-100 Python](https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz)
 
+#### IMDB
+- [IMDB Python](http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz)
+
 ### Dataset Setup Instructions
 
 1. Download the dataset files from the links above
@@ -272,6 +275,11 @@ python -m src.qd_rdfl.experiments.supplement.Us.supplement-CIFAR10-Us --adjustme
     - MNIST: Extract to `data/dataset/MNIST/`
     - CIFAR10: Extract to `data/dataset/CIFAR10/`
     - CIFAR100: Extract to `data/dataset/CIFAR100/`
+    - IMDB：Extract to `data/dataset/IMDB/`
+3. For IMDB Dataset Usage:
+   - Download the NLTK tokenizers data (punkt and punkt_tab) from https://github.com/nltk/nltk_data/tree/gh-pages.
+   - Extract the files from the packages/tokenizers directory in the downloaded repository.
+   - Place the extracted files into /root/miniconda3/envs/py38/nltk_data/tokenizers/ to enable tokenizer functionality.
 
 ## 💡 Installation
 
